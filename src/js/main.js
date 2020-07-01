@@ -1,128 +1,88 @@
-(function() {
+
+
+(function () {
+
   // Polyfill for NodeList.prototype.forEach() in IE
   if (window.NodeList && !NodeList.prototype.forEach) {
     NodeList.prototype.forEach = function (callback, thisArg) {
-        thisArg = thisArg || window;
-        for (var i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-        }
+      thisArg = thisArg || window;
+      for (let i = 0; i < this.length; i++) {
+        callback.call(thisArg, this[i], i, this);
+      }
     };
   }
+  /******************************
+  Search Open / Close / Trigger
+  *******************************/
 
-  var HIDE_FOCUS_STYLES_CLASS = 'disable-focus-styles';
-  var SHOW_FOCUS_STYLES_CLASS = 'enable-focus-styles';
+  let searchTrigger = document.getElementById('searchTrigger');
+  let searchInputWrapper = document.getElementById('searchInputWrapper');
+  let menu = document.getElementById('navWrapper');
 
-  var firstLanguageSwitcherItem = document.querySelector('.header__language-switcher .lang_list_class li:first-child')
-  var languageSwitcherList = document.querySelector('.header__language-switcher .lang_list_class')
 
-  var Nav = document.querySelector('.header__navigation')
-  var LangSwitcher = document.querySelector('.header__language-switcher')
-  var Search = document.querySelector('.header__search')
+  searchTrigger.addEventListener("click", openSearch);
+  document.addEventListener("click", closeSearch);
+  // Call Function On Click
+  function openSearch() {
+    searchInputWrapper.classList.toggle('active');
+    searchTrigger.classList.toggle('active');
+    menu.classList.toggle('active');
+  }
 
-  var allToggles = document.querySelectorAll('.header--toggle')
-  var navToggle = document.querySelector('.header__navigation--toggle')
-  var langToggle = document.querySelector('.header__language-switcher--toggle')
-  var searchToggle = document.querySelector('.header__search--toggle')
-  var closeToggle = document.querySelector('.header__close--toggle')
-
-  var allElements = document.querySelectorAll('.header--element, .header--toggle')
-
-  function domReady(callback) {
-    if (['interactive', 'complete'].indexOf(document.readyState) >= 0) {
-      callback();
-    } else {
-      document.addEventListener('DOMContentLoaded', callback);
+  function closeSearch() {
+    let isClickInsideElement = searchInputWrapper.contains(event.target);
+    let isClickInsideSearchTrigger = searchTrigger.contains(event.target);
+    if (isClickInsideSearchTrigger) {
+      searchInputWrapper.classList.add('active');
+      searchTrigger.classList.add('active');
+      menu.classList.add('active')
+    } else if (!isClickInsideElement && !isClickInsideSearchTrigger) {
+      searchInputWrapper.classList.remove('active');
+      searchTrigger.classList.remove('active');
+      menu.classList.remove('active');
     }
   }
 
-  function showFocusOutline() {
-    document.body.classList.add(SHOW_FOCUS_STYLES_CLASS);
-    document.body.classList.remove(HIDE_FOCUS_STYLES_CLASS);
-  }
+  let mainStickyNav = document.getElementById('mainStickyNav');
+  let navHeight = 117;
 
-  function hideFocusOutline() {
-    document.body.classList.add(HIDE_FOCUS_STYLES_CLASS);
-    document.body.classList.remove(SHOW_FOCUS_STYLES_CLASS);
-  }
+  /******************************
+   Sticky Clone
+  *******************************/
 
-  // adds hover effects to the pseduoelement triangle on the menu
-  // for design continutity
-  function hoverLanguageSwitcher() {
-    languageSwitcherList.classList.add("first-active")
-  }
+  let clone = mainStickyNav.cloneNode(true);
+  clone.id = 'cloneStickyNav';
+  clone.style.position = "fixed";
+  clone.style.top = "-54px";
+  clone.style.left = "0px";
+  clone.style.right = "0px";
+  mainStickyNav.after(clone);
 
-  function unhoverLanguageSwitcher() {
-    languageSwitcherList.classList.remove("first-active")
-  }
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
 
-  function toggleNav() {
-    allToggles.forEach(function(toggle) {
-      toggle.classList.toggle('hide')
-    })
-
-    Nav.classList.toggle('open')
-    navToggle.classList.toggle('open')
-
-    closeToggle.classList.toggle('show')
-  }
-
-  function toggleLang() {
-    allToggles.forEach(function(toggle) {
-      toggle.classList.toggle('hide')
-    })
-
-    LangSwitcher.classList.toggle('open')
-    langToggle.classList.toggle('open')
-
-    closeToggle.classList.toggle('show')
-  }
-
-  function toggleSearch() {
-    allToggles.forEach(function(toggle) {
-      toggle.classList.toggle('hide')
-    })
-
-    Search.classList.toggle('open')
-    searchToggle.classList.toggle('open')
-
-    closeToggle.classList.toggle('show')
-  }
-
-  function closeAll() {
-    allElements.forEach(function(element) {
-      element.classList.remove('hide', 'open')
-    })
-
-    closeToggle.classList.remove('show')
-  }
-
-  domReady(function() {
-    if (!document.body) {
-      return;
+    if (currentScroll > navHeight) {
+      clone.classList.add('sticky');
     } else {
-      // Show the focus outline when keyboard activity occurs
-      document.body.addEventListener('keydown', showFocusOutline);
-
-      // Hide the focus outline when mouse activity occurs
-      document.body.addEventListener('mousemove', hideFocusOutline);
-      document.body.addEventListener('mousedown', hideFocusOutline);
-      document.body.addEventListener('mouseup', hideFocusOutline);
-
-      // function dependent on the language switcher component
-      if (LangSwitcher) {
-        // Adds a hover style class to the parent element when the cursor hovers
-        // over the first child item
-        firstLanguageSwitcherItem.addEventListener('mouseover', hoverLanguageSwitcher);
-        firstLanguageSwitcherItem.addEventListener('mouseout', unhoverLanguageSwitcher);
-
-        // Toggles the language switcher
-        langToggle.addEventListener('click', toggleLang);
-      }
-
-      // Toggles the mobile views for menu, search, and close button
-      navToggle.addEventListener('click', toggleNav);
-      searchToggle.addEventListener('click', toggleSearch);
-      closeToggle.addEventListener('click', closeAll);
+      clone.classList.remove('sticky');
     }
+
   });
+
+  /********************
+   Mobile Menu Dropdown
+  ******************/
+  let mobileTrigger = document.getElementById('mobileTrigger');
+  let mobileDropdown = document.getElementById('mobileDropdown');
+
+  mobileTrigger.addEventListener("click", toggleMobileMenu);
+
+  function toggleMobileMenu() {
+    mobileDropdown.classList.toggle('open');
+    mobileTrigger.classList.toggle('open');
+    document.body.classList.toggle('open-menu');
+  }
+
 })();
+
+

@@ -12,11 +12,16 @@
     "@hubspot/cms-cli": "^1.0.13",
     "eslint": "^6.3.0",
     "js-yaml": "^3.13.1",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "concurrently": "^5.1.0",
+    "node-sass": "^4.13.1"
   },
   "scripts": {
     "eslint": "eslint src",
     "lint": "eslint src && prettier --list-different 'src/**/*.js' 'src/**/*.json'",
-    "prettier:write": "prettier --write 'src/**/*.js' 'src/**/*.json'"
+    "prettier:write": "prettier --write 'src/**/*.js' 'src/**/*.json'",
+    "watch": "hs watch src damore-cms-theme --remove",
+    "scss": "node-sass -w build/scss -o src/css",
+    "dev": "concurrently \"npm run scss\" \"npm run watch\""
   }
 }

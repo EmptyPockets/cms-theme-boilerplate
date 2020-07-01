@@ -1,0 +1,60 @@
+* {-webkit-font-smoothing: antialiased;}
+
+$light: 200;
+$normal: 400;
+$semi-bold: 600;
+$bold: 700;
+
+html, body {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: $normal;
+}
+
+h1,h2,h3,h4,h5,h6,a,p {
+  margin:0;
+  line-height: 1.1;
+  color: $color-blue-dark;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: $bold;
+}
+
+a, p {
+  line-height: 1.15;
+  font-weight: $normal;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+.section-heading {
+  font-family: $play;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 16px;
+  color: $color-blue-dark;
+  @include sm {
+    font-size: 50px;
+    line-height: 65px;
+  }
+}
+.section-description {
+  font-family: $public;
+  font-size: 18px;
+  max-width: 550px;
+  font-weight: $normal;
+  line-height: 1.3;
+  margin-bottom: 64px;
+  @include sm {
+    font-size: 20px;
+  }
+}
+
+.heading {
+  color: $color-blue-dark;
+}
