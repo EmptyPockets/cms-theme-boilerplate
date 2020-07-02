@@ -9,19 +9,46 @@
   "author": "",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@hubspot/cms-cli": "^1.0.13",
-    "eslint": "^6.3.0",
-    "js-yaml": "^3.13.1",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@hubspot/cms-cli": "^1.1.4",
+    "@hubspot/webpack-cms-plugins": "^1.1.7",
+    "autoprefixer": "^9.7.6",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.4",
+    "core-js": "^3.6.5",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-import": "^2.18.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
     "prettier": "^1.18.2",
-    "concurrently": "^5.1.0",
-    "node-sass": "^4.13.1"
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "eslint": "eslint src",
+    "start": "webpack --watch --env.autoupload --mode production",
+    "build": "rm -Rf dist && webpack --mode production",
+    "deploy": "rm -Rf dist && webpack --mode production && hs upload dist damore-cms-theme",
     "lint": "eslint src && prettier --list-different 'src/**/*.js' 'src/**/*.json'",
-    "prettier:write": "prettier --write 'src/**/*.js' 'src/**/*.json'",
-    "watch": "hs watch dist damore-cms-theme --remove",
-    "scss": "node-sass -w build/scss -o dist/css",
-    "dev": "concurrently \"npm run scss\" \"npm run watch\""
+    "prettier:write": "prettier --write 'src/**/*.js' 'src/**/*.json'"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "last 2 versions",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
