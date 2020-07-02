@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ html_lang }}"
+  {{ html_lang_dir }}>
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ page_meta.html_title }}</title>
+  {% if site_settings.favicon_src %}
+  <link rel="shortcut icon"
+    href="{{ site_settings.favicon_src }}" />{% endif %}
+  <meta name="description"
+    content="{{ page_meta.meta_description }}">
+  {{ require_css(get_asset_url('../../css/main.css')) }}
+  <!-- load fonts here-->
+  {{ standard_header_includes }}
+</head>
+
+<body>
+  {% block header %}
+  {% global_partial path='../partials/header.html' %}
+  {% endblock header %}
+
+  {% block body %}
+  {% endblock body %}
+
+  {% block footer %}
+  {% global_partial path='../partials/footer.html' %}
+  {% endblock footer %}
+
+  {{ standard_footer_includes }}
+  <!-- Scripts -->
+  <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
+  {{ require_js(get_asset_url('../../js/main.js')) }}
+</body>
+
+</html>

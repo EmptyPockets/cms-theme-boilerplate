@@ -20,8 +20,8 @@
     "eslint": "eslint src",
     "lint": "eslint src && prettier --list-different 'src/**/*.js' 'src/**/*.json'",
     "prettier:write": "prettier --write 'src/**/*.js' 'src/**/*.json'",
-    "watch": "hs watch src damore-cms-theme --remove",
-    "scss": "node-sass -w build/scss -o src/css",
+    "watch": "hs watch dist damore-cms-theme --remove",
+    "scss": "node-sass -w build/scss -o dist/css",
     "dev": "concurrently \"npm run scss\" \"npm run watch\""
   }
 }

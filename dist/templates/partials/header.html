@@ -1,0 +1,125 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+<div class="mq-test-icon"></div>
+<header class="global-header">
+
+  <div class="header-wrapper">
+
+    <!-- Mobile Menu Trigger -->
+    <div class="menu-icon hide-lg"
+      id="mobileTrigger">
+      <img class="menu "
+        src="{{ get_asset_url('../../images/icons/menu-icon.svg') }}" />
+      <img class="close"
+        src="{{ get_asset_url('../../images/icons/menu-icon-close-alt.svg') }}" />
+    </div>
+
+    <!-- Logo -->
+    <div class="logo-wrapper">
+      <img class="logo"
+        src="{{ get_asset_url('../../images/brand/damore-logo.svg') }}"
+        alt="D'Amore Personal Injury Law, LLC" />
+      <img class="logo"
+        src="{{ get_asset_url('../../images/brand/damore-logo-darker.svg') }}"
+        alt="D'Amore Personal Injury Law, LLC" />
+
+      <a href="/"
+        class="click-cover">D'Amore Personal Injury Law, LLC</a>
+    </div>
+
+
+
+
+
+
+    <!-- Locaton and Nav Wrapper -->
+    <div class="nav-content-wrapper">
+      <div id="mainStickyNav"
+        class="contact-banner">
+        <div class="location-wrapper">
+
+          <p class="after-sticky">Serious Injury Lawyers Proudly Serving Baltimore,
+            Annapolis,&nbsp;&&nbsp;Washington,&nbsp;D.C. 3</p>
+
+        </div>
+
+        <a href="#"
+          class="button tiny">No Fee Unless We Win</a>
+
+
+        <div class="button-group">
+
+          <a href="#"
+            class="button link">
+            <img class="icon phone"
+              src="{{ get_asset_url('../../images/icons/phone-icon.svg') }}"
+              alt="Phone icon" />
+            <span>1-800-JUSTICE</span></a>
+
+          <a href="#"
+            class="button link">
+            <img class="icon email"
+              src="{{ get_asset_url('../../images/icons/email-icon.svg') }}"
+              alt="Email icon" />
+            <span>Contact Us</span>
+          </a>
+
+        </div>
+
+      </div>
+      <div class="nav-wrapper"
+        id="navWrapper">
+        {% module 'navigation-primary'
+      path='../../modules/menu-section',
+      label='Primary navigation'
+      %}
+        <img class="search-icon"
+          id="searchTrigger"
+          src="{{ get_asset_url('../../images/icons/search-icon.svg') }}"
+          alt="Search Injury Guides and Helpful Resources" />
+        <div id="searchInputWrapper">
+          {% module 'site_search'
+            path='@hubspot/search_input',
+            label='Search Guides & Helpful Resources'
+          %}
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+  <div class="mobile-contact-wrapper">
+
+
+    <a href="#"
+      class="button link">
+      <img class="icon email"
+        src="{{ get_asset_url('../../images/icons/email-icon.svg') }}"
+        alt="Email icon" />
+      Contact Us
+    </a>
+
+    <a href="#"
+      class="button link">
+      <img class="icon phone"
+        src="{{ get_asset_url('../../images/icons/phone-icon.svg') }}"
+        alt="Phone icon" />
+      1-800-JUSTICE</a>
+
+  </div>
+
+
+</header>
+<div class="mobile-dropdown"
+  id="mobileDropdown">
+  {% module 'navigation-primary'
+        path='../../modules/menu-section',
+        label='Primary navigation'
+        %}
+</div>
