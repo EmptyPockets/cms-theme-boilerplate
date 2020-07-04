@@ -1,13 +1,25 @@
 module.exports = {
   root: true,
+
+  parser: 'babel-eslint',
+
+  plugins: ['import'],
+
   env: {
     browser: true,
+    commonjs: true,
+    es6: true,
+    jest: true,
     node: true,
-    es6: true
   },
-  "parserOptions": {
-    "sourceType": "module"
+
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
   },
+
+
+
   rules: {
     'accessor-pairs': 'off',
     'array-bracket-newline': 'off',
@@ -67,7 +79,6 @@ module.exports = {
     'lines-between-class-members': 'off',
     'max-depth': 'off',
     'max-len': 'off',
-    'max-len': 0,
     'max-lines': 'off',
     'max-nested-callbacks': 'off',
     'max-params': 'off',
@@ -75,13 +86,10 @@ module.exports = {
     'max-statements-per-line': 'off',
     'multiline-comment-style': 'off',
     'multiline-ternary': 'off',
-    'multiline-ternary': 'off',
     'new-cap': 'off',
-    'new-parens': 'off',
     'new-parens': 'off',
     'newline-after-var': 'off',
     'newline-before-return': 'off',
-    'newline-per-chained-call': 'off',
     'newline-per-chained-call': 'off',
     'no-alert': 'off',
     'no-array-constructor': 'off',
@@ -98,8 +106,8 @@ module.exports = {
     'no-cond-assign': 'error',
     'no-confusing-arrow': 'off',
     'no-confusing-arrow': 0,
-    'no-console': 'error',
-    'no-const-assign': 'off',
+    'no-console': 'off',
+    'no-const-assign': 'error',
     'no-constant-condition': 'error',
     'no-continue': 'off',
     'no-control-regex': 'error',
@@ -217,7 +225,7 @@ module.exports = {
     'no-unsafe-negation': 'error',
     'no-unused-expressions': 'off',
     'no-unused-labels': 'error',
-    'no-unused-vars': 'error',
+    'no-unused-vars': 'off',
     'no-use-before-define': 'off',
     'no-useless-call': 'off',
     'no-useless-computed-key': 'off',
@@ -292,5 +300,7 @@ module.exports = {
     'wrap-regex': 'off',
     'yield-star-spacing': 'off',
     yoda: 'off',
-  },
-};
+
+  }
+}
+
