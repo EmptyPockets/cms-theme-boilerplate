@@ -1,25 +1,14 @@
 module.exports = {
   root: true,
-
-  parser: 'babel-eslint',
-
-  plugins: ['import'],
-
   env: {
     browser: true,
-    commonjs: true,
-    es6: true,
-    jest: true,
     node: true,
   },
-
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
   },
-
-
-
   rules: {
     'accessor-pairs': 'off',
     'array-bracket-newline': 'off',
@@ -79,6 +68,7 @@ module.exports = {
     'lines-between-class-members': 'off',
     'max-depth': 'off',
     'max-len': 'off',
+    'max-len': 0,
     'max-lines': 'off',
     'max-nested-callbacks': 'off',
     'max-params': 'off',
@@ -86,10 +76,13 @@ module.exports = {
     'max-statements-per-line': 'off',
     'multiline-comment-style': 'off',
     'multiline-ternary': 'off',
+    'multiline-ternary': 'off',
     'new-cap': 'off',
+    'new-parens': 'off',
     'new-parens': 'off',
     'newline-after-var': 'off',
     'newline-before-return': 'off',
+    'newline-per-chained-call': 'off',
     'newline-per-chained-call': 'off',
     'no-alert': 'off',
     'no-array-constructor': 'off',
@@ -300,7 +293,5 @@ module.exports = {
     'wrap-regex': 'off',
     'yield-star-spacing': 'off',
     yoda: 'off',
-
-  }
-}
-
+  },
+};
