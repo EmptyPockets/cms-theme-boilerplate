@@ -47,7 +47,7 @@
     "also": "webpack --watch --env.autoupload --mode production",
     "build": "rm -Rf dist && webpack --mode production",
     "deploy": "rm -Rf dist && webpack --mode production && hs upload dist damore-cms-theme",
-    "lint": "sass-lint -v",
+    "lint": "eslint src && prettier --list-different 'src/**/*.js' 'src/**/*.json'",
     "lint:fix": "sass-lint-auto-fix",
     "prettier:write": "prettier --write 'src/**/*.js' 'src/**/*.json'",
     "scss": "node-sass -w src/scss -o src/css",
