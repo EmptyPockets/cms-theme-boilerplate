@@ -40,8 +40,8 @@ $contactBannerHeight: 54px;
     display: flex;
     position: relative;
     &:hover {
-        background-color: $color-background-light;
-        transition: 0.2s background-color linear;
+      background-color: $color-background-light;
+      transition: 0.2s background-color linear;
     }
     width: initial;
     @include sm {
@@ -76,7 +76,7 @@ $contactBannerHeight: 54px;
       width: 100%;
     }
 
-     .logo {
+    .logo {
       display: none;
       width: 225px;
       + .logo {
@@ -95,7 +95,7 @@ $contactBannerHeight: 54px;
       @include md {
         margin: 0 auto;
         width: $fixed-spacer-sm - 40px;
-         + .logo {
+        + .logo {
           display: none;
         }
       }
@@ -103,476 +103,468 @@ $contactBannerHeight: 54px;
       @include lg {
         display: none;
         & + .logo {
-           display: block;
-           margin: 0 auto;
-           width: 225px;
+          display: block;
+          margin: 0 auto;
+          width: 225px;
         }
       }
     }
   }
 
-     .nav-content-wrapper {
-      display: flex;
-      flex-direction: column;
-      .navigation-primary {
-        padding-right: 16px;
+  .nav-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    .navigation-primary {
+      padding-right: 16px;
+      @include lg {
+        padding-right: 24px;
+      }
+    }
+
+    #cloneStickyNav {
+      opacity: 0;
+      overflow: hidden;
+      transition: 0.25s all linear;
+      width: 100%;
+      &.sticky {
+        border-radius: 0;
+        height: 54px;
+        opacity: 1;
+        position: fixed;
+        transform: translateY(100%);
+        transition: 0.25s all linear;
+        width: 100%;
+        z-index: 3;
+      }
+
+      @include md {
+        justify-content: space-between;
+      }
+
+      nav {
+        margin-left: 24px;
+        margin-right: 24px;
+      }
+    }
+
+    div {
+      nav {
+        margin-left: 0;
+        max-width: $max-nav-width;
+        @include sm {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
         @include lg {
-          padding-right: 24px;
+          display: block;
+        }
+
+        @include xl {
+          display: block;
         }
       }
 
-       #cloneStickyNav {
-          opacity: 0;
-          overflow: hidden;
-          transition: 0.25s all linear;
-          width: 100%;
-          &.sticky {
-            border-radius: 0;
-            height: 54px;
-            opacity: 1;
-            position: fixed;
-            transform: translateY(100%);
-            transition: 0.25s all linear;
-            width: 100%;
-            z-index: 3;
+      &.contact-banner {
+        align-items: center;
+        background-color: $color-blue-darker;
+        border-bottom-left-radius: 10px;
+        color: $color-white;
+        display: none;
+        flex: 1;
+        flex-direction: row;
+        height: 54px;
+        justify-content: flex-start;
+        left: 0;
+        @include sm {
+          display: flex;
+          justify-content: flex-end;
+          left: $fixed-spacer-sm;
+          padding: 0 0 0 0;
+          width: calc(100vw - #{$fixed-spacer-sm});
+        }
+
+        @include md {
+          display: flex;
+          justify-content: space-between;
+          left: $fixed-spacer-sm;
+          padding: 0 0 0 16px;
+          width: calc(100vw - #{$fixed-spacer-sm});
+        }
+
+        @include lg {
+          justify-content: space-between;
+          padding: 0 16px 0 8px;
+          width: calc(100vw - #{$fixed-spacer-lg});
+        }
+        max-height: 54px;
+        padding: 0 0 0 0;
+        right: 0;
+        top: 0;
+        transform: translateY(0%);
+        p {
+          color: #fff;
+          font-size: 15px;
+          font-weight: 600;
+          margin-right: 0;
+          position: relative;
+          top: -1px;
+        }
+
+        a {
+          color: $color-white;
+          // letter-spacing: 1px;
+          margin-left: 20px;
+          @include sm {
+            margin-left: 20px;
+            // letter-spacing: 1px;
           }
 
           @include md {
-            justify-content: space-between;
+            // letter-spacing: 1px;
           }
 
-          nav {
-            margin-left: 24px;
-            margin-right: 24px;
+          &.tiny {
+            display: none;
+            margin-left: 20px;
+            @include sm {
+              display: block;
+              font-size: 11px;
+            }
+
+            @include md {
+              display: block;
+              font-size: 11px;
+              margin-left: 8px;
+            }
+
+            @include md {
+              font-size: 13px;
+            }
           }
         }
 
-      div {
-        nav {
-          margin-left: 0;
-          max-width: $max-nav-width;
-          @include sm {
+        .location-wrapper {
+          align-items: center;
+          display: none;
+          flex: 1;
+          flex-direction: row;
+          justify-content: flex-start;
+          padding-left: 0;
+          padding-right: 16px;
+          .after-sticky {
+            a {
+              border: 0;
+            }
+          }
+
+          a {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
             margin-left: 0;
-            margin-right: 0;
+            &:hover {
+              border-bottom: 1px solid rgba(255, 255, 255, 1);
+              transition: 0.25s all linear;
+            }
+          }
+
+          @include sm {
+            display: none;
+          }
+
+          @include md {
+            display: none;
           }
 
           @include lg {
-            display: block;
+            display: none;
           }
 
           @include xl {
             display: block;
+            opacity: 1;
+            padding-left: 8px;
+          }
+        }
+      }
+
+      &.nav-wrapper {
+        display: flex;
+        @include sm {
+          align-items: flex-end;
+          display: flex;
+          justify-content: space-between;
+          overflow: hidden;
+          padding: 20px 20px;
+          position: relative;
+          width: 100vw;
+          a {
+            font-size: 13px;
           }
         }
 
-        &.contact-banner {
-            align-items: center;
-            background-color: $color-blue-darker;
-            border-bottom-left-radius: 10px;
-            color: $color-white;
-            display: flex;
-              display: none;
-            flex: 1;
-            flex-direction: row;
-            height: 54px;
-            justify-content: flex-start;
-              left: 0;
-            @include sm {
-              display: flex;
-              justify-content: flex-end;
-              left: $fixed-spacer-sm;
-              padding: 0 0 0 0;
-              width: calc(100vw - #{$fixed-spacer-sm});
-            }
+        @include sm {
+          align-items: center;
+          justify-content: flex-start;
+          left: -$fixed-spacer-sm;
+          padding: 10px 20px;
+          width: 100vw;
+        }
 
-            @include md {
-              display: flex;
-             justify-content: space-between;
-              left: $fixed-spacer-sm;
-              padding: 0 0 0 16px;
-              width: calc(100vw - #{$fixed-spacer-sm});
-            }
+        @include md {
+          justify-content: flex-start;
+          left: -$fixed-spacer-sm;
+          padding: 10px 24px;
+          width: 100vw;
+          a {
+            font-size: 15px;
+          }
+        }
 
-             @include lg {
-              justify-content: space-between;
-              padding: 0 16px 0 8px;
-              width: calc(100vw - #{$fixed-spacer-lg});
-            }
-            max-height: 54px;
-            padding: 0 0 0 0;
-              right: 0;
-              top: 0;
-              transform: translateY(0%);
-            p {
-              color: #fff;
-              font-size: 15px;
-              font-weight: 600;
-              margin-right: 0;
+        @include lg {
+          align-items: center;
+          height: $totalNavHeight - $contactBannerHeight;
+          justify-content: flex-start;
+          left: 0;
+          padding: 20px 20px;
+          padding: 0 16px 0 16px;
+          width: calc(100vw - #{$fixed-spacer-lg});
+
+          a {
+            font-size: 17px;
+          }
+        }
+
+        div {
+          flex: 1;
+        }
+
+        .search-icon {
+          cursor: pointer;
+          display: block;
+          height: 44px;
+          opacity: 0.85;
+          transition: 0.25s all linear;
+          width: initial;
+          z-index: 2;
+          &:hover {
+            opacity: 1;
+            transition: 0.25s all linear;
+          }
+
+          @include lg {
+            display: block;
+          }
+
+          &.active {
+            cursor: text;
+          }
+        }
+      }
+
+      .button-group {
+        align-items: center;
+        display: flex;
+        height: 54px;
+        justify-content: flex-start;
+        width: 100%;
+        @include sm {
+          justify-content: flex-start;
+          margin-left: 4px;
+        }
+
+        @include md {
+          width: initial;
+        }
+
+        a {
+          align-items: center;
+          display: flex;
+          justify-content: flex-start;
+          margin-left: 16px;
+          margin-right: 16px;
+          .icon {
+            &.email {
+              left: -6px;
               position: relative;
               top: -1px;
             }
 
-            a {
-              color: $color-white;
-              // letter-spacing: 1px;
-              margin-left: 20px;
-              @include sm {
-                margin-left: 20px;
-                // letter-spacing: 1px;
-              }
-
-              @include md {
-                // letter-spacing: 1px;
-              }
-
-              &.tiny {
-                display: none;
-                margin-left: 20px;
-                @include sm {
-                  display: block;
-                  font-size: 11px;
-                }
-
-                @include md {
-                  display: block;
-                  font-size: 11px;
-                  margin-left: 8px;
-                }
-
-                @include md {
-                  font-size: 13px;
-                }
-              }
-            }
-
-            .location-wrapper {
-              align-items: center;
-              display: flex;
-              display: none;
-              flex: 1;
-              flex-direction: row;
-              justify-content: flex-start;
-              padding-left: 0;
-              padding-right: 16px;
-              .after-sticky {
-                a {
-                  border: 0;
-                }
-              }
-
-              a {
-                border-bottom: 1px solid rgba(255,255,255,0.5);
-                margin-left: 0;
-                &:hover {
-                  border-bottom: 1px solid rgba(255,255,255,1);
-                  transition: 0.25s all linear;
-                }
-              }
-
-                  @include sm {
-                    display: none;
-                  }
-
-                  @include md {
-                    display: none;
-                  }
-
-                  @include lg {
-                    display: none;
-                  }
-
-                  @include xl {
-                    display: block;
-                    opacity: 1;
-                    padding-left: 8px;
-                  }
-            }
-          }
-
-            &.nav-wrapper {
-                display: flex;
-                @include sm {
-                align-items: flex-end;
-                display: flex;
-                justify-content: space-between;
-                overflow: hidden;
-                padding: 20px 20px;
-                position: relative;
-                width: 100vw;
-                  a {
-                    font-size: 13px;
-                  }
-                }
-
-                @include sm {
-                  align-items: center;
-                  justify-content: flex-start;
-                  left: -$fixed-spacer-sm;
-                  padding: 10px 20px;
-                  width: 100vw;
-                }
-
-                @include md {
-                  justify-content: flex-start;
-                  left: -$fixed-spacer-sm;
-                  padding: 10px 24px;
-                   width: 100vw;
-                  a {
-                  font-size: 15px;
-                  }
-                }
-
-                @include lg {
-                  align-items: center;
-                  height: $totalNavHeight - $contactBannerHeight;
-                  justify-content: flex-start;
-                  left: 0;
-                  padding: 20px 20px;
-                  padding: 0 16px 0 16px;
-                  width: calc(100vw - #{$fixed-spacer-lg});
-
-                  a {
-                  font-size: 17px;
-                }
-                }
-
-              div {
-                flex: 1;
-              }
-
-              .search-icon {
-                cursor: pointer;
-                display: block;
-                height: 44px;
-                opacity: 0.85;
-                transition: 0.25s all linear;
-                width: initial;
-                z-index: 2;
-                &:hover {
-                  opacity: 1;
-                  transition: 0.25s all linear;
-                }
-
-                  @include lg {
-                    display: block;
-                  }
-
-                &.active {
-                  cursor: text;
-                }
-              }
-            }
-
-            .button-group {
-              align-items: center;
-              display: flex;
-              height: 54px;
-              justify-content: flex-start;
-              width: 100%;
-              @include sm {
-                justify-content: flex-start;
-                margin-left: 4px;
-              }
-
-               @include md {
-                width: initial;
-              }
-
-              a {
-                align-items: center;
-                display: flex;
-                justify-content: flex-start;
-                margin-left: 16px;
-                margin-right: 16px;
-                .icon {
-                  &.email {
-                    left: -6px;
-                    position: relative;
-                    top: -1px;
-                  }
-
-                  &.phone {
-                    left: -4px;
-                    position: relative;
-                    top: -1px;
-                  }
-                }
-              }
-            }
-      }
-
-      /* Site Search */
-        #searchInputWrapper {
-          align-items: center;
-          background-color: $color-blue-darker;
-          border-radius: 22px;
-          color: #fff;
-          display: flex;
-          height: 44px;
-          max-width: 44px;
-          overflow: hidden;
-          padding: 0;
-          transition: 0.2s all cubic-bezier(.17,.67,.46,1.1);
-          width: 0;
-            @include sm {
-              margin-left: -44px;
-            }
-
-          input {
-            background-color: $color-blue-darker;
-            border: 0;
-            color: #fff;
-            font-size: 17px;
-            left: -16px;
-            line-height: 40px;
-            max-width: 0;
-            opacity: 0;
-            outline: 0;
-            overflow: hidden;
-            transition: 0.2s all cubic-bezier(.17,.67,.46,1.1);
-            width: 0;
-          }
-
-          &.active {
-            margin-left: -44px;
-            max-width: 300px;
-            padding-left: 60px;
-            transition: 0.2s all cubic-bezier(.17,.67,.46,1.1);
-            width: 300px;
-            input {
-              color: #fff;
-              max-width: 100%;
-              opacity: 1;
+            &.phone {
+              left: -4px;
               position: relative;
-              transition: 0.2s all cubic-bezier(.17,.67,.46,1.1);
-              width: 100%;
-              &::placeholder {
-                color: rgba(255,255,255,0.8);
-                font-size: 17px;
-              }
+              top: -1px;
             }
           }
-        }
-
-      a.button.link {
-        color: rgba(255,255,255,0.9);
-        transition: 0.25s color ease;
-        &:hover {
-        color: rgba(255,255,255,1);
-        transition: 0.25s color ease;
         }
       }
     }
 
-    .button.tiny {
-      margin-right: 2px;
+    /* Site Search */
+    #searchInputWrapper {
+      align-items: center;
+      background-color: $color-blue-darker;
+      border-radius: 22px;
+      color: #fff;
+      display: flex;
+      height: 44px;
+      max-width: 44px;
+      overflow: hidden;
+      padding: 0;
+      transition: 0.2s all cubic-bezier(0.17, 0.67, 0.46, 1.1);
+      width: 0;
+      @include sm {
+        margin-left: -44px;
+      }
+
+      input {
+        background-color: $color-blue-darker;
+        border: 0;
+        color: #fff;
+        font-size: 17px;
+        left: -16px;
+        line-height: 40px;
+        max-width: 0;
+        opacity: 0;
+        outline: 0;
+        overflow: hidden;
+        transition: 0.2s all cubic-bezier(0.17, 0.67, 0.46, 1.1);
+        width: 0;
+      }
+
+      &.active {
+        margin-left: -44px;
+        max-width: 300px;
+        padding-left: 60px;
+        transition: 0.2s all cubic-bezier(0.17, 0.67, 0.46, 1.1);
+        width: 300px;
+        input {
+          color: #fff;
+          max-width: 100%;
+          opacity: 1;
+          position: relative;
+          transition: 0.2s all cubic-bezier(0.17, 0.67, 0.46, 1.1);
+          width: 100%;
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 17px;
+          }
+        }
+      }
     }
 
-    .hs-search-field__suggestions {
+    a.button.link {
+      color: rgba(255, 255, 255, 0.9);
+      transition: 0.25s color ease;
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+        transition: 0.25s color ease;
+      }
+    }
+  }
+
+  .button.tiny {
+    margin-right: 2px;
+  }
+
+  .hs-search-field__suggestions {
+    display: none;
+  }
+
+  .menu-icon {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+    &.hide-lg {
+      @include sm {
+        bottom: 16px;
+        display: none;
+        right: 16px;
+        transform: translate(0, 0);
+      }
+
+      @include md {
+      }
+
+      @include lg {
+        display: none;
+      }
+    }
+
+    .menu {
+      height: 42px;
+      position: absolute;
+      width: 42px;
+      z-index: 10;
+    }
+
+    .close {
+      height: 42px;
+      position: absolute;
+      width: 42px;
+    }
+
+    &.open {
+      .menu {
+        z-index: 9;
+      }
+
+      .close {
+        z-index: 10;
+      }
+    }
+  }
+
+  .mobile-contact-wrapper {
+    align-items: center;
+    background-color: $color-blue-dark;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0;
+    a {
+      color: #fff;
+      font-size: 17px;
+      // letter-spacing: 1px;
+      padding: 12px;
+      text-align: center;
+      width: 50%;
+      span {
+        border: 0;
+      }
+
+      + a {
+        background-color: $color-blue-dark;
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+      }
+
+      .icon {
+        &.email {
+          left: -4px;
+          position: relative;
+        }
+      }
+    }
+
+    @include sm {
       display: none;
     }
-
-    .menu-icon {
-        align-items: center;
-        cursor: pointer;
-        display: flex;
-        height: 50px;
-        justify-content: center;
-        width: 50px;
-        &.hide-lg {
-          @include sm {
-            bottom: 16px;
-            display: none;
-            right: 16px;
-            transform: translate(0, 0);
-          }
-
-          @include md {
-
-          }
-
-          @include lg {
-            display: none;
-          }
-        }
-
-        .menu {
-          height: 42px;
-          position: absolute;
-          width: 42px;
-          z-index: 10;
-        }
-
-        .close {
-          height: 42px;
-          position: absolute;
-          width: 42px;
-        }
-
-        &.open {
-          .menu {
-           z-index: 9;
-          }
-
-          .close {
-           z-index: 10;
-          }
-        }
-      }
-
-      .mobile-contact-wrapper {
-        align-items: center;
-        background-color: $color-blue-dark;
-        color: #fff;
-        display: block;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 0 0;
-        a {
-          color: #fff;
-          font-size: 17px;
-          // letter-spacing: 1px;
-          padding: 12px;
-          text-align: center;
-          width: 50%;
-          span {
-            border: 0;
-          }
-
-          + a {
-            background-color: $color-blue-dark;
-            border-left: 1px solid rgba(255,255,255,0.25);
-          }
-
-          .icon {
-                &.email {
-                  left: -4px;
-                  position: relative;
-                }
-              }
-        }
-
-        @include sm {
-          display: none;
-        }
-      }
+  }
 }
 
-
 .navigation-primary {
-
-
-
-    display: none;
-    @include sm {
+  display: none;
+  @include sm {
     display: block;
-    }
+  }
 
-    ul {
+  ul {
     align-items: center;
     column-gap: 16px;
     display: grid;
-    grid-template-columns: repeat(7,minmax(min-content,max-content));
+    grid-template-columns: repeat(7, minmax(min-content, max-content));
     justify-content: space-between;
     list-style: none;
     margin: 0;
@@ -596,8 +588,6 @@ $contactBannerHeight: 54px;
       }
     }
   }
-
-
 }
 
 .sticky {
@@ -608,7 +598,6 @@ $contactBannerHeight: 54px;
     }
   }
 }
-
 
 .mobile-dropdown {
   background: $color-blue-darker;
@@ -624,42 +613,36 @@ $contactBannerHeight: 54px;
     position: fixed;
     top: 111px;
     width: 100%;
-
   }
 
   @include sm {
     &.hide-lg {
-    display: none;
+      display: none;
     }
   }
 
   a {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     display: block;
     font-size: 22px;
     font-weight: 500;
     padding: 24px 45px;
     text-transform: uppercase;
-
   }
 
   li:first-child {
     a {
       padding-top: 50px;
     }
+  }
 
+  li:last-child {
+    a {
+      padding-bottom: 50px;
     }
-
-    li:last-child {
-      a {
-        padding-bottom: 50px;
-      }
-    }
-
-
+  }
 }
 
 body.open-menu {
   overflow: hidden;
 }
-

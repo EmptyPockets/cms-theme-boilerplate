@@ -1,196 +1,186 @@
 <!--
-  templateType: page
-  isAvailableForNewContent: true
-  label: Home
-  screenshotPath: ../images/template-previews/home.png
+templateType: page
+isAvailableForNewContent: true
+label: Home
+screenshotPath: ../images/template-previews/home.png
 -->
 {% extends "./layouts/base.html" %}
 
 {% block body %}
-<main class="body-container-wrapper">
+  <main class="body-container-wrapper">
 
-  <!-- Video Hero -->
-  {% dnd_area "hero_dnd_area" %}
-  {% dnd_section %}
-  {% dnd_module path='../hubspot-modules/video-hero' %}
-  {% end_dnd_module %}
-  {% end_dnd_section %}
-  {% end_dnd_area %}
-
-  <!-- Hero Banner-->
-  <article id="hero-banner">
-
-    {% dnd_area "banner_dnd_area" %}
-    {% dnd_section
-        max_width=1600,
-        vertical_alignment='MIDDLE',
-        background_color={
-        r: 32,
-        g: 36,
-        b: 78,
-        a: 1.0
-        },
-        padding={
-        'top': 40,
-        'bottom': 40,
-        'left': 64,
-        'right': 64
-        },
-      %}
-    {% dnd_module path='../hubspot-modules/banner-award', width=3 %}
-    {% end_dnd_module %}
-    {% dnd_module path='../hubspot-modules/banner-review', width=6, offset=3 %}
-    {% end_dnd_module %}
-    {% dnd_module path='../hubspot-modules/banner-settlement', width=3, offset=9 %}
-    {% end_dnd_module %}
-    {% end_dnd_section %}
+    <!-- Video Hero -->
+    {% dnd_area "hero_dnd_area" %}
+      {% dnd_section %}
+        {% dnd_module path='../hubspot-modules/video-hero' %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
     {% end_dnd_area %}
-  </article>
 
-  <!-- Three Steps -->
-  <article id="three-steps"
-    class="three-steps-wrapper">
-    {% dnd_area "steps_dnd_area_new" %}
-    {% dnd_section 
+    <!-- Hero Banner-->
+    <article id="hero-banner">
+      {% dnd_area "banner_dnd_area" %}
+        {% dnd_section
           max_width=1600,
+          vertical_alignment='MIDDLE',
+          background_color={
+            r: 32,
+            g: 36,
+            b: 78,
+            a: 1.0
+          },
           padding={
+            'top': 40,
+            'bottom': 40,
+            'left': 64,
+            'right': 64
+          },
+          %}
+            {% dnd_module path='../hubspot-modules/banner-award', 
+              width=3 %}
+            {% end_dnd_module %}
+            {% dnd_module path='../hubspot-modules/banner-review', 
+              width=6, 
+              offset=3 %}
+            {% end_dnd_module %}
+            {% dnd_module path='../hubspot-modules/banner-settlement', 
+              width=3, 
+              offset=9 %}
+            {% end_dnd_module %}
+        {% end_dnd_section %}
+      {% end_dnd_area %}
+    </article>
+
+    <!-- Three Steps -->
+    <article id="three-steps"
+      class="three-steps-wrapper">
+      {% dnd_area "steps_dnd_area_new" %}
+        {% dnd_section 
+        max_width=1600,
+        padding={
           'top': 100,
           'bottom': 0,
           'left': 56,
           'right': 56
-          },
-      %}
-
-    {% dnd_column %}
-
-    {% dnd_row padding={ 'bottom': 70 } %}
-    {% dnd_module path='../hubspot-modules/section-heading',
-              width=12,
-              section_title="Trial Lawyers For The Seriously Injured",
-              section_intro="You deserve to worry less about getting the financial help you need, and&nbsp;focus more on healing and getting your life back.",
-              is_centered="true" %}
-    {% end_dnd_module %}
-    {% end_dnd_row %}
-
-    {% dnd_row %}
-    {% dnd_module path='../hubspot-modules/simple-step',
-      width=4, 
-      step_title="1. Get Real Answers", 
-      step_body="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-magna aliquam erat volutpat. Ut wisi enim ad minim veniam",
-      icon={
-        "src" : "{{ get_asset_url('../../images/placeholder/step-1.svg') }}",
-        "alt" : "step one",
-        "width" : 200,
-        "height" : 200
-      }       
-    %}
-    {% end_dnd_module %}
-    {% dnd_module path='../hubspot-modules/simple-step',
-                    width=4, 
-                    offset=4, 
-                    step_title="2. Settle Your Case", 
-                    step_body="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                    nonummy nibh euismod tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam",
-                    icon={
-                    "src" : "{{ get_asset_url('../../images/placeholder/step-2.svg') }}",
-                    "alt" : "step one",
-                    "width" : 200,
-                    "height" : 200
-                    }
-                    %}
-    {% end_dnd_module %}
-    {% dnd_module path='../hubspot-modules/simple-step',
-                      width=4, 
-                      offset=8, 
-                      step_title="3. Rebuild Your Life", 
-                      step_body="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                      nonummy nibh euismod tincidunt ut laoreet dolore
-                      magna aliquam erat volutpat. Ut wisi enim ad minim veniam",
-                      icon={
-                      "src" : "{{ get_asset_url('../../images/placeholder/step-3.svg') }}",
-                      "alt" : "step one",
-                      "width" : 200,
-                      "height" : 200
-                      }
-                      %}
-    {% end_dnd_module %}
-    {% end_dnd_row %}
-
-
-    {% dnd_row %}
-
-    <!-- Simple Button -->
-    {% dnd_module width=4, path="@hubspot/horizontal_spacer" %}{% end_dnd_module %}
-    {% dnd_module path='../hubspot-modules/simple-button',
-              width=4, offset=4, horizontal_alignment='CENTER'
-            %}
-    {% end_dnd_module %}
-    {% dnd_module width=4, offset=8, path="@hubspot/horizontal_spacer" %}{% end_dnd_module %}
-    {% end_dnd_row %}
-
-
-    {% end_dnd_column %}
-    {% end_dnd_section %}
-    {% end_dnd_area %}
-  </article>
-
-  <!-- Content Slider -->
-  <article class="content-slider-wrapper">
-
-    {% dnd_area "content_slider_area" %}
-
-    {% dnd_section 
-        full_width="true",
-        background_color={
-        r: 32,
-        g: 36,
-        b: 78,
-        a: 1.0
         },
-        padding={
-        'top': 100,
-        'bottom': 100,
-        'left': 0,
-        'right': 0
-        },
-      %}
+        %}
+          {% dnd_column %}
+            {% dnd_row padding={ 'bottom': 70 } %}
+              {% dnd_module path='../hubspot-modules/section-heading',
+                width=12,
+                section_title="Trial Lawyers For The Seriously Injured",
+                section_intro="You deserve to worry less about getting the financial help you need, and&nbsp;focus more on healing and getting your life back.",
+                is_centered="true" %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+
+            {% dnd_row %}
+              {% dnd_module path='../hubspot-modules/simple-step',
+                width=4, 
+                step_title="1. Get Real Answers", 
+                step_body="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                magna aliquam erat volutpat. Ut wisi enim ad minim veniam",
+                icon={
+                  "src" : "{{ get_asset_url('../../images/placeholder/step-1.svg') }}",
+                  "alt" : "step one",
+                  "width" : 200,
+                  "height" : 200
+                }       
+              %}
+              {% end_dnd_module %}
+              {% dnd_module path='../hubspot-modules/simple-step',
+                width=4, 
+                offset=4, 
+                step_title="2. Settle Your Case", 
+                step_body="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                nonummy nibh euismod tincidunt ut laoreet dolore
+                magna aliquam erat volutpat. Ut wisi enim ad minim veniam",
+                icon={
+                  "src" : "{{ get_asset_url('../../images/placeholder/step-2.svg') }}",
+                  "alt" : "step one",
+                  "width" : 200,
+                  "height" : 200
+                }
+              %}
+              {% end_dnd_module %}
+              {% dnd_module path='../hubspot-modules/simple-step',
+                width=4, 
+                offset=8, 
+                step_title="3. Rebuild Your Life", 
+                step_body="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                nonummy nibh euismod tincidunt ut laoreet dolore
+                magna aliquam erat volutpat. Ut wisi enim ad minim veniam",
+                icon={
+                "src" : "{{ get_asset_url('../../images/placeholder/step-3.svg') }}",
+                "alt" : "step one",
+                "width" : 200,
+                "height" : 200
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
 
 
-    {% dnd_column %}
+            {% dnd_row %}
 
-    {% dnd_row %}
-    {% dnd_module path='../hubspot-modules/section-heading',
-                    width=12,
-                    section_title="Trial Lawyers For The Seriously Injured",
-                    section_intro="You deserve to worry less about getting the financial help you need, and&nbsp;focus more on healing and getting your life back.", 
-                    is_on_dark_background="true",
-                    is_centered="false" %}
-    {% end_dnd_module %}
-    {% end_dnd_row %}
+              <!-- Simple Button -->
+              {% dnd_module width=4, path="@hubspot/horizontal_spacer" %}
+              {% end_dnd_module %}
+              {% dnd_module path='../hubspot-modules/simple-button',
+                width=4, 
+                offset=4, 
+                horizontal_alignment='CENTER'
+              %}
+              {% end_dnd_module %}
+              {% dnd_module width=4, offset=8, path="@hubspot/horizontal_spacer" %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
 
-    {% dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_section %}
+      {% end_dnd_area %}
+    </article>
 
-    {% dnd_module path='../hubspot-modules/content-slider',
-                        width=12,
-                        %}
-    {% end_dnd_module %}
+    <!-- Content Slider -->
+    <article class="content-slider-wrapper">
 
-    {% end_dnd_row %}
+      {% dnd_area "content_slider_area" %}
 
-    {% end_dnd_column %}
-
-
-
-
-    {% end_dnd_section %}
-
-    {% end_dnd_area %}
-
-
-
-  </article>
-
-</main>
+        {% dnd_section 
+            full_width="true",
+            background_color={
+              r: 32,
+              g: 36,
+              b: 78,
+              a: 1.0
+            },
+            padding={
+              'top': 100,
+              'bottom': 100,
+              'left': 0,
+              'right': 0
+            },
+          %}
+            {% dnd_column %}
+              {% dnd_row %}
+                {% dnd_module path='../hubspot-modules/section-heading',
+                  width=12,
+                  section_title="Trial Lawyers For The Seriously Injured",
+                  section_intro="You deserve to worry less about getting the financial help you need, and&nbsp;focus more on healing and getting your life back.", 
+                  is_on_dark_background="true",
+                  is_centered="false" 
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+                {% dnd_module path='../hubspot-modules/content-slider',
+                  width=12,
+                %}
+                {% end_dnd_module %}
+              {% end_dnd_row %}
+            {% end_dnd_column %}
+        {% end_dnd_section %}
+      {% end_dnd_area %}
+    </article>
+  </main>
 {% endblock body %}

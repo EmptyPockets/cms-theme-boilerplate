@@ -56,7 +56,7 @@ const hubspotConfig = ({ portal, autoupload } = {}) => {
             {
               loader: 'sass-resources-loader',
               options: {
-                resources: ['./src/scss/settings/vars.scss', './src/scss/tools/mediaqueries.scss']
+                resources: ['./src/scss/settings/vars.scss', './src/scss/tools/media-queries.scss']
               },
             },
           ],

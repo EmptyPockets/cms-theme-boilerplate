@@ -1,36 +1,50 @@
-* {-webkit-font-smoothing: antialiased;}
+* {
+  -webkit-font-smoothing: antialiased;
+}
 
 $light: 200;
 $normal: 400;
 $semi-bold: 600;
 $bold: 700;
 
-html, body {
+html,
+body {
   font-family: 'Public Sans', sans-serif;
   font-weight: $normal;
 }
 
-h1,h2,h3,h4,h5,h6,a,p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
   margin: 0;
   line-height: 1.1;
   color: $color-blue-dark;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Playfair Display', serif;
   font-weight: $bold;
 }
 
-a, p {
+a,
+p {
   line-height: 1.15;
   font-weight: $normal;
 }
 
-
 a {
   text-decoration: none;
 }
-
 
 .section-heading {
   font-family: $play;

@@ -1,28 +1,16 @@
-
-
-
-@import "generic/normalize";
-@import "generic/reset";
-
-@import "generic/slider";
-
-@import "elements/headings";
-
-@import "objects/grid";
-@import "objects/modal";
-
-
-
-@import "components/header";
-@import "components/footer";
-@import "components/systems";
-@import "components/buttons";
-
-@import "modules/video-hero";
-@import "modules/search-input";
-@import "modules/hero-banner";
-@import "modules/section-heading";
-@import "modules/simple-step";
-@import "modules/content-slider";
-
-
+@import 'generic/normalize';
+@import 'generic/reset';
+@import 'generic/slider';
+@import 'elements/headings';
+@import 'objects/grid';
+@import 'objects/modal';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/systems';
+@import 'components/buttons';
+@import 'modules/video-hero';
+@import 'modules/search-input';
+@import 'modules/hero-banner';
+@import 'modules/section-heading';
+@import 'modules/simple-step';
+@import 'modules/content-slider';

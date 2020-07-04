@@ -1,5 +1,5 @@
 .video-wrapper {
-  background: url("https://f.hubspotusercontent20.net/hubfs/5191528/Crisp%20Videos/Homepage/v2/Hero%20-%2015s%20-%20No%20Sound%20-%204%20-%20firstframe.jpg")
+  background: url('https://f.hubspotusercontent20.net/hubfs/5191528/Crisp%20Videos/Homepage/v2/Hero%20-%2015s%20-%20No%20Sound%20-%204%20-%20firstframe.jpg')
     $color-blue-darker no-repeat center / cover;
   background-color: $color-blue-darker;
   position: relative;
@@ -28,7 +28,7 @@
       ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       border-radius: 5px;
       bottom: 0;
-      content: "";
+      content: '';
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
       left: 0;
       position: absolute;
@@ -99,7 +99,7 @@
     }
 
     p {
-      color: #fff;
+      color: #ffffff;
       display: block;
       font-size: 3vw;
       font-weight: 800;
