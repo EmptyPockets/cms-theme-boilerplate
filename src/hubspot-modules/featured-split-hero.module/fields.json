@@ -1,0 +1,64 @@
+[
+  {
+    "name": "section_title",
+    "label": "Section Title",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "We Believe In Holding Those Responsible For Your Loss Fully Accountable."
+  },
+  {
+    "id": "group",
+    "name": "group",
+    "label": "group",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 2,
+      "max": null,
+      "sorting_label_field": "group.heading",
+      "default": null
+    },
+    "children": [
+      {
+        "id": "group.heading",
+        "name": "heading",
+        "label": "heading",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "We Know The Enemy"
+      },
+      {
+        "id": "group.description",
+        "name": "description",
+        "label": "description",
+        "help_text": "What is this section about?",
+        "required": false,
+        "locked": false,
+        "allow_new_line": true,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam."
+      }
+    ],
+    "tab": "CONTENT",
+    "type": "group",
+    "default": [
+      {
+        "heading": "We Know The Enemy",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam."
+      },
+      {
+        "heading": "We Fight To Win",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam."
+      }
+    ]
+  }
+]

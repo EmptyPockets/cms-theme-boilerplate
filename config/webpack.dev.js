@@ -1,14 +1,25 @@
 const HubSpotAutoUploadPlugin = require('@hubspot/webpack-cms-plugins/HubSpotAutoUploadPlugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const webpack = require('webpack');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin
 
 const hubspotConfig = ({ portal, autoupload } = {}) => {
   return {
     entry: {
       'main': './src/index.js',
     },
+    // optimization: {
+    //   splitChunks: {
+    //     chunks: 'all'
+    //   }
+    // },
+    mode: "development",
     output: {
-      filename: 'js/[name].js',
+      filename: 'js/[name]-bundle.js',
     },
     module: {
       rules: [
@@ -31,23 +42,8 @@ const hubspotConfig = ({ portal, autoupload } = {}) => {
           test: /\.scss$/,
           use: [
             MiniCssExtractPlugin.loader,
-            {
-              loader: 'css-loader',
-              options: {
-                importLoaders: 1
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                ident: 'postcss',
-                plugins: (loader) => [
-                  require('postcss-import')({ root: loader.resourcePath }),
-                  require('postcss-preset-env')(),
-                  require('cssnano')()
-                ]
-              }
-            },
+            { loader: 'css-loader' },
+            { loader: 'postcss-loader' },
             {
               loader: 'sass-loader', options: {
                 implementation: require('node-sass'),
@@ -70,6 +66,7 @@ const hubspotConfig = ({ portal, autoupload } = {}) => {
         src: 'dist',
         dest: 'damore-cms-theme',
       }),
+      new OptimizeCssAssetsPlugin(),
       new MiniCssExtractPlugin({
         filename: 'css/[name].css'
       }),
@@ -80,6 +77,10 @@ const hubspotConfig = ({ portal, autoupload } = {}) => {
         { from: 'src/fields.json', to: 'fields.json' },
         { from: 'src/theme.json', to: 'theme.json' }
       ]),
+      new MinifyPlugin(),
+      new BundleAnalyzerPlugin({
+        generateStatsFile: true
+      })
     ],
   };
 };

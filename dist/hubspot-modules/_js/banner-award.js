@@ -1,4 +1,5 @@
 var Flickity = require('flickity-fade');
+require('flickity-imagesloaded');
 
 new Flickity('.award-slider', {
   fade: true,

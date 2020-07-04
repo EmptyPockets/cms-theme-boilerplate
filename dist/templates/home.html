@@ -162,7 +162,13 @@ screenshotPath: ../images/template-previews/home.png
             },
           %}
             {% dnd_column %}
-              {% dnd_row %}
+              {% dnd_row 
+              padding={
+                'top': 0,
+                'right': 100,
+                'bottom': 0,
+                'left': 100
+              } %}
                 {% dnd_module path='../hubspot-modules/section-heading',
                   width=12,
                   section_title="Trial Lawyers For The Seriously Injured",
@@ -182,5 +188,28 @@ screenshotPath: ../images/template-previews/home.png
         {% end_dnd_section %}
       {% end_dnd_area %}
     </article>
+    
+    <!-- Featured Split Hero -->
+    {% dnd_area 'home_split_hero' class="home-split-hero" %}
+    
+      {% dnd_section %}
+      
+      {% dnd_column %}
+    
+    {% dnd_row %}
+        {% dnd_module path='../hubspot-modules/featured-split-hero',
+          width=12
+        %}
+        {% end_dnd_module %}
+        
+        {% end_dnd_row %}
+        
+        {% end_dnd_column %}
+    
+      {% end_dnd_section %}
+    
+    {% end_dnd_area %}
+    
+    
   </main>
 {% endblock body %}

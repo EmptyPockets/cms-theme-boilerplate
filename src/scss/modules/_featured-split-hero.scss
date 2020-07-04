@@ -1,0 +1,65 @@
+.split-hero {
+    position: relative;
+}
+@media (min-width: 705px) {
+    .split-hero {
+        margin-bottom: 32px;
+    }
+}
+@media (min-width: 705px) {
+    .split-hero section {
+        padding-right: 55%;
+    }
+}
+.split-hero section.top {
+    background-color: #20264c;
+}
+.split-hero section.top h2 {
+    color: #fff;
+}
+.split-hero section .inner-content-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 48px;
+}
+@media (min-width: 705px) {
+    .split-hero section .inner-content-wrapper {
+        padding: 48px 0 48px 100px;
+        margin: 0 auto;
+
+        max-width: 1600px;
+    }
+}
+@include xl {
+    .split-hero section .inner-content-wrapper {
+        padding: 48px 0 48px 100px;
+        margin: 0 auto;
+        max-width: 700px;
+    }
+}
+.split-hero section .inner-content-wrapper h3 {
+    font-size: 35px;
+    margin-bottom: 24px;
+}
+.split-hero section .inner-content-wrapper p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+.split-hero section .inner-content-wrapper p + p {
+    margin-bottom: 48px;
+}
+.split-hero .hero-img {
+    width: 50%;
+    max-width: 600px;
+    height: 90%;
+    position: absolute;
+    left: 50%;
+    top: 32px;
+    display: none;
+}
+@media (min-width: 705px) {
+    .split-hero .hero-img {
+        display: block;
+    }
+}
