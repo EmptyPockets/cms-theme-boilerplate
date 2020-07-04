@@ -1,0 +1,158 @@
+/* Modules */
+.banner-award {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .banner-award > div {
+    width: 100%; }
+  .banner-award img {
+    width: auto;
+    min-height: 160px;
+   }
+
+    .banner-award {
+      text-align: center;
+      img {
+        margin-bottom: 16px;
+      }
+      h2 {
+        color: #fff;
+        font-size: 17px;
+        text-transform: uppercase;
+        font-family: $public;
+        font-weight: $semi-bold;
+        margin-bottom: 16px;
+        max-width: 245px;
+      }
+      h3 {
+        span {
+          font-size: 90%;
+          margin-right: 3px;
+        }
+      }
+    }
+
+.banner-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+
+  .review-stars-img {
+    margin-bottom: 16px;
+    width: 220px;
+    height: 38px;
+  }
+
+}
+  .banner-review > div {
+    width: 100%; }
+  .banner-review h2 {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #fff; }
+  .banner-review h3 {
+    font-size: 35px;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 24px;
+    color: #fff; }
+  .banner-review h4, .banner-review footer {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "Public Sans", sans-serif;
+    color: #fff; }
+  .banner-review blockquote {
+    margin-bottom: 0;
+    margin: 0;
+    padding: 0 56px; }
+  .banner-review h2, .banner-review h3 {
+    color: #20264c; }
+  @media (min-width: 705px) {
+    .banner-review {
+      margin: 0;
+      background-color: initial; }
+      .banner-review h2, .banner-review h3 {
+        color: #fff; } }
+  .banner-review .review-stars {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+    margin-bottom: 30px; }
+    @media (min-width: 705px) {
+      .banner-review .review-stars {
+        margin-top: 0; } }
+    .banner-review .review-stars .star {
+      margin: 0 2px;
+      width: 40px;
+      height: 40px; }
+  .banner-review .icon {
+    margin-bottom: 24px;
+    margin-top: 0px;
+    width: 60px;
+    height: 40px; }
+
+.group.slide {
+  width: 100%; }
+
+.banner-settlement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  img {
+    width: 60px;
+    height: 40px;
+  }
+
+}
+  .banner-settlement > div {
+    width: 100%; }
+  .banner-settlement h2 {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family: "Public Sans", sans-serif;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #fff; }
+  .banner-settlement h3 {
+    font-size: 3.5vw;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 24px;
+    color: #fff; }
+    @media (min-width: 1300px) {
+      .banner-settlement h3 {
+        font-size: 50px; } }
+  .banner-settlement h4, .banner-settlement footer {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "Public Sans", sans-serif;
+    color: #fff; }
+  .banner-settlement .settlement {
+    width: 100%;
+    text-align: center; }
+    .banner-settlement .settlement h2 {
+      margin-bottom: 8px; }
+    .banner-settlement .settlement h3 {
+      font-size: 48px;
+      margin-bottom: 16px; }
+  .banner-settlement .icon {
+    margin-bottom: 24px;
+    margin-top: 0px;
+    width: 60px;
+    height: 40px; }
+
+    .slide {
+  opacity: 0 !important;
+  transition: opacity 1s ease !important; }
+  .slide.is-selected {
+    opacity: 1 !important; }
+
+.flickity-viewport {
+  transition: height 0.2s; }

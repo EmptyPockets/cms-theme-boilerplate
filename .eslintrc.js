@@ -3,6 +3,10 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    es6: true
+  },
+  "parserOptions": {
+    "sourceType": "module"
   },
   rules: {
     'accessor-pairs': 'off',
@@ -95,7 +99,7 @@ module.exports = {
     'no-confusing-arrow': 'off',
     'no-confusing-arrow': 0,
     'no-console': 'error',
-    'no-const-assign': 'error',
+    'no-const-assign': 'off',
     'no-constant-condition': 'error',
     'no-continue': 'off',
     'no-control-regex': 'error',
