@@ -1,0 +1,37 @@
+<section class="practice-areas">
+ 
+  
+      {% set practiceAreas = ['one', 'two', 'three'] %}
+  
+      {% for area in practiceAreas %}
+  
+      <section class="practice-area {% cycle 'odd','even' %}">
+        <img src="http://placehold.it/600x400">
+        <div class="inner-content-wrapper">
+          <h3>
+            Sub-Topic | Sub-Topic
+          </h3>
+          <h4>Practice Area Lawyers</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, aspernatur doloribus molestiae quis ea
+            voluptatum. Officia cumque illum corrupti sequi neque, laudantium doloremque deserunt consectetur, debitis,
+            voluptate quas incidunt nulla.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus enim voluptatibus molestias facilis esse
+            ab! Eaque veniam alias quae voluptatum qui. Culpa porro omnis laudantium delectus voluptatem numquam. Soluta,
+            numquam.
+          </p>
+  
+          <a href="#"
+            class="button primary">
+            Meet The Team
+          </a>
+        </div>
+      </section>
+  
+      {% endfor %}
+  
+  
+</section>
+  
