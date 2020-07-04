@@ -34,6 +34,7 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.18.2",
     "resolve-url-loader": "^3.1.1",
+    "sass-lint-auto-fix": "^0.21.0",
     "sass-loader": "^8.0.0",
     "sass-resources-loader": "^2.0.3",
     "style-loader": "^1.0.0",
@@ -46,7 +47,8 @@
     "also": "webpack --watch --env.autoupload --mode production",
     "build": "rm -Rf dist && webpack --mode production",
     "deploy": "rm -Rf dist && webpack --mode production && hs upload dist damore-cms-theme",
-    "lint": "eslint src && prettier --list-different 'src/**/*.js' 'src/**/*.json'",
+    "lint": "sass-lint -v",
+    "lint:fix": "sass-lint-auto-fix",
     "prettier:write": "prettier --write 'src/**/*.js' 'src/**/*.json'",
     "scss": "node-sass -w src/scss -o src/css",
     "dev": "concurrently \"npm run scss\" \"npm run start\""

@@ -11,7 +11,7 @@ html, body {
 }
 
 h1,h2,h3,h4,h5,h6,a,p {
-  margin:0;
+  margin: 0;
   line-height: 1.1;
   color: $color-blue-dark;
 }
@@ -43,6 +43,7 @@ a {
     line-height: 65px;
   }
 }
+
 .section-description {
   font-family: $public;
   font-size: 18px;

@@ -1,0 +1,35 @@
+.simple-step-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 56px;
+    text-align: center;
+    @include sm {
+        margin-bottom: 0;
+        padding: 0 32px;
+    }
+
+    img {
+        height: 75px;
+        margin: 0 auto 24px auto;
+    }
+
+    h3 {
+        font-size: 35px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: $line-height-body;
+        
+    }
+}
+
+.three-steps-wrapper .row-number-4 {
+    padding: 0 0 50px 0;
+    @include sm {
+        padding: 60px 0 100px 0;
+    }
+}

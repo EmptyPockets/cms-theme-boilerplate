@@ -1,0 +1,46 @@
+.section-heading-wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 0 100px;
+  text-align: left;
+
+  h2 {
+    font-size: 50px;
+    margin: 0 0 16px 0;
+    max-width: 1000px;
+  }
+
+  p {
+    color: $color-blue-dark;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 600px;
+  }
+
+  &.is-on-dark-background {
+
+    h2 {
+      color: #fff;
+    }
+
+    p {
+      color: #fff;
+    }
+
+  }
+
+  &.is-centered {
+    margin: 0;
+    max-width: initial;
+    text-align: center;
+    h2 {
+      margin: 0 auto 16px auto;
+    }
+
+    p {
+      margin: 0 auto;
+      max-width: 600px;
+    }
+  }
+}

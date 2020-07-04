@@ -1,16 +1,16 @@
 /********* Colors **********/
-$color-black: #000000;
-$color-white: #ffffff;
+$color-black: #000;
+$color-white: #fff;
 $color-gray: #4d4d4d;
-$color-yellow: #F3B52C;
+$color-yellow: #f3b52c;
 $color: #009045;
-$color-blue-light: #0071BA;
+$color-blue-light: #0071ba;
 $color-blue: #1c2f5f;
 $color-blue-dark: #20264c;
-$color-blue-darker: #161B35;
-$color-red: #bd311a;
+$color-blue-darker: #161b35;
+$color-red: #b72f00;
 $color-red-light: #d33120;
-$color-red-dark: #9A2310;
+$color-red-dark: #9a2310;
 $color-background-light: #f3f4f8;
 
 /********* Page Sizing *******/
@@ -19,10 +19,9 @@ $padding-md: 24px;
 $padding-lg: 48px;
 $padding-xl: 64px;
 
+$line-height-body: 1.5;
+$line-height-headings: 1.1;
+
 /********* Typography **********/
-$public: 'Public Sans',
-sans-serif;
-$play: 'Playfair Display',
-serif;
-
-
+$public: "Public Sans", sans-serif;
+$play: "Playfair Display", serif;

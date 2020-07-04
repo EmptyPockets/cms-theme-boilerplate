@@ -1,0 +1,38 @@
+[
+  {
+    "name": "step_title",
+    "label": "Step Title",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": true,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Lorem Ipsum"
+  },
+  {
+    "name": "step_body",
+    "label": "Step Body",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": true,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse vero, recusandae inventore corrupti qui saepe laboriosam accusamus."
+  },
+  {
+    "name": "icon",
+    "label": "Step Icon",
+    "required": false,
+    "locked": false,
+    "responsive": true,
+    "resizable": true,
+    "type": "image",
+    "default": {
+      "size_type": "auto",
+      "src": "http://placehold.it/200x200",
+      "alt": null
+    }
+  }
+]

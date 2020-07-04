@@ -1,14 +1,14 @@
 .button {
   &.tiny {
-    font-size: 12px;
-    color: $color-white;
     background-color: $color-red;
-    text-transform: uppercase;
-    padding: 8px 10px 6.5px 10px;
-    line-height: 1;
     border-radius: 3px;
-    white-space: nowrap;
+    color: $color-white;
+    font-size: 12px;
+    line-height: 1;
+    padding: 8px 10px 6.5px 10px;
+    text-transform: uppercase;
     transition: 0.25s background-color ease;
+    white-space: nowrap;
     &:hover {
       background-color: $color-red-dark;
       transition: 0.25s background-color ease;
@@ -19,11 +19,12 @@
 .button {
   &.link {
     font-size: 12px;
-    text-transform: uppercase;
     font-weight: 700;
+    text-transform: uppercase;
     @include sm {
       font-size: 14px;
     }
+
     @include lg {
       font-size: 14px;
     }
@@ -32,20 +33,21 @@
 
 .button {
   display: inline-block;
-  width: initial;
   font-weight: $bold;
   transition: 0.25s all linear;
+  width: initial;
   &:hover {
     transition: 0.25s all linear;
   }
+
   &.primary {
     background-color: $color-red-dark;
     color: #fff;
-    padding: 19px 24px 18px 24px;
-    text-transform: uppercase;
+    cursor: pointer;
     font-size: 18px;
     line-height: 1;
-    cursor: pointer;
+    padding: 19px 56px 18px 56px;
+    text-transform: uppercase;
     &:hover {
       background-color: $color-red;
     }

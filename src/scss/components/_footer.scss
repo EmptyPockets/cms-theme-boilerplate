@@ -3,30 +3,32 @@
   background-color: $color-blue-darker;
 
   .content-wrapper {
-    max-width: 1600px;
-    margin: 0 auto;
+    align-items: center;
+    color: #fff;
     display: flex;
     flex-direction: column;
 
-    padding: 30px 60px;
-    color: #fff;
     justify-content: space-evenly;
-    align-items: center;
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 30px 60px;
 
     @include sm {
-      flex-direction: column;
       align-items: flex-start;
+      flex-direction: column;
       padding: 30px 30px;
     }
+
     @include md {
       flex-direction: column;
-      padding: 30px 60px 20px 60px;
       justify-content: flex-start;
+      padding: 30px 60px 20px 60px;
     }
+
     @include xl {
+      align-items: center;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
     }
 
 
@@ -35,21 +37,23 @@
   .brand-wrapper {
     text-align: center;
     @include sm {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
       text-align: left;
-      display: flex;
       width: 100%;
-      align-items: center;
-      justify-content: space-between;
     }
+
     @include md {
-      display: flex;
-      width: 100%;
       align-items: center;
+      display: flex;
       order: 1;
+      width: 100%;
     }
+
     @include xl {
-      width: initial;
       justify-content: space-between;
+      width: initial;
       width: 60%;
     }
   }
@@ -62,41 +66,46 @@
       order: 1;
       text-align: left;
     }
+
     @include md {
       order: 2;
     }
+
     @include xl {
-      order: 1;
       flex: initial;
+      order: 1;
       width: calc(100% / 3);
     }
 
     p {
-      margin-bottom: 4px;
-      font-weight: 400;
-      font-size: 15px;
       color: #fff;
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 4px;
     }
+
     ul {
       display: flex;
       justify-content: center;
       @include sm {
         justify-content: flex-start;
       }
+
       li {
         a {
           color: #fff;
+          font-size: 14px;
           font-weight: 400;
           margin-right: 25px;
           text-decoration: underline;
-          font-size: 14px;
           &:after {
             content: '|';
-            position: relative;
-            left: 12px;
             font-size: 14px;
+            left: 12px;
+            position: relative;
           }
         }
+
         + li {
           a {
             &:after {
@@ -112,44 +121,48 @@
   .logo {
     flex: 1;
     height: 81px;
-    order: 1;
     margin-bottom: 20px;
+    order: 1;
     @include sm {
-      order: 2;
-      margin-bottom: 20px;
-      width: initial;
       flex: initial;
+      margin-bottom: 20px;
+      order: 2;
+      width: initial;
     }
+
     @include md {
       flex: initial;
       order: 2;
 
     }
+
     @include xl {
+      margin-bottom: 20px;
       order: 2;
-      margin-bottom:20px;
     }
   }
 
 
   .social-media {
-    flex: 1;
     display: flex;
+    flex: 1;
     justify-content: flex-end;
-    order: 2;
     margin: 0 auto 30px auto;
+    order: 2;
     @include sm {
-      order: 3;
-      margin-bottom: 0;
       margin: 0 0 0 0;
+      margin-bottom: 0;
+      order: 3;
     }
+
     @include md {
       margin-bottom: 20px;
     }
+
     @include xl {
-      order: 3;
       flex: initial;
-      margin-bottom:0;
+      margin-bottom: 0;
+      order: 3;
     }
 
 
@@ -162,9 +175,10 @@
         }
       }
     }
+
     img {
-      width: 40px;
       height: 40px;
+      width: 40px;
     }
   }
 

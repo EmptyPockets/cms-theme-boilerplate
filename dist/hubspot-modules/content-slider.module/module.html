@@ -1,0 +1,34 @@
+<div class="content-slider">
+  <div class="content-wrapper slider">
+
+    <div class="gallery">
+      {% set cards = ['1', '2', '3', '4', '5', '6,', '7'] %}
+      {% for card in cards %}
+      <div class="card"
+        style="background: url('') gray no-repeat center / cover">
+        <div>
+          <h3>
+            What Does Your Family Need To Know About Your Medical Malpractice Case?
+          </h3>
+          <ul>
+            <li>
+              <a href="#">
+                Critical family history questions
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Facts and medical records
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a href="#">
+          See More
+        </a>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>

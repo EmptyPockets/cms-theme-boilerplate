@@ -1,0 +1,42 @@
+[
+  {
+    "name": "section_title",
+    "label": "Section Title",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Lorem Ipsum"
+  },
+  {
+    "name": "section_intro",
+    "label": "Section Intro",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse vero, recusandae inventore corrupti qui saepe laboriosam accusamus."
+  },
+  {
+    "name": "is_on_dark_background",
+    "label": "Is On Dark Background?",
+    "sortable": false,
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "default": false
+  },
+  {
+    "name": "is_centered",
+    "label": "Is Centered?",
+    "sortable": false,
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "default": true
+  }
+]
