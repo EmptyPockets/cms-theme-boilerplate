@@ -1,11 +1,108 @@
 [
   {
-    "default": "<h1>Hello, world!</h1>",
-    "label": "Rich text field",
-    "locked": false,
-    "name": "text",
+    "type": "group",
+    "name": "featured_review",
+    "label": "Featured Review",
+    "children": [
+      {
+        "name": "featured_title",
+        "label": "Featured Title",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "He was misdiagnosed"
+      },
+      {
+        "name": "featured_quote",
+        "label": "Featured Quote",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "The Best Lawyer"
+      },
+      {
+        "name": "featured_body_text",
+        "label": "Featured Body Text",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": true,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Working with Paul D’Amore has been a wonderful experience. He has been professional, compassionate and dedicated to my daughter’s case every step of the way. It has truly been a pleasure and a privilege working with Mr. D’Amore. I would definitely recommend him to anyone."
+      },
+      {
+        "name": "featured_author",
+        "label": "Featured Author",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Kieara D."
+      }
+    ]
+  },
+  {
+    "id": "client_reviews",
+    "name": "client_reviews",
+    "label": "Client Reviews",
     "required": false,
-    "type": "richtext",
-    "validation_regex": ""
+    "locked": false,
+    "occurrence": {
+      "min": 3,
+      "max": null,
+      "sorting_label_field": "client_reviews.title",
+      "default": null
+    },
+    "children": [
+      {
+        "id": "reviews.title",
+        "name": "title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "He was in a car accident"
+      },
+      {
+        "id": "reviews.quote",
+        "name": "quote",
+        "label": "Quote",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "They never backed down from corporate lawyers"
+      }
+    ],
+    "tab": "CONTENT",
+    "type": "group",
+    "default": [
+      {
+        "title": "He was in a car accident",
+        "quote": "They never backed down from corporate lawyers"
+      },
+      {
+        "title": "Another Review Title",
+        "quote": "Different text here for the quote"
+      },
+      {
+        "title": "Another Review Title",
+        "quote": "Different text here for the quote"
+      }
+    ]
   }
 ]

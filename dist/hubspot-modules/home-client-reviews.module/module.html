@@ -1,22 +1,22 @@
-{% set reviews = ['one', 'two', 'three'] %}
 {% set stars = get_asset_url('../../images/icons/five-stars.svg') %}
-
 <article class="client-reviews">
   <div class="content-wrapper">
     <section class="list">
       <h2 class="section-heading">Client Reviews</h2>
       <ul>
-        {% for review in reviews %}
+        {% for review in module.client_reviews %}
         <li>
           <div class="review">
             <img src="http://placehold.it/240x140">
             <div class="inner-content-wrapper">
-                <img class="review-stars-img"
-                    alt="Five Star Review"
-                    src="{{stars}}" />
-              <h3>HE WAS MISDIAGNOSED</h3>
+              <img
+                class="review-stars-img"
+                alt="Five Star Review"
+                src="{{stars}}"
+              >
+              <h3>{{ review.title }}</h3>
               <h4>
-                “The Best Lawyer”
+                “{{ review.quote }}”
               </h4>
             </div>
           </div>
@@ -26,29 +26,24 @@
     </section>
     <section class="featured">
       <div class="review">
-        <img src="http://placehold.it/600x230" />
+        <img src="http://placehold.it/600x230">
         <div class="inner-featured-review">
-            <img class="review-stars-img"
-                alt="Five Star Review"
-                src="{{ stars }}" />
-          <h3>HE WAS MISDIAGNOSED</h3>
+          <img
+            class="review-stars-img"
+            alt="Five Star Review"
+            src="{{ stars }}"
+          >
+          <h3>{{ module.featured_review.featured_title }}</h3>
           <h4>
-            “The Best Lawyer”
+            “{{ module.featured_review.featured_title }}”
           </h4>
           <p>
-            "Working with Paul D’Amore has been a wonderful experience. He has been professional, compassionate and
-            dedicated to my
-            daughter’s case every step of the way. It has truly been a pleasure and a privilege working with Mr.
-            D’Amore.
-            I would
-            definitely recommend him to anyone."
+            {{ module.featured_review.featured_body_text }}
           </p>
-          <p>By: Kieara D.</p>
-          <a href="#"
-            class="button primary">See More Reviews</a>
+          <p>By: {{ module.featured_review.featured_author }}</p>
+          <a href="#" class="button primary">See More Reviews</a>
         </div>
       </div>
-
     </section>
   </div>
 </article>
