@@ -1,11 +1,100 @@
 [
   {
-    "default": "<h1>Hello, world!</h1>",
-    "label": "Rich text field",
-    "locked": false,
-    "name": "text",
+    "id": "practice_areas",
+    "name": "practice_areas",
+    "label": "Practice Area Lawyers",
     "required": false,
-    "type": "richtext",
-    "validation_regex": ""
+    "locked": false,
+    "occurrence": {
+      "min": 3,
+      "max": null,
+      "sorting_label_field": "areas.title",
+      "default": null
+    },
+    "children": [
+      {
+        "id": "areas.title",
+        "name": "title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": true,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Medical Malpractice lawyers"
+      },
+      {
+        "id": "areas.sub_topic",
+        "name": "sub_topic",
+        "label": "Sub Topics",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "SUB-TOPIC | SUB-TOPIC"
+      },
+      {
+        "id": "areas.body_text",
+        "name": "body_text",
+        "label": "Body Text",
+        "locked": false,
+        "required": false,
+        "type": "richtext",
+        "validation_regex": "",
+        "default": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, aspernatur doloribus molestiae quis ea voluptatum. Officia cumque illum corrupti sequi neque, laudantium doloremque deserunt consectetur, debitis, voluptate quas incidunt nulla.</p>"
+      },
+      {
+        "id": "areas.button_text",
+        "name": "button_text",
+        "label": "Button Text",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "CTA BUTTON HERE"
+      },
+      {
+        "id": "areas.button_url",
+        "name": "button_url",
+        "label": "Button URL",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "https://google.com"
+      }
+    ],
+    "tab": "CONTENT",
+    "type": "group",
+    "default": [
+      {
+        "title": "Medical Malpractice Lawyers",
+        "sub_topic": "Medical Malpractice",
+        "body_text": "<p>lorem ipsum</p>",
+        "button_text": "Lawyers and Guides",
+        "button_url": "https://google.com"
+      },
+      {
+        "title": "Medical Malpractice Lawyers",
+        "sub_topic": "Medical Malpractice",
+        "body_text": "<p>lorem ipsum</p>",
+        "button_text": "Lawyers and Guides",
+        "button_url": "https://google.com"
+      },
+      {
+        "title": "Medical Malpractice Lawyers",
+        "sub_topic": "Medical Malpractice",
+        "body_text": "<p>lorem ipsum</p>",
+        "button_text": "Lawyers and Guides",
+        "button_url": "https://google.com"
+      }
+    ]
   }
 ]
