@@ -1,34 +1,27 @@
 <div class="content-slider">
   <div class="content-wrapper slider">
-
     <div class="gallery">
-      {% set cards = ['1', '2', '3', '4', '5', '6,', '7'] %}
-      {% for card in cards %}
-      <div class="card"
-        style="background: url('') gray no-repeat center / cover">
+      {% for slide in module.sliders %}
+      <div class="card" style="background: url('') gray no-repeat center / cover">
         <div>
           <h3>
-            What Does Your Family Need To Know About Your Medical Malpractice Case?
+            {{ slide.title }}
           </h3>
           <ul>
+            {% for link in slide.links %}
             <li>
-              <a href="#">
-                Critical family history questions
+              <a href="{{ link.url }}">
+                {{ link.title }}
               </a>
             </li>
-            <li>
-              <a href="#">
-                Facts and medical records
-              </a>
-            </li>
+            {% endfor %}
           </ul>
         </div>
-        <a href="#">
+        <a href="{{ slide.url }}">
           See More
         </a>
       </div>
       {% endfor %}
-
     </div>
   </div>
 </div>

@@ -1,11 +1,126 @@
 [
   {
-    "default": "<h1>Hello, world!</h1>",
-    "label": "Rich text field",
-    "locked": false,
-    "name": "text",
+    "name": "section_title",
+    "label": "Section Title",
     "required": false,
-    "type": "richtext",
-    "validation_regex": ""
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": true,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Trial Lawyers For The Seriously Injured"
+  },
+  {
+    "name": "section_intro",
+    "label": "Section Intro",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": true,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "You deserve to worry less about getting the financial help you need, and focus more on healing and getting your life back."
+  },
+  {
+    "id": "slides",
+    "name": "slides",
+    "label": "Slides",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 5,
+      "max": null,
+      "sorting_label_field": "slides.title",
+      "default": null
+    },
+    "children": [
+      {
+        "id": "slides.title",
+        "name": "title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "What Does Your Family Need To Know About Your Medical Malpractice Case?"
+      },
+      {
+        "id": "slides.url",
+        "name": "url",
+        "label": "URL",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "https://google.com"
+      },
+      {
+        "id": "links",
+        "name": "links",
+        "label": "Links",
+        "required": false,
+        "locked": false,
+        "occurrence": {
+          "min": 5,
+          "max": null,
+          "sorting_label_field": "links.title",
+          "default": null
+        },
+        "children": [
+          {
+            "id": "links.title",
+            "name": "title",
+            "label": "Title",
+            "required": false,
+            "locked": false,
+            "validation_regex": "",
+            "allow_new_line": false,
+            "show_emoji_picker": false,
+            "type": "text",
+            "default": "Link One"
+          },
+          {
+            "id": "links.url",
+            "name": "url",
+            "label": "URL",
+            "required": false,
+            "locked": false,
+            "validation_regex": "",
+            "allow_new_line": false,
+            "show_emoji_picker": false,
+            "type": "text",
+            "default": "https://google.com"
+          }
+        ],
+        "tab": "CONTENT",
+        "type": "group",
+        "default": [
+          {
+            "title": "Link One",
+            "url": "https://google.com"
+          },
+          {
+            "title": "Linke Two",
+            "url": "https://google.com"
+          }
+        ]
+      }
+    ],
+    "tab": "CONTENT",
+    "type": "group",
+    "default": [
+      {
+        "title": "What Does Your Family Need To Know About Your Medical Malpractice Case?",
+        "url": "https://google.com"
+      },
+      {
+        "title": "What Does Your Family Need To Know About Your Medical Malpractice Case?",
+        "url": "https://google.com"
+      }
+    ]
   }
 ]
