@@ -46,13 +46,7 @@ import LazyLoad from "vanilla-lazyload";
    Sticky Clone
   *******************************/
 
-  let clone = mainStickyNav.cloneNode(true);
-  clone.id = 'cloneStickyNav';
-  clone.style.position = "fixed";
-  clone.style.top = "-54px";
-  clone.style.left = "0px";
-  clone.style.right = "0px";
-  mainStickyNav.after(clone);
+  let clone = document.querySelector('#stickyGlobalHeader');
 
   window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;

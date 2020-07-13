@@ -646,3 +646,49 @@ $contactBannerHeight: 54px;
 body.open-menu {
   overflow: hidden;
 }
+
+/* Sticky Global Header */
+.global-header {
+  &#stickyGlobalHeader {
+    position: fixed;
+    top: -54px;
+    left: 0;
+    right: 0;
+    background: none;
+    .header-wrapper {
+      height: initial;
+      background: none;
+      width: 100%;
+    }
+    .nav-content-wrapper {
+      width: 100%;
+      div.contact-banner {
+        width: 100%;
+        border: 0;
+        border-bottom-left-radius: 0;
+        .location-wrapper {
+          a {
+            border-bottom: 0;
+          }
+        }
+      }
+      .navigation-primary ul {
+        justify-content: space-evenly;
+      }
+    }
+    &.sticky {
+      border-radius: 0;
+      height: 54px;
+      opacity: 1;
+      position: fixed;
+      transform: translateY(100%);
+      transition: 0.25s all linear;
+      width: 100%;
+      z-index: 3;
+      div.contact-banner {
+        width: 100%;
+        border: 0;
+      }
+    }
+  }
+}
