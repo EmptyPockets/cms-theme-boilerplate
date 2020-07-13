@@ -1,11 +1,67 @@
 [
   {
-    "default": "<h1>Hello, world!</h1>",
-    "label": "Rich text field",
-    "locked": false,
-    "name": "text",
+    "id": "settlements",
+    "name": "settlements",
+    "label": "Settlements",
     "required": false,
-    "type": "richtext",
-    "validation_regex": ""
+    "locked": false,
+    "occurrence": {
+      "min": 5,
+      "max": null,
+      "sorting_label_field": "settlements.practice_area",
+      "default": null
+    },
+    "children": [
+      {
+        "id": "settlements.practice_area",
+        "name": "practice_area",
+        "label": "Practice Area",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Medical Malpractice"
+      },
+      {
+        "id": "settlements.amount",
+        "name": "amount",
+        "label": "Amount",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "$4,000,000"
+      },
+      {
+        "id": "settlements.location",
+        "name": "location",
+        "label": "Location",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Baltimore, MD"
+      }
+    ],
+    "tab": "CONTENT",
+    "type": "group",
+    "default": [
+      {
+        "practice_area": "Medical Malpractice",
+        "amount": "$4,000,000",
+        "location": "Baltimore, MD"
+      },
+      {
+        "practice_area": "Medical Malpractice",
+        "amount": "$6,000,000",
+        "location": "Baltimore, MD"
+      }
+    ]
   }
 ]

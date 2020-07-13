@@ -1,21 +1,15 @@
 <!-- Awards -->
 <div class="award banner-award">
   <div class="award-slider">
+    {% for award in module.awards %}
     <div class="slide">
       <img
         class="award"
-        alt="AVVO award"
-        data-flickity-lazyload="https://f.hubspotusercontent20.net/hubfs/5191528/Awards/AVVO-Superb%20Badge.png"
+        alt="{{ award.image.alt }}"
+        data-flickity-lazyload="{{ award.image.src }}"
       >
-      <h2>Award Winning Personal Injury Lawyers</h2>
+      <h2>{{ module.section_title }}</h2>
     </div>
-    <div class="slide">
-      <img
-        class="award"
-        alt="Other"
-        data-flickity-lazyload="https://f.hubspotusercontent20.net/hubfs/5191528/Awards/Americas%20Top%20100%20Badge.png"
-      >
-      <h2>Award Winning Personal Injury Lawyers</h2>
-    </div>
+    {% endfor %}
   </div>
 </div>
