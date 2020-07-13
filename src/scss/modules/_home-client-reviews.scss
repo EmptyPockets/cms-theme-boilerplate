@@ -1,0 +1,136 @@
+.home-client-reviews {
+    background-color: #eaebef;
+}
+
+article.client-reviews {
+    margin-bottom: 32px;
+}
+
+article.client-reviews .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1260px;
+}
+
+article.client-reviews .content-wrapper .list {
+    order: 2;
+}
+
+article.client-reviews .content-wrapper .featured {
+    order: 1;
+}
+
+@media (min-width: 705px) {
+    article.client-reviews .content-wrapper {
+        flex-direction: row;
+    }
+
+    article.client-reviews .content-wrapper .list {
+        order: 1;
+    }
+
+    article.client-reviews .content-wrapper .featured {
+        order: 2;
+    }
+}
+
+article.client-reviews .content-wrapper section {
+    background-color: #fff;
+    flex: 1.1;
+    padding: 48px;
+}
+
+article.client-reviews .content-wrapper section h2 {
+    color: #20264c;
+    margin-bottom: 32px;
+}
+
+article.client-reviews .content-wrapper section + section {
+    background-color: #20264c;
+    flex: 1;
+    padding: 0;
+}
+
+article.client-reviews .content-wrapper section + section img {
+    max-width: 100%;
+}
+
+article.client-reviews ul .review {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+article.client-reviews ul .review > img {
+    margin-right: 24px;
+}
+
+article.client-reviews ul .review h3,
+article.client-reviews ul .review h4 {
+    color: #20264c;
+}
+
+article.client-reviews ul .review h4 {
+    margin-bottom: 0;
+}
+
+@media (min-width: 705px) {
+    article.client-reviews ul .review {
+        flex-direction: row;
+    }
+}
+
+article.client-reviews ul .review .review-stars {
+    margin-top: 24px;
+}
+
+@media (min-width: 705px) {
+    article.client-reviews ul .review .review-stars {
+        margin-top: 0;
+    }
+}
+
+article.client-reviews .review .review-stars {
+    margin-bottom: 16px;
+}
+
+article.client-reviews .review .review-stars img {
+    margin-right: 2px;
+}
+
+article.client-reviews .review h3,
+article.client-reviews .review h4,
+article.client-reviews .review p {
+    color: #fff;
+}
+
+article.client-reviews .review h3 {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 17px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+article.client-reviews .review h4 {
+    font-size: 35px;
+    margin-bottom: 16px;
+}
+
+article.client-reviews .review .inner-featured-review {
+    padding: 32px;
+}
+
+article.client-reviews .review .inner-featured-review p {
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+article.client-reviews .review-stars {
+    display: flex;
+}
+
+article.client-reviews .review-stars-img {
+    margin-bottom: 8px;
+}

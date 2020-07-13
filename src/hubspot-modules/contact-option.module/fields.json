@@ -1,0 +1,60 @@
+[
+  {
+    "name": "icon",
+    "label": "Icon",
+    "required": false,
+    "locked": false,
+    "responsive": true,
+    "resizable": true,
+    "type": "image",
+    "default": {
+      "size_type": "auto",
+      "src": "http://placehold.it/200x200",
+      "alt": "icon"
+    }
+  },
+  {
+    "name": "title",
+    "label": "Title",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Call Us"
+  },
+  {
+    "name": "description",
+    "label": "Description",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Talk to an attorney about your case or schedule an in-person meeting."
+  },
+  {
+    "name": "button_text",
+    "label": "Button Text",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "CTA BUTTON HERE"
+  },
+  {
+    "name": "button_url",
+    "label": "Button URL",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "https://google.com"
+  }
+]

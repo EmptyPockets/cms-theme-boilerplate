@@ -1,4 +1,11 @@
+import LazyLoad from "vanilla-lazyload";
+
 (function () {
+
+  /* Lazy Load Images */
+  var lazyLoadInstance = new LazyLoad({
+    // Your custom settings go here
+  });
 
   /******************************
   Search Open / Close / Trigger
@@ -71,6 +78,34 @@
     mobileTrigger.classList.toggle('open');
     document.body.classList.toggle('open-menu');
   }
+
+
+  /* Delay Contact Form Load */
+  function windowScroll(event) {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > 0) {
+      window.hbspt.forms.create({
+        portalId: "8020292",
+        formId: "def10fb4-61ea-4f2e-894a-3e5f76d6b97f",
+        target: '.form-holder'
+      });
+      // Remove it:
+      window.removeEventListener('scroll', windowScroll, false);
+    }
+  }
+
+  document.addEventListener('readystatechange', event => {
+    // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
+    if (event.target.readyState === "complete") {
+      var hsform = document.createElement('script');
+      hsform.src = '//js.hsforms.net/forms/v2.js';
+      hsform.async = true;
+      document.head.appendChild(hsform);
+      // Add the listener:
+      window.addEventListener('scroll', windowScroll, false);
+    }
+  });
+
 
 })();
 

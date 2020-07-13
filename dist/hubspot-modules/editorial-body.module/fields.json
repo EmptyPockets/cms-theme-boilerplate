@@ -1,0 +1,11 @@
+[
+  {
+    "default": "<p>Placeholder text. Images and links can go here too.</p>",
+    "label": "Rich text field",
+    "locked": false,
+    "name": "editorial_body",
+    "required": false,
+    "type": "richtext",
+    "validation_regex": ""
+  }
+]

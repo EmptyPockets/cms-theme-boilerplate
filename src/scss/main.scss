@@ -1,13 +1,18 @@
+/* Generic */
 @import 'generic/normalize';
 @import 'generic/reset';
 @import 'generic/slider';
+/* Elements */
 @import 'elements/headings';
+/* Objects */
 @import 'objects/grid';
 @import 'objects/modal';
+/* Components */
 @import 'components/header';
 @import 'components/footer';
 @import 'components/systems';
 @import 'components/buttons';
+/* Modules */
 @import 'modules/video-hero';
 @import 'modules/search-input';
 @import 'modules/hero-banner';
@@ -16,3 +21,8 @@
 @import 'modules/content-slider';
 @import 'modules/featured-split-hero';
 @import 'modules/home-practice-area';
+@import 'modules/editorial-body';
+@import 'modules/home-client-reviews';
+@import 'modules/faq';
+@import 'modules/settlements-card';
+@import 'modules/contact-option';

@@ -1,0 +1,64 @@
+[
+  {
+    "name": "title",
+    "label": "Title",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Pain, Injury & Treatment Questions"
+  },
+  {
+    "name": "show_title",
+    "label": "Show title?",
+    "sortable": false,
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "default": false
+  },
+  {
+    "name": "question",
+    "label": "Question",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Do I have a Medical Malpractice case?"
+  },
+  {
+    "name": "short_answer",
+    "label": "Short Answer",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": true,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam."
+  },
+  {
+    "name": "full_answer",
+    "label": "Full Answer",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": true,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam."
+  },
+  {
+    "name": "is_open",
+    "label": "Is the question open by default?",
+    "sortable": false,
+    "required": false,
+    "locked": false,
+    "type": "boolean",
+    "default": false
+  }
+]

@@ -2,10 +2,82 @@
   templateType: global_partial
   label: Footer
 -->
+<article class="global-contact">
+  <section class="form">
+    <div class="form-wrapper">
+      <h2>{% module "text" path="@hubspot/text" value="Contact Us" %}</h2>
+      <p>
+        {% module "text" path="@hubspot/text" value=" If you or a loved one has been injured by someone 
+     else’s negligence, contact us immediately." no_wrapper="true" %}
+      </p>
+      <div class="form-holder"></div>
+    </div>
+  </section>
+  <section class="locations">
+    <div class="location baltimore lazy" data-bg="https://cdn2.hubspot.net/hubfs/5191528/Images/Footer/Baltimore-4c-Blue.jpg">
+      <div>
+        <h3>
+          <a href="https://damoreinjurylaw.com/contact/">Baltimore Office</a>
+        </h3>
+        <p>
+          200 E Pratt Street, Suite 4100
+          <br>
+          Baltimore, MD 21202
+        </p>
+        <p>
+          <strong>Local:</strong>
+          <a href="tel:14103242000">410-324-2000</a>
+        </p>
+        <p>
+          <strong>Fax:</strong>
+          443-782-0700
+        </p>
+      </div>
+    </div>
+    <div class="location annapolis lazy" data-bg="https://cdn2.hubspot.net/hubfs/5191528/Images/Footer/Annapolis-4c-Blue.jpg">
+      <div>
+        <h3>
+          <a href="https://damoreinjurylaw.com/contact/">Annapolis Office</a>
+        </h3>
+        <p>
+          888 Bestgate Road, Suite 205
+          <br>
+          Annapolis, MD 21401
+        </p>
+        <p>
+          <strong>Local:</strong>
+          <a href="tel:14103242000">410-324-2000</a>
+        </p>
+        <p>
+          <strong>Fax:</strong>
+          443-782-0700
+        </p>
+      </div>
+    </div>
+    <div class="location washington lazy" data-bg="https://cdn2.hubspot.net/hubfs/5191528/Images/Footer/Washington-4c-Blue.jpg">
+      <div>
+        <h3>
+          <a href="https://damoreinjurylaw.com/contact/">Washington, D.C. Office</a>
+        </h3>
+        <p>
+          1200 G Street NW, 8th Floor
+          <br>
+          Washington, D.C. 20005
+        </p>
+        <p>
+          <strong>Local:</strong>
+          <a href="tel:12027809000">202-780-9000</a>
+        </p>
+        <p>
+          <strong>Fax:</strong>
+          443-782-0700
+        </p>
+      </div>
+    </div>
+  </section>
+</article>
 <footer class="global-footer">
-
   <div class="content-wrapper">
-
     <!-- Copyright Group -->
     <div class="copyright-group">
       <p>© 2020 D’Amore Personal Injury Law, LLC.</p>
@@ -22,55 +94,41 @@
         </li>
       </ul>
     </div>
-
     <div class="brand-wrapper">
-
       <!-- Logo -->
-      <img class="logo"
+      <img
+        class="logo"
         src="{{ get_asset_url('../../images/brand/damore-logo-white.svg') }}"
-        alt="D'Amore Personal Injury Law, LLC" />
-
+        alt="D'Amore Personal Injury Law, LLC"
+      >
       <!-- Social Icons -->
       <ul class="social-media">
         <li>
-          <a target="_blank"
-            href="https://www.youtube.com/channel/UCa46aXJW-kuJKfWFYWuyQWg">
-            <img alt="Youtube"
-              src="https://www.damoreinjurylaw.com/hubfs/Icons/YouTube%20Icon.svg">
+          <a target="_blank" href="https://www.youtube.com/channel/UCa46aXJW-kuJKfWFYWuyQWg">
+            <img alt="Youtube" src="https://www.damoreinjurylaw.com/hubfs/Icons/YouTube%20Icon.svg">
           </a>
         </li>
         <li>
-          <a target="_blank"
-            href="https://www.linkedin.com/company/10855051">
-            <img alt="Linkedin"
-              src="https://www.damoreinjurylaw.com/hubfs/Icons/LinkedIn%20Icon.svg">
+          <a target="_blank" href="https://www.linkedin.com/company/10855051">
+            <img alt="Linkedin" src="https://www.damoreinjurylaw.com/hubfs/Icons/LinkedIn%20Icon.svg">
           </a>
         </li>
         <li>
-          <a target="_blank"
-            href="https://www.facebook.com/damoreinjurylaw/">
-            <img alt="Facebook"
-              src="https://www.damoreinjurylaw.com/hubfs/Icons/Facebook%20Icon.svg">
+          <a target="_blank" href="https://www.facebook.com/damoreinjurylaw/">
+            <img alt="Facebook" src="https://www.damoreinjurylaw.com/hubfs/Icons/Facebook%20Icon.svg">
           </a>
         </li>
         <li>
-          <a target="_blank"
-            href="https://twitter.com/DAmoreInjuryLaw">
-            <img alt="Twitter"
-              src="https://www.damoreinjurylaw.com/hubfs/Icons/Twitter%20Icon.svg">
+          <a target="_blank" href="https://twitter.com/DAmoreInjuryLaw">
+            <img alt="Twitter" src="https://www.damoreinjurylaw.com/hubfs/Icons/Twitter%20Icon.svg">
           </a>
         </li>
         <li>
-          <a target="_blank"
-            href="https://www.instagram.com/damoreinjurylaw/">
-            <img alt="Instagram"
-              src="https://www.damoreinjurylaw.com/hubfs/Icons/Instagram%20Icon-2.svg">
+          <a target="_blank" href="https://www.instagram.com/damoreinjurylaw/">
+            <img alt="Instagram" src="https://www.damoreinjurylaw.com/hubfs/Icons/Instagram%20Icon-2.svg">
           </a>
         </li>
       </ul>
-
     </div>
-
   </div>
-
 </footer>

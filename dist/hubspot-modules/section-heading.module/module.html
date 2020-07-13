@@ -3,4 +3,7 @@
   {% if module.is_centered %}is-centered{% endif %}">
   <h2>{{ module.section_title }}</h2>
   <p>{{ module.section_intro }}</p>
+  <a class="{% if module.hide_button %}hide{% endif %} button primary" 
+    href="{{ module.button_url }}"
+    style="margin-top:16px">{{ module.button_text }}</a>
 </header>

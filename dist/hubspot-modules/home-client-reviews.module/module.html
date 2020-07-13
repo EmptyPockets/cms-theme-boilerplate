@@ -1,0 +1,54 @@
+{% set reviews = ['one', 'two', 'three'] %}
+{% set stars = get_asset_url('../../images/icons/five-stars.svg') %}
+
+<article class="client-reviews">
+  <div class="content-wrapper">
+    <section class="list">
+      <h2 class="section-heading">Client Reviews</h2>
+      <ul>
+        {% for review in reviews %}
+        <li>
+          <div class="review">
+            <img src="http://placehold.it/240x140">
+            <div class="inner-content-wrapper">
+                <img class="review-stars-img"
+                    alt="Five Star Review"
+                    src="{{stars}}" />
+              <h3>HE WAS MISDIAGNOSED</h3>
+              <h4>
+                “The Best Lawyer”
+              </h4>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section class="featured">
+      <div class="review">
+        <img src="http://placehold.it/600x230" />
+        <div class="inner-featured-review">
+            <img class="review-stars-img"
+                alt="Five Star Review"
+                src="{{ stars }}" />
+          <h3>HE WAS MISDIAGNOSED</h3>
+          <h4>
+            “The Best Lawyer”
+          </h4>
+          <p>
+            "Working with Paul D’Amore has been a wonderful experience. He has been professional, compassionate and
+            dedicated to my
+            daughter’s case every step of the way. It has truly been a pleasure and a privilege working with Mr.
+            D’Amore.
+            I would
+            definitely recommend him to anyone."
+          </p>
+          <p>By: Kieara D.</p>
+          <a href="#"
+            class="button primary">See More Reviews</a>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</article>

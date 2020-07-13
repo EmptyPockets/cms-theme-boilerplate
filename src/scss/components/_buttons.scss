@@ -52,4 +52,7 @@
       background-color: $color-red;
     }
   }
+  &.hide {
+    display: none;
+  }
 }
