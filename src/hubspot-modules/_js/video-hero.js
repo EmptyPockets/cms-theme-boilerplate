@@ -47,11 +47,23 @@
   }
 
   if (window.innerWidth > 700) {
-    let video = document.getElementById('videoItem');
-    let mp4Source = document.createElement('source');
+    const wrapper = document.getElementById('video-wrapper');
+    const video = document.createElement('video');
+    video.autoplay = true;
+    video.id = 'videoItem';
+    video.loop = true;
+    video.preload = 'auto';
+    video.defaultMuted = true;
+    video.muted = true;
+    video.setAttribute('width', '100%');
+    video.setAttribute('height', 'auto');
+    const mp4Source = document.createElement('source');
     mp4Source.setAttribute('src', 'https://f.hubspotusercontent20.net/hubfs/5191528/Crisp%20Videos/Homepage/v2/Hero%20-%2015s%20-%20No%20Sound%20-%204.mp4');
     mp4Source.setAttribute('type', 'video/mp4');
     video.appendChild(mp4Source);
+    wrapper.appendChild(video);
+    video.autoplay = true;
+    video.play();
 
   }
 
