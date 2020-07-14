@@ -74,6 +74,7 @@
     position: relative;
     top: 1px;
     width: 13px;
+    height: 13px;
   }
 
   #playButton.play-button-wrapper {
@@ -87,7 +88,7 @@
         opacity: 1;
       }
 
-      svg {
+      svg.play-button {
         transform: scale(1.05);
         transition: 0.25s all cubic-bezier(0.17, 0.67, 0.84, 1.05);
         circle {
@@ -96,7 +97,7 @@
       }
     }
 
-    svg {
+    svg.play-button {
       transition: 0.25s all cubic-bezier(0.17, 0.67, 0.84, 1.05);
       width: 50px;
       @include sm {

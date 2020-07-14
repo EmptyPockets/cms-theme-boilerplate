@@ -5,6 +5,7 @@
     <h1>{{ module.title }}</h1>
     <div class="play-button-wrapper" id="playButton">
       <svg
+        class="play-button"
         xmlns="http://www.w3.org/2000/svg"
         width="75"
         height="75"
@@ -36,11 +37,9 @@
         {{ module.subheading }}
         <span>
           {{ module.video_length }}
-          <img
-            class="sound-icon"
-            src="{{ get_asset_url('../images/icons/sound-icon-7.svg') }}"
-            alt="play video with sound"
-          >
+          <svg class="sound-icon">
+            <use xlink:href="#sound-icon-7"></use>
+          </svg>
         </span>
       </p>
     </div>

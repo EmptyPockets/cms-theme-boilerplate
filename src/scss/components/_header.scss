@@ -342,9 +342,10 @@ $contactBannerHeight: 54px;
           cursor: pointer;
           display: block;
           height: 44px;
+          width: 44px;
           opacity: 0.85;
           transition: 0.25s all linear;
-          width: initial;
+
           z-index: 2;
           &:hover {
             opacity: 1;

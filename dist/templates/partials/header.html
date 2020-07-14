@@ -7,21 +7,21 @@
   <div class="header-wrapper">
     <!-- Mobile Menu Trigger -->
     <div class="menu-icon hide-lg" id="mobileTrigger">
-      <img class="menu " src="{{ get_asset_url('../../images/icons/menu-icon.svg') }}">
-      <img class="close" src="{{ get_asset_url('../../images/icons/menu-icon-close-alt.svg') }}">
+      <svg class="menu">
+        <use xlink:href="#menu-icon"></use>
+      </svg>
+      <svg class="close">
+        <use xlink:href="#menu-icon-close-alt"></use>
+      </svg>
     </div>
     <!-- Logo -->
     <div class="logo-wrapper">
-      <img
-        class="logo"
-        src="{{ get_asset_url('../../images/brand/damore-logo.svg') }}"
-        alt="D'Amore Personal Injury Law, LLC"
-      >
-      <img
-        class="logo"
-        src="{{ get_asset_url('../../images/brand/damore-logo-darker.svg') }}"
-        alt="D'Amore Personal Injury Law, LLC"
-      >
+      <svg class="logo">
+        <use xlink:href="#damore-logo"></use>
+      </svg>
+      <svg class="logo">
+        <use xlink:href="#damore-logo-darker"></use>
+      </svg>
       <a href="/" class="click-cover">D'Amore Personal Injury Law, LLC</a>
     </div>
     <!-- Locaton and Nav Wrapper -->
@@ -54,12 +54,9 @@
           path='../../hubspot-modules/menu-section',
           label='Primary navigation'
         %}
-        <img
-          class="search-icon"
-          id="searchTrigger"
-          src="{{ get_asset_url('../../images/icons/search-icon.svg') }}"
-          alt="Search Injury Guides and Helpful Resources"
-        >
+        <svg class="search-icon" id="searchTrigger">
+          <use xlink:href="#search-icon"></use>
+        </svg>
         <div id="searchInputWrapper">
           {% module 'site_search'
             path='../../hubspot-modules/search-input-min'
