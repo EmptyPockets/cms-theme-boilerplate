@@ -6,6 +6,13 @@
     "name": "editorial_body",
     "required": false,
     "type": "richtext",
-    "validation_regex": ""
+    "validation_regex": "",
+    "enabled_features": [
+      "bold",
+      "link",
+      "image",
+      "source_code",
+      "lists"
+    ]
   }
 ]
