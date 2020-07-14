@@ -34,5 +34,16 @@
       "src": "http://placehold.it/200x200",
       "alt": null
     }
+  },
+  {
+    "name": "icon_name",
+    "label": "Icon Name",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": true,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "step-1"
   }
 ]

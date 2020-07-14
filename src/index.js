@@ -10,3 +10,8 @@ import './hubspot-modules/_js/banner-settlement.js';
 import './hubspot-modules/_js/content-slider.js';
 import './hubspot-modules/_js/faq.js';
 import './hubspot-modules/_js/settlements-card.js';
+
+function requireAll(r) {
+  r.keys().forEach(r);
+}
+requireAll(require.context('./images/', true, /\.svg$/));

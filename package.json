@@ -45,6 +45,7 @@
     "sass-loader": "^8.0.0",
     "sass-resources-loader": "^2.0.3",
     "style-loader": "^1.0.0",
+    "svg-sprite-loader": "^5.0.0",
     "url-loader": "^2.1.0",
     "vanilla-lazyload": "^17.1.0",
     "webpack": "^4.43.0",

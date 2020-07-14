@@ -1,4 +1,3 @@
-{% set stars = get_asset_url('../../images/icons/five-stars.svg') %}
 <article class="client-reviews">
   <div class="content-wrapper">
     <section class="list">
@@ -28,11 +27,9 @@
       <div class="review">
         <img src="http://placehold.it/600x230">
         <div class="inner-featured-review">
-          <img
-            class="review-stars-img"
-            alt="Five Star Review"
-            src="{{ stars }}"
-          >
+          <svg class="review-stars-img">
+            <use xlink:href="#five-stars"></use>
+          </svg>
           <h3>{{ module.featured_review.featured_title }}</h3>
           <h4>
             “{{ module.featured_review.featured_title }}”

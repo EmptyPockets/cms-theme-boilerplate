@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const webpack = require('webpack');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const hubspotConfig = ({ portal, autoupload } = {}) => {
   return {
@@ -30,7 +31,7 @@ const hubspotConfig = ({ portal, autoupload } = {}) => {
           test: /\.(svg)$/,
           use: [
             {
-              loader: 'url-loader',
+              loader: 'svg-sprite-loader'
             },
           ],
         },
@@ -73,7 +74,7 @@ const hubspotConfig = ({ portal, autoupload } = {}) => {
         { from: 'src/fields.json', to: 'fields.json' },
         { from: 'src/theme.json', to: 'theme.json' }
       ]),
-      new MinifyPlugin(),
+      new MinifyPlugin()
     ],
   };
 };

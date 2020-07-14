@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style>
+    .sprite-symbol-usage {display: none;}
+    .sprite-symbol-usage:target {display: inline;}
+  </style><symbol viewBox="0 0 57.439 57.284" id="call-icon">
+  <path id="call-icon_Path_130" data-name="Path 130" d="M249.213,9376.858a2,2,0,0,0-1.192.08c-4.289,1.668-6.99,7.784-7.626,11.994-1.986,13.664,8.818,25.5,18.748,33.286,8.818,6.912,25.739,18.272,35.749,7.31,1.271-1.352,2.78-3.337,2.7-5.323-.239-3.336-3.337-5.719-5.72-7.547-1.827-1.351-5.64-5.084-8.024-5-2.145.079-3.495,2.3-4.846,3.653l-2.383,2.384c-.4.4-5.481-2.939-6.037-3.336a40.569,40.569,0,0,1-5.8-4.529,37.483,37.483,0,0,1-4.687-5.4c-.4-.556-3.654-5.4-3.336-5.8,0,0,2.78-3.019,3.575-4.21,1.668-2.542,2.939-4.528,1.032-7.547a17.723,17.723,0,0,0-2.542-2.939,48.285,48.285,0,0,0-5.243-4.607C252.549,9378.527,250.8,9377.1,249.213,9376.858Z" transform="translate(-240.157 -9376.807)" fill="#20244e" />
+</symbol><symbol viewBox="0 0 69.82 66.75" id="chat-icon">
+  <g id="chat-icon_Group_90" data-name="Group 90" transform="translate(-686.18 -9372.522)">
+    <g id="chat-icon_Group-3">
+      <image id="chat-icon_Fill-1" width="58" height="45" transform="translate(698 9372.522)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAtCAYAAAD/aHgLAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAOqADAAQAAAABAAAALQAAAABSo8JcAAABKElEQVRoBe2ZUQrCMAyGrewgCnodPavn8cGjTCIEYmnaRHTbH+OLpc1ov//LNsEyz/PO+zmer/6LvJs06h/3W2lMm6ZKC3QtENOJlaJRCG+giIAt7hb0CzQKoISuYfdyMdK4llcOp8sqD5alQmWzEw+W2ri3T22hV+tdm7wX/LJeC/0bAWwKVAtRBvApNNzDSEJrwch5DgYOlCAI1gsMCSqNWcfQoB6r0KDcxhar8KAWSKoJAWpp4RCgI6v0ivkL0DCtOzIaCnR0n2brWtoBqSaNItmynDWNWlJCqglltPeKCQXa67AE7aWDuJZGEa1pZ6aHVBrV0kGdT6Oo5rRzp1EtGdT58Eb59294UO7ABOUkkL75v9DWmUMb5fuTwMOCSsiwoDUkgT4B36pSGZbeSLAAAAAASUVORK5CYII="></image>
+    </g>
+    <g id="chat-icon_Group_89" data-name="Group 89">
+      <path id="chat-icon_Path_131" data-name="Path 131" d="M743.507,9390.6a6.839,6.839,0,0,0-6.169-6.182,145.145,145.145,0,0,0-43.336,0,6.831,6.831,0,0,0-6.188,6.15,73.261,73.261,0,0,0-.009,30.731,6.841,6.841,0,0,0,6.169,6.184,111.413,111.413,0,0,0,14.506,1.466l5.353,9.272a2.1,2.1,0,0,0,3.646,0l5.354-9.272a111.361,111.361,0,0,0,14.477-1.461,6.833,6.833,0,0,0,6.189-6.149,73.3,73.3,0,0,0,.008-30.734Zm-41.92,20.43a4.571,4.571,0,1,1,4.571-4.571A4.571,4.571,0,0,1,701.587,9411.031Zm14.628,0a4.571,4.571,0,1,1,4.571-4.571A4.57,4.57,0,0,1,716.215,9411.031Zm14.627,0a4.571,4.571,0,1,1,4.571-4.571A4.57,4.57,0,0,1,730.842,9411.031Z" fill="#20244e" />
+    </g>
+  </g>
+</symbol><symbol viewBox="0 0 16.656 12.073" id="email-icon">
+  <g id="email-icon_Group_47" data-name="Group 47" transform="translate(-1289.344 -21.099)">
+    <path id="email-icon_Path_100" data-name="Path 100" d="M1306,21.132V21.1h-16.656v.033l8.328,6.7Z" fill="#fff" />
+    <path id="email-icon_Path_101" data-name="Path 101" d="M1297.672,29.525l-8.328-6.7v9.818a.527.527,0,0,0,.526.526h15.6a.526.526,0,0,0,.526-.526V22.828Z" fill="#fff" />
+  </g>
+</symbol><symbol viewBox="0 0 220.145 38.339" id="five-stars">
+  <g id="five-stars_Group_119" data-name="Group 119" transform="translate(-499.458 -779.793)">
+    <path id="five-stars_Path_199" data-name="Path 199" d="M519.614,809.464l-12.457,8.669,4.395-14.526-12.094-9.169,15.173-.309,4.983-14.335,4.983,14.335,15.173.309-12.094,9.169,4.395,14.526Z" fill="#f3b52c" />
+    <path id="five-stars_Path_200" data-name="Path 200" d="M564.572,809.464l-12.457,8.669,4.395-14.526-12.094-9.169,15.173-.309,4.983-14.335,4.983,14.335,15.173.309-12.094,9.169,4.395,14.526Z" fill="#f3b52c" />
+    <path id="five-stars_Path_201" data-name="Path 201" d="M609.53,809.464l-12.457,8.669,4.395-14.526-12.094-9.169,15.173-.309,4.983-14.335,4.983,14.335,15.173.309-12.094,9.169,4.395,14.526Z" fill="#f3b52c" />
+    <path id="five-stars_Path_202" data-name="Path 202" d="M654.489,809.464l-12.457,8.669,4.395-14.526-12.094-9.169,15.173-.309,4.983-14.335,4.983,14.335,15.173.309-12.094,9.169,4.395,14.526Z" fill="#f3b52c" />
+    <path id="five-stars_Path_203" data-name="Path 203" d="M699.447,809.464l-12.457,8.669,4.395-14.526-12.094-9.169,15.173-.309,4.983-14.335,4.983,14.335,15.173.309-12.094,9.169,4.395,14.526Z" fill="#f3b52c" />
+  </g>
+</symbol></defs><use id="call-icon-usage" xlink:href="#call-icon" class="sprite-symbol-usage" /><use id="chat-icon-usage" xlink:href="#chat-icon" class="sprite-symbol-usage" /><use id="email-icon-usage" xlink:href="#email-icon" class="sprite-symbol-usage" /><use id="five-stars-usage" xlink:href="#five-stars" class="sprite-symbol-usage" /></svg>

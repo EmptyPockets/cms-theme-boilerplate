@@ -163,13 +163,15 @@
       margin-left: 12px;
       margin-right: 12px;
       &:last-child {
-        img {
+        img,
+        svg {
           width: 34px;
         }
       }
     }
 
-    img {
+    img,
+    svg {
       height: 40px;
       width: 40px;
     }

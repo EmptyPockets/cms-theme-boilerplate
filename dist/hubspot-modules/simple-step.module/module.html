@@ -1,6 +1,7 @@
 <div class="simple-step-wrapper">
-  <img src="{{ module.icon.src }}"
-    alt="{{ module.icon.alt }}" />
+  <svg>
+    <use xlink:href="#{{ module.icon_name }}"></use>
+  </svg>
   <h3>{{ module.step_title }}</h3>
   <p>
     {{ module.step_body }}

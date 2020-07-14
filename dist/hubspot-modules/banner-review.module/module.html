@@ -4,11 +4,9 @@
   <div class="review-slider">
     {% for review in module.reviews %}
     <div class="group slide">
-      <img
-        class="review-stars-img"
-        alt="Five Star Review"
-        data-flickity-lazyload="{{ get_asset_url('../../images/icons/five-stars.svg') }}"
-      >
+      <svg class="review-stars-img">
+        <use xlink:href="#five-stars"></use>
+      </svg>
       <blockquote cite="#">
         <h2>{{ review.title }}</h2>
         <h3>“{{ review.quote }}”</h3>
