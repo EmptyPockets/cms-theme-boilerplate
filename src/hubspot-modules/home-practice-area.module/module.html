@@ -1,7 +1,11 @@
 <section class="practice-areas">
   {% for area in module.practice_areas %}
   <section class="practice-area {% cycle 'odd','even' %}">
-    <img src="{{ area.image.src }}" alt="{{ area.image.alt }}">
+    <img
+      class="lazy"
+      data-src="{{ area.image.src }}"
+      alt="{{ area.image.alt }}"
+    >
     <div class="inner-content-wrapper">
       <h3>
         {{ area.sub_topic }}

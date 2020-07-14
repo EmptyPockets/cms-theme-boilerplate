@@ -81,7 +81,7 @@
         "type": "image",
         "default": {
           "size_type": "auto",
-          "src": "http://placehold.it/160x160",
+          "src": "http://placehold.it/1230x760",
           "alt": null
         }
       }
