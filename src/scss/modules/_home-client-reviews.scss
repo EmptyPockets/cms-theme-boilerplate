@@ -70,6 +70,9 @@ article.client-reviews ul .review > svg {
     width: 240px;
     height: 140px;
 }
+article.client-reviews ul .review > img {
+    object-fit: cover;
+}
 
 article.client-reviews ul .review h3,
 article.client-reviews ul .review h4 {

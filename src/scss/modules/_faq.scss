@@ -19,7 +19,8 @@
         svg {
             left: -5px;
             position: relative;
-            width: 25px;
+            min-width: 25px;
+            height: 25px;
             circle {
                 fill: $color-blue-light;
             }

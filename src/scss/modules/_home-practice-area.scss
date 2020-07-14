@@ -21,7 +21,9 @@ article .practice-area {
     article .practice-area.odd .inner-content-wrapper {
         order: 2;
     }
-
+    article .practice-area.even .inner-content-wrapper {
+        padding: 58px 80px 80px 48px;
+    }
     article .practice-area.even img {
         order: 2;
     }
@@ -36,6 +38,10 @@ article .practice-area img {
     margin-top: 60px;
     // max-width: 600px;
     // width: 100%;
+
+    // position: relative;
+    // padding-top: calc((760 / 1230) * 100%);
+    // width: 50%;
     width: calc(1230px / 2);
     height: calc(760px / 2);
 }
