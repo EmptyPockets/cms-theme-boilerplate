@@ -122,15 +122,24 @@
     "default": [
       {
         "title": "He was in a car accident",
-        "quote": "They never backed down from corporate lawyers"
+        "quote": "They never backed down from corporate lawyers",
+        "image": {
+          "src": "http://placehold.it/160x160"
+        }
       },
       {
         "title": "Another Review Title",
-        "quote": "Different text here for the quote"
+        "quote": "Different text here for the quote",
+        "image": {
+          "src": "http://placehold.it/160x160"
+        }
       },
       {
         "title": "Another Review Title",
-        "quote": "Different text here for the quote"
+        "quote": "Different text here for the quote",
+        "image": {
+          "src": "http://placehold.it/160x160"
+        }
       }
     ]
   }

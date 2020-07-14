@@ -6,7 +6,11 @@
         {% for review in module.client_reviews %}
         <li>
           <div class="review">
-            <img src="{{ review.image.src }}" alt="{{ review.image.alt }}">
+            <img
+              class="lazy"
+              data-src="{{ review.image.src }}"
+              alt="{{ review.image.alt }}"
+            >
             <div class="inner-content-wrapper">
               <svg class="review-stars-img">
                 <use xlink:href="#five-stars"></use>
@@ -23,7 +27,11 @@
     </section>
     <section class="featured">
       <div class="review">
-        <img src="{{ module.featured_review.featured_image.src }}" alt="{{ module.featured_review.featured_image.alt }}">
+        <img
+          class="lazy"
+          data-src="{{ module.featured_review.featured_image.src }}"
+          alt="{{ module.featured_review.featured_image.alt }}"
+        >
         <div class="inner-featured-review">
           <svg class="review-stars-img">
             <use xlink:href="#five-stars"></use>

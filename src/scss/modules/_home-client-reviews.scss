@@ -71,7 +71,7 @@ article.client-reviews ul .review > svg {
     height: 140px;
 }
 article.client-reviews ul .review > img {
-    object-fit: cover;
+    flex: none;
 }
 
 article.client-reviews ul .review h3,
