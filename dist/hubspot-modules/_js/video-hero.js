@@ -25,6 +25,11 @@
     _wq.push({
       id: 'k0r1g3cju9', onReady: function (video) {
         video.play();
+
+        video.bind("play", function () {
+          video.unmute();
+          video.volume(0.6);
+        });
       }
     });
 
@@ -43,6 +48,7 @@
   window.onclick = function (event) {
     if (event.target == modal) {
       modal.style.display = "none";
+      document.body.classList.remove("open-modal");
     }
   }
 

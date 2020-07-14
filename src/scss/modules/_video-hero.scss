@@ -15,6 +15,7 @@
 
   &::before {
     @include sm {
+      z-index: 2;
       background: -moz-linear-gradient(
         left,
         rgba(0, 0, 0, 0.4) 0%,
@@ -90,7 +91,7 @@
         transform: scale(1.05);
         transition: 0.25s all cubic-bezier(0.17, 0.67, 0.84, 1.05);
         circle {
-          fill: $color-red-dark;
+          fill: $color-red-light;
         }
       }
     }
