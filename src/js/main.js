@@ -1,4 +1,9 @@
 import LazyLoad from "vanilla-lazyload";
+/* SVG Imports */
+// function requireAll(r) {
+//   r.keys().forEach(r);
+// }
+// requireAll(require.context('../images/', true, /\.svg$/));
 
 (function () {
 

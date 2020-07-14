@@ -15,7 +15,6 @@ import './hubspot-modules/_js/content-slider.js';
 import './hubspot-modules/_js/faq.js';
 import './hubspot-modules/_js/settlements-card.js';
 
-/* SVG Imports */
 function requireAll(r) {
   r.keys().forEach(r);
 }
