@@ -23,10 +23,12 @@
     window._wq = window._wq || [];
     // eslint-disable-next-line no-undef
     _wq.push({
-      id: 'k0r1g3cju9', onReady: function (video) {
+      id: 'fl1rw4h0vw', onReady: function (video) {
+
         video.play();
 
         video.bind("play", function () {
+          console.log(video);
           video.unmute();
           video.volume(0.6);
         });

@@ -125,9 +125,38 @@
         display: block;
         font-size: 17px;
         font-weight: 400;
-        margin-top: 4px;
+        margin-top: 8px;
         opacity: 0.9;
       }
     }
+  }
+}
+
+#playButton svg {
+  animation-name: heartbeat;
+  animation-duration: 6.18s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.18);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.18);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.18);
   }
 }

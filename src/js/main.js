@@ -43,7 +43,7 @@ import LazyLoad from "vanilla-lazyload";
   let navHeight = 117;
 
   /******************************
-   Sticky Clone
+   Sticky Not Clone
   *******************************/
 
   let clone = document.querySelector('#stickyGlobalHeader');
