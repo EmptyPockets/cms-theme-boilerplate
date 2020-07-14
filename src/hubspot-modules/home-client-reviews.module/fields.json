@@ -47,6 +47,20 @@
         "show_emoji_picker": false,
         "type": "text",
         "default": "Kieara D."
+      },
+      {
+        "name": "featured_image",
+        "label": "Featured Image",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "type": "image",
+        "default": {
+          "size_type": "auto",
+          "src": "http://placehold.it/160x160",
+          "alt": null
+        }
       }
     ]
   },
@@ -86,6 +100,21 @@
         "show_emoji_picker": false,
         "type": "text",
         "default": "They never backed down from corporate lawyers"
+      },
+      {
+        "id": "reviews.image",
+        "name": "image",
+        "label": "Review Image",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "type": "image",
+        "default": {
+          "size_type": "auto",
+          "src": "http://placehold.it/160x160",
+          "alt": null
+        }
       }
     ],
     "tab": "CONTENT",

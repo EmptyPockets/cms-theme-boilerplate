@@ -6,7 +6,7 @@
         {% for review in module.client_reviews %}
         <li>
           <div class="review">
-            <img src="http://placehold.it/240x140">
+            <img src="{{ review.image.src }}" alt="{{ review.image.alt }}">
             <div class="inner-content-wrapper">
               <svg class="review-stars-img">
                 <use xlink:href="#five-stars"></use>
@@ -23,7 +23,7 @@
     </section>
     <section class="featured">
       <div class="review">
-        <img src="http://placehold.it/600x230">
+        <img src="{{ module.featured_review.featured_image.src }}" alt="{{ module.featured_review.featured_image.alt }}">
         <div class="inner-featured-review">
           <svg class="review-stars-img">
             <use xlink:href="#five-stars"></use>
