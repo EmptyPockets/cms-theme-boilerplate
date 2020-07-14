@@ -59,6 +59,20 @@
         "default": "https://google.com"
       },
       {
+        "name": "background",
+        "label": "Background Image",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "type": "image",
+        "default": {
+          "size_type": "auto",
+          "src": "http://placehold.it/200x200",
+          "alt": "icon"
+        }
+      },
+      {
         "id": "links",
         "name": "links",
         "label": "Links",

@@ -69,6 +69,21 @@
         "show_emoji_picker": false,
         "type": "text",
         "default": "https://google.com"
+      },
+      {
+        "id": "areas.image",
+        "name": "image",
+        "label": "Practice Area Image",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "type": "image",
+        "default": {
+          "size_type": "auto",
+          "src": "http://placehold.it/160x160",
+          "alt": null
+        }
       }
     ],
     "tab": "CONTENT",

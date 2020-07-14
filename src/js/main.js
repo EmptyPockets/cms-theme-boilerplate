@@ -1,9 +1,4 @@
 import LazyLoad from "vanilla-lazyload";
-/* SVG Imports */
-// function requireAll(r) {
-//   r.keys().forEach(r);
-// }
-// requireAll(require.context('../images/', true, /\.svg$/));
 
 (function () {
 
@@ -81,6 +76,10 @@ import LazyLoad from "vanilla-lazyload";
 
   /* Delay Contact Form Load */
   function windowScroll(event) {
+    var hsform = document.createElement('script');
+    hsform.src = '//js.hsforms.net/forms/v2.js';
+    hsform.async = true;
+    document.head.appendChild(hsform);
     const currentScroll = window.pageYOffset;
     if (currentScroll > 0) {
       window.hbspt.forms.create({
@@ -94,13 +93,7 @@ import LazyLoad from "vanilla-lazyload";
   }
 
   document.addEventListener('readystatechange', event => {
-    // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
     if (event.target.readyState === "complete") {
-      var hsform = document.createElement('script');
-      hsform.src = '//js.hsforms.net/forms/v2.js';
-      hsform.async = true;
-      document.head.appendChild(hsform);
-      // Add the listener:
       window.addEventListener('scroll', windowScroll, false);
     }
   });
