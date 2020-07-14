@@ -53,7 +53,8 @@ article.client-reviews .content-wrapper section + section {
     padding: 0;
 }
 
-article.client-reviews .content-wrapper section + section img {
+article.client-reviews .content-wrapper section + section img,
+article.client-reviews .content-wrapper section + section svg {
     max-width: 100%;
 }
 
@@ -63,7 +64,8 @@ article.client-reviews ul .review {
     margin-bottom: 32px;
 }
 
-article.client-reviews ul .review > img {
+article.client-reviews ul .review > img,
+article.client-reviews ul .review > svg {
     margin-right: 24px;
 }
 
@@ -96,7 +98,8 @@ article.client-reviews .review .review-stars {
     margin-bottom: 16px;
 }
 
-article.client-reviews .review .review-stars img {
+article.client-reviews .review .review-stars img,
+article.client-reviews .review .review-stars svg {
     margin-right: 2px;
 }
 
@@ -133,4 +136,6 @@ article.client-reviews .review-stars {
 
 article.client-reviews .review-stars-img {
     margin-bottom: 8px;
+    height: 38px;
+    width: 220px;
 }

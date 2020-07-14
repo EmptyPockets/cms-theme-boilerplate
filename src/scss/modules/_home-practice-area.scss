@@ -3,6 +3,10 @@ article .practice-area {
     color: #fff;
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 @media (min-width: 705px) {

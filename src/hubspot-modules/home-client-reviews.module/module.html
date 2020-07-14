@@ -8,11 +8,9 @@
           <div class="review">
             <img src="http://placehold.it/240x140">
             <div class="inner-content-wrapper">
-              <img
-                class="review-stars-img"
-                alt="Five Star Review"
-                src="{{stars}}"
-              >
+              <svg class="review-stars-img">
+                <use xlink:href="#five-stars"></use>
+              </svg>
               <h3>{{ review.title }}</h3>
               <h4>
                 “{{ review.quote }}”
