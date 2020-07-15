@@ -36,8 +36,10 @@ article .practice-area {
 article .practice-area img {
     margin-bottom: 24px;
     margin-top: 60px;
-    width: calc(1230px / 2);
+    // width: calc(1230px / 2);
+    width: 50%;
     height: calc(760px / 2);
+    object-fit: cover;
 }
 
 @media (min-width: 705px) {
