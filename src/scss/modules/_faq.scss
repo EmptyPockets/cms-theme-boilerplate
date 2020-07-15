@@ -16,17 +16,34 @@
         margin-bottom: 24px;
         margin-top: 24px;
         padding-bottom: 16px;
+        transition: 0.25s all linear;
+        &:hover {
+            opacity: 0.75;
+            transition: 0.25s all linear;
+        }
+        cursor: pointer;
         svg {
             left: -5px;
             position: relative;
             min-width: 25px;
             height: 25px;
+            cursor: pointer;
             circle {
                 fill: $color-blue-light;
             }
         }
     }
     &.open {
+        svg {
+            #Rectangle_70 {
+                display: none;
+            }
+            circle {
+                fill: gray;
+            }
+        }
+    }
+    &.starts-open {
         svg {
             #Rectangle_70 {
                 display: none;
