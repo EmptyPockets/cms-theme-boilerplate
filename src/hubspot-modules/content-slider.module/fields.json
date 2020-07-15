@@ -58,7 +58,7 @@
         "locked": false,
         "occurrence": {
           "min": 0,
-          "max": null,
+          "max": 3,
           "sorting_label_field": "links.title",
           "default": null
         },
@@ -96,7 +96,7 @@
             "url": "https://google.com"
           },
           {
-            "title": "Linke Two",
+            "title": "Link Two",
             "url": "https://google.com"
           }
         ]
