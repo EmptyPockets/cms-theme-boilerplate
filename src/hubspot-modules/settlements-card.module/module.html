@@ -1,12 +1,10 @@
-{% set settlements = ['one', 'two', 'three'] %}
 <div class="settlements-card settlements-slider">
-  {% for settlement in settlements %}
+  {% for settlement in module.settlements %}
   <div class="slide">
-    <h4>$6,000,000</h4>
-    <h5>BIRTH INJURY</h5>
+    <h4>{{ settlement.amount }}</h4>
+    <h5>{{ settlement.practice_area }}</h5>
     <h6>
-      Missed Diagnosis of Infant
-      Hydrocephalus
+      {{ settlement.title }}
     </h6>
     <a href="#" class="button ghost">Read More</a>
   </div>

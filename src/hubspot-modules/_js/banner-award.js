@@ -11,6 +11,7 @@ new Flickity('.award-slider', {
   setGallerySize: true,
   imagesLoaded: true,
   lazyLoad: true,
+  draggable: false
 });
 
 

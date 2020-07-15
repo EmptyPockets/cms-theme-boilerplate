@@ -9,6 +9,7 @@ new Flickity('.settlement-slider', {
   adaptiveHeight: true,
   setGallerySize: true,
   lazyLoad: true,
+  draggable: false
 });
 
 
