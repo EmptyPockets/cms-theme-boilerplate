@@ -6,7 +6,7 @@ new Flickity('.review-slider', {
   wrapAround: true,
   autoPlay: true,
   pageDots: false,
-  adaptiveHeight: true,
+  adaptiveHeight: false,
   setGallerySize: true,
   lazyLoad: true,
 });

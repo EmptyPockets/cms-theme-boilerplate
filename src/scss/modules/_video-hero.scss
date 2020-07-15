@@ -134,7 +134,7 @@
 
 #playButton svg {
   animation-name: heartbeat;
-  animation-duration: 6.18s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
@@ -154,9 +154,9 @@
     transform: scale(1.18);
   }
   80% {
-    transform: scale(1);
+    transform: scale(1.18);
   }
   100% {
-    transform: scale(1.18);
+    transform: scale(1);
   }
 }
