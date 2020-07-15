@@ -228,13 +228,13 @@
   transition: height 0.2s;
 }
 
-.hero-banner-wrapper {
+.hero-banner {
   .row-depth-1 {
     padding-top: 10px !important;
     padding-right: 10px !important;
-    padding-bottom: 56px !important;
+    padding-bottom: 64px !important;
     padding-left: 10px !important;
-    @include tn {
+    @include md {
       &.banner_dnd_area-row-0-padding.row-depth-1 {
         padding-top: 40px !important;
         padding-bottom: 40px !important;
