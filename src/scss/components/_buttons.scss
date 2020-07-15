@@ -21,6 +21,9 @@
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     @include sm {
       font-size: 14px;
     }

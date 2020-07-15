@@ -18,8 +18,12 @@ $contactBannerHeight: 54px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px 24px;
+
     position: relative;
+
+    @include tn {
+      padding: 10px 24px;
+    }
     @include sm {
       align-items: flex-start;
       flex-direction: row;
@@ -40,8 +44,10 @@ $contactBannerHeight: 54px;
     display: flex;
     position: relative;
     &:hover {
-      background-color: $color-background-light;
-      transition: 0.2s background-color linear;
+      @include tn {
+        background-color: $color-background-light;
+        transition: 0.2s background-color linear;
+      }
     }
     width: initial;
     @include sm {
@@ -78,9 +84,17 @@ $contactBannerHeight: 54px;
 
     .logo {
       display: none;
-      width: 225px;
+
       + .logo {
+        width: 175px;
+        height: 85px;
         display: block;
+        @include bp {
+          width: 175px;
+        }
+        @include tn {
+          width: 225px;
+        }
       }
 
       @include sm {
@@ -289,6 +303,8 @@ $contactBannerHeight: 54px;
 
       &.nav-wrapper {
         display: flex;
+        align-items: center;
+        padding-right: 16px;
         @include sm {
           align-items: flex-end;
           display: flex;
@@ -341,12 +357,15 @@ $contactBannerHeight: 54px;
         .search-icon {
           cursor: pointer;
           display: block;
-          height: 44px;
-          width: 44px;
+          height: 36px;
+          width: 36px;
           opacity: 0.85;
           transition: 0.25s all linear;
-
           z-index: 2;
+          @include tn {
+            height: 44px;
+            width: 44px;
+          }
           &:hover {
             opacity: 1;
             transition: 0.25s all linear;
@@ -384,8 +403,16 @@ $contactBannerHeight: 54px;
           margin-left: 16px;
           margin-right: 16px;
           .icon {
-            width: 20px;
-            height: 20px;
+            width: 12px;
+            height: 12px;
+            @include bp {
+              width: 16px;
+              height: 16px;
+            }
+            @include tn {
+              width: 20px;
+              height: 20px;
+            }
             &.email {
               left: -6px;
               position: relative;
@@ -409,12 +436,16 @@ $contactBannerHeight: 54px;
       border-radius: 22px;
       color: #fff;
       display: flex;
-      height: 44px;
-      max-width: 44px;
+      height: 40px;
       overflow: hidden;
       padding: 0;
       transition: 0.2s all cubic-bezier(0.17, 0.67, 0.46, 1.1);
       width: 0;
+      max-width: 0;
+      @include tn {
+        height: 44px;
+        max-width: 40px;
+      }
       @include sm {
         margin-left: -44px;
       }
@@ -497,10 +528,16 @@ $contactBannerHeight: 54px;
     }
 
     .menu {
-      height: 42px;
+      height: 30px;
+      width: 30px;
       position: absolute;
-      width: 42px;
       z-index: 10;
+      left: 20px;
+      @include tn {
+        height: 42px;
+        width: 42px;
+        left: 0;
+      }
     }
 
     .close {
@@ -534,6 +571,9 @@ $contactBannerHeight: 54px;
       padding: 12px;
       text-align: center;
       width: 50%;
+      @include tp {
+        font-size: 12px;
+      }
       span {
         border: 0;
       }
@@ -544,11 +584,33 @@ $contactBannerHeight: 54px;
       }
 
       .icon {
-        width: 20px;
-        height: 20px;
+        width: 12px;
+        height: 12px;
+        @include bp {
+          width: 16px;
+          height: 16px;
+        }
+        @include tn {
+          width: 20px;
+          height: 20px;
+        }
         &.email {
-          left: -4px;
+          left: -8px;
+          top: -1px;
           position: relative;
+          @include bp {
+            left: -8px;
+            top: -1px;
+          }
+        }
+        &.phone {
+          left: -6px;
+          top: -1px;
+          position: relative;
+          @include bp {
+            left: -4px;
+            top: -1px;
+          }
         }
       }
     }
@@ -656,11 +718,20 @@ body.open-menu {
 .global-header {
   &#stickyGlobalHeader {
     position: fixed;
-    top: -54px;
+    top: -67px;
     left: 0;
     right: 0;
     background: none;
     height: initial;
+    @include tp {
+      top: -67px;
+    }
+    @include bp {
+      top: -68px;
+    }
+    @include sm {
+      top: -54px;
+    }
     .header-wrapper {
       height: initial;
       background: none;
@@ -684,13 +755,16 @@ body.open-menu {
     }
     &.sticky {
       border-radius: 0;
-      height: 54px;
+      height: 67px;
       opacity: 1;
       position: fixed;
       transform: translateY(100%);
       transition: 0.25s all linear;
       width: 100%;
       z-index: 3;
+      @include tn {
+        height: 54px;
+      }
       div.contact-banner {
         width: 100%;
         border: 0;

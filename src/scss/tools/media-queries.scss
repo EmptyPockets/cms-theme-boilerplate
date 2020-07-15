@@ -1,3 +1,8 @@
+//tiny-phone
+$screen-tp-min: 320px;
+//big-phone
+$screen-bp-min: 414px;
+
 // tiny
 $screen-tn-min: 476px;
 
@@ -16,6 +21,19 @@ $screen-xl-min: 1300px;
 // Larger tablets and desktops
 $screen-xxl-min: 1500px;
 
+// Small Phone devices
+@mixin tp {
+  @media (min-width: #{$screen-tp-min}) {
+    @content;
+  }
+}
+
+// Big Phone devices
+@mixin bp {
+  @media (min-width: #{$screen-bp-min}) {
+    @content;
+  }
+}
 // Tiny devices
 @mixin tn {
   @media (min-width: #{$screen-tn-min}) {

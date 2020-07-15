@@ -124,3 +124,10 @@ ul.hs-search-results__listing li {
   margin-bottom: 1.4rem;
   padding: 0.7rem !important;
 }
+
+.three-steps-wrapper .steps_dnd_area_new-row-0-padding {
+  padding: 24px !important;
+  @include tp {
+    padding: unset;
+  }
+}
