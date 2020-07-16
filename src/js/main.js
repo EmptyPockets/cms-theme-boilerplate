@@ -73,29 +73,31 @@ import LazyLoad from "vanilla-lazyload";
     document.body.classList.toggle('open-menu');
   }
 
-  let userScroll = false;
-  /* Delay Contact Form Load */
-  function windowScroll(event) {
+  /********************
+   Load Hubspot form on scroll
+  ******************/
 
+  function userScroll() {
     var hsform = document.createElement('script');
     hsform.src = '//js.hsforms.net/forms/v2.js';
     hsform.async = true;
     document.head.appendChild(hsform);
     const currentScroll = window.pageYOffset;
-    if (currentScroll > 10) {
-      window.hbspt.forms.create({
-        portalId: "5191528",
-        formId: "95a767f4-059f-4918-be0b-0a3007f5b473",
-        target: '.form-holder'
-      });
-      // Remove it:
-      window.removeEventListener('scroll', windowScroll, false);
+    if (currentScroll > 0) {
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          portalId: "5191528",
+          formId: "95a767f4-059f-4918-be0b-0a3007f5b473",
+          target: '#form-holder'
+        });
+        window.removeEventListener('scroll', userScroll, false);
+      }
     }
   }
 
   document.addEventListener('readystatechange', event => {
-    if (event.target.readyState === "complete") {
-      window.addEventListener('scroll', windowScroll, false);
+    if (event.target.readyState === 'complete') {
+      window.addEventListener('scroll', userScroll, false);
     }
   });
 
