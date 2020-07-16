@@ -78,26 +78,48 @@ import LazyLoad from "vanilla-lazyload";
   ******************/
 
   function userScroll() {
-    var hsform = document.createElement('script');
-    hsform.src = '//js.hsforms.net/forms/v2.js';
-    hsform.async = true;
-    document.head.appendChild(hsform);
-    const currentScroll = window.pageYOffset;
-    if (currentScroll > 0) {
-      if (window.hbspt) {
-        window.hbspt.forms.create({
-          portalId: "5191528",
-          formId: "95a767f4-059f-4918-be0b-0a3007f5b473",
-          target: '#form-holder'
-        });
-        window.removeEventListener('scroll', userScroll, false);
-      }
+
+    // const currentScroll = window.pageYOffset;
+    // if (currentScroll > 0) {
+    if (window.hbspt) {
+      window.hbspt.forms.create({
+        portalId: "5191528",
+        formId: "95a767f4-059f-4918-be0b-0a3007f5b473",
+        target: '#form-holder'
+      });
+      // window.removeEventListener('scroll', userScroll, false);
     }
+    // }
+  }
+
+  function checkForForm() {
+    // for browsers without support
+    if (!('IntersectionObserver' in window)) {
+      // probably just load the form
+      return
+    }
+
+    let lazyFormObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log('intersecting')
+          let lazyForm = entry.target
+          userScroll();
+          lazyFormObserver.unobserve(lazyForm)
+        }
+      })
+    }, { rootMargin: '0px 0px 200px 0px' })
   }
 
   document.addEventListener('readystatechange', event => {
     if (event.target.readyState === 'complete') {
-      window.addEventListener('scroll', userScroll, false);
+      var hsform = document.createElement('script');
+      hsform.src = '//js.hsforms.net/forms/v2.js';
+      hsform.async = true;
+      document.head.appendChild(hsform);
+      checkForForm();
+      // window.addEventListener('scroll', userScroll, false);
+
     }
   });
 
