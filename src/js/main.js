@@ -79,17 +79,17 @@ import LazyLoad from "vanilla-lazyload";
 
   function userScroll() {
 
-    // const currentScroll = window.pageYOffset;
-    // if (currentScroll > 0) {
-    if (window.hbspt) {
-      window.hbspt.forms.create({
-        portalId: "5191528",
-        formId: "95a767f4-059f-4918-be0b-0a3007f5b473",
-        target: '#form-holder'
-      });
-      // window.removeEventListener('scroll', userScroll, false);
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > 0) {
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          portalId: "5191528",
+          formId: "95a767f4-059f-4918-be0b-0a3007f5b473",
+          target: '#form-holder'
+        });
+        window.removeEventListener('scroll', userScroll, false);
+      }
     }
-    // }
   }
 
   function checkForForm() {
@@ -117,8 +117,8 @@ import LazyLoad from "vanilla-lazyload";
       hsform.src = '//js.hsforms.net/forms/v2.js';
       hsform.async = true;
       document.head.appendChild(hsform);
-      checkForForm();
-      // window.addEventListener('scroll', userScroll, false);
+      // checkForForm();
+      window.addEventListener('scroll', userScroll, false);
 
     }
   });
