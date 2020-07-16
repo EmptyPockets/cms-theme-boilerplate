@@ -8,57 +8,29 @@
     "allow_new_line": false,
     "show_emoji_picker": false,
     "type": "text",
-    "default": "We Believe In Holding Those Responsible For Your Loss Fully Accountable."
+    "default": "Lorem Ipsum"
   },
   {
-    "id": "group",
-    "name": "group",
-    "label": "group",
+    "name": "body_text",
+    "label": "Body Text",
+    "locked": false,
+    "required": false,
+    "type": "richtext",
+    "validation_regex": "",
+    "default": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, aspernatur doloribus molestiae quis ea voluptatum. Officia cumque illum corrupti sequi neque, laudantium doloremque deserunt consectetur, debitis, voluptate quas incidunt nulla.</p>"
+  },
+  {
+    "name": "split_image",
+    "label": "Split Image",
     "required": false,
     "locked": false,
-    "occurrence": {
-      "min": 2,
-      "max": null,
-      "sorting_label_field": "group.heading",
-      "default": null
-    },
-    "children": [
-      {
-        "id": "group.heading",
-        "name": "heading",
-        "label": "heading",
-        "required": false,
-        "locked": false,
-        "validation_regex": "",
-        "allow_new_line": false,
-        "show_emoji_picker": false,
-        "type": "text",
-        "default": "We Know The Enemy"
-      },
-      {
-        "id": "group.description",
-        "name": "description",
-        "label": "description",
-        "help_text": "What is this section about?",
-        "required": false,
-        "locked": false,
-        "allow_new_line": true,
-        "show_emoji_picker": false,
-        "type": "text",
-        "default": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam."
-      }
-    ],
-    "tab": "CONTENT",
-    "type": "group",
-    "default": [
-      {
-        "heading": "We Know The Enemy",
-        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam."
-      },
-      {
-        "heading": "We Fight To Win",
-        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam."
-      }
-    ]
+    "responsive": true,
+    "resizable": true,
+    "type": "image",
+    "default": {
+      "size_type": "auto",
+      "src": "http://placehold.it/200x200",
+      "alt": "icon"
+    }
   }
 ]

@@ -3,18 +3,15 @@
     <section class="top">
       <div class="inner-content-wrapper">
         <h2 class="section-heading">
-          We Believe In Holding Those Responsible For Your Loss Fully Accountable.
+          {{ module.section_title }}
         </h2>
       </div>
     </section>
     <section class="bottom">
       <div class="inner-content-wrapper">
-        {% for item in module.group %}
-        <h3>{{ item.heading }}</h3>
-        <p>{{ item.description }}</p>
-        {% endfor %}
+        {{ module.body_text }}
       </div>
     </section>
-    <div class="hero-img lazy" data-bg="{{ get_asset_url('../../images/placeholder/paul-split-hero@2x.jpg') }}"></div>
+    <div class="hero-img lazy" data-bg="{{ module.split_image.src }}"></div>
   </div>
 </article>
