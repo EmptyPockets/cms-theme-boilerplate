@@ -230,11 +230,11 @@
 
 .hero-banner {
   .row-depth-1 {
-    padding-top: 10px !important;
-    padding-right: 10px !important;
+    padding-top: 24px !important;
+    padding-right: 24px !important;
     padding-bottom: 64px !important;
-    padding-left: 10px !important;
-    @include md {
+    padding-left: 24px !important;
+    @include m {
       &.banner_dnd_area-row-0-padding.row-depth-1 {
         padding-top: 40px !important;
         padding-bottom: 40px !important;

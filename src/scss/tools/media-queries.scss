@@ -6,6 +6,9 @@ $screen-bp-min: 414px;
 // tiny
 $screen-tn-min: 476px;
 
+// basic mobile media query + small chrome window
+$screen-m-min: 501px;
+
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 705px;
 
@@ -20,6 +23,12 @@ $screen-xl-min: 1300px;
 
 // Larger tablets and desktops
 $screen-xxl-min: 1500px;
+
+@mixin m {
+  @media (min-width: #{$screen-m-min}) {
+    @content;
+  }
+}
 
 // Small Phone devices
 @mixin tp {

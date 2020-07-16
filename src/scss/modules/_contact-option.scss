@@ -1,6 +1,10 @@
 .contact-option {
   text-align: center;
   padding: 0 24px;
+  margin-bottom: 56px;
+  @include m {
+    margin-bottom: 0;
+  }
   img,
   svg {
     margin-bottom: 16px;
@@ -14,6 +18,9 @@
   p {
     font-size: 17px;
     line-height: 1.5;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
+    @include m {
+      margin-bottom: 48px;
+    }
   }
 }

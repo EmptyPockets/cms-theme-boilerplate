@@ -88,12 +88,24 @@ article .practice-area p:last-of-type {
     margin-bottom: 32px;
 }
 article {
+    .home_practice_areas-row-0-padding {
+        padding: 24px !important;
+        @include m {
+            .home_practice_areas-row-0-padding {
+                padding-top: 100px !important;
+                padding-bottom: 64px !important;
+                padding-left: 64px !important;
+                padding-right: 64px !important;
+            }
+        }
+    }
+
     .home_practice_areas-row-1-padding {
         padding-top: 0px !important;
         padding-bottom: 48px !important;
         padding-left: 24px !important;
         padding-right: 24px !important;
-        @include tn {
+        @include m {
             padding-top: 0px !important;
             padding-bottom: 100px !important;
             padding-left: 64px !important;

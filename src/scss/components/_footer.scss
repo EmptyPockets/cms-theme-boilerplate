@@ -180,6 +180,10 @@
 
 .global-contact {
   display: flex;
+  flex-direction: column;
+  @include m {
+    flex-direction: row;
+  }
   h2 {
     font-size: 50px;
     color: #fff;

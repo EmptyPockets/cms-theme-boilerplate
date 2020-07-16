@@ -49,12 +49,9 @@
   h1 {
     color: #fff;
     font-size: 7vw;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     padding-right: 60px;
     position: relative;
-    @include tn {
-      margin-bottom: 4px;
-    }
     @include sm {
       font-size: 64px;
       margin-bottom: 24px;
@@ -116,7 +113,6 @@
     p {
       color: #fff;
       display: block;
-      font-size: 3vw;
       font-weight: 700;
       margin-left: 24px;
       position: relative;
@@ -124,9 +120,9 @@
       text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
       text-transform: uppercase;
       top: -4px;
-      font-size: 12px;
-      @include tn {
-        font-size: 20px;
+      font-size: 14px;
+      @include m {
+        font-size: 18px;
       }
       @include sm {
         font-size: 20px;
@@ -135,11 +131,11 @@
       span {
         color: #fff;
         display: block;
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 400;
         margin-top: 4px;
         opacity: 0.9;
-        @include tn {
+        @include m {
           font-size: 17px;
           margin-top: 8px;
         }
