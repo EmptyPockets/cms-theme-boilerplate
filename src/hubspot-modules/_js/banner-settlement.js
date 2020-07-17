@@ -8,7 +8,7 @@ new Flickity('.settlement-slider', {
   pageDots: false,
   adaptiveHeight: true,
   setGallerySize: true,
-  lazyLoad: true,
+  lazyLoad: false,
   draggable: false
 });
 

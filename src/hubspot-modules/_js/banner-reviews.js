@@ -8,7 +8,7 @@ new Flickity('.review-slider', {
   pageDots: false,
   adaptiveHeight: false,
   setGallerySize: true,
-  lazyLoad: true,
+  lazyLoad: false,
   draggable: false
 });
 
