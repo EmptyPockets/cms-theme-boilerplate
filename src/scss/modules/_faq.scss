@@ -44,12 +44,14 @@
         }
     }
     &.starts-open {
-        svg {
-            #Rectangle_70 {
-                display: none;
-            }
-            circle {
-                fill: $color-blue-dark;
+        &.open {
+            svg {
+                #Rectangle_70 {
+                    display: none;
+                }
+                circle {
+                    fill: $color-blue-dark;
+                }
             }
         }
     }
