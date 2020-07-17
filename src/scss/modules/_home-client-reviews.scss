@@ -81,14 +81,15 @@ article.client-reviews ul .review .inner-content-wrapper svg {
     margin-right: 24px;
     width: 240px;
 }
-article.client-reviews .featured img {
+article.client-reviews .featured .review > img {
     width: 100%;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
 }
 
 article.client-reviews .review > img {
     width: 100%;
-    height: auto;
+    height: 140px;
     max-width: 240px;
     object-fit: cover;
 }
@@ -180,5 +181,8 @@ article.client-reviews {
 
     .inner-content-wrapper {
         padding: 24px;
+        @include m {
+            padding: 0 0 0 24px;
+        }
     }
 }
