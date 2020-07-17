@@ -5,7 +5,9 @@
       <div class="card lazy" data-bg="{{ slide.background.src }}">
         <div>
           <h3>
-            {{ slide.title }}
+            <a href="{{ slide.url }}">
+              {{ slide.title }}
+            </a>
           </h3>
           <ul>
             {% for link in slide.links %}
