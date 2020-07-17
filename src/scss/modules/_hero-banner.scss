@@ -11,8 +11,11 @@
 
 .banner-award img {
   margin-top: 16px;
-  min-height: 160px;
+  min-height: 120px;
   width: auto;
+  @include m {
+    min-height: 160px;
+  }
 }
 
 .banner-award {
@@ -24,16 +27,12 @@
   h2 {
     color: #fff;
     font-family: $public;
-    font-size: 12px;
+    font-size: 17px;
     font-weight: $bold;
     line-height: 1.3;
     margin-bottom: 16px;
     text-transform: uppercase;
-    max-width: 180px;
-    @include tn {
-      font-size: 17px;
-      max-width: 255px;
-    }
+    max-width: 255px;
   }
 
   h3 {
