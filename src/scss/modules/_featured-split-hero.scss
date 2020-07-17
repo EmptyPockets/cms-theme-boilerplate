@@ -82,12 +82,12 @@
 }
 
 .split-hero h4 {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .split-hero ul {
     margin: 5px 0 16px 0;
-    &:last-child {
+    &:last-of-type {
         margin-bottom: 24px;
     }
     li {
