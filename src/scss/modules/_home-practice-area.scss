@@ -91,12 +91,10 @@ article {
     .home_practice_areas-row-0-padding {
         padding: 24px !important;
         @include m {
-            .home_practice_areas-row-0-padding {
-                padding-top: 100px !important;
-                padding-bottom: 64px !important;
-                padding-left: 64px !important;
-                padding-right: 64px !important;
-            }
+            padding-top: 100px !important;
+            padding-bottom: 64px !important;
+            padding-left: 64px !important;
+            padding-right: 64px !important;
         }
     }
 
