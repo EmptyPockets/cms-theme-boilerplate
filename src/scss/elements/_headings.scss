@@ -64,11 +64,11 @@ h4 {
   color: $color-blue-dark;
   font-family: $play;
   font-size: 35px;
-  line-height: 55px;
+  line-height: 1.1;
   margin-bottom: 16px;
   @include m {
     font-size: 50px;
-    line-height: 65px;
+    line-height: 1.3;
   }
 }
 
