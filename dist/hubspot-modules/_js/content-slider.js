@@ -7,8 +7,8 @@ new Flickity('.gallery', {
   cellAlign: 0.2,
   cellSelector: undefined,
   contain: false,
-  selectedAttraction: 0.2,
-  friction: 0.8,
+  selectedAttraction: 0.01,
+  friction: 0.2,
   freeScroll: false,
   groupCells: false,
   initialIndex: 0,
@@ -20,7 +20,7 @@ new Flickity('.gallery', {
   rightToLeft: false,
   setGallerySize: true,
   watchCSS: false,
-  wrapAround: false,
+  wrapAround: false
 });
 
 
