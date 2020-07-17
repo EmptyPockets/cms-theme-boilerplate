@@ -90,8 +90,10 @@ article.client-reviews .featured .review > img {
 article.client-reviews .review > img {
     width: 100%;
     height: 140px;
-    max-width: 240px;
     object-fit: cover;
+    @include m {
+        max-width: 240px;
+    }
 }
 
 // article.client-reviews ul .review > img {

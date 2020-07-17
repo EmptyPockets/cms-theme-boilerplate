@@ -12,7 +12,7 @@ article .practice-area {
     }
 }
 
-@media (min-width: 705px) {
+@media (min-width: 1040px) {
     article .practice-area {
         flex-direction: row;
     }
@@ -23,6 +23,7 @@ article .practice-area {
 
     article .practice-area.odd .inner-content-wrapper {
         order: 2;
+        padding: 58px 0px 80px 48px;
     }
     article .practice-area.even .inner-content-wrapper {
         padding: 58px 80px 80px 48px;
@@ -43,16 +44,9 @@ article .practice-area img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    @include m {
+    @include lg {
         width: 50%;
         height: calc(760px / 2);
-    }
-}
-
-@media (min-width: 705px) {
-    article .practice-area img {
-        margin-bottom: 0;
-        // width: 50%;
     }
 }
 
@@ -64,9 +58,9 @@ article .practice-area .inner-content-wrapper {
     }
 }
 
-@media (min-width: 705px) {
+@media (min-width: 1040px) {
     article .practice-area .inner-content-wrapper {
-        padding: 58px 40px 80px 80px;
+        padding: 58px 40px 80px 0px;
     }
 }
 
