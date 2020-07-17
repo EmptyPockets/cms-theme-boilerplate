@@ -11,7 +11,8 @@
 
 .banner-award img {
   margin-top: 16px;
-  min-height: 120px;
+  min-height: initial;
+  height: 120px;
   width: auto;
   @include m {
     min-height: 160px;
@@ -175,8 +176,11 @@
 .banner-settlement h3 {
   color: #fff;
   font-family: 'Playfair Display', serif;
-  font-size: 3.5vw;
+  font-size: 30px;
   margin-bottom: 24px;
+  @include m {
+    font-size: 3.5vw;
+  }
 }
 
 @media (min-width: 1300px) {
