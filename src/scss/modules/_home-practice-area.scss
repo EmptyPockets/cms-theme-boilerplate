@@ -5,7 +5,7 @@ article .practice-area {
     flex-direction: column;
     margin-bottom: 0;
     @include m {
-        margin-bottom: 60px;
+        margin-bottom: 0;
     }
     &:last-child {
         margin-bottom: 0;
