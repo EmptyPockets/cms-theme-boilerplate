@@ -70,12 +70,15 @@
   border-bottom: 2px solid #fff;
   color: #fff;
   font-family: 'Public Sans', sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 16px;
   padding-bottom: 16px;
   z-index: 2;
   line-height: 1.2;
   position: relative;
+  @include m {
+    font-size: 25px;
+  }
 }
 
 .content-slider .card ul {
@@ -91,12 +94,15 @@
 
 .content-slider .card ul li a {
   color: #fff;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 30px;
   text-decoration: underline;
   opacity: 0.85;
   &:hover {
     opacity: 1;
+  }
+  @include m {
+    font-size: 20px;
   }
 }
 
