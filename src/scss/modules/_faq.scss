@@ -29,7 +29,7 @@
             height: 25px;
             cursor: pointer;
             circle {
-                fill: $color-blue-light;
+                fill: $color-red;
             }
         }
     }
@@ -39,7 +39,7 @@
                 display: none;
             }
             circle {
-                fill: gray;
+                fill: $color-blue;
             }
         }
     }
@@ -49,7 +49,7 @@
                 display: none;
             }
             circle {
-                fill: gray;
+                fill: $color-blue-dark;
             }
         }
     }
@@ -64,9 +64,6 @@
         font-size: 17px;
         line-height: 1.5;
         margin-bottom: 24px;
-        + div {
-            // margin-bottom: 32px;
-        }
         &:empty {
             display: none;
         }
