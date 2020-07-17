@@ -118,6 +118,10 @@
   text-decoration: underline;
   z-index: 2;
   position: relative;
+  opacity: 0.85;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .content-slider .flickity-button.flickity-prev-next-button {
