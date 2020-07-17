@@ -38,14 +38,18 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 380px;
+  width: 300px;
+  height: 300px;
   justify-content: space-between;
   margin-right: 24px;
   padding: 24px;
-  width: 380px;
   background-size: cover;
   background-position: center;
   background-color: gray;
+  @include m {
+    width: 380px;
+    height: 380px;
+  }
   &:before {
     content: '';
     background-color: black;
