@@ -38,10 +38,11 @@ article .practice-area img {
     margin-top: 60px;
     // width: calc(1230px / 2);
     width: 100%;
-    height: calc(760px / 2);
+    height: auto;
     object-fit: cover;
-    @include sm {
+    @include m {
         width: 50%;
+        height: calc(760px / 2);
     }
 }
 

@@ -63,10 +63,10 @@ h4 {
 .section-heading {
   color: $color-blue-dark;
   font-family: $play;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 55px;
   margin-bottom: 16px;
-  @include sm {
+  @include m {
     font-size: 50px;
     line-height: 65px;
   }

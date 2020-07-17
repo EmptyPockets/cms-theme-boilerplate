@@ -46,8 +46,11 @@
 }
 
 .split-hero section .inner-content-wrapper h3 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 24px;
+    @include m {
+        font-size: 35px;
+    }
 }
 
 .split-hero section .inner-content-wrapper p {
