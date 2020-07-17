@@ -719,12 +719,14 @@ body.open-menu {
   &#stickyGlobalHeader {
     position: fixed;
     top: -44px;
+    // height: 54px;
     left: 0;
     right: 0;
     background: none;
-    height: initial;
+
     @include m {
-      top: -54px; /* TODO: Refactor to remove magic number */
+      top: -54px;
+      height: 54px;
     }
     // @include tp {
     //   top: -67px;

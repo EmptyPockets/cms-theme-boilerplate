@@ -1,6 +1,10 @@
 .global-footer {
   background-color: $color-blue-darker;
 
+  iframe {
+    width: 100%;
+  }
+
   .content-wrapper {
     align-items: center;
     color: #fff;
@@ -193,7 +197,7 @@
     }
   }
   p {
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     margin-bottom: 32px;
   }
@@ -209,7 +213,12 @@
   }
   .form {
     background-color: #20244e;
-    padding: 80px 56px 56px 56px;
+    padding: 48px 24px 24px 24px;
+    text-align: center;
+    @include m {
+      text-align: left;
+      padding: 80px 56px 56px 56px;
+    }
     .form-wrapper {
       max-width: 500px;
       margin: 0 auto;
