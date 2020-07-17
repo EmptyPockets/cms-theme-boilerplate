@@ -79,6 +79,10 @@
   a {
     text-decoration: none;
   }
+  opacity: 0.85;
+  &:hover {
+    opacity: 1;
+  }
   @include m {
     font-size: 25px;
   }
