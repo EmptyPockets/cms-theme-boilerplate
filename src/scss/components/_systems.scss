@@ -126,7 +126,7 @@ ul.hs-search-results__listing li {
 }
 
 .three-steps-wrapper .steps_dnd_area_new-row-0-padding {
-  padding: 24px !important;
+  padding: 48px 24px 24px 24px !important;
   @include m {
     padding-top: 100px !important;
     padding-bottom: 0 !important;
@@ -144,5 +144,31 @@ article {
       padding-left: 64px !important;
       padding-right: 64px !important;
     }
+  }
+}
+
+.triple-contact-wrapper .triple-contact-row-0-padding {
+  padding-top: 48px !important;
+  padding-bottom: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  @include m {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
+
+.triple-contact-wrapper .triple-contact-column-1-row-0-padding {
+  padding-top: 0px !important;
+  padding-bottom: 48px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  @include m {
+    padding-top: 0px !important;
+    padding-bottom: 100px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
 }

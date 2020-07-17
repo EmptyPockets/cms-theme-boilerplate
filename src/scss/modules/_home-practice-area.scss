@@ -3,7 +3,10 @@ article .practice-area {
     color: #fff;
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
+    margin-bottom: 0;
+    @include m {
+        margin-bottom: 60px;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -55,7 +58,10 @@ article .practice-area img {
 
 article .practice-area .inner-content-wrapper {
     flex: 1;
-    padding: 24px;
+    padding: 24px 0;
+    @include m {
+        padding: 24px;
+    }
 }
 
 @media (min-width: 705px) {
@@ -93,7 +99,7 @@ article .practice-area p:last-of-type {
 }
 article {
     .home_practice_areas-row-0-padding {
-        padding: 24px !important;
+        padding: 48px 24px 24px 24px !important;
         @include m {
             padding-top: 100px !important;
             padding-bottom: 64px !important;

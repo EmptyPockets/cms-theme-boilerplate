@@ -3,9 +3,11 @@
 }
 
 article.client-reviews {
-    margin-bottom: 32px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 2px 2px rgba(0, 0, 0, 0.06), 0 4px 4px rgba(0, 0, 0, 0.06),
-        0 6px 8px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.06);
+    @include m {
+        margin-bottom: 32px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 2px 2px rgba(0, 0, 0, 0.06), 0 4px 4px rgba(0, 0, 0, 0.06),
+            0 6px 8px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.06);
+    }
 }
 
 article.client-reviews .content-wrapper {
@@ -39,14 +41,22 @@ article.client-reviews .content-wrapper .featured {
 }
 
 article.client-reviews .content-wrapper section {
-    background-color: #fff;
+    background-color: rgba(234, 235, 239, 1);
     flex: 1.1;
-    padding: 48px;
+    padding: 24px;
+    @include m {
+        padding: 48px;
+        background-color: #fff;
+    }
 }
 
 article.client-reviews .content-wrapper section h2 {
     color: #20264c;
     margin-bottom: 32px;
+    text-align: center;
+    @include m {
+        text-align: left;
+    }
 }
 
 article.client-reviews .content-wrapper section + section {
@@ -66,15 +76,24 @@ article.client-reviews ul .review {
     margin-bottom: 32px;
 }
 
-article.client-reviews ul .review > img,
-article.client-reviews ul .review > svg {
+article.client-reviews ul .review .inner-content-wrapper img,
+article.client-reviews ul .review .inner-content-wrapper svg {
     margin-right: 24px;
     width: 240px;
-    height: 140px;
 }
-article.client-reviews ul .review > img {
-    flex: none;
+article.client-reviews .featured img {
+    width: 100%;
+    height: auto;
 }
+
+article.client-reviews .review > img {
+    width: 100%;
+    height: auto;
+}
+
+// article.client-reviews ul .review > img {
+//     // flex: none;
+// }
 
 article.client-reviews ul .review h3,
 article.client-reviews ul .review h4 {
@@ -124,7 +143,6 @@ article.client-reviews .review h3 {
 }
 
 article.client-reviews .review h4 {
-    font-size: 35px;
     margin-bottom: 16px;
 }
 
@@ -145,4 +163,20 @@ article.client-reviews .review-stars-img {
     margin-bottom: 8px;
     height: 38px;
     width: 220px;
+}
+
+article.client-reviews {
+    ul li {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03), 0 2px 2px rgba(0, 0, 0, 0.03), 0 4px 4px rgba(0, 0, 0, 0.03),
+            0 6px 8px rgba(0, 0, 0, 0.03), 0 8px 16px rgba(0, 0, 0, 0.03);
+        @include m {
+            box-shadow: none;
+        }
+    }
+
+    .inner-content-wrapper {
+        padding: 24px;
+    }
 }
