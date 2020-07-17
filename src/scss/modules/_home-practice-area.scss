@@ -73,8 +73,11 @@ article .practice-area h3 {
 
 article .practice-area h4 {
     color: #fff;
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 24px;
+    @include m {
+        font-size: 35px;
+    }
 }
 
 article .practice-area p {
