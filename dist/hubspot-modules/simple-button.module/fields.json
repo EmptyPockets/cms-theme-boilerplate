@@ -1,11 +1,24 @@
 [
   {
-    "default": "<h1>Hello, world!</h1>",
-    "label": "Rich text field",
-    "locked": false,
-    "name": "text",
+    "name": "button_text",
+    "label": "Button Text",
     "required": false,
-    "type": "richtext",
-    "validation_regex": ""
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "CTA BUTTON HERE"
+  },
+  {
+    "name": "button_url",
+    "label": "Button URL",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "https://google.com"
   }
 ]
