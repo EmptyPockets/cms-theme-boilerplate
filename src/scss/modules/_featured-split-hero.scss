@@ -86,10 +86,13 @@
 }
 
 .split-hero ul {
-    margin: 5px 0 10px 0;
+    margin: 5px 0 16px 0;
+    &:last-child {
+        margin-bottom: 24px;
+    }
     li {
         color: #20264c;
         line-height: 1.5;
-        font-size: 14px;
+        font-size: 17px;
     }
 }
