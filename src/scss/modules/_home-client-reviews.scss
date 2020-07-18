@@ -86,6 +86,9 @@ article.client-reviews .featured .review > img {
     width: 100%;
     height: 250px;
     object-fit: cover;
+    @include m {
+        height: 350px;
+    }
 }
 
 article.client-reviews .featured .review > img {
