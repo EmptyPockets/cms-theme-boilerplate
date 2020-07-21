@@ -1,0 +1,14 @@
+<!-- 
+templateType: page
+isAvailableForNewContent: true
+label: Page Starter
+screenshotPath: ../images/template-previews/home.png 
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  {% dnd_area "main" %}
+  {% end_dnd_area %}
+</main>
+{% endblock body %}
