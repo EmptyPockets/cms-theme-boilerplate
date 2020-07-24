@@ -1,0 +1,14 @@
+ul.awards {
+  &.module {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    li {
+      margin-top: 0;
+      margin: 25px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

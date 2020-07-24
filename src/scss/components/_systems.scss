@@ -145,6 +145,13 @@ article {
       padding-right: 64px !important;
     }
   }
+  &.practice-area-page {
+    .faq_area-row-0-padding {
+      @include m {
+        padding-top: 170px !important;
+      }
+    }
+  }
 }
 
 .triple-contact-wrapper .triple-contact-row-0-padding {
@@ -170,5 +177,18 @@ article {
     padding-bottom: 100px !important;
     padding-left: 0px !important;
     padding-right: 0px !important;
+  }
+}
+
+.drag-area {
+  ul {
+    li {
+      font-size: 17px;
+      line-height: 1.5;
+      color: #20244e;
+      &:first-of-type {
+        margin-top: 15px;
+      }
+    }
   }
 }

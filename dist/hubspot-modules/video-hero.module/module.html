@@ -1,7 +1,7 @@
 <div class="video-wrapper" id="video-wrapper">
   <!-- Background Video -->
   {# video is appened #}
-  <header>
+  <header class="{% if !module.show_subheading %}practice-area-page{% endif %}">
     <h1>{{ module.title }}</h1>
     <div class="play-button-wrapper" id="playButton">
       <svg
@@ -33,17 +33,14 @@
           />
         </g>
       </svg>
+      {% if module.show_subheading %}
       <p>
         {{ module.subheading }}
         <span>
           {{ module.video_length }} | Play With Sound
-          {#
-          <svg class="sound-icon">
-            <use xlink:href="#sound-icon-7"></use>
-          </svg>
-          #}
         </span>
       </p>
+      {% endif %}
     </div>
   </header>
 </div>
@@ -64,10 +61,10 @@
     </span>
     <div class="wistia_responsive_padding" style="padding:42.5% 0 0 0;position:relative;">
       <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-        <div class="wistia_embed wistia_async_fl1rw4h0vw videoFoam=true" style="height:100%;position:relative;width:100%">
+        <div class="wistia_embed wistia_async_{{ module.wistia_id }} videoFoam=true" style="height:100%;position:relative;width:100%">
           <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
             <img
-              src="https://fast.wistia.com/embed/medias/fl1rw4h0vw/swatch"
+              src="https://fast.wistia.com/embed/medias/{{ module.wistia_id }}/swatch"
               style="filter:blur(5px);height:100%;object-fit:contain;width:100%;"
               alt=""
               aria-hidden="true"
@@ -79,3 +76,25 @@
     </div>
   </div>
 </div>
+<script>
+  if (window.innerWidth > 700) {
+    const wrapper = document.getElementById('video-wrapper');
+    const video = document.createElement('video');
+    video.autoplay = true;
+    video.id = 'videoItem';
+    video.loop = true;
+    video.preload = 'auto';
+    video.defaultMuted = true;
+    video.muted = true;
+    video.setAttribute('width', '100%');
+    video.setAttribute('height', 'auto');
+    const mp4Source = document.createElement('source');
+    mp4Source.setAttribute('src', '{{ module.video_url }}');
+    mp4Source.setAttribute('type', 'video/mp4');
+    video.appendChild(mp4Source);
+    wrapper.appendChild(video);
+    video.autoplay = true;
+    video.play();
+
+  }
+</script>

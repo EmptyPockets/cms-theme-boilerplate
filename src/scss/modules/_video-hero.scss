@@ -66,6 +66,21 @@
     top: 50%;
     transform: translate(0, -50%);
     z-index: 2;
+    &.practice-area-page {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      h1 {
+        order: 2;
+        margin-top: 30px;
+      }
+      .play-button-wrapper {
+        justify-content: center;
+      }
+    }
   }
 
   .sound-icon {

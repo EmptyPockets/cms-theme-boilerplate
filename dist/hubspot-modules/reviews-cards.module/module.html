@@ -1,0 +1,21 @@
+<div class="reviews-cards">
+  <ul>
+    {% for review in module.reviews %}
+    <li class="card">
+      <img
+        class="logo"
+        src="{{ review.logo.src }}"
+        alt="review logo"
+      >
+      <svg class="review-stars-img">
+        <use xlink:href="#five-stars"></use>
+      </svg>
+      <blockquote cite="#">
+        <h2>“{{ review.quote }}”</h2>
+        <footer>By: {{ review.author }}</footer>
+      </blockquote>
+      <a class="button ghost" href="/client-reviews">Read More</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

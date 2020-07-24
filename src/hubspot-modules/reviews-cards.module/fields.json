@@ -1,0 +1,104 @@
+[
+  {
+    "id": "reviews",
+    "name": "reviews",
+    "label": "Reviews",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 5,
+      "max": null,
+      "sorting_label_field": "reviews.title",
+      "default": null
+    },
+    "children": [
+      {
+        "id": "reviews.title",
+        "name": "title",
+        "label": "title",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "He was in a car accident"
+      },
+      {
+        "id": "reviews.quote",
+        "name": "quote",
+        "label": "quote",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "They never backed down from corporate lawyers"
+      },
+      {
+        "id": "reviews.author",
+        "name": "author",
+        "label": "author",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Don T."
+      },
+      {
+        "id": "reviews.logo",
+        "name": "logo",
+        "label": "Logo Image",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "type": "image",
+        "default": {
+          "size_type": "auto",
+          "src": "http://placehold.it/200x200",
+          "alt": "icon"
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "type": "group",
+    "default": [
+      {
+        "title": "He was in a car accident",
+        "quote": "They never backed down from corporate lawyers",
+        "author": "Don T.",
+        "logo": {
+          "src": "http://placehold.it/200x100"
+        }
+      },
+      {
+        "title": "Another Review Title",
+        "quote": "Different text here for the quote",
+        "author": "Someone E.",
+        "logo": {
+          "src": "http://placehold.it/200x100"
+        }
+      },
+      {
+        "title": "He was in a car accident",
+        "quote": "They never backed down from corporate lawyers",
+        "author": "Don T.",
+        "logo": {
+          "src": "http://placehold.it/200x100"
+        }
+      },
+      {
+        "title": "Another Review Title",
+        "quote": "Different text here for the quote",
+        "author": "Someone E.",
+        "logo": {
+          "src": "http://placehold.it/200x100"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "results",
+    "name": "results",
+    "label": "results",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 5,
+      "max": null,
+      "sorting_label_field": "results.amount",
+      "default": null
+    },
+    "children": [
+      {
+        "id": "results.amount",
+        "name": "amount",
+        "label": "Amount",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "$4,000,000"
+      },
+      {
+        "id": "results.practice_area",
+        "name": "practice_area",
+        "label": "Practice Area",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Medical Malpractice"
+      },
+      {
+        "id": "results.title",
+        "name": "title",
+        "label": "Title",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "Missed Diagnosis of Infant Hydrocephalus"
+      }
+    ],
+    "tab": "CONTENT",
+    "type": "group",
+    "default": [
+      {
+        "practice_area": "Medical Malpractice",
+        "amount": "$4,000,000",
+        "title": "Missed Diagnosis of Infant Hydrocephalus"
+      },
+      {
+        "practice_area": "Medical Malpractice",
+        "amount": "$6,000,000",
+        "title": "Missed Diagnosis of Infant Hydrocephalus"
+      },
+      {
+        "practice_area": "Medical Malpractice",
+        "amount": "$4,000,000",
+        "title": "Missed Diagnosis of Infant Hydrocephalus"
+      },
+      {
+        "practice_area": "Medical Malpractice",
+        "amount": "$6,000,000",
+        "title": "Missed Diagnosis of Infant Hydrocephalus"
+      }
+    ]
+  }
+]

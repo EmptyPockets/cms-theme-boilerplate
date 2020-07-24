@@ -1,0 +1,96 @@
+[
+  {
+    "id": "awards",
+    "name": "awards",
+    "label": "Awards",
+    "required": false,
+    "locked": false,
+    "occurrence": {
+      "min": 5,
+      "max": null,
+      "sorting_label_field": "awards.title",
+      "default": null
+    },
+    "children": [
+      {
+        "id": "awards.title",
+        "name": "title",
+        "label": "title",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "AVVO"
+      },
+      {
+        "id": "awards.image",
+        "name": "image",
+        "label": "Award Image",
+        "required": false,
+        "locked": false,
+        "responsive": true,
+        "resizable": true,
+        "type": "image",
+        "default": {
+          "size_type": "auto",
+          "src": "http://placehold.it/160x160",
+          "alt": null
+        }
+      }
+    ],
+    "tab": "CONTENT",
+    "type": "group",
+    "default": [
+      {
+        "title": "Award 1",
+        "image": {
+          "size_type": "auto",
+          "src": "http://placehold.it/160x160",
+          "alt": "award 1"
+        }
+      },
+      {
+        "title": "Award 2",
+        "image": {
+          "size_type": "auto",
+          "src": "http://placehold.it/160x160",
+          "alt": "award 2"
+        }
+      },
+      {
+        "title": "Award 3",
+        "image": {
+          "size_type": "auto",
+          "src": "http://placehold.it/160x160",
+          "alt": "award 2"
+        }
+      },
+      {
+        "title": "Award 4",
+        "image": {
+          "size_type": "auto",
+          "src": "http://placehold.it/160x160",
+          "alt": "award 2"
+        }
+      },
+      {
+        "title": "Award 5",
+        "image": {
+          "size_type": "auto",
+          "src": "http://placehold.it/160x160",
+          "alt": "award 2"
+        }
+      },
+      {
+        "title": "Award 6",
+        "image": {
+          "size_type": "auto",
+          "src": "http://placehold.it/160x160",
+          "alt": "award 2"
+        }
+      }
+    ]
+  }
+]
