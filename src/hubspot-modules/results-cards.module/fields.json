@@ -47,6 +47,18 @@
         "show_emoji_picker": false,
         "type": "text",
         "default": "Missed Diagnosis of Infant Hydrocephalus"
+      },
+      {
+        "id": "results.more_link",
+        "name": "more_link",
+        "label": "Read More Link",
+        "required": false,
+        "locked": false,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "/client-reviews"
       }
     ],
     "tab": "CONTENT",

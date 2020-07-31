@@ -14,7 +14,7 @@
         <h2>“{{ review.quote }}”</h2>
         <footer>By: {{ review.author }}</footer>
       </blockquote>
-      <a class="button ghost" href="/client-reviews">Read More</a>
+      <a class="button ghost" href="{{ review.more_link }}">Read More</a>
     </li>
     {% endfor %}
   </ul>
