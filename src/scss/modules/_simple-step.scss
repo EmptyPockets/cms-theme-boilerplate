@@ -7,13 +7,17 @@
     text-align: center;
     @include sm {
         margin-bottom: 0;
-        padding: 0 16px;
+        padding: 100px 16px 0;
+        position: relative;
     }
 
     img,
     svg {
         height: 75px;
-        margin: 0 auto 24px auto;
+        left: 50%;
+        margin: 0 0 24px -150px;
+        position: absolute;
+        top: 0;
     }
 
     h3 {
