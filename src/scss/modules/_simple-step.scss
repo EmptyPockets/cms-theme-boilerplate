@@ -14,12 +14,12 @@
     img,
     svg {
         height: 75px;
-        left: 50%;
         margin: 0 auto 24px auto;
         @include sm {
             margin: 0 0 24px -150px;
             position: absolute;
             top: 0;
+            left: 50%;
         }
     }
 
