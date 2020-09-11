@@ -246,14 +246,10 @@ $contactBannerHeight: 54px;
               font-size: 11px;
             }
 
-            @include md {
+            @include lg {
               display: block;
-              font-size: 11px;
-              margin-left: 8px;
-            }
-
-            @include md {
               font-size: 13px;
+              margin-left: 8px;
             }
           }
         }
@@ -290,10 +286,6 @@ $contactBannerHeight: 54px;
           }
 
           @include lg {
-            display: none;
-          }
-
-          @include xl {
             display: block;
             opacity: 1;
             padding-left: 8px;
