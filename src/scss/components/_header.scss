@@ -650,25 +650,35 @@ $contactBannerHeight: 54px;
 }
 
 .sticky {
-  .nav-content-wrapper div.contact-banner {
-    .button-group {
-      @include md {
-        width: auto;
-      }
-
-      @include lg {
-        width: 100%;
-      }
-    }
-    a.tiny {
+  .nav-content-wrapper {
+    a.button.link span {
       @include md {
         display: none;
       }
+      @include lg {
+        display: flex;
+      }
+    }
+    div.contact-banner {
+      .button-group {
+        @include md {
+          width: auto;
+        }
 
-      @include xl {
-        display: block;
-        font-size: 13px;
-        margin-left: 8px;
+        @include lg {
+          width: 100%;
+        }
+      }
+      a.tiny {
+        @include md {
+          display: none;
+        }
+
+        @include xl {
+          display: block;
+          font-size: 13px;
+          margin-left: 8px;
+        }
       }
     }
   }
