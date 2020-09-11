@@ -246,10 +246,6 @@ $contactBannerHeight: 54px;
               font-size: 11px;
             }
 
-            @include lg {
-              display: none;
-            }
-
             @include xl {
               display: block;
               font-size: 13px;
@@ -654,6 +650,17 @@ $contactBannerHeight: 54px;
 }
 
 .sticky {
+  .global-header.sticky .nav-content-wrapper div.contact-banner a.tiny {
+    @include lg {
+      display: none;
+    }
+
+    @include xl {
+      display: block;
+      font-size: 13px;
+      margin-left: 8px;
+    }
+  }
   .navigation-primary {
     ul li a {
       font-size: 15px;
