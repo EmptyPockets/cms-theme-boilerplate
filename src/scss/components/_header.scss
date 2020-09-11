@@ -650,7 +650,7 @@ $contactBannerHeight: 54px;
 }
 
 .sticky {
-  .global-header.sticky .nav-content-wrapper div.contact-banner a.tiny {
+  .nav-content-wrapper div.contact-banner a.tiny {
     @include lg {
       display: none;
     }
