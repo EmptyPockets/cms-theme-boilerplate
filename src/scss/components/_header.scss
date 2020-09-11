@@ -664,10 +664,6 @@ $contactBannerHeight: 54px;
         @include md {
           width: auto;
         }
-
-        @include lg {
-          width: 100%;
-        }
       }
       a.tiny {
         @include md {
