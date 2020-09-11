@@ -282,11 +282,11 @@ $contactBannerHeight: 54px;
           }
 
           @include md {
-            display: none;
+            display: block;
+            padding-left: 16px;
           }
 
           @include lg {
-            display: block;
             opacity: 1;
             padding-left: 8px;
           }
@@ -650,21 +650,36 @@ $contactBannerHeight: 54px;
 }
 
 .sticky {
-  .nav-content-wrapper div.contact-banner a.tiny {
-    @include lg {
-      display: none;
-    }
+  .nav-content-wrapper div.contact-banner {
+    .button-group {
+      @include md {
+        width: auto;
+      }
 
-    @include xl {
-      display: block;
-      font-size: 13px;
-      margin-left: 8px;
+      @include lg {
+        width: 100%;
+      }
+    }
+    a.tiny {
+      @include md {
+        display: none;
+      }
+
+      @include xl {
+        display: block;
+        font-size: 13px;
+        margin-left: 8px;
+      }
     }
   }
   .navigation-primary {
     ul li a {
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 400;
+
+      @include lg {
+        font-size: 15px;
+      }
     }
   }
 }
