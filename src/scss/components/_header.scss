@@ -613,6 +613,10 @@ $contactBannerHeight: 54px;
   }
 }
 
+.navigation-mobile {
+  display: none;
+}
+
 .navigation-primary {
   display: none;
   @include sm {
@@ -736,9 +740,9 @@ $contactBannerHeight: 54px;
   }
 }
 
-body.open-menu {
-  // overflow: hidden;
-}
+// body.open-menu {
+//   overflow: hidden;
+// }
 
 /* Sticky Global Header */
 .global-header {
