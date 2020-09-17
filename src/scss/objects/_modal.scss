@@ -13,42 +13,43 @@ body.open-modal {
   height: 100vh;
   overflow-y: hidden;
   background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-}
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #000;
-  margin: 125px auto;
-  padding: 0;
-  width: 100%;
-  video {
-    vertical-align: bottom;
-  }
-
-  /* The Close Button */
-  .close {
-    float: right;
-    position: relative;
-    top: -64px;
-    background-color: #9a2310;
-    border-radius: 50%;
-    left: -10px;
-    padding: 7px;
-    display: flex;
-    justify-content: center;
-    border: 2px solid #fff;
-    align-items: center;
-    img,
-    svg {
-      width: 30px;
-      height: 30px;
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #000;
+    margin: 125px auto;
+    padding: 0;
+    width: 100%;
+    
+    video {
+      vertical-align: bottom;
     }
-  }
 
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    /* The Close Button */
+    .close {
+      float: right;
+      position: relative;
+      top: -64px;
+      background-color: #9a2310;
+      border-radius: 50%;
+      left: -10px;
+      padding: 7px;
+      display: flex;
+      justify-content: center;
+      border: 2px solid #fff;
+      align-items: center;
+      img,
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 }
