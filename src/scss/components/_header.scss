@@ -18,7 +18,7 @@ $contactBannerHeight: 54px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    padding: 0 16px;
     position: relative;
 
     @include tn {
@@ -296,7 +296,7 @@ $contactBannerHeight: 54px;
       &.nav-wrapper {
         display: flex;
         align-items: center;
-        padding-right: 16px;
+        // padding-right: 16px;
         @include sm {
           align-items: flex-end;
           display: flex;
@@ -503,6 +503,8 @@ $contactBannerHeight: 54px;
     height: 50px;
     justify-content: center;
     width: 50px;
+    position: relative;
+
     &.hide-lg {
       @include sm {
         bottom: 16px;
@@ -614,7 +616,17 @@ $contactBannerHeight: 54px;
 }
 
 .navigation-mobile {
-  display: none;
+  display: block;
+
+  @include sm {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .navigation-primary {
@@ -632,24 +644,6 @@ $contactBannerHeight: 54px;
     list-style: none;
     margin: 0;
     padding: 0;
-
-    li {
-      display: grid;
-      justify-content: center;
-      a {
-        color: $color-blue-dark;
-        font-size: 16px;
-        font-weight: $normal;
-        text-align: center;
-        @include xxl {
-          font-size: 17px;
-        }
-
-        &:hover {
-          color: $color-red;
-        }
-      }
-    }
   }
 }
 
@@ -695,7 +689,7 @@ $contactBannerHeight: 54px;
 }
 
 .mobile-dropdown {
-  background: $color-blue-darker;
+  background: $color-gray;
   // max-height: 0;
   height: 0;
   overflow: hidden;
@@ -718,26 +712,57 @@ $contactBannerHeight: 54px;
     }
   }
 
-  a {
-    color: rgba(255, 255, 255, 0.9);
-    display: block;
-    font-size: 22px;
-    font-weight: 400;
-    padding: 24px 45px;
-    text-transform: uppercase;
+  li {
+    margin-top: 1px;
   }
 
   li:first-child {
-    a {
-      padding-top: 50px;
+    margin-top: 0;
+  }
+
+  a {
+    display: block;
+    padding: 0 24px;
+    font-size: 1.05em;
+    font-weight: 400;
+    line-height: 2.7em;
+    background: $color-background-light;
+    color: $color-blue-dark;
+
+    &:hover {
+      padding-right: 32px;
     }
   }
 
-  li:last-child {
-    a {
-      padding-bottom: 50px;
-    }
-  }
+  // li {
+  //   display: grid;
+  //   justify-content: center;
+  //   a {
+  //     color: $color-blue-dark;
+  //     font-size: 16px;
+  //     font-weight: $normal;
+  //     text-align: center;
+  //     @include xxl {
+  //       font-size: 17px;
+  //     }
+
+  //     &:hover {
+  //       color: $color-red;
+  //     }
+  //   }
+  // }
+
+  // li:first-child {
+  //   a {
+  //     padding-top: 50px;
+  //   }
+  // }
+
+  // li:last-child {
+  //   a {
+  //     padding-bottom: 50px;
+  //   }
+  // }
 }
 
 // body.open-menu {
