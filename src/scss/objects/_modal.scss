@@ -24,31 +24,31 @@ body.open-modal {
   video {
     vertical-align: bottom;
   }
-}
 
-/* The Close Button */
-.close {
-  float: right;
-  position: relative;
-  top: -64px;
-  background-color: #9a2310;
-  border-radius: 50%;
-  left: -10px;
-  padding: 7px;
-  display: flex;
-  justify-content: center;
-  border: 2px solid #fff;
-  align-items: center;
-  img,
-  svg {
-    width: 30px;
-    height: 30px;
+  /* The Close Button */
+  .close {
+    float: right;
+    position: relative;
+    top: -64px;
+    background-color: #9a2310;
+    border-radius: 50%;
+    left: -10px;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #fff;
+    align-items: center;
+    img,
+    svg {
+      width: 30px;
+      height: 30px;
+    }
   }
-}
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }

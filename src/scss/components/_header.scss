@@ -521,23 +521,20 @@ $contactBannerHeight: 54px;
       }
     }
 
-    .menu {
+    .menu, .close {
+      position: absolute;
       height: 30px;
       width: 30px;
-      position: absolute;
-      z-index: 10;
-      left: 20px;
+      left: 0;
+
       @include m {
         height: 42px;
         width: 42px;
-        left: 0;
       }
     }
 
-    .close {
-      height: 42px;
-      position: absolute;
-      width: 42px;
+    .menu {
+      z-index: 10;
     }
 
     &.open {
@@ -689,7 +686,7 @@ $contactBannerHeight: 54px;
 }
 
 .mobile-dropdown {
-  background: $color-gray;
+  background: $color-gray-light;
   // max-height: 0;
   height: 0;
   overflow: hidden;
