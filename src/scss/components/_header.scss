@@ -422,7 +422,7 @@ $contactBannerHeight: 54px;
     }
 
     /* Site Search */
-    #searchInputWrapper {
+    #searchInputWrapper, #mobileSearchInputWrapper {
       align-items: center;
       background-color: $color-blue-darker;
       border-radius: 22px;
@@ -762,33 +762,15 @@ $contactBannerHeight: 54px;
   // }
 }
 
-// body.open-menu {
-//   overflow: hidden;
-// }
-
 /* Sticky Global Header */
 .global-header {
   &#stickyGlobalHeader {
     position: fixed;
     top: -44px;
-    // height: 54px;
     left: 0;
     right: 0;
     background: none;
 
-    @include m {
-      top: -54px;
-      height: 54px;
-    }
-    // @include tp {
-    //   top: -67px;
-    // }
-    // @include bp {
-    //   top: -68px;
-    // }
-    // @include sm {
-    //   top: -54px;
-    // }
     .header-wrapper {
       height: initial;
       background: none;
@@ -810,18 +792,18 @@ $contactBannerHeight: 54px;
         justify-content: space-evenly;
       }
     }
+    .mobile-header-wrapper {
+      display: none;
+    }
     &.sticky {
       border-radius: 0;
-      // height: 67px;
       opacity: 1;
       position: fixed;
       transform: translateY(100%);
       transition: 0.25s all linear;
       width: 100%;
       z-index: 3;
-      @include tn {
-        // height: 54px;
-      }
+
       div.contact-banner {
         width: 100%;
         border: 0;
