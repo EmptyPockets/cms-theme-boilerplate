@@ -560,9 +560,12 @@ $contactBannerHeight: 54px;
       color: #fff;
       font-size: 17px;
       // letter-spacing: 1px;
-      padding: 12px;
+      padding: 8px;
       text-align: center;
       width: 50%;
+      @include sm {
+        padding: 12px;
+      }
       @include tp {
         font-size: 12px;
       }
@@ -754,12 +757,32 @@ $contactBannerHeight: 54px;
       }
     }
     .mobile-header-wrapper {
-      display: none;
+      // display: none;
       background: #fff;
       height: 60px;
 
       @include md {
         display: none;
+      }
+    }
+    .menu-icon {
+      .menu, .close {
+        width: 30px;
+        height: 30px;
+
+        @include sm {
+          width: 38px;
+          height: 38px;
+        }
+      }
+    }
+    .logo-wrapper .logo + .logo {
+      width: 140px;
+      height: 60px;
+
+      @include sm {
+        width: 170px;
+        height: 74px;
       }
     }
     &.sticky {
