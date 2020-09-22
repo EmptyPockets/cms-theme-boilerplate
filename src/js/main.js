@@ -16,7 +16,8 @@ import LazyLoad from "vanilla-lazyload";
   let searchInputWrapper = document.getElementById('searchInputWrapper');
   let mobileSearchInputWrapper = document.getElementById('mobileSearchInputWrapper');
   let menu = document.getElementById('navWrapper');
-
+  let header = document.getElementById('globalHeader');
+  let mobileHeader = document.getElementById('stickyGlobalHeader');
 
   searchTrigger.addEventListener("click", openSearch);
   mobileSearchTrigger.addEventListener("click", openSearch);
@@ -28,6 +29,8 @@ import LazyLoad from "vanilla-lazyload";
     searchTrigger.classList.toggle('active');
     mobileSearchTrigger.classList.toggle('active');
     menu.classList.toggle('active');
+    header.classList.toggle('search-is-active');
+    mobileHeader.classList.toggle('search-is-active');
   }
 
   function closeSearch() {
@@ -38,17 +41,21 @@ import LazyLoad from "vanilla-lazyload";
       mobileSearchInputWrapper.classList.add('active');
       searchTrigger.classList.add('active');
       mobileSearchTrigger.classList.add('active');
-      menu.classList.add('active')
+      menu.classList.add('active');
+      header.classList.add('search-is-active');
+      mobileHeader.classList.add('search-is-active');
     } else if (!isClickInsideElement && !isClickInsideSearchTrigger) {
       searchInputWrapper.classList.remove('active');
       mobileSearchInputWrapper.classList.remove('active');
       searchTrigger.classList.remove('active');
       mobileSearchTrigger.classList.remove('active');
       menu.classList.remove('active');
+      header.classList.remove('search-is-active');
+      mobileHeader.classList.remove('search-is-active');
     }
   }
 
-  let mainStickyNav = document.getElementById('mainStickyNav');
+  // let mainStickyNav = document.getElementById('mainStickyNav');
   let navHeight = 117;
 
   /******************************

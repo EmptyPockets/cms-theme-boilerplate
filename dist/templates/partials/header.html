@@ -3,7 +3,7 @@
   label: Website header
 -->
 <div class="mq-test-icon"></div>
-<header class="global-header">
+<header class="global-header" id="globalHeader">
   <div class="header-wrapper">
     <!-- Mobile Menu Trigger -->
     <div class="menu-icon hide-lg" id="mobileTrigger">
@@ -139,10 +139,6 @@
     <!-- Search -->
     <div class="nav-content-wrapper">
       <div class="nav-wrapper" id="mobileNavWrapper">
-        {% module 'navigation-primary'
-          path='../../hubspot-modules/menu-section',
-          label='Primary navigation'
-        %}
         <svg class="search-icon" id="mobileSearchTrigger">
           <use xlink:href="#search-icon"></use>
         </svg>
