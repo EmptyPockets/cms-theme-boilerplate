@@ -116,6 +116,31 @@
       </div>
     </div>
   </div>
+  <div class="mobile-header-wrapper">
+    <!-- Mobile Menu Trigger -->
+    <div class="menu-icon hide-lg" id="secondaryMobileTrigger">
+      <svg class="menu">
+        <use xlink:href="#menu-icon"></use>
+      </svg>
+      <svg class="close">
+        <use xlink:href="#menu-icon-close-alt"></use>
+      </svg>
+    </div>
+    <div class="nav-wrapper" id="navWrapper">
+      {% module 'navigation-primary'
+        path='../../hubspot-modules/menu-section',
+        label='Primary navigation'
+      %}
+      <svg class="search-icon" id="searchTrigger">
+        <use xlink:href="#search-icon"></use>
+      </svg>
+      <div id="searchInputWrapper">
+        {% module 'site_search'
+          path='../../hubspot-modules/search-input-min'
+        %}
+      </div>
+    </div>
+  </div>
   <div class="mobile-contact-wrapper">
     <a href="/contact" class="button link">
       <svg class="icon email">
@@ -129,5 +154,11 @@
       </svg>
       1-800-JUSTICE
     </a>
+  </div>
+  <div class="mobile-dropdown" id="secondaryMobileDropdown">
+    {% module 'navigation-mobile'
+      path='../../hubspot-modules/mobile-menu-section',
+      label='Mobile navigation'
+    %}
   </div>
 </header>
