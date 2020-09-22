@@ -737,19 +737,16 @@ $contactBannerHeight: 54px;
 
     .header-wrapper {
       height: initial;
-      background: none;
       width: 100%;
     }
-    .nav-content-wrapper {
+    .default-header-wrapper .nav-content-wrapper {
       width: 100%;
       div.contact-banner {
         width: 100%;
         border: 0;
         border-bottom-left-radius: 0;
-        .location-wrapper {
-          a {
-            border-bottom: 0;
-          }
+        .location-wrapper a {
+          border-bottom: 0;
         }
       }
       .navigation-primary ul {
@@ -757,8 +754,9 @@ $contactBannerHeight: 54px;
       }
     }
     .mobile-header-wrapper {
-      display: block;
       display: none;
+      background: #fff;
+      height: 60px;
 
       @include md {
         display: none;
