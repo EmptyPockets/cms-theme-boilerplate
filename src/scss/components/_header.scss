@@ -563,7 +563,7 @@ $contactBannerHeight: 54px;
       padding: 8px;
       text-align: center;
       width: 50%;
-      @include sm {
+      @include tn {
         padding: 12px;
       }
       @include tp {
@@ -770,19 +770,21 @@ $contactBannerHeight: 54px;
         width: 30px;
         height: 30px;
 
-        @include sm {
+        @include tn {
           width: 38px;
           height: 38px;
         }
       }
     }
-    .logo-wrapper .logo + .logo {
-      width: 140px;
-      height: 60px;
+    .logo-wrapper {
+      .logo + .logo {
+        width: 140px;
+        height: 60px;
 
-      @include sm {
-        width: 170px;
-        height: 74px;
+        @include tn {
+          width: 170px;
+          height: 74px;
+        }
       }
     }
     &.sticky {
