@@ -766,9 +766,10 @@ $contactBannerHeight: 54px;
 .global-header {
   &#stickyGlobalHeader {
     position: fixed;
-    top: -44px;
+    top: 0;
     left: 0;
     right: 0;
+    transform: translateY(-100%);
     background: none;
 
     .header-wrapper {
@@ -799,7 +800,7 @@ $contactBannerHeight: 54px;
       border-radius: 0;
       opacity: 1;
       position: fixed;
-      transform: translateY(100%);
+      transform: translateY(0%);
       transition: 0.25s all linear;
       width: 100%;
       z-index: 3;
