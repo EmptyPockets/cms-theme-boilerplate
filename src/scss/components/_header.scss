@@ -771,7 +771,7 @@ $contactBannerHeight: 54px;
     .mobile-header-wrapper {
       background: #fff;
 
-      @include md {
+      @include sm {
         display: none;
       }
     }
