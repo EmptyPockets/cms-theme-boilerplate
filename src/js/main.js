@@ -1,7 +1,6 @@
 import LazyLoad from "vanilla-lazyload";
 
 (function () {
-
   /* Lazy Load Images */
   var lazyLoadInstance = new LazyLoad({});
 
@@ -44,20 +43,18 @@ import LazyLoad from "vanilla-lazyload";
 
   const openSearch = () => toggleIt(true);
 
-  /** @type {(this: Document, ev: MouseEvent) => void} */
-  const closeSearch = (ctx, e) => {
-    const isClickInsideElement = searchInputWrapper.contains(event.target) || mobileSearchInputWrapper.contains(event.target);
-    const isClickInsideSearchTrigger = searchTrigger.contains(event.target) || mobileSearchTrigger.contains(event.target);
+  searchTriggers.forEach(x => x.addEventListener(clickEvent, openSearch));
 
-    if (isClickInsideSearchTrigger) {
+  document.addEventListener(clickEvent, (this, ev) => {
+    /** @type {(x: Node) => boolean} */
+    const isInsideTarget = x => x.contains(ev.target);
+
+    if (searchTriggers.some(isInsideTarget)) {
       toggleIt(true);
-    } else if (!isClickInsideElement && !isClickInsideSearchTrigger) {
+    } else if (!searchInputWrappers.some(isInsideTarget)) {
       toggleIt(false);
     }
-  };
-
-  searchTriggers.forEach(x => x.addEventListener(clickEvent, openSearch));
-  document.addEventListener(clickEvent, closeSearch);
+  });
 
   // const mainStickyNav = Q('#mainStickyNav');
   const navHeight = 117;
@@ -66,25 +63,18 @@ import LazyLoad from "vanilla-lazyload";
    Sticky Not Clone
   *******************************/
 
+  const stickyClass = 'sticky';
   const clone = Q1('#stickyGlobalHeader');
-
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > navHeight) {
-      clone.classList.add('sticky');
-    } else {
-      clone.classList.remove('sticky');
-    }
-
-  });
+  window.addEventListener('scroll', () => clone.classList.toggle(stickyClass, window.pageYOffset > navHeight));
 
   /********************
    Mobile Menu Dropdown
   ******************/
+
   const mobileTrigger = Q1('#mobileTrigger');
   const secondaryMobileTrigger = Q1('#secondaryMobileTrigger');
   const mobileDropdown = Q1('#mobileDropdown');
+  const secondaryMobileDropdown = Q1('#secondaryMobileDropdown');
 
   mobileTrigger.addEventListener("click", toggleMobileMenu);
   secondaryMobileTrigger.addEventListener("click", toggleMobileMenu);
