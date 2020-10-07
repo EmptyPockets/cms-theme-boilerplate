@@ -8,9 +8,6 @@ $contactBannerHeight: 54px;
 
 .global-header {
   overflow: hidden;
-  @include lg {
-    height: 125px;
-  }
 
   .header-wrapper {
     align-items: center;
@@ -228,6 +225,10 @@ $contactBannerHeight: 54px;
         top: 0;
         transform: translateY(0%);
         p {
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          height: 100%;
           color: #fff;
           font-size: 15px;
           font-weight: $normal;
@@ -656,7 +657,7 @@ $contactBannerHeight: 54px;
     display: block;
   }
 
-  ul {
+  ul.level-1 {
     align-items: center;
     column-gap: 16px;
     display: grid;
@@ -670,6 +671,16 @@ $contactBannerHeight: 54px;
     > li {
       height: 100%;
 
+      &.has-submenu {
+        position: relative;
+
+        &:hover > ul.level-2 {
+          opacity: 1;
+          margin-top: 0;
+          pointer-events: auto;
+        }
+      }
+
       > a {
         display: flex;
         height: 100%;
@@ -679,7 +690,49 @@ $contactBannerHeight: 54px;
     }
   }
 
-  .submenu-toggle, .menu-arrow, .submenu.level-2 {
+  ul.level-2 {
+    $distance-from-menu: 24px;
+    display: none; // REMOVE when ready to go live
+    position: absolute;
+    top: 100%;
+    padding: $distance-from-menu;
+    margin-top: -($distance-from-menu - 1);
+    opacity: 0;
+    pointer-events: none;
+    transform: all 0.2s ease-in-out;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 1px;
+      width: $distance-from-menu;
+      height: $distance-from-menu;
+      margin-left: ($distance-from-menu / 2);
+      border: ($distance-from-menu / 2) transparent;
+      border-bottom-color: $color-white;
+      z-index: 1;
+    }
+    > li a {
+      padding: 0 2em;
+      height: 3em;
+      background-color: $color-white;
+      color: $color-blue-dark;
+      border: 1px solid $color-gray-light;
+      border-top: none;
+
+      &:first-child {
+        border-radius: 2px 2px 0 0;
+        border-top: 1px solid $color-gray-light;
+      }
+      &:last-child {
+        border-radius: 0 0 2px 2px;
+      }
+    }
+  }
+
+  .submenu-toggle, .menu-arrow {
     display: none;
   }
 }
@@ -829,6 +882,7 @@ $contactBannerHeight: 54px;
       transition: 0.25s all linear;
       width: 100%;
       z-index: 3;
+      overflow: visible;
 
       div.contact-banner {
         width: 100%;
