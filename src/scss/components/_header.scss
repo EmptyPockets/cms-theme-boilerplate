@@ -695,6 +695,7 @@ $contactBannerHeight: 54px;
   }
 
   ul.level-2 {
+    display: none; // Only displays when sticky
     $distance-from-menu: 24px;
     $submenu-width: 14em;
     position: absolute;
@@ -778,6 +779,9 @@ $contactBannerHeight: 54px;
     }
   }
   .navigation-primary {
+    ul.level-2 {
+      display: block;
+    }
     ul li a {
       font-size: 13px;
       font-weight: 400;
