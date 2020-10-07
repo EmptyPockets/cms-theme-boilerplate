@@ -2,12 +2,12 @@ $max-nav-width: 1100px;
 $spacer: 30vw;
 $fixed-spacer-sm: 200px;
 $fixed-spacer-md: 200px;
-$fixed-spacer-lg: 280px;
+$fixed-spacer-lg: 300px;
 $totalNavHeight: 125px;
 $contactBannerHeight: 54px;
 
 .global-header {
-  overflow: hidden;
+  // overflow: hidden;
 
   .header-wrapper {
     align-items: center;
@@ -319,7 +319,6 @@ $contactBannerHeight: 54px;
           align-items: flex-end;
           display: flex;
           justify-content: space-between;
-          overflow: hidden;
           padding: 20px 20px;
           position: relative;
           width: 100vw;
@@ -358,6 +357,10 @@ $contactBannerHeight: 54px;
           a {
             font-size: 17px;
           }
+        }
+
+        > div {
+          height: 100%;
         }
 
         div {
@@ -692,14 +695,18 @@ $contactBannerHeight: 54px;
 
   ul.level-2 {
     $distance-from-menu: 24px;
+    $submenu-width: 14em;
     display: none; // REMOVE when ready to go live
     position: absolute;
     top: 100%;
+    left: 50%;
     padding: $distance-from-menu;
+    width: $submenu-width;
+    margin-left: -$submenu-width;
     margin-top: -($distance-from-menu - 1);
     opacity: 0;
     pointer-events: none;
-    transform: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &:before {
       content: '';
@@ -709,24 +716,28 @@ $contactBannerHeight: 54px;
       top: 1px;
       width: $distance-from-menu;
       height: $distance-from-menu;
-      margin-left: ($distance-from-menu / 2);
-      border: ($distance-from-menu / 2) transparent;
+      margin-left: -($distance-from-menu / 2);
+      border: ($distance-from-menu / 2) solid transparent;
       border-bottom-color: $color-white;
       z-index: 1;
     }
-    > li a {
-      padding: 0 2em;
-      height: 3em;
-      background-color: $color-white;
-      color: $color-blue-dark;
-      border: 1px solid $color-gray-light;
-      border-top: none;
-
-      &:first-child {
+    > li {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        background-color: $color-white;
+        color: $color-blue-dark !important;
+        text-align: center;
+        border: 1px solid $color-gray-light;
+        border-top: none;
+      }
+      &:first-child a {
         border-radius: 2px 2px 0 0;
         border-top: 1px solid $color-gray-light;
       }
-      &:last-child {
+      &:last-child a {
         border-radius: 0 0 2px 2px;
       }
     }
