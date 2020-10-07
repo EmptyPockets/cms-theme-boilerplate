@@ -9,7 +9,7 @@ $contactBannerHeight: 54px;
 .global-header {
   // overflow: hidden;
   position: relative;
-  z-index: 2;
+  z-index: 3; // 2 isn't enough the be interactable over the video
 
   .header-wrapper {
     align-items: center;
@@ -284,7 +284,7 @@ $contactBannerHeight: 54px;
             }
           }
 
-          a {
+          .level-1 > li > a {
             border-bottom: 1px solid rgba(255, 255, 255, 0.5);
             margin-left: 0;
             &:hover {
@@ -694,7 +694,6 @@ $contactBannerHeight: 54px;
   ul.level-2 {
     $distance-from-menu: 24px;
     $submenu-width: 14em;
-    display: none; // REMOVE when ready to go live
     position: absolute;
     top: 100%;
     left: 50%;
@@ -846,7 +845,7 @@ $contactBannerHeight: 54px;
         width: 100%;
         border: 0;
         border-bottom-left-radius: 0;
-        .location-wrapper a {
+        .location-wrapper .level-1 > li > a {
           border-bottom: 0;
         }
       }
