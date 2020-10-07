@@ -3,66 +3,70 @@ import LazyLoad from "vanilla-lazyload";
 (function () {
 
   /* Lazy Load Images */
-  var lazyLoadInstance = new LazyLoad({
-    // Your custom settings go here
-  });
+  var lazyLoadInstance = new LazyLoad({});
+
+  /** @type {(...x: any[]) => Node[]} */
+  const Q = (...x) => Array.from(document.querySelectorAll(...x));
+
+  /** @type {(...x: any[]) => Node} */
+  const Q1 = (...x) => document.querySelector(...x);
+
+  /** @type {(className: string, isOn: boolean) => (x: Node) => void} */
+  const toggle = (className, isOn) => x => x.classList.toggle(className, isOn);
 
   /******************************
   Search Open / Close / Trigger
   *******************************/
 
-  let searchTrigger = document.getElementById('searchTrigger');
-  let mobileSearchTrigger = document.getElementById('mobileSearchTrigger');
-  let searchInputWrapper = document.getElementById('searchInputWrapper');
-  let mobileSearchInputWrapper = document.getElementById('mobileSearchInputWrapper');
-  let menu = document.getElementById('navWrapper');
-  let header = document.getElementById('globalHeader');
-  let mobileHeader = document.getElementById('stickyGlobalHeader');
+  const activeClass = 'active';
+  const searchIsActiveClass = 'search-is-active';
+  const clickEvent = 'click';
+  const searchInputWrappers = Q('#searchInputWrapper, #mobileSearchInputWrapper');
+  const searchTriggers = Q('#searchTrigger, #mobileSearchTrigger');
+  const menu = Q('#navWrapper');
+  const headers = Q('#globalHeader, #stickyGlobalHeader');
 
-  searchTrigger.addEventListener("click", openSearch);
-  mobileSearchTrigger.addEventListener("click", openSearch);
-  document.addEventListener("click", closeSearch);
-  // Call Function On Click
-  function openSearch() {
-    searchInputWrapper.classList.toggle('active');
-    mobileSearchInputWrapper.classList.toggle('active');
-    searchTrigger.classList.toggle('active');
-    mobileSearchTrigger.classList.toggle('active');
-    menu.classList.toggle('active');
-    header.classList.toggle('search-is-active');
-    mobileHeader.classList.toggle('search-is-active');
-  }
+  const activate = toggle(activeClass, true);
+  const deactivate = toggle(activeClass, false);
+  const reactToActivation = toggle(searchIsActiveClass, true);
+  const reactToDeactivation = toggle(searchIsActiveClass, false);
 
-  function closeSearch() {
-    let isClickInsideElement = searchInputWrapper.contains(event.target) || mobileSearchInputWrapper.contains(event.target);
-    let isClickInsideSearchTrigger = searchTrigger.contains(event.target) || mobileSearchTrigger.contains(event.target);
+  /** @type {(isOn: boolean) => void} */
+  const toggleIt = (isOn) => {
+    const activateFn = isOn ? activate : deactivate;
+    const reactFn = isOn ? reactToActivation : reactToDeactivation;
+
+    searchInputWrappers.forEach(activateFn);
+    searchTriggers.forEach(activateFn);
+    menu.forEach(activateFn);
+    headers.forEach(reactFn);
+  };
+
+  const openSearch = () => toggleIt(true);
+
+  /** @type {(this: Document, ev: MouseEvent) => void} */
+  const closeSearch = (ctx, e) => {
+    const isClickInsideElement = searchInputWrapper.contains(event.target) || mobileSearchInputWrapper.contains(event.target);
+    const isClickInsideSearchTrigger = searchTrigger.contains(event.target) || mobileSearchTrigger.contains(event.target);
+
     if (isClickInsideSearchTrigger) {
-      searchInputWrapper.classList.add('active');
-      mobileSearchInputWrapper.classList.add('active');
-      searchTrigger.classList.add('active');
-      mobileSearchTrigger.classList.add('active');
-      menu.classList.add('active');
-      header.classList.add('search-is-active');
-      mobileHeader.classList.add('search-is-active');
+      toggleIt(true);
     } else if (!isClickInsideElement && !isClickInsideSearchTrigger) {
-      searchInputWrapper.classList.remove('active');
-      mobileSearchInputWrapper.classList.remove('active');
-      searchTrigger.classList.remove('active');
-      mobileSearchTrigger.classList.remove('active');
-      menu.classList.remove('active');
-      header.classList.remove('search-is-active');
-      mobileHeader.classList.remove('search-is-active');
+      toggleIt(false);
     }
-  }
+  };
 
-  // let mainStickyNav = document.getElementById('mainStickyNav');
-  let navHeight = 117;
+  searchTriggers.forEach(x => x.addEventListener(clickEvent, openSearch));
+  document.addEventListener(clickEvent, closeSearch);
+
+  // const mainStickyNav = Q('#mainStickyNav');
+  const navHeight = 117;
 
   /******************************
    Sticky Not Clone
   *******************************/
 
-  let clone = document.querySelector('#stickyGlobalHeader');
+  const clone = Q1('#stickyGlobalHeader');
 
   window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
@@ -78,10 +82,10 @@ import LazyLoad from "vanilla-lazyload";
   /********************
    Mobile Menu Dropdown
   ******************/
-  let mobileTrigger = document.getElementById('mobileTrigger');
-  let secondaryMobileTrigger = document.getElementById('secondaryMobileTrigger');
-  let mobileDropdown = document.getElementById('mobileDropdown');
-  let secondaryMobileDropdown = document.getElementById('secondaryMobileDropdown');
+  const mobileTrigger = Q('#mobileTrigger');
+  const secondaryMobileTrigger = Q('#secondaryMobileTrigger');
+  const mobileDropdown = Q('#mobileDropdown');
+  const secondaryMobileDropdown = Q('#secondaryMobileDropdown');
 
   mobileTrigger.addEventListener("click", toggleMobileMenu);
   secondaryMobileTrigger.addEventListener("click", toggleMobileMenu);
@@ -120,11 +124,11 @@ import LazyLoad from "vanilla-lazyload";
       return
     }
 
-    let lazyFormObserver = new IntersectionObserver((entries, observer) => {
+    const lazyFormObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           console.log('intersecting')
-          let lazyForm = entry.target
+          const lazyForm = entry.target
           userScroll();
           lazyFormObserver.unobserve(lazyForm)
         }
