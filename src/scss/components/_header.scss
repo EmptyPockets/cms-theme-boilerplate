@@ -28,6 +28,9 @@ $contactBannerHeight: 54px;
       flex-direction: row;
       padding: 0;
     }
+    @include lg {
+      height: 125px;
+    }
   }
 
   @include sm {
@@ -350,7 +353,7 @@ $contactBannerHeight: 54px;
           left: 0;
           padding: 20px 20px;
           padding: 0 16px 0 16px;
-          width: calc(100vw - #{$fixed-spacer-lg} - 20px);
+          width: calc(100vw - #{$fixed-spacer-lg});
 
           a {
             font-size: 17px;
