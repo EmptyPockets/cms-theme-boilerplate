@@ -658,6 +658,10 @@ $contactBannerHeight: 54px;
     margin: 0;
     padding: 0;
   }
+
+  .submenu-toggle, .menu-arrow, .submenu.level-2 {
+    display: none;
+  }
 }
 
 .sticky {
