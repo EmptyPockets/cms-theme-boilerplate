@@ -82,10 +82,9 @@ import LazyLoad from "vanilla-lazyload";
   /********************
    Mobile Menu Dropdown
   ******************/
-  const mobileTrigger = Q('#mobileTrigger');
-  const secondaryMobileTrigger = Q('#secondaryMobileTrigger');
-  const mobileDropdown = Q('#mobileDropdown');
-  const secondaryMobileDropdown = Q('#secondaryMobileDropdown');
+  const mobileTrigger = Q1('#mobileTrigger');
+  const secondaryMobileTrigger = Q1('#secondaryMobileTrigger');
+  const mobileDropdown = Q1('#mobileDropdown');
 
   mobileTrigger.addEventListener("click", toggleMobileMenu);
   secondaryMobileTrigger.addEventListener("click", toggleMobileMenu);
