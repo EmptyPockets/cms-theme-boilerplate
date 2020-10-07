@@ -4,50 +4,55 @@ import LazyLoad from "vanilla-lazyload";
   /* Lazy Load Images */
   var lazyLoadInstance = new LazyLoad({});
 
-  /** @type {(...x: any[]) => Node[]} */
+  const clickEvent = 'click';
+
+  /** @type {(...x: any[]) => HTMLElement[]} */
   const Q = (...x) => Array.from(document.querySelectorAll(...x));
 
-  /** @type {(...x: any[]) => Node} */
+  /** @type {(...x: any[]) => HTMLElement} */
   const Q1 = (...x) => document.querySelector(...x);
 
-  /** @type {(className: string, isOn: boolean) => (x: Node) => void} */
+  /** @type {(className: string, isOn: boolean) => (x: HTMLElement) => void} */
   const toggle = (className, isOn) => x => x.classList.toggle(className, isOn);
 
   /******************************
   Search Open / Close / Trigger
   *******************************/
 
+  let searchIsActive = false;
+
   const activeClass = 'active';
   const searchIsActiveClass = 'search-is-active';
-  const clickEvent = 'click';
   const searchInputWrappers = Q('#searchInputWrapper, #mobileSearchInputWrapper');
   const searchTriggers = Q('#searchTrigger, #mobileSearchTrigger');
   const menu = Q('#navWrapper');
   const headers = Q('#globalHeader, #stickyGlobalHeader');
 
-  const activate = toggle(activeClass, true);
-  const deactivate = toggle(activeClass, false);
-  const reactToActivation = toggle(searchIsActiveClass, true);
-  const reactToDeactivation = toggle(searchIsActiveClass, false);
+  const activateSearch = toggle(activeClass, true);
+  const deactivateSearch = toggle(activeClass, false);
+  const reactToSearchActivation = toggle(searchIsActiveClass, true);
+  const reactToSearchDeactivation = toggle(searchIsActiveClass, false);
 
   /** @type {(isOn: boolean) => void} */
   const toggleIt = (isOn) => {
-    const activateFn = isOn ? activate : deactivate;
-    const reactFn = isOn ? reactToActivation : reactToDeactivation;
+    if (!!searchIsActive !== !!isOn) {
+      searchIsActive = !!isOn;
 
-    searchInputWrappers.forEach(activateFn);
-    searchTriggers.forEach(activateFn);
-    menu.forEach(activateFn);
-    headers.forEach(reactFn);
+      const activateFn = searchIsActive ? activateSearch : deactivateSearch;
+      const reactFn = searchIsActive ? reactToSearchActivation : reactToSearchDeactivation;
+
+      searchInputWrappers.forEach(activateFn);
+      searchTriggers.forEach(activateFn);
+      menu.forEach(activateFn);
+      headers.forEach(reactFn);
+    }
   };
 
-  const openSearch = () => toggleIt(true);
+  searchTriggers.forEach(x => x.addEventListener(clickEvent, () => toggleIt(true)));
 
-  searchTriggers.forEach(x => x.addEventListener(clickEvent, openSearch));
-
-  document.addEventListener(clickEvent, (this, ev) => {
+  document.addEventListener(clickEvent, e => {
     /** @type {(x: Node) => boolean} */
-    const isInsideTarget = x => x.contains(ev.target);
+    const isInsideTarget = x => x.contains(e.target);
 
     if (searchTriggers.some(isInsideTarget)) {
       toggleIt(true);
@@ -56,43 +61,59 @@ import LazyLoad from "vanilla-lazyload";
     }
   });
 
-  // const mainStickyNav = Q('#mainStickyNav');
-  const navHeight = 117;
-
   /******************************
    Sticky Not Clone
   *******************************/
 
+  let isSticky = false;
+
+  const navHeight = 117;
   const stickyClass = 'sticky';
   const clone = Q1('#stickyGlobalHeader');
-  window.addEventListener('scroll', () => clone.classList.toggle(stickyClass, window.pageYOffset > navHeight));
+
+  window.addEventListener('scroll', () => {
+    const shouldBeSticky = window.pageYOffset > navHeight;
+
+    if (!!isSticky !== shouldBeSticky) {
+      isSticky = shouldBeSticky;
+      clone.classList.toggle(stickyClass, isSticky);
+    }
+  });
 
   /********************
    Mobile Menu Dropdown
   ******************/
 
-  const mobileTrigger = Q1('#mobileTrigger');
-  const secondaryMobileTrigger = Q1('#secondaryMobileTrigger');
-  const mobileDropdown = Q1('#mobileDropdown');
-  const secondaryMobileDropdown = Q1('#secondaryMobileDropdown');
+  let mobileMenuIsOpen = false;
 
-  mobileTrigger.addEventListener("click", toggleMobileMenu);
-  secondaryMobileTrigger.addEventListener("click", toggleMobileMenu);
+  const openClass = 'open';
+  const openMenuClass = 'open-menu';
+  const mobileTriggers = Q('#mobileTrigger, #secondaryMobileTrigger');
+  const mobileDropdowns = Q('#mobileDropdown, #secondaryMobileDropdown');
 
-  function toggleMobileMenu() {
-    mobileDropdown.classList.toggle('open');
-    secondaryMobileDropdown.classList.toggle('open');
-    mobileTrigger.classList.toggle('open');
-    secondaryMobileTrigger.classList.toggle('open');
-    document.body.classList.toggle('open-menu');
-  }
+  const openMobileMenu = toggle(openClass, true);
+  const closeMobileMenu = toggle(openClass, false);
+  const reactToOpenMobileMenu = toggle(openMenuClass, true);
+  const reactToCloseMobileMenu = toggle(openMenuClass, true);
+
+  const toggleMobileMenu = () => {
+    mobileMenuIsOpen = !mobileMenuIsOpen;
+
+    const menuFn = mobileMenuIsOpen ? openMobileMenu : closeMobileMenu;
+    const reactFn = mobileMenuIsOpen ? reactToOpenMobileMenu : reactToCloseMobileMenu;
+
+    mobileDropdowns.forEach(menuFn);
+    mobileTriggers.forEach(menuFn);
+    reactFn(document.body);
+  };
+
+  mobileTriggers.forEach(x => x.addEventListener(clickEvent, toggleMobileMenu))
 
   /********************
    Load Hubspot form on scroll
   ******************/
 
   function userScroll() {
-
     const currentScroll = window.pageYOffset;
     if (currentScroll > 0) {
       if (window.hbspt) {
@@ -133,15 +154,8 @@ import LazyLoad from "vanilla-lazyload";
       document.head.appendChild(hsform);
       // checkForForm();
       window.addEventListener('scroll', userScroll, false);
-
     }
   });
-
-
-
-
-
-
 })();
 
 
