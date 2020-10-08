@@ -137,6 +137,15 @@ $contactBannerHeight: 54px;
   .nav-content-wrapper {
     display: flex;
     flex-direction: column;
+
+    a.button.link span {
+      @include md {
+        display: none;
+      }
+      @include lg {
+        display: flex;
+      }
+    }
     .navigation-primary {
       padding-right: 16px;
       @include lg {
@@ -765,14 +774,6 @@ $contactBannerHeight: 54px;
 
 .sticky {
   .nav-content-wrapper {
-    a.button.link span {
-      @include md {
-        display: none;
-      }
-      @include lg {
-        display: flex;
-      }
-    }
     div.contact-banner {
       .button-group {
         @include md {
