@@ -804,7 +804,7 @@ $contactBannerHeight: 54px;
   transition: max-height 0.10s linear;
 
   &.open {
-    max-height: 500px;
+    max-height: 600px;
   }
 
   @include sm {
