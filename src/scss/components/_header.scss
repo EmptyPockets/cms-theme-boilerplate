@@ -240,15 +240,12 @@ $contactBannerHeight: 54px;
           align-items: center;
           height: 100%;
           color: #fff;
-          font-size: 12px;
+          font-size: 13px;
           font-weight: $normal;
           margin-right: 0;
           position: relative;
           top: -1px;
 
-          @include lg {
-            font-size: 13px;
-          }
           @include xl {
             font-size: 15px;
           }
