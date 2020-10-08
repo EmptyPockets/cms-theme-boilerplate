@@ -237,10 +237,10 @@ $contactBannerHeight: 54px;
           position: relative;
           top: -1px;
 
-          @include md {
+          @include lg {
             font-size: 13px;
           }
-          @include lg {
+          @include xl {
             font-size: 15px;
           }
         }
