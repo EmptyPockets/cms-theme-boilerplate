@@ -231,11 +231,18 @@ $contactBannerHeight: 54px;
           align-items: center;
           height: 100%;
           color: #fff;
-          font-size: 15px;
+          font-size: 12px;
           font-weight: $normal;
           margin-right: 0;
           position: relative;
           top: -1px;
+
+          @include md {
+            font-size: 13px;
+          }
+          @include lg {
+            font-size: 15px;
+          }
         }
 
         a {
