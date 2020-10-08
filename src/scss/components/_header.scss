@@ -695,7 +695,6 @@ $contactBannerHeight: 54px;
   }
 
   ul.level-2 {
-    display: none; // Only displays when sticky
     $distance-from-menu: 24px;
     $submenu-width: 14em;
     position: absolute;
@@ -779,9 +778,6 @@ $contactBannerHeight: 54px;
     }
   }
   .navigation-primary {
-    ul.level-2 {
-      display: block;
-    }
     ul li a {
       font-size: 13px;
       font-weight: 400;
@@ -842,6 +838,9 @@ $contactBannerHeight: 54px;
     transform: translateY(-100%);
     background: none;
 
+    .navigation-primary ul.level-2 {
+      display: none; // Only displays when sticky
+    }
     .header-wrapper {
       height: initial;
       width: 100%;
@@ -899,6 +898,9 @@ $contactBannerHeight: 54px;
       z-index: 3;
       overflow: visible;
 
+      .navigation-primary ul.level-2 {
+        display: block; // Only displays when sticky
+      }
       div.contact-banner {
         width: 100%;
         border: 0;
