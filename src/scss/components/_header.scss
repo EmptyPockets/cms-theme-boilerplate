@@ -723,7 +723,7 @@ $contactBannerHeight: 54px;
       z-index: 1;
       border-bottom-color: $color-gray-light;
     }
-    &:before {
+    &:after {
       top: 1px;
       z-index: 2;
       border-bottom-color: $color-white;
