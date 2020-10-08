@@ -708,18 +708,25 @@ $contactBannerHeight: 54px;
     pointer-events: none;
     transition: all 0.2s ease-in-out;
 
-    &:before {
+    &:before, &:after {
       content: '';
       display: block;
       position: absolute;
       left: 50%;
-      top: 1px;
       width: $distance-from-menu;
       height: $distance-from-menu;
       margin-left: -($distance-from-menu / 2);
       border: ($distance-from-menu / 2) solid transparent;
-      border-bottom-color: $color-white;
+    }
+    &:before {
+      top: 0px;
       z-index: 1;
+      border-bottom-color: $color-gray-light;
+    }
+    &:before {
+      top: 1px;
+      z-index: 2;
+      border-bottom-color: $color-white;
     }
     > li {
       a {
