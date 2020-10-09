@@ -1,5 +1,4 @@
 .all-lawyers-column {
-	margin-top: 25px;
 	padding: 20px 20px;
   background-color: #f3f4f8;
 
@@ -51,8 +50,11 @@
 					font-size: 17px;
 				}
 				.button {
-					display: inline-block;
-					width: initial;
+          // display: inline-block;
+          position: absolute;
+          left: 20px;
+          bottom: 20px;
+					width: auto;
 					line-height: 30px;
 				}
 			}
@@ -80,6 +82,7 @@
 			height: auto;
 		}
 		.details {
+      position: relative;
 			padding: 20px;
 		}
 		.button {

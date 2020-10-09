@@ -10,7 +10,7 @@
           <h3 class="h3">{{ item.lawyer_position }}</h3>
           <p>{{ item.short_bio }}</p>
           <a class="click-card" href="{{ item.lawyer_profile_url.href }}"></a>
-          <a href="{{ item.lawyer_profile_url.href }}" class="button dark"><img class="button-icon" alt="open lawyer profile" src="https://cdn2.hubspot.net/hubfs/5191528/Icons/Lawyer%20Bio%20Icon.svg">About {{ item.short_name }}</a>
+          <a href="{{ item.lawyer_profile_url.href }}" class="button primary"><img class="button-icon" alt="open lawyer profile" src="https://cdn2.hubspot.net/hubfs/5191528/Icons/Lawyer%20Bio%20Icon.svg">About {{ item.short_name }}</a>
         </div>
       </li>
       {% endfor %}
