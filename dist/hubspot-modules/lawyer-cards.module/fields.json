@@ -47,17 +47,6 @@
     "type" : "text",
     "default" : "Founding Member, Trial Lawyer"
   }, {
-    "name" : "short_bio",
-    "label" : "Short Bio",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "placeholder" : "Short Bio",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "After a decade of successful practice, Paul decided he would rather help real people instead of the rich hospitals and insurance companies that once retained him."
-  }, {
     "name" : "lawyer_profile_url",
     "label" : "Lawyer Profile URL",
     "required" : false,
