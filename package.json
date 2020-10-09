@@ -61,7 +61,8 @@
     "deploy:sandbox": "rm -Rf dist && webpack --mode production && hs upload dist damore-cms-theme",
     "scss": "sass-lint-auto-fix",
     "eslint": "eslint src",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "hs": "hs"
   },
   "browserslist": {
     "production": [
