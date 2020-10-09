@@ -1,0 +1,103 @@
+[ {
+  "name" : "lawyers",
+  "label" : "Lawyers",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "name" : "lawyer_profile_photo",
+    "label" : "Lawyer Profile Photo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Images/Lawyer%20Photos/Paul-Headshot-2.jpg",
+      "alt" : "Paul-Headshot-2",
+      "width" : 1139,
+      "height" : 1052
+    }
+  }, {
+    "name" : "lawyer_name",
+    "label" : "Lawyer Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Lawyer Name",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Paul M. D'Amore"
+  }, {
+    "name" : "lawyer_position",
+    "label" : "Lawyer Position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Lawyer Position",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Founding Member, Trial Lawyer"
+  }, {
+    "name" : "short_bio",
+    "label" : "Short Bio",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Short Bio",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "After a decade of successful practice, Paul decided he would rather help real people instead of the rich hospitals and insurance companies that once retained him."
+  }, {
+    "name" : "lawyer_profile_url",
+    "label" : "Lawyer Profile URL",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "url",
+    "default" : {
+      "type" : "CONTENT",
+      "href" : null,
+      "content_id" : 7692035202
+    }
+  }, {
+    "name" : "short_name",
+    "label" : "Short Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Lawyer Short Name",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Paul"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : [ {
+    "lawyer_profile_photo" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Images/Lawyer%20Photos/Paul-Headshot-2.jpg",
+      "alt" : "Paul Headshot",
+      "width" : 1139,
+      "height" : 1052
+    },
+    "lawyer_name" : "Paul M. D'Amore, Esq.",
+    "lawyer_position" : "Founding Member, Trial Lawyer",
+    "short_bio" : "",
+    "lawyer_profile_url" : {
+      "type" : "CONTENT",
+      "href" : null,
+      "content_id" : 7692035202
+    },
+    "short_name" : "Paul"
+  } ]
+} ]

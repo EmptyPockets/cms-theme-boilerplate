@@ -1,0 +1,19 @@
+<article id="all-lawyers-column">
+  <div class="content-wrapper">
+    <ul>
+      {% for item in module.lawyers %}      
+      <li class="card">
+        <div class="profile-img-wrapper" style="background-image: url({{ item.lawyer_profile_photo.src }});">
+        </div>
+        <div class="details">
+          <h2 class="h2">{{ item.lawyer_name }}</h2>
+          <h3 class="h3">{{ item.lawyer_position }}</h3>
+          <p>{{ item.short_bio }}</p>
+          <a class="click-card" href="{{ item.lawyer_profile_url.href }}"></a>
+          <a href="{{ item.lawyer_profile_url.href }}" class="button dark"><img class="button-icon" alt="open lawyer profile" src="https://cdn2.hubspot.net/hubfs/5191528/Icons/Lawyer%20Bio%20Icon.svg">About {{ item.short_name }}</a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>   
+  </div>
+</article>
