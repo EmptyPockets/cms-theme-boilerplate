@@ -5,7 +5,7 @@
 <div class="mq-test-icon"></div>
 <header class="global-header" id="globalHeader">
   <div class="header-wrapper">
-    <!-- Mobile Menu Trigger -->
+    {# Mobile Menu Trigger #}
     <div class="menu-icon hide-lg" id="mobileTrigger">
       <svg class="menu">
         <use xlink:href="#menu-icon"></use>
@@ -14,7 +14,7 @@
         <use xlink:href="#menu-icon-close-alt"></use>
       </svg>
     </div>
-    <!-- Logo -->
+    {# Logo #}
     <div class="logo-wrapper">
       <svg class="logo">
         <use xlink:href="#damore-logo"></use>
@@ -24,7 +24,7 @@
       </svg>
       <a href="/" class="click-cover">D'Amore Personal Injury Law, LLC</a>
     </div>
-    <!-- Locaton and Nav Wrapper -->
+    {# Locaton and Nav Wrapper #}
     <div class="nav-content-wrapper">
       <div id="mainStickyNav" class="contact-banner">
         <div class="location-wrapper">
@@ -50,17 +50,13 @@
         </div>
       </div>
       <div class="nav-wrapper" id="navWrapper">
-        {% module 'navigation-primary'
-          path='../../hubspot-modules/menu-section',
-          label='Primary navigation'
-        %}
+        {% module 'navigation-primary' path='../../hubspot-modules/menu-section',
+          label='Primary navigation' %}
         <svg class="search-icon" id="searchTrigger">
           <use xlink:href="#search-icon"></use>
         </svg>
         <div id="searchInputWrapper">
-          {% module 'site_search'
-            path='../../hubspot-modules/search-input-min'
-          %}
+          {% module 'site_search' path='../../hubspot-modules/search-input-min' %}
         </div>
       </div>
     </div>
@@ -81,22 +77,18 @@
   </div>
 </header>
 <div class="mobile-dropdown" id="mobileDropdown">
-  {% module 'navigation-mobile'
-    path='../../hubspot-modules/mobile-menu-section',
-    label='Mobile navigation'
-  %}
+  {% module 'navigation-mobile' path='../../hubspot-modules/mobile-menu-section',
+    label='Mobile navigation' %}
 </div>
-<!-- Sticky Global Header -->
+{# Sticky Global Header #}
 <header class="global-header" id="stickyGlobalHeader">
   <div class="default-header-wrapper header-wrapper">
-    <!-- Locaton and Nav Wrapper -->
+    {# Locaton and Nav Wrapper #}
     <div class="nav-content-wrapper">
       <div class="contact-banner">
         <div class="location-wrapper">
-          {% module 'navigation-primary'
-          path='../../hubspot-modules/menu-section',
-          label='Primary navigation'
-        %}
+          {% module 'navigation-primary' path='../../hubspot-modules/menu-section',
+            label='Primary navigation' %}
         </div>
         <a href="/contact" class="button tiny">No Fee Unless We Win</a>
         <div class="button-group">
@@ -117,7 +109,7 @@
     </div>
   </div>
   <div class="mobile-header-wrapper header-wrapper">
-    <!-- Mobile Menu Trigger -->
+    {# Mobile Menu Trigger #}
     <div class="menu-icon hide-lg" id="secondaryMobileTrigger">
       <svg class="menu">
         <use xlink:href="#menu-icon"></use>
@@ -126,7 +118,7 @@
         <use xlink:href="#menu-icon-close-alt"></use>
       </svg>
     </div>
-    <!-- Logo -->
+    {# Logo #}
     <div class="logo-wrapper">
       <svg class="logo">
         <use xlink:href="#damore-logo"></use>
@@ -136,16 +128,14 @@
       </svg>
       <a href="/" class="click-cover">D'Amore Personal Injury Law, LLC</a>
     </div>
-    <!-- Search -->
+    {# Search #}
     <div class="nav-content-wrapper">
       <div class="nav-wrapper" id="mobileNavWrapper">
         <svg class="search-icon" id="mobileSearchTrigger">
           <use xlink:href="#search-icon"></use>
         </svg>
         <div id="mobileSearchInputWrapper">
-          {% module 'site_search'
-            path='../../hubspot-modules/search-input-min'
-          %}
+          {% module 'site_search' path='../../hubspot-modules/search-input-min' %}
         </div>
       </div>
     </div>
@@ -165,9 +155,7 @@
     </a>
   </div>
   <div class="mobile-dropdown" id="secondaryMobileDropdown">
-    {% module 'navigation-mobile'
-      path='../../hubspot-modules/mobile-menu-section',
-      label='Mobile navigation'
-    %}
+    {% module 'navigation-mobile' path='../../hubspot-modules/mobile-menu-section',
+      label='Mobile navigation' %}
   </div>
 </header>

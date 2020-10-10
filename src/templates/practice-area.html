@@ -1,32 +1,32 @@
-<!-- 
+<!--
 templateType: page
 isAvailableForNewContent: true
 label: Practice Area
 screenshotPath: ../images/template-previews/home.png 
 -->
-{% extends "./layouts/base-practice-areas.html" %}
+{% extends "./layouts/base.html" %}
 
 {% block body %}
-<main class="body-container-wrapper">
-  <!-- Video Hero -->
-  {% dnd_area "hero_dnd_area" %}
+  <main class="body-container-wrapper">
+    {# Video Hero #}
+    {% dnd_area "hero_dnd_area" %}
       {% dnd_section %}
         {% dnd_module path='../hubspot-modules/video-hero' %}
         {% end_dnd_module %}
       {% end_dnd_section %}
     {% end_dnd_area %}
-  <!-- Three Steps -->
-  <article id="three-steps" class="three-steps-wrapper">
-    {% dnd_area "steps_dnd_area_new" %}
+
+    {# Three Steps #}
+    <article id="three-steps" class="three-steps-wrapper">
+      {% dnd_area "steps_dnd_area_new" %}
         {% dnd_section 
-        max_width=1600,
-        padding={
-          'top': 100,
-          'bottom': 0,
-          'left': 56,
-          'right': 56
-        },
-        %}
+          max_width=1600,
+          padding={
+            'top': 100,
+            'bottom': 0,
+            'left': 56,
+            'right': 56
+          } %}
           {% dnd_column %}
             {% dnd_row padding={ 'bottom': 70 } %}
               {% dnd_module path='../hubspot-modules/section-heading',
@@ -49,8 +49,7 @@ screenshotPath: ../images/template-previews/home.png
                   "alt" : "step one",
                   "width" : 200,
                   "height" : 200
-                }       
-              %}
+                } %}
               {% end_dnd_module %}
               {% dnd_module path='../hubspot-modules/simple-step',
                 width=4, 
@@ -65,8 +64,7 @@ screenshotPath: ../images/template-previews/home.png
                   "alt" : "step one",
                   "width" : 200,
                   "height" : 200
-                }
-              %}
+                } %}
               {% end_dnd_module %}
               {% dnd_module path='../hubspot-modules/simple-step',
                 width=4, 
@@ -81,105 +79,94 @@ screenshotPath: ../images/template-previews/home.png
                 "alt" : "step one",
                 "width" : 200,
                 "height" : 200
-                }
-              %}
+                } %}
               {% end_dnd_module %}
             {% end_dnd_row %}
 
-
             {% dnd_row %}
-    <!-- Simple Button -->
-    {% dnd_module width=4, path="@hubspot/horizontal_spacer" %}
+              {# Simple Button #}
+              {% dnd_module width=4, path="@hubspot/horizontal_spacer" %}
               {% end_dnd_module %}
               {% dnd_module path='../hubspot-modules/simple-button',
                 width=4, 
                 offset=4, 
-                horizontal_alignment='CENTER'
-              %}
+                horizontal_alignment='CENTER' %}
               {% end_dnd_module %}
               {% dnd_module width=4, offset=8, path="@hubspot/horizontal_spacer" %}
               {% end_dnd_module %}
             {% end_dnd_row %}
-
           {% end_dnd_column %}
         {% end_dnd_section %}
       {% end_dnd_area %}
-  </article>
-  <!-- Case Results & Wins -->
-  <article class="case-results-and-wins">
-    {% dnd_area "results_area" %}
-    
-    {% dnd_section 
-      max_width=1200,
-      background_color={
-        r: 32,
-        g: 36,
-        b: 78,
-        a: 1.0
-      },
-      padding={
-        'top': 100,
-        'bottom': 100,
-        'left': 0,
-        'right': 0
-      },
-    %}
-    
-    {% dnd_column %}
-    
-      {% dnd_row %}
-        {% dnd_module path='../hubspot-modules/section-heading',
+    </article>
+
+    {# Case Results & Wins #}
+    <article class="case-results-and-wins">
+      {% dnd_area "results_area" %}
+        {% dnd_section 
+          max_width=1200,
+          background_color={
+            r: 32,
+            g: 36,
+            b: 78,
+            a: 1.0
+          },
+          padding={
+            'top': 100,
+            'bottom': 100,
+            'left': 0,
+            'right': 0
+          } %}
+          {% dnd_column %}
+            {% dnd_row %}
+              {% dnd_module path='../hubspot-modules/section-heading',
                 is_on_dark_background="true",
                 section_title="Get The Compensation and Justice You Deserve",
                 section_intro="The best lawyer to handle your case will have the expert training, knowledge, and skills necessary to handle complex cases.",
-                width=12
-                %}
-        {% end_dnd_module %}
-      {% end_dnd_row %}
-    
-      {% dnd_row %}
-        {% dnd_module path='../hubspot-modules/results-cards' %}
-        {% end_dnd_module %}
-      {% end_dnd_row %}
-    
-    {% end_dnd_column %}
-    
-    {% end_dnd_section %}
-    
-    {% end_dnd_area %}
-  </article>
-  <!-- We Know The Enemy -->
-  <article class="drag-area">
-    {% dnd_area 'simple-area' %}
-      {% dnd_section 
-        max_width=640,
-        vertical_alignment='MIDDLE',
-        background_color={
-          r: 234,
-          g: 235,
-          b: 239,
-          a: 1.0
-        },
-        padding={
-          'top': 150,
-          'bottom': 64,
-          'left': 64,
-          'right': 64
-        }, %}
-        {% dnd_module path='../hubspot-modules/section-heading',
-          is_on_dark_background="false",
-          section_title="Hold Those Responsible For
-          Your Loss Accountable.",
-          section_intro="lorem ipsum intro text",
-          hide_button="true"
-          width=12
-          %}
-        {% end_dnd_module %}
-      {% end_dnd_section %}
-      
-      {% dnd_section 
-        max_width=1200,
-        padding={
+                width=12 %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+
+            {% dnd_row %}
+              {% dnd_module path='../hubspot-modules/results-cards' %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_section %}
+      {% end_dnd_area %}
+    </article>
+
+    {# We Know The Enemy #}
+    <article class="drag-area">
+      {% dnd_area 'simple-area' %}
+        {% dnd_section 
+          max_width=640,
+          vertical_alignment='MIDDLE',
+          background_color={
+            r: 234,
+            g: 235,
+            b: 239,
+            a: 1.0
+          },
+          padding={
+            'top': 150,
+            'bottom': 64,
+            'left': 64,
+            'right': 64
+          } %}
+          {% dnd_module path='../hubspot-modules/section-heading',
+            is_on_dark_background="false",
+            section_title="Hold Those Responsible For
+            Your Loss Accountable.",
+            section_intro="lorem ipsum intro text",
+            hide_button="true"
+            width=12 %}
+          {% end_dnd_module %}
+        {% end_dnd_section %}
+        
+        {% dnd_section 
+          max_width=1200,
+          padding={
           'top': 0,
           'bottom': 100,
           'left': 64,
@@ -190,110 +177,95 @@ screenshotPath: ../images/template-previews/home.png
             g: 235,
             b: 239,
             a: 1.0
-          },
-          %}
-       
+          } %}
           {% dnd_module
             path="@hubspot/rich_text",
             offset=0,
             width=4,
-            horizontal_alignment='CENTER'
-          %}
+            horizontal_alignment='CENTER' %}
             {% module_attribute "html" %}
-    <h4>Baltimore City</h4>
-    <ul>
-      <li>Good Samaritan</li>
-      <li>Harbor Hospital</li>
-      <li>Johns Hopkins</li>
-      <li>Johns Hopkins Bayview</li>
-      <li>Maryland General</li>
-      <li>Mercy Hospital</li>
-      <li>Sinai Hospital</li>
-      <li>St. Agnes</li>
-      <li>University of Maryland Medical Center</li>
-    </ul>
-    {% end_module_attribute %}
+              <h4>Baltimore City</h4>
+              <ul>
+                <li>Good Samaritan</li>
+                <li>Harbor Hospital</li>
+                <li>Johns Hopkins</li>
+                <li>Johns Hopkins Bayview</li>
+                <li>Maryland General</li>
+                <li>Mercy Hospital</li>
+                <li>Sinai Hospital</li>
+                <li>St. Agnes</li>
+                <li>University of Maryland Medical Center</li>
+              </ul>
+            {% end_module_attribute %}
           {% end_dnd_module %}
-          
+
           {% dnd_module
             path="@hubspot/rich_text",
             offset=4,
             width=4,
-            horizontal_alignment='CENTER'
-          %}
+            horizontal_alignment='CENTER' %}
             {% module_attribute "html" %}
-    <h4>Baltimore City</h4>
-    <ul>
-      <li>Good Samaritan</li>
-      <li>Harbor Hospital</li>
-      <li>Johns Hopkins</li>
-      <li>Johns Hopkins Bayview</li>
-      <li>Maryland General</li>
-      <li>Mercy Hospital</li>
-      <li>Sinai Hospital</li>
-      <li>St. Agnes</li>
-      <li>University of Maryland Medical Center</li>
-    </ul>
-    {% end_module_attribute %}
+              <h4>Baltimore City</h4>
+              <ul>
+                <li>Good Samaritan</li>
+                <li>Harbor Hospital</li>
+                <li>Johns Hopkins</li>
+                <li>Johns Hopkins Bayview</li>
+                <li>Maryland General</li>
+                <li>Mercy Hospital</li>
+                <li>Sinai Hospital</li>
+                <li>St. Agnes</li>
+                <li>University of Maryland Medical Center</li>
+              </ul>
+            {% end_module_attribute %}
           {% end_dnd_module %}
-          
-          
+
           {% dnd_module
             path="@hubspot/rich_text",
             offset=8,
             width=4,
-            horizontal_alignment='CENTER'
-          %}
+            horizontal_alignment='CENTER' %}
             {% module_attribute "html" %}
-    <h4>Baltimore City</h4>
-    <ul>
-      <li>Good Samaritan</li>
-      <li>Harbor Hospital</li>
-      <li>Johns Hopkins</li>
-      <li>Johns Hopkins Bayview</li>
-      <li>Maryland General</li>
-      <li>Mercy Hospital</li>
-      <li>Sinai Hospital</li>
-      <li>St. Agnes</li>
-      <li>University of Maryland Medical Center</li>
-    </ul>
-    {% end_module_attribute %}
+              <h4>Baltimore City</h4>
+              <ul>
+                <li>Good Samaritan</li>
+                <li>Harbor Hospital</li>
+                <li>Johns Hopkins</li>
+                <li>Johns Hopkins Bayview</li>
+                <li>Maryland General</li>
+                <li>Mercy Hospital</li>
+                <li>Sinai Hospital</li>
+                <li>St. Agnes</li>
+                <li>University of Maryland Medical Center</li>
+              </ul>
+            {% end_module_attribute %}
           {% end_dnd_module %}
-            
-            
-        
-           
-          
-      
-      {% end_dnd_section %}
-      
-      
-    {% end_dnd_area %}
-  </article>
-  <!-- Editorial Wrapper -->
-  <article class="editorial-wrapper">
-    {% dnd_area 'editorial-area' %}
-    
-    
-    {% dnd_section 
-      max_width=1260,
-      vertical_alignment='MIDDLE',
-      background_color={
-        r: 255,
-        g: 255,
-        b: 255,
-        a: 1.0
-      },
-      padding={
-        'top': 100,
-        'bottom': 64,
-        'left': 64,
-        'right': 64
-      }, %}
-    {% dnd_module path='../hubspot-modules/awards' %}
+        {% end_dnd_section %}
+      {% end_dnd_area %}
+    </article>
+
+    {# Editorial Wrapper #}
+    <article class="editorial-wrapper">
+      {% dnd_area 'editorial-area' %}
+        {% dnd_section 
+          max_width=1260,
+          vertical_alignment='MIDDLE',
+          background_color={
+            r: 255,
+            g: 255,
+            b: 255,
+            a: 1.0
+          },
+          padding={
+            'top': 100,
+            'bottom': 64,
+            'left': 64,
+            'right': 64
+          } %}
+          {% dnd_module path='../hubspot-modules/awards' %}
           {% end_dnd_module %}
-    {% end_dnd_section %}
-    
+        {% end_dnd_section %}
+
         {% dnd_section 
           max_width=640,
           vertical_alignment='MIDDLE',
@@ -308,154 +280,130 @@ screenshotPath: ../images/template-previews/home.png
             'bottom': 64,
             'left': 64,
             'right': 64
-          }, %}
-          
+          } %}
           {% dnd_column %}
-          
-        
-          {% dnd_row %}
-          
-          {% dnd_module path='../hubspot-modules/section-heading',
-            is_on_dark_background="false",
-            section_title="Hold Those Responsible For
-            Your Loss Accountable.",
-            section_intro="",
-            hide_button="false"
-            width=12
-            %}
-          {% end_dnd_module %}
-          
-          {% end_dnd_row %}
-          
+            {% dnd_row %}
+              {% dnd_module path='../hubspot-modules/section-heading',
+                is_on_dark_background="false",
+                section_title="Hold Those Responsible For
+                Your Loss Accountable.",
+                section_intro="",
+                hide_button="false"
+                width=12 %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
           {% end_dnd_column %}
-          
         {% end_dnd_section %}
-        
+
         {% dnd_section 
           max_width=1200,
           padding={
-            'top': 0,
-            'bottom': 100,
-            'left': 64,
-            'right': 64
-            }, 
-            background_color={
-              r: 255,
-              g: 255,
-              b: 255,
-              a: 1.0
-            },
-            %}
-         
-              {% dnd_module path='../hubspot-modules/editorial-body',
-                width=6,
-                horizontal_alignment='CENTER'
-                %}
-                
-                {% module_attribute "editorial_body" %}
-    <h3>Physical and Emotional Pain</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, expedita dolorem! Molestias ducimus,
-                  aspernatur, beatae enim excepturi doloribus quidem, repellendus totam culpa officia commodi eum optio a velit
-                  nemo placeat?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      <img class="left" src="http://placehold.it/150x70">
-      Fugit necessitatibus ab accusantium, fuga cupiditate
-                  minima dignissimos deleniti consequuntur quaerat itaque? Sint accusamus expedita beatae natus ex facere fugit
-                  magnam earum.
-    </p>
-    <h3>Financial Problems</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptatem tempore tempora dolorem possimus
-                  dicta illum doloribus pariatur, nemo facere numquam nobis magnam! Sed maxime iusto voluptate ad at nulla?
-    </p>
-    {% end_module_attribute %}
-                
-              {% end_dnd_module%}
-    
-          
-              {% dnd_module path='../hubspot-modules/editorial-body',
-                width=6, offset=6,
-                horizontal_alignment='CENTER'
-                %}
-                
-                {% module_attribute "editorial_body" %}
-    <h3>Getting Medical Care</h3>
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi dolore asperiores eligendi vitae, temporibus
-                  id ea voluptate quibusdam eveniet. Earum fugiat excepturi totam veritatis laboriosam veniam, inventore iste
-                  maiores deleniti!
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. A facilis ipsum dolore laudantium corporis numquam,
-      <img class="right" src="http://placehold.it/200x200">
-      voluptates incidunt enim laborum. Cumque tempore a cum officia, illum doloremque similique nam quia nobis.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolor omnis laudantium dignissimos? Nemo
-                  expedita officiis recusandae numquam aut, a, iure quidem eveniet explicabo esse dignissimos itaque incidunt
-                  sapiente vitae?
-    </p>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam nam vero delectus mollitia iusto nemo sit!
-    </p>
-    {% end_module_attribute %}
-                
-                
-              {% end_dnd_module %}
-          
-        
-        {% end_dnd_section %}
-        
-        
-      {% end_dnd_area %}
-  </article>
-  <!-- Client Reviews -->
-  <article class="page-client-reviews">
-    {% dnd_area 'client_reviews_area' %}
-    {% dnd_section 
-      max_width=1200,
-      background_color={
-        r: 32,
-        g: 36,
-        b: 78,
-        a: 1.0
-      },
-      padding={
-        'top': 100,
-        'bottom': 100,
-        'left': 0,
-        'right': 0
-      },
-    %}
-          {% dnd_column %}
-          
-          {% dnd_row %}
-            {% dnd_module path='../hubspot-modules/section-heading',
-            is_on_dark_background="true",
-            section_title="Client Reviews",
-            section_intro="",
-            hide_button="true"
-            width=12
-            %}
+          'top': 0,
+          'bottom': 100,
+          'left': 64,
+          'right': 64
+          }, 
+          background_color={
+            r: 255,
+            g: 255,
+            b: 255,
+            a: 1.0
+          } %}
+          {% dnd_module path='../hubspot-modules/editorial-body',
+            width=6,
+            horizontal_alignment='CENTER' %}
+            {% module_attribute "editorial_body" %}
+              <h3>Physical and Emotional Pain</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, expedita dolorem! Molestias ducimus,
+                aspernatur, beatae enim excepturi doloribus quidem, repellendus totam culpa officia commodi eum optio a velit
+                nemo placeat?
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <img class="left" src="http://placehold.it/150x70">
+                Fugit necessitatibus ab accusantium, fuga cupiditate
+                minima dignissimos deleniti consequuntur quaerat itaque? Sint accusamus expedita beatae natus ex facere fugit
+                magnam earum.
+              </p>
+              <h3>Financial Problems</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptatem tempore tempora dolorem possimus
+                dicta illum doloribus pariatur, nemo facere numquam nobis magnam! Sed maxime iusto voluptate ad at nulla?
+              </p>
+            {% end_module_attribute %}
           {% end_dnd_module %}
-          {% end_dnd_row %}
-          
+
+          {% dnd_module path='../hubspot-modules/editorial-body',
+            width=6, offset=6,
+            horizontal_alignment='CENTER' %}
+            {% module_attribute "editorial_body" %}
+              <h3>Getting Medical Care</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi dolore asperiores eligendi vitae, temporibus
+                id ea voluptate quibusdam eveniet. Earum fugiat excepturi totam veritatis laboriosam veniam, inventore iste
+                maiores deleniti!
+              </p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. A facilis ipsum dolore laudantium corporis numquam,
+                <img class="right" src="http://placehold.it/200x200">
+                voluptates incidunt enim laborum. Cumque tempore a cum officia, illum doloremque similique nam quia nobis.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolor omnis laudantium dignissimos? Nemo
+                expedita officiis recusandae numquam aut, a, iure quidem eveniet explicabo esse dignissimos itaque incidunt
+                sapiente vitae?
+              </p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam nam vero delectus mollitia iusto nemo sit!
+              </p>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_section %}
+      {% end_dnd_area %}
+    </article>
+
+    {# Client Reviews #}
+    <article class="page-client-reviews">
+      {% dnd_area 'client_reviews_area' %}
+        {% dnd_section 
+          max_width=1200,
+          background_color={
+            r: 32,
+            g: 36,
+            b: 78,
+            a: 1.0
+          },
+          padding={
+            'top': 100,
+            'bottom': 100,
+            'left': 0,
+            'right': 0
+          } %}
+          {% dnd_column %}
+            {% dnd_row %}
+              {% dnd_module path='../hubspot-modules/section-heading',
+                is_on_dark_background="true",
+                section_title="Client Reviews",
+                section_intro="",
+                hide_button="true"
+                width=12 %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+
             {% dnd_row %}
               {% dnd_module path='../hubspot-modules/reviews-cards',
-                width=12
-              %}
+                width=12 %}
               {% end_dnd_module %}
             {% end_dnd_row %}
           {% end_dnd_column %}
         {% end_dnd_section %}
       {% end_dnd_area %}
-  </article>
-  <!-- FAQ -->
-  <article class="faq-wrapper practice-area-page" id="faqWrapper">
-    {% dnd_area 'faq_area' %}
+    </article>
+
+    {# FAQ #}
+    <article class="faq-wrapper practice-area-page" id="faqWrapper">
+      {% dnd_area 'faq_area' %}
         {% dnd_section max_width=1200,
           background_color={
             r: 234,
@@ -468,217 +416,198 @@ screenshotPath: ../images/template-previews/home.png
             'bottom': 64,
             'left': 64,
             'right': 64
-          }
-        %}
-    <!-- outer column -->
-    {% dnd_column width=6 %}
+          } %}
+          {# outer column #}
+          {% dnd_column width=6 %}
             {% dnd_row %}
-    <!-- inner column -->
-    {% dnd_column padding={
-              'top': 0,
-              'bottom': 0,
-              'left': 32,
-              'right': 32
-              } %}
-              {% dnd_row %}
-                {% dnd_module "first_faq" path='../hubspot-modules/faq',
-                  width=12,
-                  show_title="true",
-                  is_open="true",
-                  full_answer="
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium similique suscipit eos eveniet quia explicabo dignissimos aspernatur quisquam! Dicta sapiente eos quia laborum! Debitis voluptates odio dignissimos quas, ab autem!
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatum dolore laboriosam, ab accusantium molestiae, sed sint quaerat, recusandae ducimus ratione minima exercitationem natus quo consequatur consectetur. Repellat, quaerat. Illo.
-    </p>
-    "
-                %}
-                {% end_dnd_module %}
-              {% end_dnd_row %}
-              {% dnd_row %}
-                {% dnd_module path='../hubspot-modules/faq',
-                  width=12,
-                  is_open="true"
-                %}
-                {% end_dnd_module %}
-              {% end_dnd_row %}
-            {% end_dnd_column %}
-            
-            {% end_dnd_row %}
-        {% end_dnd_column %}
-    <!-- outer column -->
-    {% dnd_column width=6, offset=6 %}
-            {% dnd_row %}
-    <!-- inner column -->
-    {% dnd_column padding={
-              'top': 0,
-              'bottom': 0,
-              'left': 24,
-              'right': 24
-              } %}
+              {# inner column #}
+              {% dnd_column padding={
+                'top': 0,
+                'bottom': 0,
+                'left': 32,
+                'right': 32
+                } %}
+                {% dnd_row %}
+                  {% dnd_module "first_faq" path='../hubspot-modules/faq',
+                    width=12,
+                    show_title="true",
+                    is_open="true",
+                    full_answer="
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium similique suscipit eos eveniet quia explicabo dignissimos aspernatur quisquam! Dicta sapiente eos quia laborum! Debitis voluptates odio dignissimos quas, ab autem!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatum dolore laboriosam, ab accusantium molestiae, sed sint quaerat, recusandae ducimus ratione minima exercitationem natus quo consequatur consectetur. Repellat, quaerat. Illo.</p>
+                    " %}
+                  {% end_dnd_module %}
+                {% end_dnd_row %}
+
                 {% dnd_row %}
                   {% dnd_module path='../hubspot-modules/faq',
-                    width=12
-                  %}
+                    width=12,
+                    is_open="true" %}
+                  {% end_dnd_module %}
+                {% end_dnd_row %}
+              {% end_dnd_column %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {# outer column #}
+          {% dnd_column width=6, offset=6 %}
+            {% dnd_row %}
+              {# inner column #}
+              {% dnd_column padding={
+                'top': 0,
+                'bottom': 0,
+                'left': 24,
+                'right': 24
+                } %}
+                {% dnd_row %}
+                  {% dnd_module path='../hubspot-modules/faq',
+                    width=12 %}
                   {% end_dnd_module %}
                 {% end_dnd_row %}
                 
                 {% dnd_row %}
                   {% dnd_module "settlements-card" path='../hubspot-modules/settlements-card',
-                  width=12
-                  %}
+                    width=12 %}
                   {% end_dnd_module %}
                 {% end_dnd_row %}
                 
                 {% dnd_row %}
                   {% dnd_module path='../hubspot-modules/faq',
-                    width=12
-                  %}
+                    width=12 %}
                   {% end_dnd_module %}
                 {% end_dnd_row %}
                 
                 {% dnd_row %}
                   {% dnd_module path='../hubspot-modules/faq',
-                    width=12
-                  %}
+                    width=12 %}
                   {% end_dnd_module %}
                 {% end_dnd_row %}
-                
-            {% end_dnd_column %}
-            
+              {% end_dnd_column %}
             {% end_dnd_row %}
-        {% end_dnd_column %}
-        
-          
+          {% end_dnd_column %}
         {% end_dnd_section %}
       {% end_dnd_area %}
-  </article>
-  <!-- Content Slider -->
-  <article class="content-slider-wrapper">
-    {% dnd_area "content_slider_area" %}
+    </article>
 
+    {# Content Slider #}
+    <article class="content-slider-wrapper">
+      {% dnd_area "content_slider_area" %}
         {% dnd_section 
-            full_width="true",
-            background_color={
-              r: 32,
-              g: 36,
-              b: 78,
-              a: 1.0
-            },
-            padding={
-              'top': 100,
-              'bottom': 100,
-              'left': 0,
-              'right': 0
-            },
-          %}
-            {% dnd_column %}
-              {% dnd_row 
+          full_width="true",
+          background_color={
+            r: 32,
+            g: 36,
+            b: 78,
+            a: 1.0
+          },
+          padding={
+            'top': 100,
+            'bottom': 100,
+            'left': 0,
+            'right': 0
+          } %}
+          {% dnd_column %}
+            {% dnd_row 
               padding={
                 'top': 0,
                 'right': 100,
                 'bottom': 0,
                 'left': 100
               } %}
-                {% dnd_module path='../hubspot-modules/section-heading',
-                  width=12,
-                  section_title="Trial Lawyers For The Seriously Injured",
-                  section_intro="You deserve to worry less about getting the financial help you need, and&nbsp;focus more on healing and getting your life back.", 
-                  is_on_dark_background="true",
-                  is_centered="false" 
-                %}
-                {% end_dnd_module %}
-              {% end_dnd_row %}
-              {% dnd_row %}
-                {% dnd_module path='../hubspot-modules/content-slider',
-                  width=12,
-                %}
-                {% end_dnd_module %}
-              {% end_dnd_row %}
-            {% end_dnd_column %}
+              {% dnd_module path='../hubspot-modules/section-heading',
+                width=12,
+                section_title="Trial Lawyers For The Seriously Injured",
+                section_intro="You deserve to worry less about getting the financial help you need, and&nbsp;focus more on healing and getting your life back.", 
+                is_on_dark_background="true",
+                is_centered="false" %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path='../hubspot-modules/content-slider',
+                width=12 %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
         {% end_dnd_section %}
       {% end_dnd_area %}
-  </article>
-  <article>
-    {% dnd_area 'triple-contact' class="triple-contact-wrapper" %}
-      {% dnd_section 
-        padding={
-        'top': 100,
-        'right': 0,
-        'bottom': 100,
-        'left':0
-        },
-        max_width=1200
-      %}
-        {% dnd_column %}
-          {% dnd_row padding={
-            'top': 0,
-            'right': 0,
-            'bottom': 100,
-            'left': 0
-          } %}
-            {% dnd_module path='../hubspot-modules/section-heading',
-              width=12, 
-              section_title="Talk To An Attorney Today",
-              section_intro="Free Consultation. No Fees Unless We Win",
-              hide_button="true",
-            %}
-            {% end_dnd_module %}
-          {% end_dnd_row %}
-          {% dnd_row %}
-            {% dnd_module path='../hubspot-modules/contact-option',
-              width=4, 
-              horizontal_alignment='CENTER',
-              icon={
-                "src" : "{{ get_asset_url('../../images/icons/call-icon.svg') }}",
-                "alt" : "call us",
-                "width" : 60,
-                "height" : 60
-              },
-              icon_name="call-icon",
-              title="Call Us",
-              description="Talk to an attorney about your case or schedule an in-person meeting.",
-              button_text="1-800-JUSTICE",
-              button_url=""
-            %}
-            {% end_dnd_module %}
-            {% dnd_module path='../hubspot-modules/contact-option',
-              width=4, offset=4, 
-              horizontal_alignment='CENTER',
-              icon_name="chat-icon",
-              icon={
-                "src" : "{{ get_asset_url('../../images/icons/chat-icon.svg') }}",
-                "alt" : "chat now",
-                "width" : 60,
-                "height" : 60
-              },
-                button_text="Chat With Us",
-                button_url="",
-              title="Chat With Us",
-              description="Ask a question or get more information from an attorney."
-            %}
-            {% end_dnd_module %}
-            {% dnd_module path='../hubspot-modules/contact-option',
-              width=4, offset=8, 
-              horizontal_alignment='CENTER',
-              icon_name="meeting-icon",
-              icon={
-                "src" : "{{ get_asset_url('../../images/icons/meeting-icon.svg') }}",
-                "alt" : "Schedule Meeting",
-                "width" : 60,
-                "height" : 60
-              },
-                button_text="Schedule A Meeting",
-                button_url="",
-              title="Schedule Meeting",
-              description="Schedule a video conference or phone call directly on our calendar."
-            %}
-            {% end_dnd_module %}
-          {% end_dnd_row %}
-        {% end_dnd_column %}
-      {% end_dnd_section %}
-    {% end_dnd_area %}
-  </article>
-</main>
+    </article>
+
+    {# Triple Contact #}
+    <article>
+      {% dnd_area 'triple-contact' class="triple-contact-wrapper" %}
+        {% dnd_section 
+          padding={
+          'top': 100,
+          'right': 0,
+          'bottom': 100,
+          'left':0
+          },
+          max_width=1200 %}
+          {% dnd_column %}
+            {% dnd_row
+              padding={
+                'top': 0,
+                'right': 0,
+                'bottom': 100,
+                'left': 0
+              } %}
+              {% dnd_module path='../hubspot-modules/section-heading',
+                width=12, 
+                section_title="Talk To An Attorney Today",
+                section_intro="Free Consultation. No Fees Unless We Win",
+                hide_button="true" %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+
+            {% dnd_row %}
+              {% dnd_module path='../hubspot-modules/contact-option',
+                width=4, 
+                horizontal_alignment='CENTER',
+                icon={
+                  "src" : "{{ get_asset_url('../../images/icons/call-icon.svg') }}",
+                  "alt" : "call us",
+                  "width" : 60,
+                  "height" : 60
+                },
+                icon_name="call-icon",
+                title="Call Us",
+                description="Talk to an attorney about your case or schedule an in-person meeting.",
+                button_text="1-800-JUSTICE",
+                button_url="" %}
+              {% end_dnd_module %}
+              {% dnd_module path='../hubspot-modules/contact-option',
+                width=4, offset=4, 
+                horizontal_alignment='CENTER',
+                icon_name="chat-icon",
+                icon={
+                  "src" : "{{ get_asset_url('../../images/icons/chat-icon.svg') }}",
+                  "alt" : "chat now",
+                  "width" : 60,
+                  "height" : 60
+                },
+                  button_text="Chat With Us",
+                  button_url="",
+                title="Chat With Us",
+                description="Ask a question or get more information from an attorney." %}
+              {% end_dnd_module %}
+              {% dnd_module path='../hubspot-modules/contact-option',
+                width=4, offset=8, 
+                horizontal_alignment='CENTER',
+                icon_name="meeting-icon",
+                icon={
+                  "src" : "{{ get_asset_url('../../images/icons/meeting-icon.svg') }}",
+                  "alt" : "Schedule Meeting",
+                  "width" : 60,
+                  "height" : 60
+                },
+                  button_text="Schedule A Meeting",
+                  button_url="",
+                title="Schedule Meeting",
+                description="Schedule a video conference or phone call directly on our calendar." %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_section %}
+      {% end_dnd_area %}
+    </article>
+  </main>
 {% endblock body %}

@@ -12,8 +12,7 @@
     <div class="systems-page">
       <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
       {% module 'search_results'
-        path='@hubspot/search_results'
-      %}
+        path='@hubspot/search_results' %}
     </div>
   </section>
 </main>

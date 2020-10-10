@@ -5,10 +5,11 @@
 <article class="global-contact">
   <section class="form">
     <div class="form-wrapper">
-      <h2>{% module "text" path="@hubspot/text" value="Contact Us" %}</h2>
+      <h2>{% module "text" path="@hubspot/text", value="Contact Us" %}</h2>
       <p>
-        {% module "text" path="@hubspot/text" value=" If you or a loved one has been injured by someone 
-     else’s negligence, contact us immediately." no_wrapper="true" %}
+        {% module "text" path="@hubspot/text"
+          value=" If you or a loved one has been injured by someone else’s negligence, contact us immediately.",
+          no_wrapper="true" %}
       </p>
       <div id="form-holder"></div>
     </div>
@@ -78,7 +79,7 @@
 </article>
 <footer class="global-footer">
   <div class="content-wrapper">
-    <!-- Copyright Group -->
+    {# Copyright Group #}
     <div class="copyright-group">
       <p>© 2020 D’Amore Personal Injury Law, LLC.</p>
       <ul>
@@ -95,11 +96,11 @@
       </ul>
     </div>
     <div class="brand-wrapper">
-      <!-- Logo -->
+      {# Logo #}
       <svg class="logo">
         <use xlink:href="#damore-logo-white"></use>
       </svg>
-      <!-- Social Icons -->
+      {# Social Icons #}
       <ul class="social-media">
         <li>
           <a target="_blank" href="https://www.youtube.com/channel/UCa46aXJW-kuJKfWFYWuyQWg">
