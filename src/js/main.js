@@ -189,6 +189,7 @@ import LazyLoad from "vanilla-lazyload";
       wrapAround: false,
       groupCells: false,
       autoPlay: false,
+      fade: false,
       adaptiveHeight: false,
       watchCSS: false,
       selectedAttraction: 0.01,
