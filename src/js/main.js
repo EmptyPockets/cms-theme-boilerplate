@@ -1,8 +1,7 @@
 import LazyLoad from "vanilla-lazyload";
 
 (function () {
-  /* Lazy Load Images */
-  var lazyLoadInstance = new LazyLoad({});
+  var lazyLoadInstance = new LazyLoad({});// Lazy Load Images
 
   const clickEvent = 'click';
 
@@ -15,10 +14,9 @@ import LazyLoad from "vanilla-lazyload";
   /** @type {(className: string, isOn: boolean) => (x: HTMLElement) => void} */
   const toggle = (className, isOn) => x => x.classList.toggle(className, isOn);
 
-  /******************************
-  Search Open / Close / Trigger
-  *******************************/
-
+  /**
+   * Search Open / Close / Trigger
+   */
   let searchIsActive = false;
 
   const activeClass = 'active';
@@ -61,10 +59,9 @@ import LazyLoad from "vanilla-lazyload";
     }
   });
 
-  /******************************
-   Sticky Not Clone
-  *******************************/
-
+  /**
+   * Sticky Not Clone
+   */
   let isSticky = false;
 
   const navHeight = 117;
@@ -80,10 +77,9 @@ import LazyLoad from "vanilla-lazyload";
     }
   });
 
-  /********************
-   Mobile Menu Dropdown
-  ******************/
-
+  /**
+   * Mobile Menu Dropdown
+   */
   let mobileMenuIsOpen = false;
 
   const openClass = 'open';
@@ -109,10 +105,9 @@ import LazyLoad from "vanilla-lazyload";
 
   mobileTriggers.forEach(x => x.addEventListener(clickEvent, toggleMobileMenu))
 
-  /********************
-   Load Hubspot form on scroll
-  ******************/
-
+  /**
+   * Load Hubspot form on scroll
+   */
   function userScroll() {
     const currentScroll = window.pageYOffset;
     if (currentScroll > 0) {
@@ -156,6 +151,66 @@ import LazyLoad from "vanilla-lazyload";
       window.addEventListener('scroll', userScroll, false);
     }
   });
+
+  /**
+   * Flickity handling
+   */
+  const Flickity = require('flickity-fade');
+  require('flickity-imagesloaded');
+
+  const flickityBase = {
+    wrapAround: true,
+    autoPlay: 4000,
+    fade: true,
+    adaptiveHeight: true,
+    lazyLoad: true,
+    setGallerySize: true,
+    prevNextButtons: false,
+    pageDots: false,
+  };
+
+  const flickityTypes = {
+    'with-images': {
+      imagesLoaded: true,
+    },
+    'play-immediately': {
+      autoPlay: true,
+      lazyLoad: false,
+    },
+    'not-lazy': {
+      lazyLoad: false,
+    },
+    'with-buttons': {
+      prevNextButtons: true,
+      lazyLoad: false,
+    },
+    'has-content': {
+      freeScroll: false,
+      wrapAround: false,
+      groupCells: false,
+      autoPlay: false,
+      adaptiveHeight: false,
+      watchCSS: false,
+      selectedAttraction: 0.01,
+      friction: 0.2,
+      cellSelector: undefined,
+      initialIndex: 0,
+      accessibility: true,
+      resize: true,
+      cellAlign: 0.2,
+      contain: false,
+      percentPosition: true,
+      rightToLeft: false,
+      prevNextButtons: true,
+    },
+  };
+
+  Q('.is-flickity').forEach((el) => {
+    const type = Array.from(el.classList).find(x => flickityTypes.hasOwnProperty(x));
+
+    if (type) {
+      new Flickity(el, { ...base, ...flickityTypes[type] });
+      console.debug('Flickity activated', el);
+    }
+  });
 })();
-
-
