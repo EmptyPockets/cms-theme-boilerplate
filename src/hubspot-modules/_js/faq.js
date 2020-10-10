@@ -3,10 +3,8 @@
   const faqs = document.querySelectorAll('.faq .full-answer');
   const faqWrapper = document.getElementById('faqWrapper');
 
-  if (faqs && faqWrapper) {
-    faqWrapper.addEventListener('click', toggleQuestion, false);
-
-    function init() {
+  if (faqs.length && faqWrapper) {
+    const init = () => {
       /* Close all but the 'always-open' faqs */
       for (const faq of faqs) {
         if (!faq.classList.contains('starts-open')) {
@@ -16,7 +14,7 @@
       }
     }
 
-    function toggleQuestion(e) {
+    const toggleQuestion = (e) => {
       const faq = e.target.closest('.faq');
       if (faq) {
         faq.classList.toggle('open');
@@ -31,6 +29,7 @@
       }
     }
 
+    faqWrapper.addEventListener('click', toggleQuestion, false);
     init();
   }
 })();
