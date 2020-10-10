@@ -209,7 +209,7 @@ import LazyLoad from "vanilla-lazyload";
     const type = Array.from(el.classList).find(x => flickityTypes.hasOwnProperty(x));
 
     if (type) {
-      new Flickity(el, { ...base, ...flickityTypes[type] });
+      new Flickity(el, { ...flickityBase, ...flickityTypes[type] });
       console.debug('Flickity activated', el);
     }
   });
