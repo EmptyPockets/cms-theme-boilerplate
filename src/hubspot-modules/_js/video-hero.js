@@ -1,49 +1,43 @@
 (function () {
+  const modal = document.getElementById('videoModal');
+  const btn = document.getElementById('playButton');
+  const span = document.getElementById('close-button');
 
-  // Get the modal
-  let modal = document.getElementById("videoModal");
+  if (modal && btn && span) {
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+      // Dynamically load Wistia JavaScript API
+      var ev1 = document.createElement('script');
+      ev1.src = '//fast.wistia.com/assets/external/E-v1.js';
+      ev1.async = true;
+      ev1.charset = 'ISO-8859-1'
+      document.head.appendChild(ev1);
 
-  // Get the button that opens the modal
-  let btn = document.getElementById("playButton");
+      /* Connect to Video in Modal */
+      window._wq = window._wq || [];
+      // eslint-disable-next-line no-undef
+      _wq.push({
+        id: '_all', onReady: function (video) {
+          video.play();
+        }
+      });
 
-  // Get the <span> element that closes the modal
-  let span = document.getElementById("close-button");
+      document.body.classList.add('open-modal');
+      modal.style.display = 'block';
+    }
 
-  // When the user clicks the button, open the modal
-  btn.onclick = function () {
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = 'none';
+      document.body.classList.remove('open-modal');
+    }
 
-    // Dynamically load Wistia JavaScript API
-    var ev1 = document.createElement('script');
-    ev1.src = '//fast.wistia.com/assets/external/E-v1.js';
-    ev1.async = true;
-    ev1.charset = 'ISO-8859-1'
-    document.head.appendChild(ev1);
-
-    /* Connect to Video in Modal */
-    window._wq = window._wq || [];
-    // eslint-disable-next-line no-undef
-    _wq.push({
-      id: '_all', onReady: function (video) {
-        video.play();
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+        document.body.classList.remove('open-modal');
       }
-    });
-
-    document.body.classList.add("open-modal");
-    modal.style.display = "block";
-  }
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {
-    modal.style.display = "none";
-    document.body.classList.remove("open-modal");
-
-  }
-
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-      document.body.classList.remove("open-modal");
     }
   }
 
@@ -67,11 +61,4 @@
   //   video.play();
 
   // }
-
-
-
-
 })();
-
-
-
