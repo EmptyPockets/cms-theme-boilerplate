@@ -7,7 +7,6 @@
 {% extends '../layouts/base.html' %}
 
 {% block body %}
-<main class="body-container-wrapper">
   <section class="content-wrapper">
     <div class="systems-page">
       {% module 'backup_unsubscribe'
@@ -15,5 +14,4 @@
         path='@hubspot/email_simple_subscription' %}
     </div>
   </section>
-</main>
 {% endblock body %}

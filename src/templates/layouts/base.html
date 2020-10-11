@@ -15,8 +15,10 @@
       {% global_partial path='../partials/header.html' %}
     {% endblock header %}
 
-    {% block body %}
-    {% endblock body %}
+    <main class="body-container-wrapper">
+      {% block body %}
+      {% endblock body %}
+    </main>
 
     {% block footer %}
       {% global_partial path='../partials/footer.html' %}

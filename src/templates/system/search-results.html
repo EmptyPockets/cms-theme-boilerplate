@@ -7,7 +7,6 @@
 {% extends '../layouts/base.html' %}
 
 {% block body %}
-<main class="body-container-wrapper">
   <section class="content-wrapper">
     <div class="systems-page">
       <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
@@ -15,5 +14,4 @@
         path='@hubspot/search_results' %}
     </div>
   </section>
-</main>
 {% endblock body %}

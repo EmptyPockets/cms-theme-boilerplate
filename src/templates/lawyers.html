@@ -6,34 +6,32 @@
 {% extends "./layouts/base.html" %}
 
 {% block body %}
-  <main class="body-container-wrapper">
-    {# Headline #}
-    {% dnd_area "headline" %}
-      {% dnd_section %}
-        {% dnd_module path='../hubspot-modules/section-heading',
-          is_on_dark_background="false",
-          section_title="Your Baltimore, Annapolis, & Washington, D.C. Personal Injury Attorneys",
-          section_intro="",
-          hide_button="true",
-          width=12 %}
-        {% end_dnd_module %}
-      {% end_dnd_section %}
-    {% end_dnd_area %}
+  {# Headline #}
+  {% dnd_area "headline" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/section-heading',
+        is_on_dark_background="false",
+        section_title="Your Baltimore, Annapolis, & Washington, D.C. Personal Injury Attorneys",
+        section_intro="",
+        hide_button="true",
+        width=12 %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
 
-    {# Lawyers #}
-    {% dnd_area "lawyers" %}
-      {% dnd_section %}
-        {% dnd_module path='../hubspot-modules/lawyers/cards' %}
-        {% end_dnd_module %}
-      {% end_dnd_section %}
-    {% end_dnd_area %}
+  {# Lawyers #}
+  {% dnd_area "lawyers" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/lawyers/cards' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
 
-    {# About Lawyers #}
-    {% dnd_area "about" %}
-      {% dnd_section %}
-        {% dnd_module path='../hubspot-modules/lawyers/about' %}
-        {% end_dnd_module %}
-      {% end_dnd_section %}
-    {% end_dnd_area %}
-  </main>
+  {# About Lawyers #}
+  {% dnd_area "about" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/lawyers/about' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
 {% endblock body %}
