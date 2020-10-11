@@ -43,6 +43,9 @@
 			column-gap: 40px;
     }
   }
+  .profile-image {
+    max-width: 100%;
+  }
   div {
     @include md {
       padding-right: 30px;
