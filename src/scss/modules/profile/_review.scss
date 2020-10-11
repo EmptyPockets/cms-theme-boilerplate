@@ -47,9 +47,11 @@
     }
     @include xl {
       padding: 75px 50px;
-    }
-		h1 {
+		}
+		h1, h2, h3, h4, h5, h6 {
 			color: white;
+		}
+		h1 {
 			font-size: 42px;
 			margin-bottom: 20px;
       line-height: 1.1;
