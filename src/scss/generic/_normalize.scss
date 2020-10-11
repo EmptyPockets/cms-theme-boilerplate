@@ -142,11 +142,14 @@ sup {
    ========================================================================== */
 
 /**
- * Remove the border on images inside links in IE 10.
+ * 1. Remove the border on images inside links in IE 10.
+ * 2. Prevent images from overflowing their containers
  */
 
 img {
   border-style: none;
+  max-width: 100%;
+  vertical-align: bottom;
 }
 
 /* Forms
