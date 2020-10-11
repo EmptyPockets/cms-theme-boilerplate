@@ -4,25 +4,23 @@
       <h2 class="section-heading">Client Reviews</h2>
       <ul>
         {% for review in module.client_reviews %}
-        <li>
-          <div class="review">
-            <img
-              class="lazy"
-              data-src="{{ review.image.src }}"
-              alt="{{ review.image.alt }}"
-            >
-            <div class="inner-content-wrapper">
-              <svg class="review-stars-img">
-                <use xlink:href="#five-stars"></use>
-              </svg>
-              <h3>{{ review.title }}</h3>
-              <h4>
-                “{{ review.quote }}”
-              </h4>
+          <li>
+            <div class="review">
+              <img
+                class="lazy"
+                data-src="{{ review.image.src }}"
+                alt="{{ review.image.alt }}"
+              />
+              <div class="inner-content-wrapper">
+                <svg class="review-stars-img">
+                  <use xlink:href="#five-stars"></use>
+                </svg>
+                <h3>{{ review.title }}</h3>
+                <h4>“{{ review.quote }}”</h4>
+              </div>
+              <a href="{{ review.url }}" class="click-card"></a>
             </div>
-            <a href="{{ review.url }}" class="click-card"></a>
-          </div>
-        </li>
+          </li>
         {% endfor %}
       </ul>
     </section>
@@ -32,18 +30,14 @@
           class="lazy"
           data-src="{{ module.featured_review.featured_image.src }}"
           alt="{{ module.featured_review.featured_image.alt }}"
-        >
+        />
         <div class="inner-featured-review">
           <svg class="review-stars-img">
             <use xlink:href="#five-stars"></use>
           </svg>
           <h3>{{ module.featured_review.featured_title }}</h3>
-          <h4>
-            “{{ module.featured_review.featured_quote }}”
-          </h4>
-          <p>
-            {{ module.featured_review.featured_body_text }}
-          </p>
+          <h4>“{{ module.featured_review.featured_quote }}”</h4>
+          <p>{{ module.featured_review.featured_body_text }}</p>
           <p>By: {{ module.featured_review.featured_author }}</p>
           <a href="/client-reviews" class="button primary">See More Reviews</a>
         </div>

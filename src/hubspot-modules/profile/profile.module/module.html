@@ -1,0 +1,113 @@
+<article class="lawyer-profile">
+  <section class="overview">
+    {% if module.lawyer_profile.lawyer_photo.src %}
+      <img
+        class="profile-image"
+        src="{{ module.lawyer_profile.lawyer_photo.src }}"
+        alt="{{ module.lawyer_profile.lawyer_photo.alt }}"
+      />
+    {% endif %}
+    <header>
+      <h1>{{ module.lawyer_profile.lawyer_position }}</h1>
+      <h2>{{ module.lawyer_profile.lawyer_name }}</h2>
+    </header>
+    <ul class="stats">
+      <li>
+        <div class="icon-wrapper">
+          <img
+            class="icon location-icon"
+            src="https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/location-icon.png"
+          />
+        </div>
+        <div>
+          <h3>Proudly Serving</h3>
+          <h4>{{ module.lawyer_profile.serving_location }}</h4>
+        </div>
+      </li>
+      <li>
+        <div class="icon-wrapper">
+          <img
+            class="icon location-icon"
+            src="https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/license-icon.png"
+          />
+        </div>
+        <div>
+          <h3>Licensed For</h3>
+          <h4>{{ module.lawyer_profile.number_of_years_licensed }} years</h4>
+        </div>
+      </li>
+    </ul>
+
+    <div class="contact-options">
+      <a class="button light" href="/contact">Contact Us</a>
+      <ul class="associations">
+        {% for item in module.lawyer_profile.associations %}
+          <li>
+            {% if item.association.src %}
+            <a href="{{ item.association_url }}">
+              <img
+                class="association-icon"
+                src="{{ item.association.src }}"
+                alt="{{ item.association.alt }}"
+                width="{{ item.association.width }}"
+                height="{{ item.association.height }}"
+              />
+            </a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+  <section class="details">
+    <div class="content-wrapper">
+      <h3>Types of Cases I Handle</h3>
+      <ul class="details-group cases">
+        {% for item in module.lawyer_profile.case_types %}
+          <li>
+            <img class="arrow" src="https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/ul-arrow-icon.png">
+            {% inline_text field="lawyer_profile.case_types" value="{{ item }}" %}
+          </li>
+        {% endfor %}
+        <li></li>
+      </ul>
+
+     <h3>Education</h3>
+      <ul class="details-group education">
+        {% for item in module.lawyer_profile.school %}
+          <li>
+            <h5>{{ item.education }}</h5>
+            {{ item.degree }}
+          </li>
+        {% endfor %}
+      </ul>
+
+      <h3>Admitted to Practice</h3>
+      <div class="practice-wrapper">
+        <div>
+          <h5>State Courts</h5>
+          <ul class="details-group">
+            {% for item in module.lawyer_profile.admitted_to_practice.state_courts %}
+              <li>
+                <div>
+                  {% inline_text field="lawyer_profile.admitted_to_practice.state_courts" value="{{ item }}" %}
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div>
+          <h5>Federal Courts</h5>
+          <ul class="details-group">
+            {% for item in module.lawyer_profile.admitted_to_practice.federal_courts %}
+              <li>
+                {% inline_text field="lawyer_profile.admitted_to_practice.federal_courts" value="{{ item }}" %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

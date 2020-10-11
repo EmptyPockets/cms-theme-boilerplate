@@ -1,0 +1,99 @@
+[ {
+  "name" : "client_review",
+  "label" : "Client Review",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "name" : "review_title",
+    "label" : "Review Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Review Title",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Fantastic Attorney"
+  }, {
+    "name" : "review_client_name",
+    "label" : "Review Client Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Review Client Name",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kieara D."
+  }, {
+    "name" : "review_body",
+    "label" : "Review Body",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Review Body",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Working with Paul D'Amore has been a wonderful experience. He has been professional, compassionate and dedicated to my daughter's case every step of the way. It has truly been a pleasure and a privilege working with Mr. D'Amore. I would definitely recommend him to anyone."
+  }, {
+    "name" : "review_video",
+    "label" : "Review Video",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Video URL",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "https://cdn2.hubspot.net/hubfs/5191528/Review%20Assets/videos/medical-malpractice-review-kieara-1.mp4"
+  }, {
+    "name" : "featured_thumbnail",
+    "label" : "Featured Thumbnail",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Review%20Assets/kieara-large.jpg",
+      "alt" : "kieara-large",
+      "width" : 720,
+      "height" : 460
+    }
+  }, {
+    "name" : "background_position",
+    "label" : "Background Position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "center center"
+  }, {
+    "name" : "is_google_review",
+    "label" : "Is Google Review",
+    "required" : false,
+    "locked" : false,
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "review_title" : "Fantastic Attorney",
+    "review_client_name" : "Kieara D.",
+    "review_body" : "Working with Paul D'Amore has been a wonderful experience. He has been professional, compassionate and dedicated to my daughter's case every step of the way. It has truly been a pleasure and a privilege working with Mr. D'Amore. I would definitely recommend him to anyone.",
+    "review_video" : "https://cdn2.hubspot.net/hubfs/5191528/Review%20Assets/videos/medical-malpractice-review-kieara-1.mp4",
+    "featured_thumbnail" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Review%20Assets/kieara-large.jpg",
+      "alt" : "kieara-large",
+      "width" : 720,
+      "height" : 460
+    },
+    "background_position" : "center center",
+    "is_google_review" : false
+  }
+} ]

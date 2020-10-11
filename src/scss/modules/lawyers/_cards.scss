@@ -1,6 +1,5 @@
 .all-lawyers-column {
 	padding: 20px 20px;
-  background-color: #f3f4f8;
 
   @include md {
     padding: 60px 0;
@@ -9,7 +8,7 @@
 		list-style: none;
 	}
 	.card {
-		background: #fff;
+		background: $color-white;
 		margin-bottom: 20px;
 		box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.10), -2px 0 5px 0px rgba(0,0,0,0.10);
 		position: relative;
@@ -98,19 +97,19 @@
 		}
 		.h2 {
 			font-size: 25px;
-			font-family: Playfair Display,Serif;
+			font-family: $play;
 			font-weight: bold;
-			color: #20264c;
+			color: $color-blue-dark;
 			margin-bottom: 5px;
 		}
 		.h3 {
 			font-size: 17px;
-			color: #414042;
+			color: $color-gray-darker;
 			font-weight: normal;
 			margin-bottom: 15px;
 		}
 		p {
-			color: #4d4d4d;
+			color:$color-gray;
 			font-size: 16px;
 			line-height: 1.5;
 			margin-bottom: 20px;

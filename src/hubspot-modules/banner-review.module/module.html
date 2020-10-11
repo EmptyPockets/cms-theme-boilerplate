@@ -1,16 +1,16 @@
 <div class="client-review banner-review">
   <div class="review-slider is-flickity play-immediately">
     {% for review in module.reviews %}
-    <div class="group slide">
-      <svg class="review-stars-img">
-        <use xlink:href="#five-stars"></use>
-      </svg>
-      <blockquote cite="#">
-        <h2>{{ review.title }}</h2>
-        <h3>“{{ review.quote }}”</h3>
-        <footer>By: {{ review.author }}</footer>
-      </blockquote>
-    </div>
+      <div class="group slide">
+        <svg class="review-stars-img">
+          <use xlink:href="#five-stars"></use>
+        </svg>
+        <blockquote cite="#">
+          <h2>{{ review.title }}</h2>
+          <h3>“{{ review.quote }}”</h3>
+          <footer>By: {{ review.author }}</footer>
+        </blockquote>
+      </div>
     {% endfor %}
   </div>
 </div>

@@ -1,14 +1,12 @@
 <div class="results-cards">
   <ul>
     {% for result in module.results %}
-    <li class="card">
-      <h4>{{ result.amount }}</h4>
-      <h5>{{ result.practice_area }}</h5>
-      <h6>
-        {{ result.title }}
-      </h6>
-      <a href="{{ result.more_link }}" class="button ghost">Read More</a>
-    </li>
+      <li class="card">
+        <h4>{{ result.amount }}</h4>
+        <h5>{{ result.practice_area }}</h5>
+        <h6>{{ result.title }}</h6>
+        <a href="{{ result.more_link }}" class="button ghost">Read More</a>
+      </li>
     {% endfor %}
   </ul>
 </div>

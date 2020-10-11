@@ -1,5 +1,5 @@
 .content-slider {
-  color: #fff;
+  color: $color-white;
   padding-bottom: 100px;
 
   padding-top: 80px;
@@ -23,11 +23,11 @@
 }
 
 .content-slider header h2 {
-  color: #fff;
+  color: $color-white;
 }
 
 .content-slider header p {
-  color: #fff;
+  color: $color-white;
 }
 
 .content-slider header p.section-description {
@@ -68,8 +68,8 @@
 
 .content-slider .card h3 {
   border-bottom: 2px solid #fff;
-  color: #fff;
-  font-family: 'Public Sans', sans-serif;
+  color: $color-white;
+  font-family: $public;
   font-size: 20px;
   margin-bottom: 16px;
   padding-bottom: 16px;
@@ -100,7 +100,7 @@
 }
 
 .content-slider .card ul li a {
-  color: #fff;
+  color: $color-white;
   font-size: 17px;
   line-height: 1.3;
   text-decoration: underline;
@@ -114,7 +114,7 @@
 }
 
 .content-slider .card a {
-  color: #fff;
+  color: $color-white;
   text-decoration: underline;
   z-index: 2;
   position: relative;

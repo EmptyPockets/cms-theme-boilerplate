@@ -1,0 +1,68 @@
+[ {
+  "name" : "philosophy",
+  "label" : "Philosophy",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "name" : "title",
+    "label" : "Philosophy Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Title",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Our Winning Philosophy"
+  }, {
+    "name" : "philosophy_body",
+    "label" : "Philosophy Body",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Philosophy Body",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Readers of the Maryland Daily Record voted\u0003D’Amore Personal Injury Law their #1 choice\u0003for medical malpractice cases in Maryland."
+  }, {
+    "name" : "video_url",
+    "label" : "Video URL",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Video URL",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "https://cdn2.hubspot.net/hubfs/5191528/Videos/D'Amore%20Personal%20Injury%20Law%20Philosophy.mp4"
+  }, {
+    "name" : "video_thumbnail",
+    "label" : "Video Thumbnail",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Images/Paul%20-%20Desk.jpg",
+      "alt" : "Paul - Desk",
+      "width" : 1440,
+      "height" : 1052
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "title" : "Our Winning Philosophy",
+    "philosophy_body" : "Readers of the Maryland Daily Record voted\u0003D’Amore Personal Injury Law their #1 choice\u0003for medical malpractice cases in Maryland.",
+    "video_url" : "https://cdn2.hubspot.net/hubfs/5191528/Videos/D'Amore%20Personal%20Injury%20Law%20Philosophy.mp4",
+    "video_thumbnail" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Images/Paul%20-%20Desk.jpg",
+      "alt" : "Paul - Desk",
+      "width" : 1440,
+      "height" : 1052
+    }
+  }
+} ]

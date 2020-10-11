@@ -2,27 +2,19 @@
   <div class="content-wrapper slider">
     <div class="gallery is-flickity has-content">
       {% for slide in module.slides %}
-      <div class="card lazy" data-bg="{{ slide.background.src }}">
-        <div>
-          <h3>
-            <a href="{{ slide.url }}">
-              {{ slide.title }}
-            </a>
-          </h3>
-          <ul>
-            {% for link in slide.links %}
-            <li>
-              <a href="{{ link.url }}">
-                {{ link.title }}
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
+        <div class="card lazy" data-bg="{{ slide.background.src }}">
+          <div>
+            <h3><a href="{{ slide.url }}">{{ slide.title }}</a></h3>
+            <ul>
+              {% for link in slide.links %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <a href="{{ slide.url }}">See More</a>
         </div>
-        <a href="{{ slide.url }}">
-          See More
-        </a>
-      </div>
       {% endfor %}
     </div>
   </div>

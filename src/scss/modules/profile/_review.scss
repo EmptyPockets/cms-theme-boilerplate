@@ -1,0 +1,101 @@
+.client-lawyer-review {
+  @include md {
+    display: flex;
+		background: #20264c;
+    flex-direction: column;
+  }
+  @include xl {
+    flex-direction: row;
+  }
+	.star-rating ul {
+    display: flex;
+    list-style: none;
+	}
+	.img {
+    background: #20264c;
+
+    @include md {
+      flex: 1;
+      margin-bottom: -1px;
+    }
+		.featured-thumbnail {
+			width: 100%;
+      height: 400px;
+      
+      @include md {
+        width: 100%;
+				height: 900px;
+				background-size: cover;
+				background-position: center top;
+      }
+      @include xl {
+        width: 100%;
+				height: 100%;
+      }
+		}
+	}
+	.client-review {
+		background: #20264c;
+		padding: 30px;
+		margin-bottom: 20px;
+    color: white;
+
+    @include md {
+      flex: 1;
+			margin-bottom: -1px;
+      padding: 50px 30px;
+    }
+    @include xl {
+      padding: 75px 50px;
+    }
+		h1 {
+			color: white;
+			font-size: 42px;
+			margin-bottom: 20px;
+      line-height: 1.1;
+      
+      @include md {
+        font-size: 60px;
+				margin-bottom: 40px;
+      }
+		}
+		.star-rating ul li img {
+      width: 40px;
+      height: 40px;
+		}
+		h2 {
+			margin-bottom: 5px;
+      margin-top: 10px;
+      
+      @include md {
+        font-size: 27px;
+      }
+		}
+		h3 {
+			margin-bottom: 20px;
+			font-weight: 300;
+		}
+		p {
+			line-height: 1.5;
+      margin-bottom: 20px;
+      
+      @include md {
+        line-height: 1.7;
+      }
+		}
+	}
+}
+.google-review {
+	background-color: #1c2f5f;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  min-height: 300px;
+
+	img {
+		width: 130px;
+	}
+}

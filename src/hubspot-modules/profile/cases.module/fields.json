@@ -1,0 +1,15 @@
+[ {
+  "name" : "previous_cases_of_interest",
+  "label" : "Previous Cases of Interest",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<ul>\n<li>Paralysis from Failure to Diagnose Type IV Elher's Danlo's Syndrome</li>\n<li>Paralysis from Failure to Diagnose Paraneoplastic Neurologic Syndrome</li>\n<li>Death from Failure to Prepare Proper Surgical Plan for Removal of Massive Hepatic Carcinoma</li>\n<li>Death from Failure to Prepare Proper Surgical Plan for Removal of Massive Hepatic Carcinoma</li>\n<li>Permanent Injury from Esophageal Perforation during cervical discectomy</li>\n<li>Death from Esophageal perforation during endoscopy</li>\n<li>Permanent injury from Colon perforation during colonoscopy</li>\n<li>Paralysis secondary to negligent Blood Pressure management during surgery</li>\n<li>Brain Damage from failure to properly treat cluster seizures</li>\n<li>Cerebral Palsy from failing to recognize placental abruption</li>\n<li>Cerebral Palsy from failing to recognize fetal distress</li>\n<li>Cerebral Palsy from failure to recognize placental insufficiency</li>\n<li>Cerebral Palsy from failure to recognize infection</li>\n<li>Brain injury from failure to properly manage breathing tube</li>\n<li>Paralysis from failure to recognize post-operative spinal cord compression</li>\n<li>Blindness from complications of gastric bypass</li>\n</ul>\n- - Death from failure to diagnose heart attack in the Emergency Room - Death from overdose of blood thinners - Lack of Informed Consent for abdominal surgery on Disabled Child - Brain damage from negligent repair of congenital heart defect in 6\u0003 month old baby - Punctured Heart from surgical guide wire - Death from Breast Cancer after misread mammogram"
+}, {
+  "name" : "cases_current_working",
+  "label" : "Cases Current Working",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<ul>\n<li>Brain Damage after successful Heart Transplant</li>\n<li>Paralysis after tethered spinal cord release</li>\n<li>Wrongful Birth of Child with Undiagnosed Dandy Walker Variant</li>\n<li>Cerebral Palsy from undiagnosed hydrocephalus</li>\n<li>Erb's Palsy from excessive head traction at delivery</li>\n<li>Quadriplegia from negligent blood transfusion</li>\n<li>Leg Amputation from improperly treated foot wound</li>\n<li>Death From Undiagnosed Aortic Dissection</li>\n</ul>"
+} ]

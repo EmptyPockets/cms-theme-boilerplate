@@ -80,7 +80,7 @@
 <ul class="submenu level-{{ level }}"
   aria-hidden="{{ level != 1 }}">
   {% for node in menuTree.children %}
-  {{ link(node) }}
+    {{ link(node) }}
   {% endfor %}
 </ul>
 {% endmacro %}

@@ -1,33 +1,43 @@
-/* Generic */
+// Generic
 @import 'generic/normalize';
 @import 'generic/reset';
 @import 'generic/slider';
-/* Elements */
+
+// Elements
 @import 'elements/headings';
-/* Objects */
+
+// Objects
 @import 'objects/grid';
 @import 'objects/modal';
-/* Components */
+
+// Components
 @import 'components/header';
 @import 'components/footer';
 @import 'components/systems';
 @import 'components/buttons';
-/* Modules */
-@import 'modules/video-hero';
-@import 'modules/search-input';
-@import 'modules/hero-banner';
-@import 'modules/section-heading';
-@import 'modules/simple-step';
-@import 'modules/content-slider';
-@import 'modules/featured-split-hero';
-@import 'modules/home-practice-area';
-@import 'modules/editorial-body';
-@import 'modules/home-client-reviews';
-@import 'modules/faq';
-@import 'modules/settlements-card';
+
+// Modules
+@import 'modules/home/client-reviews';
+@import 'modules/home/practice-area';
+@import 'modules/lawyers/about';
+@import 'modules/lawyers/cards';
+@import 'modules/profile/about';
+@import 'modules/profile/awards';
+@import 'modules/profile/cases';
+@import 'modules/profile/philosophy';
+@import 'modules/profile/profile';
+@import 'modules/profile/review';
+@import 'modules/awards';
 @import 'modules/contact-option';
+@import 'modules/content-slider';
+@import 'modules/editorial-body';
+@import 'modules/faq';
+@import 'modules/featured-split-hero';
+@import 'modules/hero-banner';
 @import 'modules/results-cards';
 @import 'modules/reviews-cards';
-@import 'modules/awards';
-@import 'modules/lawyer-cards';
-@import 'modules/lawyers-about';
+@import 'modules/search-input';
+@import 'modules/section-heading';
+@import 'modules/settlements-card';
+@import 'modules/simple-step';
+@import 'modules/video-hero';

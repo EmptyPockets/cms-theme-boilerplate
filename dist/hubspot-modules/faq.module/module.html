@@ -1,11 +1,7 @@
 <section class="faq {% if module.is_open %}starts-open open{% endif %}">
-  <h2 class="{% if module.show_title %}show-title{% endif %}">
-    {{ module.title }}
-  </h2>
+  <h2 class="{% if module.show_title %}show-title{% endif %}">{{ module.title }}</h2>
   <header>
-    <h3>
-      {{ module.question }}
-    </h3>
+    <h3>{{ module.question }}</h3>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="30"
@@ -45,9 +41,7 @@
       </g>
     </svg>
   </header>
-  <p class="short-answer">
-    {{ module.short_answer }}
-  </p>
+  <p class="short-answer">{{ module.short_answer }}</p>
   <div class="full-answer {% if module.is_open %}starts-open open{% endif %}">
     <p>{{ module.full_answer }}</p>
   </div>

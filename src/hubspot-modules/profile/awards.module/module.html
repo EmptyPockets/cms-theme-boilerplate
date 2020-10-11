@@ -1,0 +1,23 @@
+<article class="awards-and-rec">
+  <header>
+    <h1>Awards &amp; Recognition</h1>
+  </header>
+  <section class="awards-group">
+    <div class="content-wrapper">
+      <ul>
+        {% for item in module.award_images %}
+          {% if item.src %}
+            <li>
+              <img
+                src="{{ item.src }}"
+                alt="{{ item.alt }}"
+                width="{{ item.width }}"
+                height="{{ item.height }}"
+              />
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</article>

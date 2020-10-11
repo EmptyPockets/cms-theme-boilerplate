@@ -1,0 +1,56 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Profile
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  {# Profile #}
+  {% dnd_area "profile" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/profile/profile' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# Awards #}
+  {% dnd_area "awards" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/profile/awards' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# Review #}
+  {% dnd_area "review" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/profile/review' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# Philosophy #}
+  {% dnd_area "philosophy" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/profile/philosophy' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# About #}
+  {% dnd_area "about" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/profile/about' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# Cases #}
+  {% dnd_area "cases" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/profile/cases' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+{% endblock %}

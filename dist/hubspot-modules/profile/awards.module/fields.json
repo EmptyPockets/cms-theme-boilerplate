@@ -1,0 +1,47 @@
+[ {
+  "name" : "award_images",
+  "label" : "Award Images",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 6
+  },
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : [ {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Awards/AVVO-Superb%20Badge.png",
+    "alt" : "AVVO-Superb Badge",
+    "width" : 192,
+    "height" : 160
+  }, {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Awards/AVVO-Superb%20Badge.png",
+    "alt" : "AVVO-Superb Badge",
+    "width" : 192,
+    "height" : 160
+  }, {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Awards/AVVO-Superb%20Badge.png",
+    "alt" : "AVVO-Superb Badge",
+    "width" : 192,
+    "height" : 160
+  }, {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Awards/AVVO-Superb%20Badge.png",
+    "alt" : "AVVO-Superb Badge",
+    "width" : 192,
+    "height" : 160
+  }, {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Awards/AVVO-Superb%20Badge.png",
+    "alt" : "AVVO-Superb Badge",
+    "width" : 192,
+    "height" : 160
+  }, {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Awards/AVVO-Superb%20Badge.png",
+    "alt" : "AVVO-Superb Badge",
+    "width" : 192,
+    "height" : 160
+  } ]
+} ]

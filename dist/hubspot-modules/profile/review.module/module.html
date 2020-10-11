@@ -1,0 +1,31 @@
+<article class="client-lawyer-review">
+  <section class="img">
+    {% if module.client_review.is_google_review %}
+      <div class="google-review">
+        <img class="google-logo" alt="Google Reviews Logo" src="https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/google-review-logo%20(1).png">
+      </div>
+    {% else  %}
+      <div
+        class="featured-thumbnail"
+        style="background-image: url({{ module.client_review.featured_thumbnail.src }}); background-position: {{ module.client_review.background_position }}"
+      ></div>
+    {% endif %}
+  </section>
+
+  <section class="client-review">
+    <h1>What My Clients Are Saying</h1>
+    <div class="star-rating">
+      <ul>
+        <li><img class="star" alt="review-star" src="https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg"></li>
+        <li><img class="star" alt="review-star" src="https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg"></li>
+        <li><img class="star" alt="review-star" src="https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg"></li>
+        <li><img class="star" alt="review-star" src="https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg"></li>
+        <li><img class="star" alt="review-star" src="https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg"></li>
+      </ul>
+    </div>
+    <h2>"{{ module.client_review.review_title }}"</h2>
+    <h3>{{ module.client_review.review_client_name }}</h3>
+    <p>"{{ module.client_review.review_body }}"</p>
+    <a class="button red" href="/client-reviews">See More Reviews</a>
+  </section>
+</article>

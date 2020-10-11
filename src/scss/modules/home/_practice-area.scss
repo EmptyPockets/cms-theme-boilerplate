@@ -1,6 +1,6 @@
 article .practice-area {
     align-items: flex-start;
-    color: #fff;
+    color: $color-white;
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
@@ -65,15 +65,15 @@ article .practice-area .inner-content-wrapper {
 }
 
 article .practice-area h3 {
-    color: #fff;
-    font-family: 'Public Sans', sans-serif;
+    color: $color-white;
+    font-family: $public;
     font-size: 17px;
     margin-bottom: 8px;
     text-transform: uppercase;
 }
 
 article .practice-area h4 {
-    color: #fff;
+    color: $color-white;
     font-size: 30px;
     margin-bottom: 24px;
     @include m {
@@ -82,7 +82,7 @@ article .practice-area h4 {
 }
 
 article .practice-area p {
-    color: #fff;
+    color: $color-white;
     font-size: 17px;
     line-height: 1.5;
     margin-bottom: 24px;

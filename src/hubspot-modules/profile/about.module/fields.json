@@ -1,0 +1,8 @@
+[ {
+  "name" : "about_body",
+  "label" : "About Body",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h1>About Paul M. D'Amore</h1>\n<p>Paul received a Bachelor of Science degree in business finance from Boston University’s School of Management in 1992 and a Juris Doctor from Northeastern University’s School of Law in 1997. Paul began his legal career as an Assistant Prosecutor for the State of New Jersey. Thereafter, he spent 8 years successfully defending corporations, doctors, nurses and hospitals in Maryland and Washington, D.C. against claims of negligence.</p>\n<p>After a decade of successful practice, Paul decided he would rather help real people instead of the rich hospitals and insurance companies that once retained him. He resigned his partnership at a prestigious defense firm, and began working as a personal injury lawyer serving injured people in their fight for justice against the very hospitals, corporations and insurance companies that once retained him.</p>\n<p>Since then, Paul has obtained tens of millions of dollars in compensation for his injured clients and their families. The results that Paul has achieved for his injured clients have earned him recognition as a Super Lawyer, a Top 100 Trial Lawyer and Life Membership in the Million Dollar and Multi Million Dollar Advocates Forums.</p>"
+} ]

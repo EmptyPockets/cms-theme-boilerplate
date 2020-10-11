@@ -1,0 +1,54 @@
+.about-lawyer {
+	padding: 20px;
+	background: $color-blue-dark;
+	color: $color-white;
+  margin-bottom: 20px;
+
+  @include md {
+    display: flex;
+		padding: 30px;
+		min-height: 400px;
+		margin-bottom: 0;
+  }
+  @include xl {
+    padding: 50px;
+  }
+	h1 {
+		font-size: 45px;
+		margin-bottom: 20px;
+    line-height: 1.1;
+    
+    @include md {
+      font-size: 60px;
+			max-width: 80%;
+    }
+	}
+	p {
+		margin-bottom: 10px;
+		line-height: 1.5;
+    font-weight: 300;
+    
+    @include md {
+      margin-bottom: 20px;
+			line-height: 1.7;
+    }
+	}
+	.profile-long {
+		column-count: initial;
+		column-gap: initial;
+    max-width: 100%;
+
+    @include md {
+      column-count: 3;
+			column-gap: 40px;
+    }
+  }
+  div {
+    @include md {
+      padding-right: 30px;
+    }
+    @include xl {
+      padding-right: 100px;
+    }
+  }
+}

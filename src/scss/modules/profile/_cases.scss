@@ -1,0 +1,46 @@
+.cases-and-interest {
+  padding: 20px;
+
+  @include md {
+    display: flex;
+		padding: 50px;
+    background: url(https://cdn2.hubspot.net/hubfs/5191528/Images/justice-scales-2.jpg) no-repeat center / cover;
+    
+    .interest {
+			width: 50%;
+			padding-right: 50px;
+    }
+    .working {
+			width: 50%;
+			padding-right: 50px;
+		}
+  }
+	h2 {
+		font-size: 35px;
+		margin-bottom: 20px;
+		line-height: 1.1;
+    color: #263d75;
+    
+    @include md {
+      margin-bottom: 40px;
+    }
+	}
+	ul {
+		list-style-type: none;
+    margin-bottom: 20px;
+
+		li {
+			margin-bottom: 10px;
+      padding-left: 20px;
+      
+      @include md {
+        margin-bottom: 15px;
+      }
+		}
+		> li:before {
+      content: '\2014';
+      position: absolute;
+      margin-left: -1.25em;
+		}
+	}
+}

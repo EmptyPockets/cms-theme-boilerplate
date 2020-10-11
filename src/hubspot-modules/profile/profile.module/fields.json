@@ -1,0 +1,325 @@
+[ {
+  "name" : "lawyer_profile",
+  "label" : "Lawyer Profile",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "name" : "nickname",
+    "label" : "Nickname",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Short Name / Nickname",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Paul"
+  }, {
+    "name" : "lawyer_name",
+    "label" : "Lawyer Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Lawyer Name",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Paul M. D'Amore"
+  }, {
+    "name" : "lawyer_position",
+    "label" : "Lawyer Position",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Lawyer Position",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Founding Member, Trial Lawyer"
+  }, {
+    "name" : "serving_location",
+    "label" : "Serving Location",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Serving Location",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Baltimore, Annapolis & Washington, D.C."
+  }, {
+    "name" : "number_of_years_licensed",
+    "label" : "Number of Years Licensed",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 21
+  }, {
+    "name" : "email_address",
+    "label" : "Email Address",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Email Address",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "paul@damoreinjurylaw.com"
+  }, {
+    "name" : "associations",
+    "label" : "Associations",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 4
+    },
+    "children" : [ {
+      "name" : "association",
+      "label" : "Association",
+      "required" : false,
+      "locked" : false,
+      "responsive" : false,
+      "resizable" : true,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "src" : "https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/avvo-review-logo.png",
+        "alt" : "avvo-review-logo",
+        "width" : 130,
+        "height" : 39
+      }
+    }, {
+      "name" : "association_url",
+      "label" : "Association URL",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "placeholder" : "URL",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "https://google.com"
+    } ],
+    "tab" : "CONTENT",
+    "type" : "group",
+    "default" : [ {
+      "association" : {
+        "src" : "https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/avvo-review-logo.png",
+        "alt" : "avvo-review-logo",
+        "width" : 130,
+        "height" : 39
+      },
+      "association_url" : "https://google.com"
+    }, {
+      "association" : {
+        "src" : "https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/avvo-review-logo.png",
+        "alt" : "avvo-review-logo",
+        "width" : 130,
+        "height" : 39
+      },
+      "association_url" : "https://google.com"
+    }, {
+      "association" : {
+        "src" : "https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/avvo-review-logo.png",
+        "alt" : "avvo-review-logo",
+        "width" : 130,
+        "height" : 39
+      },
+      "association_url" : "https://google.com"
+    }, {
+      "association" : {
+        "src" : "https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/avvo-review-logo.png",
+        "alt" : "avvo-review-logo",
+        "width" : 130,
+        "height" : 39
+      },
+      "association_url" : "https://google.com"
+    } ]
+  }, {
+    "name" : "case_types",
+    "label" : "Case Types",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 6
+    },
+    "validation_regex" : "",
+    "placeholder" : "Case Type",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : [ "Medical Malpractice", "Medical Malpractice", "Medical Malpractice", "Medical Malpractice", "Medical Malpractice", "Medical Malpractice" ]
+  }, {
+    "name" : "school",
+    "label" : "School",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "1a06e16c-6470-302d-0471-3f261be7b714",
+      "default" : 2
+    },
+    "children" : [ {
+      "name" : "education",
+      "label" : "Education",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "placeholder" : "Education",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Northeastern University School of Law"
+    }, {
+      "name" : "degree",
+      "label" : "Degree",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "JD -  Juris Doctor"
+    } ],
+    "tab" : "CONTENT",
+    "type" : "group",
+    "default" : [ {
+      "education" : "Northeastern University School of Law",
+      "degree" : "JD -  Juris Doctor"
+    }, {
+      "education" : "Northeastern University School of Law",
+      "degree" : "JD -  Juris Doctor"
+    } ]
+  }, {
+    "name" : "admitted_to_practice",
+    "label" : "Admitted to Practice",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "name" : "state_courts",
+      "label" : "State Courts",
+      "required" : false,
+      "locked" : false,
+      "occurrence" : {
+        "min" : null,
+        "max" : null,
+        "sorting_label_field" : null,
+        "default" : 4
+      },
+      "validation_regex" : "",
+      "placeholder" : "Location",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : [ "Maryland", "Maryland", "Maryland", "Maryland" ]
+    }, {
+      "name" : "federal_courts",
+      "label" : "Federal Courts",
+      "required" : false,
+      "locked" : false,
+      "occurrence" : {
+        "min" : null,
+        "max" : null,
+        "sorting_label_field" : null,
+        "default" : 4
+      },
+      "validation_regex" : "",
+      "placeholder" : "Location",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : [ "District of Columbia", "District of Columbia", "District of Columbia", "District of Columbia" ]
+    } ],
+    "tab" : "CONTENT",
+    "type" : "group",
+    "default" : {
+      "state_courts" : [ "Maryland", "Maryland", "Maryland", "Maryland" ],
+      "federal_courts" : [ "District of Columbia", "District of Columbia", "District of Columbia", "District of Columbia" ]
+    }
+  }, {
+    "name" : "lawyer_photo",
+    "label" : "Lawyer Photo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Images/Paul%20-%20Desk.jpg",
+      "alt" : "Paul - Desk",
+      "width" : 1440,
+      "height" : 1052
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "nickname" : "Paul",
+    "lawyer_name" : "Paul M. D'Amore",
+    "lawyer_position" : "Founding Member, Trial Lawyer",
+    "serving_location" : "Baltimore, Annapolis & Washington, D.C.",
+    "number_of_years_licensed" : 21,
+    "email_address" : "paul@damoreinjurylaw.com",
+    "associations" : [ {
+      "association" : {
+        "src" : "https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/avvo-review-logo.png",
+        "alt" : "avvo-review-logo",
+        "width" : 130,
+        "height" : 39
+      },
+      "association_url" : "https://google.com"
+    }, {
+      "association" : {
+        "src" : "https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/avvo-review-logo.png",
+        "alt" : "avvo-review-logo",
+        "width" : 130,
+        "height" : 39
+      },
+      "association_url" : "https://google.com"
+    }, {
+      "association" : {
+        "src" : "https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/avvo-review-logo.png",
+        "alt" : "avvo-review-logo",
+        "width" : 130,
+        "height" : 39
+      },
+      "association_url" : "https://google.com"
+    }, {
+      "association" : {
+        "src" : "https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/avvo-review-logo.png",
+        "alt" : "avvo-review-logo",
+        "width" : 130,
+        "height" : 39
+      },
+      "association_url" : "https://google.com"
+    } ],
+    "case_types" : [ "Medical Malpractice", "Medical Malpractice", "Medical Malpractice", "Medical Malpractice", "Medical Malpractice", "Medical Malpractice" ],
+    "school" : [ {
+      "education" : "Northeastern University School of Law",
+      "degree" : "JD -  Juris Doctor"
+    }, {
+      "education" : "Northeastern University School of Law",
+      "degree" : "JD -  Juris Doctor"
+    } ],
+    "admitted_to_practice" : {
+      "state_courts" : [ "Maryland", "Maryland", "Maryland", "Maryland" ],
+      "federal_courts" : [ "District of Columbia", "District of Columbia", "District of Columbia", "District of Columbia" ]
+    },
+    "lawyer_photo" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Images/Paul%20-%20Desk.jpg",
+      "alt" : "Paul - Desk",
+      "width" : 1440,
+      "height" : 1052
+    }
+  }
+} ]

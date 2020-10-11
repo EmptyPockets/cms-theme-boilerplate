@@ -19,7 +19,7 @@
 }
 
 .split-hero section.top h2 {
-    color: #fff;
+    color: $color-white;
 }
 
 .split-hero section .inner-content-wrapper {
@@ -91,7 +91,7 @@
         margin-bottom: 24px;
     }
     li {
-        color: #20264c;
+        color: $color-blue-dark;
         line-height: 1.5;
         font-size: 17px;
         margin-bottom: 3px;
