@@ -218,14 +218,22 @@ import LazyLoad from "vanilla-lazyload";
   /**
    * "Read More" handling
    */
+  const isOpenClass = 'is-open';
   const isClosedClass = 'is-closed';
 
   Q('.read-more-text').forEach((el) => {
     const parent = el.closest('li');
+    const isOpen = false;
+
+    const toggle = (shouldBeOpen) => {
+      isOpen = !!shouldBeOpen;
+      parent.classList.toggle(isOpenClass, isOpen);
+      parent.classList.toggle(isClosedClass, !isOpen);
+    };
 
     if (parent) {
-      parent.addEventListener(clickEvent, () => parent.classList.toggle(isClosedClass));
-      parent.classList.toggle(isClosedClass, true);
+      parent.addEventListener(clickEvent, () => toggle(!isOpen));
+      toggle(false);
     }
   });
 })();

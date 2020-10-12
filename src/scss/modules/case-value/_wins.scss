@@ -60,29 +60,32 @@
           margin: 0 auto;
         }
       }
-      .read-less {
-        display: inline-block;
-      }
-      .read-more {
-        display: none;
-			}
-			.read-more-text {
-				transition: opacity .25s, font-size .5s .25s, margin .5s .25s, padding .5s .25s;
+			&.is-open {
+				.read-more {
+					display: none;
+				}
+				.read-more-text {
+					transition: font-size .25s, margin .25s, padding .25s, opacity .5s .25s;
+
+					* {
+						transition: font-size .25s;
+					}
+				}
 			}
       &.is-closed {
         .read-less {
           display: none;
         }
-        .read-more {
-          display: inline-block;
-        }
         .read-more-text {
 					opacity: 0;
 					margin: 0;
 					padding: 0;
+					font-size: 0;
+					transition: opacity .25s, font-size .5s .25s, margin .5s .25s, padding .5s .25s;
 
-					&, & * {
+					* {
 						font-size: 0;
+						transition: font-size .5s .25s;
 					}
         }
       }
