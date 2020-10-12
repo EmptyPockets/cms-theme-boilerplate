@@ -1,3 +1,7 @@
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 .imageGallery {
   display: none;
   max-height: 200px;
@@ -9,5 +13,17 @@
   img.gallery-photo {
     height: 200px;
     width: auto;
+  }
+  > ul {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    will-change: transform;
+    animation: marquee 32s linear infinite;
+
+    > li {
+      display: block;
+      flex: 0 0 auto;
+    }
   }
 }

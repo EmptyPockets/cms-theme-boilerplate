@@ -1,5 +1,14 @@
-<marquee class="imageGallery">
-  <ul class="demo">
+<div class="image-gallery">
+  <ul>
+    {% for item in module.collage_images %}
+      <li>
+        <img
+          class="gallery-photo"
+          src="{{ item.src }}"
+          alt="{{ item.alt }}"
+        />
+      </li>
+    {% endfor %}
     {% for item in module.collage_images %}
       <li>
         <img
@@ -10,4 +19,4 @@
       </li>
     {% endfor %}
   </ul>
-</marquee>
+</div>
