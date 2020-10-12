@@ -1,0 +1,32 @@
+.client-quote {
+	text-align: center;
+  padding: 0px 20px 0px 20px;
+
+  @include md {
+    padding: 60px 0px 60px 0px;
+  }
+	h1 {
+		font-size: 22px;
+		font-family: $play;
+		margin-bottom: 15px;
+    color: $color-blue-dark;
+
+    @include md {
+      font-size: 40px;
+			margin: 0 auto;
+			max-width: 1000px;
+			margin-bottom: 10px;
+			padding: 0 60px;
+    }
+	}
+	span {
+		color: $color-gray-darker;
+		display: block;
+    margin-bottom: 20px;
+
+    @include md {
+      font-size: 17px;
+			margin-bottom: 0px;
+    }
+	}
+}

@@ -1,0 +1,98 @@
+.wins-grid {
+	padding: 20px;
+
+  @include md {
+    .content-wrapper {
+			max-width: 1300px;
+			margin: 0 auto;
+			display: flex;
+		}
+  }
+	ul {
+		display: flex;
+		flex-direction: column;
+    list-style: none;
+
+    @include md {
+      width: 100%;
+    }
+		li {
+			background: white;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+			padding: 25px 25px 10px 25px;
+			text-align: center;
+			margin-bottom: 20px;
+			display: inline-block;
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+      justify-content: space-between;
+
+      @include md {
+        margin: 13px 15px;
+				min-height: 260px;
+      }
+			&:hover {
+				box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.04), -10px 0 20px 0px rgba(0,0,0,0.04);
+				transform: translate(0, -2px);
+				transition: all 0.05s linear;
+			}
+			h2 {
+				font-size: 35px;
+				color: $color-blue-light;
+				margin-bottom: 25px;
+				line-height: 1.1;
+			}
+			h3 {
+				font-size: 18px;
+				color: $color-gray;
+				font-weight: bold;
+				margin-bottom: 5px;
+			}
+			h4 {
+				font-size: 22px;
+				color: $color-blue-light;
+				font-weight: bold;
+        margin-bottom: 10px;
+        
+        @include md {
+          max-width: 500px;
+          margin: 0 auto;
+        }
+      }
+      .read-more {
+        display: inline-block;
+      }
+      .read-less {
+        display: none;
+      }
+      &.is-open {
+        .read-more {
+          display: none;
+        }
+        .read-less {
+          display: inline-block;
+        }
+        .read-more-text {
+          max-height: 500px;
+        }
+      }
+		}
+	}
+	.read-more-text {
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+
+		p {
+			line-height: 1.5;
+			font-size: 16px;
+			font-weight: 300;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			text-align: left;
+		}
+	}
+	.button:hover {
+    color: $color-red-light;
+	}
+}

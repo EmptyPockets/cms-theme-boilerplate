@@ -1,0 +1,13 @@
+.imageGallery {
+  display: none;
+  max-height: 200px;
+  overflow: hidden;
+
+  @include md {
+    display: block;
+  }
+  img.gallery-photo {
+    height: 200px;
+    width: auto;
+  }
+}

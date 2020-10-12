@@ -1,0 +1,53 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Case Value
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  {# Marquee #}
+  {% dnd_area "marquee" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/marquee' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# Headline #}
+  {% dnd_area "headline" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/section-heading',
+        is_on_dark_background="false",
+        section_title="Our firm has obtained life-changing compensation for our clients",
+        section_intro="",
+        hide_button="true",
+        width=12 %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# First half of wins #}
+  {% dnd_area "first_half_of_wins" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/case-value/wins' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# Quote #}
+  {% dnd_area "quote" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/quote' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# Second half of wins #}
+  {% dnd_area "second_half_of_wins" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/case-value/wins' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+{% endblock body %}

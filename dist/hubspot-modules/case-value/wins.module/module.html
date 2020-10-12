@@ -1,0 +1,42 @@
+<article class="wins-grid">
+  <div class="content-wrapper">
+    <ul>
+      {% for item in module.client_win %}
+        {% if loop.revindex > module.client_win|length / 2 %}
+          <li>
+            <h2>{{ item.win_amount }}</h2>
+            <div>
+              <h3>{{ item.win_practice_area }}</h3>
+              <h4>{{ item.win_title }}</h4>
+            </div>
+
+            <div class="read-more-text">
+              <p>{{ item.win_description }}</p>
+            </div>
+            <a class="button ghost read-more">Read More</a>
+            <a class="button ghost read-less">Read Less</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <ul>
+      {% for item in module.client_win %}
+        {% if loop.revindex <= module.client_win|length / 2 %}
+          <li>
+            <h2>{{ item.win_amount }}</h2>
+            <div>
+            <h3>{{ item.win_practice_area }}</h3>
+            <h4>{{ item.win_title }}</h4>
+            </div>
+
+            <div class="read-more-text">
+              <p>{{ item.win_description }}</p>
+            </div>
+            <a class="button ghost read-more">Read More</a>
+            <a class="button ghost read-less">Read Less</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</article>

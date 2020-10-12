@@ -1,0 +1,23 @@
+[ {
+  "name" : "quote",
+  "label" : "Quote",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Large Quote",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Paul has obtained tens of millions of dollars in compensation for his injured clients and their families."
+}, {
+  "name" : "quote_author",
+  "label" : "Quote Author",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Quote Author",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "By: Ana F."
+} ]

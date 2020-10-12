@@ -1,0 +1,52 @@
+[ {
+  "name" : "collage_images",
+  "label" : "Collage Images",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 7
+  },
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : [ {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Homepage/paul-hero.png",
+    "alt" : "paul-hero",
+    "width" : 890,
+    "height" : 720
+  }, {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Homepage/paul-hero.png",
+    "alt" : "paul-hero",
+    "width" : 890,
+    "height" : 720
+  }, {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Homepage/paul-hero.png",
+    "alt" : "paul-hero",
+    "width" : 890,
+    "height" : 720
+  }, {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Homepage/paul-hero.png",
+    "alt" : "paul-hero",
+    "width" : 890,
+    "height" : 720
+  }, {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Homepage/paul-hero.png",
+    "alt" : "paul-hero",
+    "width" : 890,
+    "height" : 720
+  }, {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Homepage/paul-hero.png",
+    "alt" : "paul-hero",
+    "width" : 890,
+    "height" : 720
+  }, {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/Homepage/paul-hero.png",
+    "alt" : "paul-hero",
+    "width" : 890,
+    "height" : 720
+  } ]
+} ]

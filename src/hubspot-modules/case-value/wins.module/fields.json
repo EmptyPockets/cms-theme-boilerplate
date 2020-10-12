@@ -1,0 +1,107 @@
+[ {
+  "name" : "client_win",
+  "label" : "Client Win",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 8
+  },
+  "children" : [ {
+    "name" : "win_amount",
+    "label" : "Win Amount",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Win Amount",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "400,000"
+  }, {
+    "name" : "win_practice_area",
+    "label" : "Win Practice Area",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Win Practice Area",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Medical Malpractice"
+  }, {
+    "name" : "win_title",
+    "label" : "Win Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Win Title",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Obstetrical Negligence"
+  }, {
+    "name" : "win_description",
+    "label" : "Win Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<span>A young mother and father trusted one of Maryland’s biggest hospitals to help their new baby. When the hospital violated their trust and almost<span>&nbsp;</span></span><a href=\"https://damoreinjurylaw.com/cases/birth-injury/\">caused the baby to die</a><span>, they contacted Paul for help. Paul took the case and fought tirelessly for the family on every front. Ultimately, Paul negotiated a settlement that would ensure the catastrophically injured baby would receive lifelong security, medical care and services.</span>"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : [ {
+    "win_amount" : "400,000",
+    "win_practice_area" : "Medical Malpractice",
+    "win_title" : "Obstetrical Negligence",
+    "win_description" : "<span>A young mother and father trusted one of Maryland’s biggest hospitals to help their new baby. When the hospital violated their trust and almost<span>&nbsp;</span></span><a href=\"https://damoreinjurylaw.com/cases/birth-injury/\">caused the baby to die</a><span>, they contacted Paul for help. Paul took the case and fought tirelessly for the family on every front. Ultimately, Paul negotiated a settlement that would ensure the catastrophically injured baby would receive lifelong security, medical care and services.</span>"
+  }, {
+    "win_amount" : "400,000",
+    "win_practice_area" : "Medical Malpractice",
+    "win_title" : "Obstetrical Negligence",
+    "win_description" : "<span>A young mother and father trusted one of Maryland’s biggest hospitals to help their new baby. When the hospital violated their trust and almost<span>&nbsp;</span></span><a href=\"https://damoreinjurylaw.com/cases/birth-injury/\">caused the baby to die</a><span>, they contacted Paul for help. Paul took the case and fought tirelessly for the family on every front. Ultimately, Paul negotiated a settlement that would ensure the catastrophically injured baby would receive lifelong security, medical care and services.</span>"
+  }, {
+    "win_amount" : "400,000",
+    "win_practice_area" : "Medical Malpractice",
+    "win_title" : "Obstetrical Negligence",
+    "win_description" : "<span>A young mother and father trusted one of Maryland’s biggest hospitals to help their new baby. When the hospital violated their trust and almost<span>&nbsp;</span></span><a href=\"https://damoreinjurylaw.com/cases/birth-injury/\">caused the baby to die</a><span>, they contacted Paul for help. Paul took the case and fought tirelessly for the family on every front. Ultimately, Paul negotiated a settlement that would ensure the catastrophically injured baby would receive lifelong security, medical care and services.</span>"
+  }, {
+    "win_amount" : "400,000",
+    "win_practice_area" : "Medical Malpractice",
+    "win_title" : "Obstetrical Negligence",
+    "win_description" : "<span>A young mother and father trusted one of Maryland’s biggest hospitals to help their new baby. When the hospital violated their trust and almost<span>&nbsp;</span></span><a href=\"https://damoreinjurylaw.com/cases/birth-injury/\">caused the baby to die</a><span>, they contacted Paul for help. Paul took the case and fought tirelessly for the family on every front. Ultimately, Paul negotiated a settlement that would ensure the catastrophically injured baby would receive lifelong security, medical care and services.</span>"
+  }, {
+    "win_amount" : "400,000",
+    "win_practice_area" : "Medical Malpractice",
+    "win_title" : "Obstetrical Negligence",
+    "win_description" : "<span>A young mother and father trusted one of Maryland’s biggest hospitals to help their new baby. When the hospital violated their trust and almost<span>&nbsp;</span></span><a href=\"https://damoreinjurylaw.com/cases/birth-injury/\">caused the baby to die</a><span>, they contacted Paul for help. Paul took the case and fought tirelessly for the family on every front. Ultimately, Paul negotiated a settlement that would ensure the catastrophically injured baby would receive lifelong security, medical care and services.</span>"
+  }, {
+    "win_amount" : "400,000",
+    "win_practice_area" : "Medical Malpractice",
+    "win_title" : "Obstetrical Negligence",
+    "win_description" : "<span>A young mother and father trusted one of Maryland’s biggest hospitals to help their new baby. When the hospital violated their trust and almost<span>&nbsp;</span></span><a href=\"https://damoreinjurylaw.com/cases/birth-injury/\">caused the baby to die</a><span>, they contacted Paul for help. Paul took the case and fought tirelessly for the family on every front. Ultimately, Paul negotiated a settlement that would ensure the catastrophically injured baby would receive lifelong security, medical care and services.</span>"
+  }, {
+    "win_amount" : "400,000",
+    "win_practice_area" : "Medical Malpractice",
+    "win_title" : "Obstetrical Negligence",
+    "win_description" : "<span>A young mother and father trusted one of Maryland’s biggest hospitals to help their new baby. When the hospital violated their trust and almost<span>&nbsp;</span></span><a href=\"https://damoreinjurylaw.com/cases/birth-injury/\">caused the baby to die</a><span>, they contacted Paul for help. Paul took the case and fought tirelessly for the family on every front. Ultimately, Paul negotiated a settlement that would ensure the catastrophically injured baby would receive lifelong security, medical care and services.</span>"
+  }, {
+    "win_amount" : "400,000",
+    "win_practice_area" : "Medical Malpractice",
+    "win_title" : "Obstetrical Negligence",
+    "win_description" : "<span>A young mother and father trusted one of Maryland’s biggest hospitals to help their new baby. When the hospital violated their trust and almost<span>&nbsp;</span></span><a href=\"https://damoreinjurylaw.com/cases/birth-injury/\">caused the baby to die</a><span>, they contacted Paul for help. Paul took the case and fought tirelessly for the family on every front. Ultimately, Paul negotiated a settlement that would ensure the catastrophically injured baby would receive lifelong security, medical care and services.</span>"
+  } ]
+}, {
+  "name" : "half_of_wins",
+  "label" : "Half Of Wins",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Half of Wins",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "8"
+} ]

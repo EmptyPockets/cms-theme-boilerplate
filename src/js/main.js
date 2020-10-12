@@ -214,4 +214,17 @@ import LazyLoad from "vanilla-lazyload";
       console.debug('Flickity activated', el);
     }
   });
+
+  /**
+   * "Read More" handling
+   */
+  const isOpenClass = 'is-open';
+
+  Q('.read-more-text').forEach((el) => {
+    const parent = el.closest('li');
+
+    if (parent) {
+      parent.addEventListener(clickEvent, () => parent.classList.toggle(isOpenClass));
+    }
+  });
 })();
