@@ -1,0 +1,42 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Case Resources
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <div id="swap-container">
+    {# Double Heading #}
+    {% dnd_area "double_heading" %}
+      {% dnd_section %}
+        {% dnd_module path='../hubspot-modules/double-heading' %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    {# Guides #}
+    {% dnd_area "guides" %}
+      {% dnd_section %}
+        {% dnd_module path='../hubspot-modules/case-resources/guides' %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+  </div>
+
+  {# Hospitals List #}
+  {% dnd_area "hospitals_list" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/three-column-list' %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# Insurance List #}
+  {% dnd_area "insurance_list" %}
+    {% dnd_section %}
+      {% dnd_module path='../hubspot-modules/three-column-list', is_insurance=true %}
+      {% end_dnd_module %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+{% endblock body %}

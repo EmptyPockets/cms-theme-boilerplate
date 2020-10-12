@@ -1,0 +1,146 @@
+.guides {
+  // background: rgba(4, 55, 98, 0.07);
+
+  @include md {
+    margin-bottom: 60px;
+
+    section {
+      display: flex;
+
+			> img {
+				flex: 1;
+			}
+			> div {
+				flex: 3;
+				padding-left: 60px;
+			}
+		}
+  }
+	.content-wrapper {
+		max-width: 1300px;
+		margin: 0 auto;
+    padding: 20px;
+
+    @include md {
+      padding-left: 60px;
+      padding-right: 60px;
+
+			> ul {
+				padding-top: 60px;
+				padding-bottom: 60px;
+			}
+    }
+	}
+	ul {
+    list-style: none;
+
+		> li.card {
+			background: $color-white;
+			margin-bottom: 20px;
+			box-shadow: none;
+			position: relative;
+			transition: all 0.05s linear;
+			display: flex;
+			flex-direction: column;
+			border-bottom: 1px solid #e3e3e3;
+      padding: 10px 30px 15px 30px;
+
+      @include md {
+        padding: 40px 40px 30px 40px;
+				margin-bottom: 40px;
+      }
+			&:hover {
+				box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.04), -10px 0 20px 0px rgba(0,0,0,0.04);
+				transform: translate(0, -2px);
+				transition: all 0.05s linear;
+			}
+			.illustration {
+				width: 75%;
+				margin: 20px auto 20px auto;
+				display: block;
+				max-width: 260px;
+			}
+			.click-card {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 94;
+			}
+		}
+	}
+	h1 {
+		font-family: 'Playfair Display',Serif;
+		font-size: 25px;
+		font-weight: bold;
+		color: $color-blue-dark;
+    margin-bottom: 10px;
+    
+    @include md {
+      font-size: 30px;
+    }
+	}
+	h2 {
+		font-size: 17px;
+		color: $color-gray-darker;
+		margin-bottom: 15px;
+		text-transform: uppercase;
+		font-family: 'Public Sans webfont', sans-serif;
+		color: $color-blue-darker;
+	}
+	p {
+		color: $color-gray;
+		font-size: 16px;
+		line-height: 1.5;
+		margin-bottom: 30px;
+	}
+	.links {
+    @include md {
+      display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 5px;
+    }
+		li {
+			position: relative;
+			z-index: 99;
+			margin-bottom: 20px;
+			display: flex;
+			justify-content: flex-start;
+      align-items: center;
+
+      @include md {
+        margin-right: 60px;
+				width: 100%;
+      }
+      @include xl {
+        margin-right: 0px;
+				width: 42%;
+				white-space: nowrap;
+      }
+			a {
+				font-size: 16px;
+				color: $color-gray-dark;
+				display: inline-block;
+				text-decoration: none;
+				font-weight: bold;
+				&:hover {
+					color: $color-red;
+				}
+			}
+			&:hover {
+				.arrow {
+					transform: translate(5px, 0);
+				}
+			}
+		}
+	}
+	.arrow {
+		width: 20px;
+		height: auto;
+		margin-right: 15px;
+		transition: 0.17s all linear;
+	}
+}

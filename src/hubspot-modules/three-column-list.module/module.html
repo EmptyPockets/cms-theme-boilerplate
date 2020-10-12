@@ -1,0 +1,45 @@
+<article class="three-column-list">
+  <div class="content-wrapper">
+    <h2>{{ module.headline }}</h2>
+    <div class="areas-wrapper {% if module.is_insurance %}is-insurance{% endif %}">
+      <section>
+        {% for area in module.area_group_a %}
+          {% if area.show_title %}
+            <h3>{{ area.area_title }}</h3>
+          {% endif %}
+          <ul>
+            {% for location in area.place %}
+              <li>{{ location }}</li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </section>
+      <section>
+        <div>
+          {% for area in module.area_group_b %}
+            {% if area.show_title %}
+              <h3>{{ area.area_title }}</h3>
+            {% endif %}
+            <ul>
+              {% for location in area.place %}
+                <li>{{ location }}</li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        </div>
+        <div>
+          {% for area in module.area_group_c %}
+            {% if area.show_title %}
+              <h3>{{ area.area_title }}</h3>
+            {% endif %}
+            <ul>
+              {% for location in area.place %}
+                <li>{{ location }}</li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        </div>
+      </section>
+    </div>
+  </div>
+</article>

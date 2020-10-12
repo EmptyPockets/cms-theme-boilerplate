@@ -1,0 +1,15 @@
+[ {
+  "name" : "left_side_content",
+  "label" : "Left-side Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h1>Best medical malpractice and personal injury representation in Baltimore, Maryland.</h1>"
+}, {
+  "name" : "right_side_content",
+  "label" : "Right-side Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h2><a href=\"https://www.damoreinjurylaw.com/client-wins\">Millions in compensation recovered for our clients</a></h2>\n<span></span>\n<p>D’Amore Personal Injury Law represents injured victims and families in a wide range of personal injury cases and related legal matters - and we have recovered millions of dollars in compensation on their behalves. Whether you or your loved one has been injured by corporate negligence, on the job, or by a medical professional, our personal injury lawyers are prepared to fight to get you the JUSTICE you deserve.</p>"
+} ]

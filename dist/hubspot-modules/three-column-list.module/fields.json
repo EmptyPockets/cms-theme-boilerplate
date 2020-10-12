@@ -1,0 +1,231 @@
+[ {
+  "name" : "headline",
+  "label" : "Headline",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Section Headline",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "The medical malpractice lawyers at D’Amore Personal Injury Law have successfully represented clients against every major hospital in Baltimore and Washington D.C., including:"
+}, {
+  "name" : "area_group_a",
+  "label" : "Area Group A",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "name" : "area_title",
+    "label" : "Area Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "bff070d0-e7b9-a10e-f9c8-7bbf52dad13d",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "placeholder" : "Area TItle",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Area Title"
+  }, {
+    "name" : "place",
+    "label" : "Place",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 3
+    },
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_value_regex" : null,
+      "operator" : "NOT_EMPTY",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "placeholder" : "Place Name",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : [ "Place A", "Place A", "Place A" ]
+  }, {
+    "name" : "show_title",
+    "label" : "Show Title",
+    "required" : false,
+    "locked" : false,
+    "type" : "boolean",
+    "default" : true
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : [ {
+    "area_title" : "Area Title",
+    "place" : [ "Place A", "Place A", "Place A" ],
+    "show_title" : true
+  }, {
+    "area_title" : "Area Title",
+    "place" : [ "Place A", "Place A", "Place A" ],
+    "show_title" : true
+  }, {
+    "area_title" : "Area Title",
+    "place" : [ "Place A", "Place A", "Place A" ],
+    "show_title" : true
+  } ]
+}, {
+  "name" : "area_group_b",
+  "label" : "Area Group B",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 1
+  },
+  "children" : [ {
+    "name" : "area_title",
+    "label" : "Area Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "4035e4c7-4f5e-f812-d44a-0499e93df96d",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "placeholder" : "Area TItle",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Area Title"
+  }, {
+    "name" : "place",
+    "label" : "Place",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 3
+    },
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_value_regex" : null,
+      "operator" : "NOT_EMPTY",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "placeholder" : "Place Name",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : [ "Place A", "Place A", "Place A" ]
+  }, {
+    "name" : "show_title",
+    "label" : "Show Title",
+    "required" : false,
+    "locked" : false,
+    "type" : "boolean",
+    "default" : true
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : [ {
+    "area_title" : "Area Title",
+    "place" : [ "Place A", "Place A", "Place A" ],
+    "show_title" : true
+  } ]
+}, {
+  "name" : "area_group_c",
+  "label" : "Area Group C",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 1
+  },
+  "children" : [ {
+    "name" : "area_title",
+    "label" : "Area Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "9800b4c9-c6fa-d6fa-6d36-7cf441fdc0ec",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "placeholder" : "Area TItle",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Area Title"
+  }, {
+    "name" : "place",
+    "label" : "Place",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 3
+    },
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_value_regex" : null,
+      "operator" : "NOT_EMPTY",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "placeholder" : "Place Name",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : [ "Place A", "Place A", "Place A" ]
+  }, {
+    "name" : "show_title",
+    "label" : "Show Title",
+    "required" : false,
+    "locked" : false,
+    "type" : "boolean",
+    "default" : true
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : [ {
+    "area_title" : "Area Title",
+    "place" : [ "Place A", "Place A", "Place A" ],
+    "show_title" : true
+  } ]
+}, {
+  "name" : "is_insurance",
+  "label" : "Is Insurance",
+  "required" : false,
+  "locked" : false,
+  "type" : "boolean",
+  "default" : false
+} ]

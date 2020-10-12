@@ -1,0 +1,30 @@
+<article class="guides">
+  <div class="content-wrapper">
+    <ul>
+      {% for area in module.practice_areas %}
+        <li class="card">
+          <section>
+            <img class="illustration" src="{{ area.illustration.src }}" alt="{{ area.illustration.alt }}">
+            <div>
+              <a class="click-card" href="{{ area.url }}"></a>
+              <h1>{{ area.title }}</h1>
+              <p>{{ area.description }}</p>
+
+              <h2>In this guide</h2>
+              <ul class="links">
+                {% for link in area.links %}
+                  {% set href = link.link.url.href %}
+                  <li>
+                    <img class="arrow" src="https://cdn2.hubspot.net/hubfs/5191528/Icons/arrow.svg" alt="arrow" />
+                    <a href="{{ href }}">{{ link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+              <a class="button link" href="{{ area.url }}">View Full Guide</a>
+            </div>
+          </section>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>

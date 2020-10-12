@@ -1,0 +1,425 @@
+[ {
+  "name" : "practice_areas",
+  "label" : "Practice Areas",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "name" : "title",
+    "label" : "Practice Area Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Practice Area Title",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Medical Malpractice"
+  }, {
+    "name" : "illustration",
+    "label" : "Illustration",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Med%20Mal%20Icon.svg",
+      "alt" : "Med Mal Icon",
+      "width" : 400,
+      "height" : 400
+    }
+  }, {
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Description",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Medical malpractice law deals specifically with mistakes, omissions, negligence, and even wrongful acts committed by doctors and other medical professionals–acts that frequently have a life-long impact."
+  }, {
+    "name" : "url",
+    "label" : "URL",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "url",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "https://www.damoreinjurylaw.com/cases/medical-malpractice"
+  }, {
+    "name" : "links",
+    "label" : "Links",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "55914dbe-4218-a02e-58b1-23376f75c59f",
+      "default" : 5
+    },
+    "children" : [ {
+      "name" : "link",
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "name" : "title",
+      "label" : "Title",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "placeholder" : "Link Title",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "What is Medical Malpractice?"
+    } ],
+    "tab" : "CONTENT",
+    "type" : "group",
+    "default" : [ {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : [ {
+    "title" : "Medical Malpractice",
+    "illustration" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Med%20Mal%20Icon.svg",
+      "alt" : "Med Mal Icon",
+      "width" : 400,
+      "height" : 400
+    },
+    "description" : "Medical malpractice law deals specifically with mistakes, omissions, negligence, and even wrongful acts committed by doctors and other medical professionals–acts that frequently have a life-long impact.",
+    "url" : "https://www.damoreinjurylaw.com/cases/medical-malpractice",
+    "links" : [ {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    } ]
+  }, {
+    "title" : "Medical Malpractice",
+    "illustration" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Med%20Mal%20Icon.svg",
+      "alt" : "Med Mal Icon",
+      "width" : 400,
+      "height" : 400
+    },
+    "description" : "Medical malpractice law deals specifically with mistakes, omissions, negligence, and even wrongful acts committed by doctors and other medical professionals–acts that frequently have a life-long impact.",
+    "url" : "https://www.damoreinjurylaw.com/cases/medical-malpractice",
+    "links" : [ {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    } ]
+  }, {
+    "title" : "Medical Malpractice",
+    "illustration" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Med%20Mal%20Icon.svg",
+      "alt" : "Med Mal Icon",
+      "width" : 400,
+      "height" : 400
+    },
+    "description" : "Medical malpractice law deals specifically with mistakes, omissions, negligence, and even wrongful acts committed by doctors and other medical professionals–acts that frequently have a life-long impact.",
+    "url" : "https://www.damoreinjurylaw.com/cases/medical-malpractice",
+    "links" : [ {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    } ]
+  }, {
+    "title" : "Medical Malpractice",
+    "illustration" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Med%20Mal%20Icon.svg",
+      "alt" : "Med Mal Icon",
+      "width" : 400,
+      "height" : 400
+    },
+    "description" : "Medical malpractice law deals specifically with mistakes, omissions, negligence, and even wrongful acts committed by doctors and other medical professionals–acts that frequently have a life-long impact.",
+    "url" : "https://www.damoreinjurylaw.com/cases/medical-malpractice",
+    "links" : [ {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    }, {
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "title" : "What is Medical Malpractice?"
+    } ]
+  } ]
+} ]
