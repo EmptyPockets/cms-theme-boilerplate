@@ -47,3 +47,16 @@
 @import 'modules/simple-step';
 @import 'modules/three-column-list';
 @import 'modules/video-hero';
+
+#swap-container {
+  display: flex;
+  flex-direction:column;
+
+  & > div:first-child {
+    order: 1;
+
+    @include md {
+      order: 0;
+    }
+  }
+}
