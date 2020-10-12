@@ -223,7 +223,7 @@ import LazyLoad from "vanilla-lazyload";
 
   Q('.read-more-text').forEach((el) => {
     const parent = el.closest('li');
-    const isOpen = false;
+    let isOpen = false;
 
     const toggle = (shouldBeOpen) => {
       isOpen = !!shouldBeOpen;
