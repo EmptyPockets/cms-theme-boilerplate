@@ -5,31 +5,32 @@
 
   @include md {
     > div {
-			max-width: 1100px;
-			padding: 60px;
-			margin: 0px auto 0px auto;
+      max-width: 1100px;
+      padding: 60px;
+      margin: 0px auto 0px auto;
 		}
   }
 	.partners {
     display: none;
+    float: right;
+    width: 40%;
+    padding-left: 60px;
+    padding-right: 0px;
 
     @include md {
       display: block;
-			padding-left: 60px;
-      padding-right: 0px;
-
-      h1 {
-				font-size: 40px;
-				color: $color-blue-dark;
-				font-weight: bold;
-				position: relative;
-				top: -12px;
-				line-height: 1.2;
-				margin-bottom: 15px;
-			}
-			.partner {
-				margin-bottom: 20px;
-			}
+    }
+    h1 {
+      font-size: 40px;
+      color: $color-blue-dark;
+      font-weight: bold;
+      position: relative;
+      top: -12px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+    .partner {
+      margin-bottom: 20px;
     }
 	}
 	.post-item {
