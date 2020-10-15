@@ -262,7 +262,7 @@ import LazyLoad from "vanilla-lazyload";
       window.addEventListener(scrollEvent, () => {
         updateScroll();
 
-        if (!!isShowing !== progressBar >= 1) {
+        if (!!isShowing !== progressBar.value >= 1) {
           isShowing = !isShowing;
           el.classList.toggle(isShowingClass, isShowing);
         }
