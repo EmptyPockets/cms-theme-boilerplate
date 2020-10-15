@@ -4,6 +4,8 @@ import LazyLoad from "vanilla-lazyload";
   var lazyLoadInstance = new LazyLoad({});// Lazy Load Images
 
   const clickEvent = 'click';
+  const resizeEvent = 'resize';
+  const scrollEvent = 'scroll';
 
   /** @type {(...x: any[]) => HTMLElement[]} */
   const Q = (...x) => Array.from(document.querySelectorAll(...x));
@@ -68,7 +70,7 @@ import LazyLoad from "vanilla-lazyload";
   const stickyClass = 'sticky';
   const clone = Q1('#stickyGlobalHeader');
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener(scrollEvent, () => {
     const shouldBeSticky = window.pageYOffset > navHeight;
 
     if (!!isSticky !== shouldBeSticky) {
@@ -117,7 +119,7 @@ import LazyLoad from "vanilla-lazyload";
           formId: "95a767f4-059f-4918-be0b-0a3007f5b473",
           target: '#form-holder'
         });
-        window.removeEventListener('scroll', userScroll, false);
+        window.removeEventListener(scrollEvent, userScroll, false);
       }
     }
   }
@@ -148,7 +150,7 @@ import LazyLoad from "vanilla-lazyload";
       hsform.async = true;
       document.head.appendChild(hsform);
       // checkForForm();
-      window.addEventListener('scroll', userScroll, false);
+      window.addEventListener(scrollEvent, userScroll, false);
     }
   });
 
@@ -211,7 +213,6 @@ import LazyLoad from "vanilla-lazyload";
 
     if (type) {
       new Flickity(el, { ...flickityBase, ...flickityTypes[type] });
-      console.debug('Flickity activated', el);
     }
   });
 
@@ -220,9 +221,10 @@ import LazyLoad from "vanilla-lazyload";
    */
   const isOpenClass = 'is-open';
   const isClosedClass = 'is-closed';
+  const readMoreParentElement = 'li';
 
   Q('.read-more-text').forEach((el) => {
-    const parent = el.closest('li');
+    const parent = el.closest(readMoreParentElement);
     let isOpen = false;
 
     const toggle = (shouldBeOpen) => {
@@ -234,6 +236,37 @@ import LazyLoad from "vanilla-lazyload";
     if (parent) {
       parent.addEventListener(clickEvent, () => toggle(!isOpen));
       toggle(false);
+    }
+  });
+
+  /**
+   * Progress scroller handling
+   */
+  const isShowingClass = 'is-showing';
+
+  Q('.footer-contact').forEach((el) => {
+    const progressBar = el.querySelector('progress');
+
+    if (progressBar) {
+      let isShowing = false;
+
+      const updateScroll = () => progressBar.value = window.scrollY;
+      const init = () => {
+        progressBar.max = document.documentElement.scrollHeight - window.innerHeight;
+        updateScroll();
+      };
+
+      window.addEventListener(resizeEvent, init);
+      init();
+
+      window.addEventListener(scrollEvent, () => {
+        updateScroll();
+
+        if (!!isShowing !== progressBar >= 1) {
+          isShowing = !isShowing;
+          el.classList.toggle(isShowingClass, isShowing);
+        }
+      });
     }
   });
 })();
