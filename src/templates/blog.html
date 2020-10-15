@@ -8,7 +8,7 @@
 {% block body %}
   <div class="row-fluid-wrapper row-depth-1 row-number-1 ">
     <div class="row-fluid ">
-      <div id="firm-news" class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+      <div class="firm-news" class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
         <div class="row-fluid-wrapper row-depth-1 row-number-2 ">
           <div class="row-fluid ">
             <div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
@@ -26,7 +26,7 @@
                   {% set isAll = 'all' in request.path %}
 
                   {# Blog Title #}
-                  <div id="blog-title" class="{% if topic %}topic{% endif %}">
+                  <div class="blog-title" class="{% if topic %}topic{% endif %}">
                     <h1 class="h1" style="max-width: 900px">
                       {% if topic %}
                         <a href="/blog">
@@ -172,7 +172,7 @@
 
                 {% module_attribute "blog_post_source" defer=True %}
                   {# Blog Title #}
-                  <div id="blog-title" class="blog-post">
+                  <div class="blog-title" class="blog-post">
                     <h1 class="h1" style="max-width: 900px">
                       <a href="/blog">
                         Firm News &amp; Events
@@ -200,7 +200,7 @@
 
                       <div class="inner-content-wrapper">
                         <div class="section post-header">
-                          <div id="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author" >
+                          <div class="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author" >
                             <div class="hs-author-avatar">
                               <img
                                 style="border-radius: 50%"
@@ -232,7 +232,7 @@
                       </div>
 
                       {% if content.topic_list %}
-                        <div id="hubspot-topic_data" >
+                        <div class="hubspot-topic_data">
                           {% for topic in content.topic_list %}
                             {% if loop.first %} {% set tag = topic %} {% endif %}
                             {% if loop.last && tag.name != 'Featured' %}

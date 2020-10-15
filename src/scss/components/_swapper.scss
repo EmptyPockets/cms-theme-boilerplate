@@ -1,0 +1,12 @@
+#swap-container {
+  display: flex;
+  flex-direction:column;
+
+  & > div:first-child {
+    order: 1;
+
+    @include md {
+      order: 0;
+    }
+  }
+}
