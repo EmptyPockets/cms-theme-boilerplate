@@ -1,0 +1,242 @@
+<!--
+  templateType: blog
+  isAvailableForNewContent: true
+  label: Community
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+  <div class="community-main">
+    {# Headline #}
+    {% dnd_area "headline" %}
+      {% dnd_section %}
+        {% dnd_module path='../hubspot-modules/section-heading',
+          is_on_dark_background="false",
+          section_title="We\'re Committed To Giving Back To The Communities We Serve.",
+          section_intro="",
+          hide_button="true",
+          width=12 %}
+        {% end_dnd_module %}
+      {% end_dnd_section %}
+    {% end_dnd_area %}
+
+    <div class="span7 widget-span widget-type-cell">
+      {% module_block module "community_blog"
+        overrideable=False,
+        path='@hubspot/blog_content',
+        per_widget_wrapper_html='',
+        template_to_edit='listing',
+        widget_name='Blog Content',
+        wrapping_html='',
+        label='Blog Content' %}
+        {% module_attribute "blog_listing_source" defer=True %}<div class="blog-section">
+          <div class="blog-listing-wrapper cell-wrapper">
+            <div class="blog-section">
+              <div class="blog-listing-wrapper cell-wrapper">
+                {# simple_list_page indicates the "blog/all" page, which is a list of links to every blog post #}
+                <div class="post-listing{% if simple_list_page %}-simple{% endif %}">
+                  {% for content in contents %}
+                    <div class="post-item">
+                      {% if not simple_list_page %}
+                        <div class="post-image">
+                          {% if content.post_list_summary_featured_image %}
+                            <div class="hs-featured-image-wrapper">
+                              <img
+                                src="{{ content.post_list_summary_featured_image }}"
+                                class="hs-featured-image"
+                                alt="{{ content.featured_image_alt_text | escape }}"
+                              />
+                            </div>
+                          {% endif %}
+                        </div>
+                        <div class="post-body">{{ content.post_list_content|safe }}</div>
+                        <div class="post-footer">{% module "module_1556224416547204" path="/Marketplace/Meet_Simon_by_YC/Social_Share/Social Share" %}</div>
+                      {% else %}
+                        <h2 class="post-listing-simple"><a href="{{content.absolute_url}}">{{ content.name }}</a></h2>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% end_module_attribute %}
+        {% module_attribute "blog_post_source" defer=True %}<div class="blog-section">
+          <div class="blog-post-wrapper cell-wrapper">
+            <div class="blog-section">
+              <div class="blog-post-wrapper cell-wrapper">
+                <div class="section post-header">
+                  <h1>{{ content.name }}</h1>
+                  <div class="hubspot-author_data hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author">
+                    <span class="hs-author-label">Posted by</span>
+                    {% if content.blog_post_author %}
+                      <a class="author-link" href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}">{{ content.blog_post_author.display_name }}</a>
+                      on {{ content.publish_date_localized }}
+                      {% if content.blog_post_author.avatar %}
+                        <div class="hs-author-avatar">
+                          <img src="{{ content.blog_post_author.avatar }}" alt="{{ content.blog_post_author.display_name }}"/>
+                        </div>
+                      {% endif %}
+                      {% if content.blog_post_author.has_social_profiles %}
+                        <div class="hs-author-social-section">
+                          <span class="hs-author-social-label">Find me on:</span>
+                          <div class="hs-author-social-links">
+                            {% if content.blog_post_author.facebook %}
+                              <a href="{{ content.blog_post_author.facebook }}" target="_blank" class="hs-author-social-link hs-social-facebook">Facebook </a>
+                            {% endif %}
+                            {% if content.blog_post_author.linkedin %}
+                              <a href="{{ content.blog_post_author.linkedin }}" target="_blank" class="hs-author-social-link hs-social-linkedin">LinkedIn</a>
+                            {% endif %}
+                            {% if content.blog_post_author.twitter %}
+                              <a href="{{ content.blog_post_author.twitter }}" target="_blank" class="hs-author-social-link hs-social-twitter">Twitter </a>
+                            {% endif %}
+                            {% if content.blog_post_author.google_plus %}
+                              <a href="{{ content.blog_post_author.google_plus }}?rel=author" target="_blank" class="hs-author-social-link hs-social-google-plus">Google+</a>
+                            {% endif %}
+                          </div>
+                        </div>
+                      {% endif %}
+                    {% endif %}
+                  </div>
+                </div>
+                {% blog_social_sharing "blog_social_sharing" overrideable=False, label='Blog Social Sharing' %}
+                <div class="section post-body">{{ content.post_body }}</div>
+                  {% if content.topic_list %}
+                    <p class="hubspot-topic_data" > Topics:
+                      {% for topic in content.topic_list %}
+                        <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
+                      {% endfor %}
+                    </p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% end_module_attribute %}
+      {% end_module_block %}
+    </div>
+
+    <div class="partners span5 widget-span widget-type-cell">
+      {% module_block module "module_1556219072626361"
+        header='Organizations We\'re Proud to Sponsor',
+        overrideable=True,
+        path='@hubspot/section_header',
+        per_widget_wrapper_html='',
+        subheader='',
+        widget_name='Section Header',
+        wrapping_html='',
+        label='Section Header' %}
+      {% end_module_block %}
+
+      {% module_block module "community_logo_1"
+        img='{
+          "alt": "BaltimoreHungerProject-logo-small copy",
+          "height": 67,
+          "width": 200,
+          "src": "https://cdn2.hubspot.net/hubfs/5191528/Community%20Assets/BaltimoreHungerProject-logo-small%20copy.png"
+        }',
+        path='@hubspot/linked_image',
+        widget_name='Image',
+        label='Image' %}
+      {% end_module_block %}
+
+      {% module_block module "community_logo_2"
+        img='{
+          "alt": "Blue-Ribbon-Logo",
+          "height": 132,
+          "width": 600,
+          "max_width": 600,
+          "max_height": 132,
+          "src": "https://cdn2.hubspot.net/hubfs/5191528/Community%20Assets/Sponsor%20Logos/Blue-Ribbon-Logo.png"
+        }',
+        path='@hubspot/linked_image',
+        widget_name='Image',
+        label='Image' %}
+      {% end_module_block %}
+
+      {% module_block module "community_logo_3"
+        img='{
+          "alt": "Red Devils Logo",
+          "height": 60,
+          "width": 200,
+          "src": "https://cdn2.hubspot.net/hubfs/5191528/Community%20Assets/Red%20Devils%20Logo.jpg"
+        }',
+        path='@hubspot/linked_image',
+        widget_name='Image',
+        label='Image' %}
+      {% end_module_block %}
+
+      {% module_block module "community_logo_4"
+        img='{
+          "alt": "BandB",
+          "height": 100,
+          "width": 200,
+          "src": "https://cdn2.hubspot.net/hubfs/5191528/Community%20Assets/BandB.jpg"
+        }',
+        path='@hubspot/linked_image',
+        widget_name='Image',
+        label='Image' %}
+      {% end_module_block %}
+
+      {% module_block module "community_logo_5"
+        img='{
+          "alt": "md-therapeutic-riding2",
+          "height": 100,
+          "width": 200,
+          "src": "https://cdn2.hubspot.net/hubfs/5191528/Community%20Assets/md-therapeutic-riding2.png"
+        }',
+        path='@hubspot/linked_image',
+        widget_name='Image',
+        label='Image' %}
+      {% end_module_block %}
+
+      {% module_block module "community_logo_6"
+        img='{
+          "alt": "Ravens Badge",
+          "height": 119,
+          "width": 200,
+          "src": "https://cdn2.hubspot.net/hubfs/5191528/Community%20Assets/Ravens%20Badge.png"
+        }',
+        path='@hubspot/linked_image',
+        widget_name='Image',
+        label='Image' %}
+      {% end_module_block %}
+
+      {% module_block module "community_logo_7"
+        img='{
+          "alt": "zaching-against-cancer",
+          "height": 100,
+          "width": 200,
+          "src": "https://cdn2.hubspot.net/hubfs/5191528/Community%20Assets/zaching-against-cancer.png"
+        }',
+        path='@hubspot/linked_image',
+        widget_name='Image',
+        label='Image' %}
+      {% end_module_block %}
+
+      {% module_block module "community_logo_8"
+        img='{
+          "alt": "brain-injury-assosication-md",
+          "height": 56,
+          "width": 200,
+          "src": "https://cdn2.hubspot.net/hubfs/5191528/Community%20Assets/brain-injury-assosication-md.png"
+        }',
+        path='@hubspot/linked_image',
+        widget_name='Image',
+        label='Image' %}
+      {% end_module_block %}
+
+      {% module_block module "community_logo_9"
+        img='{
+          "alt": "Midday MD Logo",
+          "height": 84,
+          "width": 200,
+          "src": "https://cdn2.hubspot.net/hubfs/5191528/Community%20Assets/Midday%20MD%20Logo.png"
+        }',
+        path='@hubspot/linked_image',
+        widget_name='Image',
+        label='Image' %}
+      {% end_module_block %}
+    </div>
+  </div>
+{% endblock body %}
