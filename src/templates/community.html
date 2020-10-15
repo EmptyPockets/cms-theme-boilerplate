@@ -7,17 +7,17 @@
 
 {% block body %}
   <div class="community-main">
-    <div>
-      {# Headline #}
-      {% module_block module "headline"
-        path='../hubspot-modules/section-heading',
-        is_on_dark_background="false",
-        section_title="We\'re Committed To Giving Back To The Communities We Serve.",
-        section_intro="",
-        hide_button="true",
-        width=12 %}
-      {% end_module_block %}
+    {# Headline #}
+    {% module_block module "headline"
+      path='../hubspot-modules/section-heading',
+      is_on_dark_background="false",
+      section_title="We\'re Committed To Giving Back To The Communities We Serve.",
+      section_intro="",
+      hide_button="true",
+      width=12 %}
+    {% end_module_block %}
 
+    <div>
       <div class="partners">
         {% module_block module "module_1556219072626361"
           header='Organizations We\'re Proud to Sponsor',
