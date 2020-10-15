@@ -6,19 +6,16 @@
 {% extends "./layouts/base.html" %}
 
 {% block body %}
-  <div class="community-main">
+  <div class="community-main" id="test">
     {# Headline #}
-    {% dnd_area "headline" %}
-      {% dnd_section %}
-        {% dnd_module path='../hubspot-modules/section-heading',
-          is_on_dark_background="false",
-          section_title="We\'re Committed To Giving Back To The Communities We Serve.",
-          section_intro="",
-          hide_button="true",
-          width=12 %}
-        {% end_dnd_module %}
-      {% end_dnd_section %}
-    {% end_dnd_area %}
+    {% module_block module "headline"
+      path='../hubspot-modules/section-heading',
+      is_on_dark_background="false",
+      section_title="We\'re Committed To Giving Back To The Communities We Serve.",
+      section_intro="",
+      hide_button="true",
+      width=12 %}
+    {% end_module_block %}
 
     <div class="span7 widget-span widget-type-cell">
       {% module_block module "community_blog"
