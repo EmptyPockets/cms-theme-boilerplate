@@ -20,7 +20,7 @@
       {% set isAll = 'all' in request.path %}
 
       {# Blog Title #}
-      <div class="blog-title" class="{% if topic %}topic{% endif %}">
+      <div class="blog-title{% if topic %} topic{% endif %}">
         <h1 class="h1" style="max-width: 900px">
           {% if topic %}
             <a href="/blog">
@@ -166,7 +166,7 @@
 
     {% module_attribute "blog_post_source" defer=True %}
       {# Blog Title #}
-      <div class="blog-title" class="blog-post">
+      <div class="blog-title blog-post">
         <h1 class="h1" style="max-width: 900px">
           <a href="/blog">
             Firm News &amp; Events
@@ -194,7 +194,7 @@
 
           <div class="inner-content-wrapper">
             <div class="section post-header">
-              <div class="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author" >
+              <div class="hubspot-author_data hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author" >
                 <div class="hs-author-avatar">
                   <img
                     style="border-radius: 50%"
