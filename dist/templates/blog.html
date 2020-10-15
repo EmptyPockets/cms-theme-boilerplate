@@ -6,293 +6,281 @@
 {% extends "./layouts/base.html" %}
 
 {% block body %}
-  <div class="row-fluid-wrapper row-depth-1 row-number-1 ">
-    <div class="row-fluid ">
-      <div class="firm-news" class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
-        <div class="row-fluid-wrapper row-depth-1 row-number-2 ">
-          <div class="row-fluid ">
-            <div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
-              {% module_block module "blog_content"
-                overrideable=False,
-                path='@hubspot/blog_content',
-                per_widget_wrapper_html='',
-                template_to_edit='listing',
-                widget_name='Blog Content',
-                wrapping_html='',
-                label='Blog Content' %}
-                {% module_attribute "blog_listing_source" defer=True %}
-                  {% set isTopicPage = 'tag' in request.path %}
-                  {% set isPage = 'page' in request.path %}
-                  {% set isAll = 'all' in request.path %}
+  {% module_block module "blog_content"
+    overrideable=False,
+    path='@hubspot/blog_content',
+    per_widget_wrapper_html='',
+    template_to_edit='listing',
+    widget_name='Blog Content',
+    wrapping_html='',
+    label='Blog Content' %}
+    {% module_attribute "blog_listing_source" defer=True %}
+      {% set isTopicPage = 'tag' in request.path %}
+      {% set isPage = 'page' in request.path %}
+      {% set isAll = 'all' in request.path %}
 
-                  {# Blog Title #}
-                  <div class="blog-title" class="{% if topic %}topic{% endif %}">
-                    <h1 class="h1" style="max-width: 900px">
-                      {% if topic %}
-                        <a href="/blog">
-                          Firm News &amp; Events
-                          <img class="arrow" src="https://www.damoreinjurylaw.com/hubfs/Icons/arrow.svg" alt="arrow" />
-                        </a>
-                        <a href="#" class="u-nolink">{{ topic|title }}</a>
-                      {% elif isAll %}
-                        <a href="/blog">
-                          Firm News &amp; Events
-                          <img class="arrow" src="https://www.damoreinjurylaw.com/hubfs/Icons/arrow.svg" alt="arrow" />
-                        </a>
-                        <a href="#" class="u-nolink">All Posts</a>
-                      {% else %}
-                        <a href="/blog">Firm News &amp; Events</a>
-                      {% endif %}
-                    </h1>
+      {# Blog Title #}
+      <div class="blog-title" class="{% if topic %}topic{% endif %}">
+        <h1 class="h1" style="max-width: 900px">
+          {% if topic %}
+            <a href="/blog">
+              Firm News &amp; Events
+              <img class="arrow" src="https://www.damoreinjurylaw.com/hubfs/Icons/arrow.svg" alt="arrow" />
+            </a>
+            <a href="#" class="u-nolink">{{ topic|title }}</a>
+          {% elif isAll %}
+            <a href="/blog">
+              Firm News &amp; Events
+              <img class="arrow" src="https://www.damoreinjurylaw.com/hubfs/Icons/arrow.svg" alt="arrow" />
+            </a>
+            <a href="#" class="u-nolink">All Posts</a>
+          {% else %}
+            <a href="/blog">Firm News &amp; Events</a>
+          {% endif %}
+        </h1>
+      </div>
+
+      {# Base Loop #}
+      <div class="firm-news">
+        {% for contentOne in contents %}
+          {% set featured = contentOne.topic_list|pprint %}
+          {% set isFeatured = 'Featured' in featured %}
+          {% if isFeatured %}
+            <div class="outer-content-wrapper is-featured {% if isTopicPage %}is-topic{% endif %} {% if isPage %}is-page{% endif %}">
+              <div class="content-wrapper {% if 'Featured' in featured %}is-featured{% endif %}">
+                <div class="post-item">
+                  {% if contentOne.post_list_summary_featured_image %}
+                    <div class="featured-image-wrapper">
+                      <a href="{{contentOne.absolute_url}}" title="" class="featured-image-link">
+                        <img
+                          src="{{ contentOne.post_list_summary_featured_image }}"
+                          class="featured-image"
+                          alt="{{ contentOne.featured_image_alt_text | escape }}"
+                        />
+                      </a>
+                    </div>
+                  {% endif %}
+                  <div class="inner-content-wrapper">
+                    <span class="featured-title">Featured</span>
+                    <h2>
+                      <a href="{{contentOne.absolute_url}}">{{ contentOne.name }}</a>
+                    </h2>
+                    {{ contentOne.post_list_content|safe }}
+                    <p class="hubspot-topic_data">
+                      {% for topic in contentOne.topic_list %}
+                        {% if topic.name != "Featured" %}
+                          <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+                          {% if not loop.last %}&nbsp;{% endif %}
+                        {% endif %}
+                      {% endfor %}
+                    </p>
                   </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
 
-                  {# Base Loop #}
-                  <div class="firm-news">
-                    {% for contentOne in contents %}
-                      {% set featured = contentOne.topic_list|pprint %}
-                      {% set isFeatured = 'Featured' in featured %}
-                      {% if isFeatured %}
-                        <div class="outer-content-wrapper is-featured {% if isTopicPage %}is-topic{% endif %} {% if isPage %}is-page{% endif %}">
-                          <div class="content-wrapper {% if 'Featured' in featured %}is-featured{% endif %}">
-                            <div class="post-item">
-                              {% if contentOne.post_list_summary_featured_image %}
-                                <div class="featured-image-wrapper">
-                                  <a href="{{contentOne.absolute_url}}" title="" class="featured-image-link">
+        {# Divider Section #}
+        <div class="outer-content-wrapper {% if isTopicPage %}is-topic{% endif %} {% if isPage %}is-page{% endif %}">
+          <div class="content-wrapper">
+            <div class="section-heading">
+              {% if isPage %}
+                <h2>Recent Posts - Page {{ current_page_num }}</h2>
+              {% elif isAll %}
+                <h2>All Posts</h2>
+              {% else %}
+                <h2>{{ topic|title }} {{ topic ? "Posts" : "Recent Posts" }}</h2>
+              {% endif %}
+            </div>
+
+            <div class="tags-list">
+              {% set topics = blog_topics('default', 250) %}
+              {% for tag in topics %}
+                {% if tag.name != "Featured" %}
+                  <a class="topic-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        {# List Section #}
+        {% for content in contents %}
+          {% set featured = content.topic_list|pprint %}
+          {% set isFeatured = 'Featured' in featured %}
+          {% if !isFeatured %}
+            <div class="outer-content-wrapper {% if isTopicPage %}is-topic{% endif %} {% if isPage %}is-page{% endif %}">
+              <div class="content-wrapper">
+                <div class="post-item list">
+                  <div class="inner-content-wrapper">
+                    {% if content.post_list_summary_featured_image %}
+                      <div class="image-wrapper">
+                        <a href="{{content.absolute_url}}" title="" class="image-link">
+                          <img
+                            src="{{ content.post_list_summary_featured_image }}"
+                            class="featured-image"
+                            alt="{{ content.featured_image_alt_text | escape }}"
+                          />
+                        </a>
+                      </div>
+                    {% endif %}
+
+                    <div>
+                      <h2>
+                        <a href="{{content.absolute_url}}">{{ content.name }}</a>
+                      </h2>
+                      {{ content.post_list_content|safe }}
+                      <p class="hubspot-topic_data">
+                        {% for topic in content.topic_list %}
+                          <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+                          {% if not loop.last %}&nbsp;{% endif %}
+                        {% endfor %}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        {% unless blog_author %}
+          {# Pagination #}
+          <div class="outer-content-wrapper {% if isTopicPage %}is-topic{% endif %} {% if isPage %}is-page{% endif %}">
+            <div class="content-wrapper">
+              <div class="blog-pagination">
+                {% if last_page_num %}
+                  <a class="previous-posts-link page-link {% if last_page_num %}active{% endif %}" href="{{ blog_page_link(last_page_num) }}">Previous</a>
+                {% endif %}
+                <a class="all-posts-link active" href="{{ blog_all_posts_url(group.id) }}">All posts</a>
+                {% if next_page_num %}
+                  <a class="next-posts-link page-link {% if next_page_num %}active{% endif %}" href="{{ blog_page_link(next_page_num) }}">Next</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endunless %}
+      </div>
+    {% end_module_attribute %}
+
+    {% module_attribute "blog_post_source" defer=True %}
+      {# Blog Title #}
+      <div class="blog-title" class="blog-post">
+        <h1 class="h1" style="max-width: 900px">
+          <a href="/blog">
+            Firm News &amp; Events
+            <img
+              class="arrow"
+              src="https://www.damoreinjurylaw.com/hubfs/Icons/arrow.svg"
+              alt="arrow"
+              style="width: 19px; position: relative; top: -4px; transform: rotate(-180deg); margin: 0 5px;"
+            />
+          </a>
+          <a href="#" class="u-nolink">{{ content.name }}</a>
+        </h1>
+      </div>
+
+      {# Blog Post #}
+      <div class="blog-section post">
+        <div class="blog-post-wrapper content-wrapper">
+          <div class="featured-image-wrapper">
+            <img
+              src="{{ content.post_list_summary_featured_image }}"
+              alt="{{ content.featured_image_alt_text }}"
+              class="featured-image"
+            />
+          </div>
+
+          <div class="inner-content-wrapper">
+            <div class="section post-header">
+              <div class="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author" >
+                <div class="hs-author-avatar">
+                  <img
+                    style="border-radius: 50%"
+                    src="{{ content.blog_post_author.avatar }}"
+                    alt="{{ content.blog_post_author.display_name }}"
+                  />
+                </div>
+
+                <div>
+                  <a class="author-link" href="/paul-damore">{{ content.blog_post_author.display_name }}</a>
+                  <p class="position">Founding Member, Trial Lawyer</p>
+                </div>
+              </div>
+              <h1>{{ content.name }}</h1>
+            </div>
+
+            <div class="section post-body">{{ content.post_body }}</div>
+              <div class="hubspot-topic_data">
+                {% for topic in content.topic_list %}
+                  <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+                  {% if not loop.last %}&nbsp;{% endif %}
+                {% endfor %}
+              </div>
+
+              <div class="social-share">
+                {% blog_social_sharing "blog_social_sharing" overrideable=False, label='Blog Social Sharing' %}
+              </div>
+            </div>
+          </div>
+
+          {% if content.topic_list %}
+            <div class="hubspot-topic_data">
+              {% for topic in content.topic_list %}
+                {% if loop.first %} {% set tag = topic %} {% endif %}
+                {% if loop.last && tag.name != 'Featured' %}
+                  <div class="recent-posts">
+                    <div class="outer-content-wrapper is-post">
+                      <div class="content-wrapper inside-post">
+                        <div class="section-heading">
+                          <h3>More {{tag.name}} Posts</h3>
+                        </div>
+                      </div>
+                    </div>
+
+                    {% set tag_posts = blog_recent_tag_posts('default', tag.slug, 3) %}
+                    {% for tag_post in tag_posts %}
+                      <div class="outer-content-wrapper is-post">
+                        <div class="content-wrapper inside-post">
+                          <div class="post-item list">
+                            <div class="inner-content-wrapper">
+                              {% if tag_post.post_list_summary_featured_image %}
+                                <div class="image-wrapper">
+                                  <a href="{{tag_post.absolute_url}}" title="" class="image-link">
                                     <img
-                                      src="{{ contentOne.post_list_summary_featured_image }}"
+                                      src="{{ tag_post.post_list_summary_featured_image }}"
                                       class="featured-image"
-                                      alt="{{ contentOne.featured_image_alt_text | escape }}"
+                                      alt="{{ tag_post.featured_image_alt_text | escape }}"
                                     />
                                   </a>
                                 </div>
                               {% endif %}
-                              <div class="inner-content-wrapper">
-                                <span class="featured-title">Featured</span>
-                                <h2>
-                                  <a href="{{contentOne.absolute_url}}">{{ contentOne.name }}</a>
-                                </h2>
-                                {{ contentOne.post_list_content|safe }}
-                                <p class="hubspot-topic_data">
-                                  {% for topic in contentOne.topic_list %}
-                                    {% if topic.name != "Featured" %}
-                                      <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
-                                      {% if not loop.last %}&nbsp;{% endif %}
-                                    {% endif %}
+
+                              <div>
+                                <h2><a href="{{tag_post.absolute_url}}">{{ tag_post.name }}</a></h2>
+                                {{ tag_post.post_list_content|safe }}
+                                <div class="hubspot-topic_data">
+                                  {% for topic in tag_post.topic_list %}
+                                    <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
+                                    {% if not loop.last %}&nbsp;{% endif %}
                                   {% endfor %}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      {% endif %}
-                    {% endfor %}
-
-                    {# Divider Section #}
-                    <div class="outer-content-wrapper {% if isTopicPage %}is-topic{% endif %} {% if isPage %}is-page{% endif %}">
-                      <div class="content-wrapper">
-                        <div class="section-heading">
-                          {% if isPage %}
-                            <h2>Recent Posts - Page {{ current_page_num }}</h2>
-                          {% elif isAll %}
-                            <h2>All Posts</h2>
-                          {% else %}
-                            <h2>{{ topic|title }} {{ topic ? "Posts" : "Recent Posts" }}</h2>
-                          {% endif %}
-                        </div>
-
-                        <div class="tags-list">
-                          {% set topics = blog_topics('default', 250) %}
-                          {% for tag in topics %}
-                            {% if tag.name != "Featured" %}
-                              <a class="topic-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
-                            {% endif %}
-                          {% endfor %}
-                        </div>
-                      </div>
-                    </div>
-
-                    {# List Section #}
-                    {% for content in contents %}
-                      {% set featured = content.topic_list|pprint %}
-                      {% set isFeatured = 'Featured' in featured %}
-                      {% if !isFeatured %}
-                        <div class="outer-content-wrapper {% if isTopicPage %}is-topic{% endif %} {% if isPage %}is-page{% endif %}">
-                          <div class="content-wrapper">
-                            <div class="post-item list">
-                              <div class="inner-content-wrapper">
-                                {% if content.post_list_summary_featured_image %}
-                                  <div class="image-wrapper">
-                                    <a href="{{content.absolute_url}}" title="" class="image-link">
-                                      <img
-                                        src="{{ content.post_list_summary_featured_image }}"
-                                        class="featured-image"
-                                        alt="{{ content.featured_image_alt_text | escape }}"
-                                      />
-                                    </a>
-                                  </div>
-                                {% endif %}
-
-                                <div>
-                                  <h2>
-                                    <a href="{{content.absolute_url}}">{{ content.name }}</a>
-                                  </h2>
-                                  {{ content.post_list_content|safe }}
-                                  <p class="hubspot-topic_data">
-                                    {% for topic in content.topic_list %}
-                                      <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
-                                      {% if not loop.last %}&nbsp;{% endif %}
-                                    {% endfor %}
-                                  </p>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      {% endif %}
+                      </div>
                     {% endfor %}
-
-                    {% unless blog_author %}
-                      {# Pagination #}
-                      <div class="outer-content-wrapper {% if isTopicPage %}is-topic{% endif %} {% if isPage %}is-page{% endif %}">
-                        <div class="content-wrapper">
-                          <div class="blog-pagination">
-                            {% if last_page_num %}
-                              <a class="previous-posts-link page-link {% if last_page_num %}active{% endif %}" href="{{ blog_page_link(last_page_num) }}">Previous</a>
-                            {% endif %}
-                            <a class="all-posts-link active" href="{{ blog_all_posts_url(group.id) }}">All posts</a>
-                            {% if next_page_num %}
-                              <a class="next-posts-link page-link {% if next_page_num %}active{% endif %}" href="{{ blog_page_link(next_page_num) }}">Next</a>
-                            {% endif %}
-                          </div>
-                        </div>
-                      </div>
-                    {% endunless %}
                   </div>
-                {% end_module_attribute %}
-
-                {% module_attribute "blog_post_source" defer=True %}
-                  {# Blog Title #}
-                  <div class="blog-title" class="blog-post">
-                    <h1 class="h1" style="max-width: 900px">
-                      <a href="/blog">
-                        Firm News &amp; Events
-                        <img
-                          class="arrow"
-                          src="https://www.damoreinjurylaw.com/hubfs/Icons/arrow.svg"
-                          alt="arrow"
-                          style="width: 19px; position: relative; top: -4px; transform: rotate(-180deg); margin: 0 5px;"
-                        />
-                      </a>
-                      <a href="#" class="u-nolink">{{ content.name }}</a>
-                    </h1>
-                  </div>
-
-                  {# Blog Post #}
-                  <div class="blog-section post">
-                    <div class="blog-post-wrapper content-wrapper">
-                      <div class="featured-image-wrapper">
-                        <img
-                          src="{{ content.post_list_summary_featured_image }}"
-                          alt="{{ content.featured_image_alt_text }}"
-                          class="featured-image"
-                        />
-                      </div>
-
-                      <div class="inner-content-wrapper">
-                        <div class="section post-header">
-                          <div class="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author" >
-                            <div class="hs-author-avatar">
-                              <img
-                                style="border-radius: 50%"
-                                src="{{ content.blog_post_author.avatar }}"
-                                alt="{{ content.blog_post_author.display_name }}"
-                              />
-                            </div>
-
-                            <div>
-                              <a class="author-link" href="/paul-damore">{{ content.blog_post_author.display_name }}</a>
-                              <p class="position">Founding Member, Trial Lawyer</p>
-                            </div>
-                          </div>
-                          <h1>{{ content.name }}</h1>
-                        </div>
-
-                        <div class="section post-body">{{ content.post_body }}</div>
-                          <div class="hubspot-topic_data">
-                            {% for topic in content.topic_list %}
-                              <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
-                              {% if not loop.last %}&nbsp;{% endif %}
-                            {% endfor %}
-                          </div>
-
-                          <div class="social-share">
-                            {% blog_social_sharing "blog_social_sharing" overrideable=False, label='Blog Social Sharing' %}
-                          </div>
-                        </div>
-                      </div>
-
-                      {% if content.topic_list %}
-                        <div class="hubspot-topic_data">
-                          {% for topic in content.topic_list %}
-                            {% if loop.first %} {% set tag = topic %} {% endif %}
-                            {% if loop.last && tag.name != 'Featured' %}
-                              <div class="recent-posts">
-                                <div class="outer-content-wrapper is-post">
-                                  <div class="content-wrapper inside-post">
-                                    <div class="section-heading">
-                                      <h3>More {{tag.name}} Posts</h3>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                {% set tag_posts = blog_recent_tag_posts('default', tag.slug, 3) %}
-                                {% for tag_post in tag_posts %}
-                                  <div class="outer-content-wrapper is-post">
-                                    <div class="content-wrapper inside-post">
-                                      <div class="post-item list">
-                                        <div class="inner-content-wrapper">
-                                          {% if tag_post.post_list_summary_featured_image %}
-                                            <div class="image-wrapper">
-                                              <a href="{{tag_post.absolute_url}}" title="" class="image-link">
-                                                <img
-                                                  src="{{ tag_post.post_list_summary_featured_image }}"
-                                                  class="featured-image"
-                                                  alt="{{ tag_post.featured_image_alt_text | escape }}"
-                                                />
-                                              </a>
-                                            </div>
-                                          {% endif %}
-
-                                          <div>
-                                            <h2><a href="{{tag_post.absolute_url}}">{{ tag_post.name }}</a></h2>
-                                            {{ tag_post.post_list_content|safe }}
-                                            <div class="hubspot-topic_data">
-                                              {% for topic in tag_post.topic_list %}
-                                                <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>
-                                                {% if not loop.last %}&nbsp;{% endif %}
-                                              {% endfor %}
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                {% endfor %}
-                              </div>
-                            {% endif %}
-                          {% endfor %}
-                        </div>
-                      {% endif %}
-                    </div>
-                  </div>
-                {% end_module_attribute %}
-              {% end_module_block %}
+                {% endif %}
+              {% endfor %}
             </div>
-          </div>
+          {% endif %}
         </div>
       </div>
-    </div>
-  </div>
+    {% end_module_attribute %}
+  {% end_module_block %}
   {% module_block module "scroll_progress" path='../hubspot-modules/scroll-progress' %}
   {% end_module_block %}
 {% endblock body %}
