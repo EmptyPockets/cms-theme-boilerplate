@@ -60,6 +60,7 @@
 				color: $color-blue-light;
 				font-weight: 400;
         margin-bottom: 3px;
+				font-family: $public;
 
         @include md {
           max-width: 500px;
@@ -70,6 +71,7 @@
 				color: $color-gray;
 				font-size: 14px;
 				margin-bottom: 20px;
+				font-family: $public;
 			}
 		}
 	}
