@@ -46,7 +46,11 @@
 		&:hover {
 			box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.04), -10px 0 20px 0px rgba(0,0,0,0.04);
 			transform: translate(0, -2px);
-      transition: all 0.05s linear;
+			transition: all 0.05s linear;
+
+			.button {
+				background-color: $color-red;
+			}
 		}
 		a.click-card {
 			position: absolute;
@@ -56,7 +60,7 @@
 			right: 0;
 			left: 0;
 			bottom: 0;
-			z-index: 99;
+			z-index: 2;
 		}
 		.details {
       padding: 20px;
@@ -86,17 +90,17 @@
 			align-items: center;
 			justify-content: center;
 			width: 100%;
-      z-index: 98;
 
 			.button-icon {
 				width: 17px;
-        margin-right: 10px;
+				height: 17px;
+				margin-right: 10px;
+				vertical-align: middle;
 
         @include md {
           width: 20px;
+					height: 20px;
 					margin-right: 15px;
-					position: relative;
-					top: -5px;
         }
 			}
 		}
@@ -119,7 +123,6 @@
 			font-weight: bold;
 			color: $color-blue-dark;
 			margin-bottom: 5px;
-			z-index: 98;
 		}
 		.h3 {
 			font-size: 17px;
