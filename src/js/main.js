@@ -418,9 +418,11 @@ import LazyLoad from "vanilla-lazyload";
             id: '_all',
             onReady: x => x.play(),
           });
+
+          toggle(true);
         };
 
-        E(clickEvent, () => (initializeModal(), toggle(true)), playButton);
+        E(clickEvent, initializeModal, playButton);
         E(clickEvent, () => toggle(false), closeButton);
         W(clickEvent, e => e.target !== modal && toggle(false));
       }
