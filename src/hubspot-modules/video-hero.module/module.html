@@ -1,4 +1,4 @@
-<div class="video-wrapper" id="video-wrapper">
+<div class="video-wrapper" data-src="{{ module.video_url }}">
   {# Background Video (video is appended) #}
   <header class="{% if !module.show_subheading %}practice-area-page{% endif %}">
     <h1>{{ module.title }}</h1>
@@ -75,24 +75,3 @@
     </div>
   </div>
 </div>
-<script>
-  if (window.innerWidth > 700) {
-    const wrapper = document.getElementById('video-wrapper');
-    const video = document.createElement('video');
-    video.autoplay = true;
-    video.id = 'videoItem';
-    video.loop = true;
-    video.preload = 'auto';
-    video.defaultMuted = true;
-    video.muted = true;
-    video.setAttribute('width', '100%');
-    video.setAttribute('height', 'auto');
-    const mp4Source = document.createElement('source');
-    mp4Source.setAttribute('src', '{{ module.video_url }}');
-    mp4Source.setAttribute('type', 'video/mp4');
-    video.appendChild(mp4Source);
-    wrapper.appendChild(video);
-    video.autoplay = true;
-    video.play();
-  }
-</script>
