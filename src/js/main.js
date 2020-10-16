@@ -382,6 +382,9 @@ import LazyLoad from "vanilla-lazyload";
     const openModalClass = 'open-modal';
 
     /** @type {HTMLScriptElement} */
+    let ev1Script;
+
+    /** @type {HTMLScriptElement} */
     const ev1Properties = {
       src: '//fast.wistia.com/assets/external/E-v1.js',
       async: true,
@@ -399,9 +402,6 @@ import LazyLoad from "vanilla-lazyload";
       };
 
       if (modal && playButton && closeButton) {
-        /** @type {HTMLScriptElement} */
-        let ev1Script;
-
         const initializeModal = () => {
           // Load Wistia API
           if (!ev1Script) {
@@ -410,10 +410,14 @@ import LazyLoad from "vanilla-lazyload";
             document.head.appendChild(ev1Script);
           }
 
+          // Add to queue
           (window._wq = window._wq || []).push({
             id: '_all',
             onReady: x => x.play(),
           });
+
+          // Move modal out of container
+          document.body.appendChild(modal);
         };
 
         E(clickEvent, () => (initializeModal(), toggle(true)), playButton);
