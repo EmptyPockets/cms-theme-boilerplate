@@ -1,4 +1,12 @@
-.video-wrapper {
+@keyframes heartbeat {
+  0%   { transform: scale(1.0); }
+  20%  { transform: scale(1.1); }
+  40%  { transform: scale(1.0); }
+  70%  { transform: scale(1.1); }
+  80%  { transform: scale(1.1); }
+  100% { transform: scale(1.0); }
+}
+.hero-video {
   background: url('https://f.hubspotusercontent20.net/hubfs/5191528/Crisp%20Videos/Homepage/v2/Hero%20-%2015s%20-%20No%20Sound%20-%204%20-%20firstframe.jpg')
     $color-blue-darker no-repeat center / cover;
   background-color: $color-blue-darker;
@@ -7,12 +15,12 @@
   overflow: hidden;
   height: 0;
   padding-top: 42.5%;
+
   video {
     position: absolute;
     top: 0;
     z-index: 1;
   }
-
   &::before {
     @include sm {
       z-index: 2;
@@ -45,20 +53,19 @@
       top: 0;
     }
   }
-
   h1 {
     color: $color-white;
     font-size: 7vw;
     margin-bottom: 16px;
     padding-right: 60px;
     position: relative;
+
     @include sm {
       font-size: 64px;
       margin-bottom: 24px;
       padding-right: 0;
     }
   }
-
   header {
     left: 6vw;
     max-width: 520px;
@@ -66,6 +73,7 @@
     top: 50%;
     transform: translate(0, -50%);
     z-index: 2;
+
     &.practice-area-page {
       left: 50%;
       transform: translate(-50%, -50%);
@@ -73,16 +81,16 @@
       display: flex;
       flex-direction: column;
       text-align: center;
+
       h1 {
         order: 2;
         margin-top: 30px;
       }
-      .play-button-wrapper {
+      .play-button {
         justify-content: center;
       }
     }
   }
-
   .sound-icon {
     left: 4px;
     opacity: 1;
@@ -91,37 +99,41 @@
     width: 13px;
     height: 13px;
   }
-
-  #playButton.play-button-wrapper {
+  .play-button {
     align-items: center;
     color: $color-white;
     cursor: pointer;
     display: flex;
     flex-direction: row;
+
     &:hover {
       p {
         opacity: 1;
       }
-
-      svg.play-button {
+      svg {
         transform: scale(1.05);
         transition: 0.25s all cubic-bezier(0.17, 0.67, 0.84, 1.05);
+
         circle {
           fill: $color-red-light;
         }
       }
     }
-
-    svg.play-button {
+    svg {
       transition: 0.25s all cubic-bezier(0.17, 0.67, 0.84, 1.05);
       width: 25px;
       height: 25px;
+      animation-name: heartbeat;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in-out;
+
       @include m {
         width: 75px;
         height: 75px;
       }
     }
-
     p {
       color: $color-white;
       display: block;
@@ -133,13 +145,13 @@
       text-transform: uppercase;
       top: -4px;
       font-size: 14px;
+
       @include m {
         font-size: 18px;
       }
       @include sm {
         font-size: 20px;
       }
-
       span {
         color: $color-white;
         display: block;
@@ -147,40 +159,12 @@
         font-weight: 400;
         margin-top: 4px;
         opacity: 0.9;
+
         @include m {
           font-size: 17px;
           margin-top: 8px;
         }
       }
     }
-  }
-}
-
-#playButton svg {
-  animation-name: heartbeat;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes heartbeat {
-  0% {
-    transform: scale(1);
-  }
-  20% {
-    transform: scale(1.1);
-  }
-  40% {
-    transform: scale(1);
-  }
-  70% {
-    transform: scale(1.1);
-  }
-  80% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
   }
 }

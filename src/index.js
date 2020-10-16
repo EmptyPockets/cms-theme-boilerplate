@@ -5,7 +5,6 @@ import './scss/main.scss';
 import './js/main.js';
 
 /* Modules JS */
-import './hubspot-modules/_js/video-hero.js';
 import './hubspot-modules/_js/menu-section.js';
 import './hubspot-modules/_js/search-input.js';
 import './hubspot-modules/_js/faq.js';

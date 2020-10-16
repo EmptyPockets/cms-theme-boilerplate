@@ -7,13 +7,47 @@ import LazyLoad from "vanilla-lazyload";
   const resizeEvent = 'resize';
   const scrollEvent = 'scroll';
 
-  /** @type {(...x: any[]) => HTMLElement[]} */
-  const Q = (...x) => Array.from(document.querySelectorAll(...x));
+  /**
+   * QuerySelectorAll
+   * @param {string} x Query
+   * @param {HTMLElement?} y Context (defaults to Document)
+   */
+  const Q = (x, y) => Array.from((y || document).querySelectorAll(x));
 
-  /** @type {(...x: any[]) => HTMLElement} */
-  const Q1 = (...x) => document.querySelector(...x);
+  /**
+   * QuerySelector
+   * @param {string} x Query
+   * @param {HTMLElement?} y Context (defaults to Document)
+   */
+  const Q1 = (x, y) => (y || document).querySelector(x);
 
-  /** @type {(className: string, isOn: boolean) => (x: HTMLElement) => void} */
+  /**
+   * AddEventListener
+   * @param {string} x Event
+   * @param {EventListenerOrEventListenerObject} y Listener
+   * @param {HTMLElement?} z Context
+   */
+  const E = (x, y, z) => (z || document).addEventListener(x, y);
+
+  /**
+   * Window.AddEventListener
+   * @param {string} x Event
+   * @param {EventListenerOrEventListenerObject} y Listener
+   */
+  const W = (x, y) => window.addEventListener(x, y);
+
+  /**
+   * CreateElement
+   * @param {string} x Tag name
+   */
+  const C = (x) => document.createElement(x);
+
+  /**
+   * Toggle a class
+   * @param {string} className Class
+   * @param {boolean} isOn Active or not
+   * @returns {(x: HTMLElement) => void}
+   */
   const toggle = (className, isOn) => x => x.classList.toggle(className, isOn);
 
   /**
@@ -49,9 +83,9 @@ import LazyLoad from "vanilla-lazyload";
       }
     };
 
-    searchTriggers.forEach(x => x.addEventListener(clickEvent, () => toggleIt(true)));
+    searchTriggers.forEach(x => E(clickEvent, () => toggleIt(true), x));
 
-    document.addEventListener(clickEvent, e => {
+    E(clickEvent, e => {
       /** @type {(x: Node) => boolean} */
       const isInsideTarget = x => x.contains(e.target);
 
@@ -73,7 +107,7 @@ import LazyLoad from "vanilla-lazyload";
     const stickyClass = 'sticky';
     const clone = Q1('#stickyGlobalHeader');
 
-    window.addEventListener(scrollEvent, () => {
+    W(scrollEvent, () => {
       const shouldBeSticky = window.pageYOffset > navHeight;
 
       if (!!isSticky !== shouldBeSticky) {
@@ -110,7 +144,7 @@ import LazyLoad from "vanilla-lazyload";
       reactFn(document.body);
     };
 
-    mobileTriggers.forEach(x => x.addEventListener(clickEvent, toggleMobileMenu));
+    mobileTriggers.forEach(x => E(clickEvent, toggleMobileMenu, x));
   })();
 
   /**
@@ -150,14 +184,15 @@ import LazyLoad from "vanilla-lazyload";
       }, { rootMargin: '0px 0px 200px 0px' })
     }
 
-    document.addEventListener('readystatechange', event => {
+    E('readystatechange', event => {
       if (event.target.readyState === 'complete') {
-        var hsform = document.createElement('script');
+        /** @type {HTMLScriptElement} */
+        var hsform = C('script');
         hsform.src = '//js.hsforms.net/forms/v2.js';
         hsform.async = true;
         document.head.appendChild(hsform);
         // checkForForm();
-        window.addEventListener(scrollEvent, userScroll, false);
+        W(scrollEvent, userScroll, false);
       }
     });
   })();
@@ -245,7 +280,7 @@ import LazyLoad from "vanilla-lazyload";
       };
 
       if (parent) {
-        parent.addEventListener(clickEvent, () => toggle(!isOpen));
+        E(clickEvent, () => toggle(!isOpen), parent);
         toggle(false);
       }
     });
@@ -258,7 +293,7 @@ import LazyLoad from "vanilla-lazyload";
     const isShowingClass = 'is-showing';
 
     Q('.footer-contact').forEach((el) => {
-      const progressBar = el.querySelector('progress');
+      const progressBar = Q1('progress', el);
 
       if (progressBar) {
         let isShowing = false;
@@ -269,10 +304,10 @@ import LazyLoad from "vanilla-lazyload";
           updateScroll();
         };
 
-        window.addEventListener(resizeEvent, init);
+        W(resizeEvent, init);
         init();
 
-        window.addEventListener(scrollEvent, () => {
+        W(scrollEvent, () => {
           updateScroll();
 
           if (!!isShowing !== progressBar.value >= 1) {
@@ -288,6 +323,7 @@ import LazyLoad from "vanilla-lazyload";
    * Video preview handling
    */
   (() => {
+    /** @type {{video: HTMLVideoElement, source: HTMLSourceElement}} */
     const properties = {
       video: {
         autoplay: true,
@@ -309,12 +345,16 @@ import LazyLoad from "vanilla-lazyload";
       if (!videoElementsAreCreated && window.innerWidth > 700) {
         videoElementsAreCreated = true;
 
-        Q('.video-wrapper').forEach((el) => {
+        Q('.hero-video').forEach((el) => {
+          /** @type {string} */
           const src = el.dataset.src;
 
           if (src) {
-            const video = document.createElement('video');
-            const mp4Source = document.createElement('source');
+            /** @type {HTMLVideoElement} */
+            const video = C('video');
+
+            /** @type {HTMLSourceElement} */
+            const mp4Source = C('source');
 
             Object.assign(video, properties.video);
             Object.assign(mp4Source, properties.source);
@@ -331,7 +371,7 @@ import LazyLoad from "vanilla-lazyload";
       }
     };
 
-    window.addEventListener(resizeEvent, init);
+    W(resizeEvent, init);
     init();
   })();
 
@@ -339,5 +379,49 @@ import LazyLoad from "vanilla-lazyload";
    * Video modal handling
    */
   (() => {
+    const openModalClass = 'open-modal';
+
+    /** @type {HTMLScriptElement} */
+    const ev1Properties = {
+      src: '//fast.wistia.com/assets/external/E-v1.js',
+      async: true,
+      charset: 'ISO-8859-1',
+    };
+
+    Q('.video-wrapper').forEach((el) => {
+      const modal = Q1('.modal', el);
+      const playButton = Q1('.play-button', el);
+      const closeButton = Q1('.close-button', el);
+
+      const toggle = (isOn) => {
+        document.body.classList.toggle(openModalClass, isOn);
+        modal.style.display = isOn ? 'block' : 'none';
+      }
+
+      if (modal && playButton && closeButton) {
+        /** @type {HTMLScriptElement} */
+        let ev1Script;
+
+        const initializeModal = () => {
+          // Load Wistia API
+          if (!ev1Script) {
+            ev1Script = C('script');
+            Object.assign(ev1Script, ev1Properties);
+            document.head.appendChild(ev1Script);
+
+            window._wq = window._wq || [];
+
+            window._wq.push({
+              id: '_all',
+              onReady: x => x.play(),
+            });
+          }
+        };
+
+        E(clickEvent, () => (initializeModal(), toggle(true)), playButton);
+        E(clickEvent, () => toggle(false), closeButton);
+        W(clickEvent, e => e.target !== modal && toggle(false));
+      }
+    });
   })();
 })();
