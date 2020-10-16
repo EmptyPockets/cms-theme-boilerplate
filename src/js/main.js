@@ -394,18 +394,15 @@ import LazyLoad from "vanilla-lazyload";
       const closeButton = Q1('.close-button', el);
 
       const toggle = (isOn) => {
-        console.debug('toggling', isOn);
         document.body.classList.toggle(openModalClass, isOn);
         modal.style.display = isOn ? 'block' : 'none';
       };
 
-      console.debug(modal, playButton, closeButton);
       if (modal && playButton && closeButton) {
         /** @type {HTMLScriptElement} */
         let ev1Script;
 
         const initializeModal = () => {
-          console.debug('Initializing...');
           // Load Wistia API
           if (!ev1Script) {
             ev1Script = C('script');
@@ -413,21 +410,15 @@ import LazyLoad from "vanilla-lazyload";
             document.head.appendChild(ev1Script);
           }
 
-          console.debug('WQ', window._wq);
-          window._wq = window._wq || [];
-
-          // eslint-disable-next-line no-undef
-          _wq.push({
+          (window._wq = window._wq || []).push({
             id: '_all',
             onReady: x => x.play(),
           });
-
-          toggle(true);
         };
 
-        E(clickEvent, initializeModal, playButton);
+        E(clickEvent, () => (initializeModal(), toggle(true)), playButton);
         E(clickEvent, () => toggle(false), closeButton);
-        W(clickEvent, e => e.target !== modal && toggle(false));
+        W(clickEvent, e => e.target === modal && toggle(false));
       }
     });
   })();
