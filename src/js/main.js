@@ -396,8 +396,9 @@ import LazyLoad from "vanilla-lazyload";
       const toggle = (isOn) => {
         document.body.classList.toggle(openModalClass, isOn);
         modal.style.display = isOn ? 'block' : 'none';
-      }
+      };
 
+      console.log(modal, playButton, closeButton);
       if (modal && playButton && closeButton) {
         /** @type {HTMLScriptElement} */
         let ev1Script;
@@ -408,14 +409,15 @@ import LazyLoad from "vanilla-lazyload";
             ev1Script = C('script');
             Object.assign(ev1Script, ev1Properties);
             document.head.appendChild(ev1Script);
-
-            window._wq = window._wq || [];
-
-            window._wq.push({
-              id: '_all',
-              onReady: x => x.play(),
-            });
           }
+
+          window._wq = window._wq || [];
+
+          // eslint-disable-next-line no-undef
+          _wq.push({
+            id: '_all',
+            onReady: x => x.play(),
+          });
         };
 
         E(clickEvent, () => (initializeModal(), toggle(true)), playButton);
