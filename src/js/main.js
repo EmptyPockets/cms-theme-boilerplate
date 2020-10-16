@@ -295,8 +295,7 @@ import LazyLoad from "vanilla-lazyload";
         preload: 'auto',
         defaultMuted: true,
         muted: true,
-        width: '100%',
-        height: 'auto',
+        style: 'width:100%;height:auto',
       },
 
       source: {
