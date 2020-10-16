@@ -1,0 +1,33 @@
+li {
+  &.is-open {
+    .read-more {
+      display: none;
+    }
+    .read-more-text {
+      max-height: 500px;
+      transition: max-height .8s ease-in 0s;
+    }
+  }
+  &.is-closed {
+    .read-less {
+      display: none;
+    }
+    .read-more-text {
+      max-height: 0;
+      transition: max-height .8s ease-out -.1s;
+    }
+  }
+}
+.read-more-text {
+  max-height: 0;
+  overflow: hidden;
+
+  p {
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+}

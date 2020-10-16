@@ -11,11 +11,13 @@
 @import 'objects/modal';
 
 // Components
-@import 'components/header';
-@import 'components/footer';
-@import 'components/systems';
 @import 'components/buttons';
+@import 'components/footer';
+@import 'components/header';
+@import 'components/read-more';
+// @import 'components/social'; // TODO: Not sure why this is ommitted
 @import 'components/swapper';
+@import 'components/systems';
 
 // Modules
 @import 'modules/case-resources/guides';
@@ -30,6 +32,8 @@
 @import 'modules/profile/philosophy';
 @import 'modules/profile/profile';
 @import 'modules/profile/review';
+@import 'modules/reviews/grid';
+@import 'modules/reviews/videos';
 @import 'modules/awards';
 @import 'modules/contact-option';
 @import 'modules/content-slider';

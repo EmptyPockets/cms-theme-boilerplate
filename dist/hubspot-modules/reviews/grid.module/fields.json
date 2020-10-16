@@ -1,0 +1,461 @@
+[ {
+  "name" : "client_reviews",
+  "label" : "Client Reviews",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 10
+  },
+  "children" : [ {
+    "name" : "review_title",
+    "label" : "Review Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Review Title",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "“Took my case when no one\u0003else would”"
+  }, {
+    "name" : "full_review",
+    "label" : "Full Review",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<span>Paul and Rus did more for me and my son than I ever expected. My son will be well taken care of for the rest of his life. They are kind and attentive and know what they are doing. They took my case when no one else would. I highly recommend D’Amore law firm!</span>"
+  }, {
+    "name" : "client_name",
+    "label" : "Client Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Client Name",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Lori N."
+  }, {
+    "name" : "star",
+    "label" : "Star",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 5,
+      "sorting_label_field" : null,
+      "default" : 5
+    },
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ]
+  }, {
+    "name" : "review_source",
+    "label" : "Review Source",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Client%20Reviews/Review%20Logos/google-review-logo.png",
+      "alt" : "google-review-logo",
+      "width" : 130,
+      "height" : 44
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : [ {
+    "review_title" : "“Took my case when no one\u0003else would”",
+    "full_review" : "<span>Paul and Rus did more for me and my son than I ever expected. My son will be well taken care of for the rest of his life. They are kind and attentive and know what they are doing. They took my case when no one else would. I highly recommend D’Amore law firm!</span>",
+    "client_name" : "Lori N.",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "review_source" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Client%20Reviews/Review%20Logos/google-review-logo.png",
+      "alt" : "google-review-logo",
+      "width" : 130,
+      "height" : 44
+    }
+  }, {
+    "review_title" : "“Took my case when no one\u0003else would”",
+    "full_review" : "<span>Paul and Rus did more for me and my son than I ever expected. My son will be well taken care of for the rest of his life. They are kind and attentive and know what they are doing. They took my case when no one else would. I highly recommend D’Amore law firm!</span>",
+    "client_name" : "Lori N.",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "review_source" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Client%20Reviews/Review%20Logos/google-review-logo.png",
+      "alt" : "google-review-logo",
+      "width" : 130,
+      "height" : 44
+    }
+  }, {
+    "review_title" : "“Took my case when no one\u0003else would”",
+    "full_review" : "<span>Paul and Rus did more for me and my son than I ever expected. My son will be well taken care of for the rest of his life. They are kind and attentive and know what they are doing. They took my case when no one else would. I highly recommend D’Amore law firm!</span>",
+    "client_name" : "Lori N.",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "review_source" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Client%20Reviews/Review%20Logos/google-review-logo.png",
+      "alt" : "google-review-logo",
+      "width" : 130,
+      "height" : 44
+    }
+  }, {
+    "review_title" : "“Took my case when no one\u0003else would”",
+    "full_review" : "<span>Paul and Rus did more for me and my son than I ever expected. My son will be well taken care of for the rest of his life. They are kind and attentive and know what they are doing. They took my case when no one else would. I highly recommend D’Amore law firm!</span>",
+    "client_name" : "Lori N.",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "review_source" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Client%20Reviews/Review%20Logos/google-review-logo.png",
+      "alt" : "google-review-logo",
+      "width" : 130,
+      "height" : 44
+    }
+  }, {
+    "review_title" : "“Took my case when no one\u0003else would”",
+    "full_review" : "<span>Paul and Rus did more for me and my son than I ever expected. My son will be well taken care of for the rest of his life. They are kind and attentive and know what they are doing. They took my case when no one else would. I highly recommend D’Amore law firm!</span>",
+    "client_name" : "Lori N.",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "review_source" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Client%20Reviews/Review%20Logos/google-review-logo.png",
+      "alt" : "google-review-logo",
+      "width" : 130,
+      "height" : 44
+    }
+  }, {
+    "review_title" : "“Took my case when no one\u0003else would”",
+    "full_review" : "<span>Paul and Rus did more for me and my son than I ever expected. My son will be well taken care of for the rest of his life. They are kind and attentive and know what they are doing. They took my case when no one else would. I highly recommend D’Amore law firm!</span>",
+    "client_name" : "Lori N.",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "review_source" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Client%20Reviews/Review%20Logos/google-review-logo.png",
+      "alt" : "google-review-logo",
+      "width" : 130,
+      "height" : 44
+    }
+  }, {
+    "review_title" : "“Took my case when no one\u0003else would”",
+    "full_review" : "<span>Paul and Rus did more for me and my son than I ever expected. My son will be well taken care of for the rest of his life. They are kind and attentive and know what they are doing. They took my case when no one else would. I highly recommend D’Amore law firm!</span>",
+    "client_name" : "Lori N.",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "review_source" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Client%20Reviews/Review%20Logos/google-review-logo.png",
+      "alt" : "google-review-logo",
+      "width" : 130,
+      "height" : 44
+    }
+  }, {
+    "review_title" : "“Took my case when no one\u0003else would”",
+    "full_review" : "<span>Paul and Rus did more for me and my son than I ever expected. My son will be well taken care of for the rest of his life. They are kind and attentive and know what they are doing. They took my case when no one else would. I highly recommend D’Amore law firm!</span>",
+    "client_name" : "Lori N.",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "review_source" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Client%20Reviews/Review%20Logos/google-review-logo.png",
+      "alt" : "google-review-logo",
+      "width" : 130,
+      "height" : 44
+    }
+  }, {
+    "review_title" : "“Took my case when no one\u0003else would”",
+    "full_review" : "<span>Paul and Rus did more for me and my son than I ever expected. My son will be well taken care of for the rest of his life. They are kind and attentive and know what they are doing. They took my case when no one else would. I highly recommend D’Amore law firm!</span>",
+    "client_name" : "Lori N.",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "review_source" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Client%20Reviews/Review%20Logos/google-review-logo.png",
+      "alt" : "google-review-logo",
+      "width" : 130,
+      "height" : 44
+    }
+  }, {
+    "review_title" : "“Took my case when no one\u0003else would”",
+    "full_review" : "<span>Paul and Rus did more for me and my son than I ever expected. My son will be well taken care of for the rest of his life. They are kind and attentive and know what they are doing. They took my case when no one else would. I highly recommend D’Amore law firm!</span>",
+    "client_name" : "Lori N.",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "review_source" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Client%20Reviews/Review%20Logos/google-review-logo.png",
+      "alt" : "google-review-logo",
+      "width" : 130,
+      "height" : 44
+    }
+  } ]
+} ]

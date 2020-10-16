@@ -1,0 +1,292 @@
+[ {
+  "name" : "clients",
+  "label" : "clients",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "name" : "client_name",
+    "label" : "Client Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Client Name",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Kieara D."
+  }, {
+    "name" : "client_photo",
+    "label" : "Client Photo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Review%20Assets/kieara-thumbnail.jpg",
+      "alt" : "kieara-thumbnail",
+      "width" : 480,
+      "height" : 284
+    }
+  }, {
+    "name": "wistia_id",
+    "label": "Wistia Id",
+    "required": false,
+    "locked": false,
+    "validation_regex": "",
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "j9zuc29lfy"
+  }, {
+    "name" : "what_happened",
+    "label" : "What Happened",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "What happened",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Her daughter suffered a birth injury"
+  }, {
+    "name" : "star",
+    "label" : "Star",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 5,
+      "sorting_label_field" : null,
+      "default" : 5
+    },
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ]
+  }, {
+    "name" : "client_review_title",
+    "label" : "Client Review Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "\"Review Title\"",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "\"Fantastic Attorney!\""
+  }, {
+    "name" : "review",
+    "label" : "Review",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Client Review",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "“Working with Paul D’Amore has been a wonderful experience. He has been professional, compassionate and dedicated to my daughter’s case.”"
+  }, {
+    "name" : "id",
+    "label" : "id",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "mike"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : [ {
+    "client_name" : "Kieara D.",
+    "client_photo" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Review%20Assets/kieara-thumbnail.jpg",
+      "alt" : "kieara-thumbnail",
+      "width" : 480,
+      "height" : 284
+    },
+    "wistia_id" : "j9zuc29lfy",
+    "what_happened" : "Her daughter suffered a birth injury",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "client_review_title" : "\"Fantastic Attorney!\"",
+    "review" : "“Working with Paul D’Amore has been a wonderful experience. He has been professional, compassionate and dedicated to my daughter’s case.”",
+    "id" : "mike"
+  }, {
+    "client_name" : "Kieara D.",
+    "client_photo" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Review%20Assets/kieara-thumbnail.jpg",
+      "alt" : "kieara-thumbnail",
+      "width" : 480,
+      "height" : 284
+    },
+    "wistia_id" : "j9zuc29lfy",
+    "what_happened" : "Her daughter suffered a birth injury",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "client_review_title" : "\"Fantastic Attorney!\"",
+    "review" : "“Working with Paul D’Amore has been a wonderful experience. He has been professional, compassionate and dedicated to my daughter’s case.”",
+    "id" : "mike"
+  }, {
+    "client_name" : "Kieara D.",
+    "client_photo" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Review%20Assets/kieara-thumbnail.jpg",
+      "alt" : "kieara-thumbnail",
+      "width" : 480,
+      "height" : 284
+    },
+    "wistia_id" : "j9zuc29lfy",
+    "what_happened" : "Her daughter suffered a birth injury",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "client_review_title" : "\"Fantastic Attorney!\"",
+    "review" : "“Working with Paul D’Amore has been a wonderful experience. He has been professional, compassionate and dedicated to my daughter’s case.”",
+    "id" : "mike"
+  }, {
+    "client_name" : "Kieara D.",
+    "client_photo" : {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Review%20Assets/kieara-thumbnail.jpg",
+      "alt" : "kieara-thumbnail",
+      "width" : 480,
+      "height" : 284
+    },
+    "wistia_id" : "j9zuc29lfy",
+    "what_happened" : "Her daughter suffered a birth injury",
+    "star" : [ {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    }, {
+      "src" : "https://cdn2.hubspot.net/hubfs/5191528/Icons/Review%20Star.svg",
+      "alt" : "Review Star",
+      "width" : 400,
+      "height" : 400
+    } ],
+    "client_review_title" : "\"Fantastic Attorney!\"",
+    "review" : "“Working with Paul D’Amore has been a wonderful experience. He has been professional, compassionate and dedicated to my daughter’s case.”",
+    "id" : "mike"
+  } ]
+} ]

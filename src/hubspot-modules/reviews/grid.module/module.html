@@ -1,0 +1,75 @@
+{% set reviewCount = module.client_reviews|length / 2 %}
+
+<article class="client-reviews-grid">
+  <div class="content-wrapper">
+     <ul class="cards">
+      {% for review in module.client_reviews %}
+        {% if loop.revindex > reviewCount %}
+          <li>
+            <img
+              class="review-source"
+              src="{{ review.review_source.src }}"
+              alt="{{ review.review_source.alt }}"
+            />
+            <div>
+              <ul class="rating">
+                {% for star in review.star %}
+                  {% if star.src %}
+                    <li>
+                      <img
+                        src="{{ star.src }}"
+                        alt="{{ star.alt }}"
+                      />
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+              <h3>{{ review.win_practice_area }}</h3>
+              <h4>{{ review.review_title }}</h4>
+              <h5>By: {{ review.client_name }}</h5>
+            </div>
+
+            <div class="read-more-text">
+              <p>{{ review.full_review }}</p>
+            </div>
+            <a class="button link read-more">Read More</a>
+            <a class="button link read-less">Read Less</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <ul class="cards">
+      {% for review in module.client_reviews %}
+          {% if loop.revindex < reviewCount + 1 %}
+          <li>
+            <img
+              class="review-source"
+              src="{{ review.review_source.src }}"
+              alt="{{ review.review_source.alt }}"
+            />
+            <div>
+              <ul class="rating">
+                {% for star in review.star %}
+                  {% if star.src %}
+                    <li>
+                      <img src="{{ star.src }}" alt="{{ star.alt }}" />
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+              <h3>{{ review.win_practice_area }}</h3>
+              <h4>{{ review.review_title }}</h4>
+              <h5>By: {{ review.client_name }}</h5>
+            </div>
+
+            <div class="read-more-text">
+              <p>{{ review.full_review }}</p>
+            </div>
+            <a class="button link read-more">Read More</a>
+            <a class="button link read-less">Read Less</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</article>

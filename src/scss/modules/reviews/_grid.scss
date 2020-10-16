@@ -1,36 +1,42 @@
-.wins-grid {
+.client-reviews-grid {
 	padding: 20px;
+  margin-bottom: 30px;
 
   @include md {
     .content-wrapper {
 			max-width: 1300px;
 			margin: 0 auto;
+			padding-left: 60px;
+			padding-right: 60px;
 			display: flex;
 		}
   }
-	ul {
+	ul.cards {
 		display: flex;
 		flex-direction: column;
+		justify-content: flex-start;
     list-style: none;
 
     @include md {
       width: 100%;
     }
-		li {
-			background: white;
-			box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+		> li {
+			background: $color-white;
+			transition: all 0.05s linear;
 			padding: 25px 25px 10px 25px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.15);
 			text-align: center;
 			margin-bottom: 20px;
 			display: inline-block;
 			cursor: pointer;
 			display: flex;
 			flex-direction: column;
-      justify-content: space-between;
+			justify-content: space-between;
+      border: 1px solid #e3e3e3;
 
       @include md {
         margin: 13px 15px;
-				min-height: 260px;
+				min-height: 300px;
       }
 			&:hover {
 				box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.04), -10px 0 20px 0px rgba(0,0,0,0.04);
@@ -45,21 +51,26 @@
 			}
 			h3 {
 				font-size: 18px;
-				color: $color-gray;
-				font-weight: bold;
+				color: #333;
+				font-weight: 400;
 				margin-bottom: 5px;
 			}
 			h4 {
 				font-size: 22px;
 				color: $color-blue-light;
-				font-weight: bold;
-        margin-bottom: 10px;
+				font-weight: 400;
+        margin-bottom: 3px;
 
         @include md {
           max-width: 500px;
-          margin: 0 auto;
+			    margin: 0 auto;
         }
-      }
+			}
+			h5 {
+				color: $color-gray;
+				font-size: 14px;
+				margin-bottom: 20px;
+			}
 		}
 	}
 	.button {
@@ -69,5 +80,23 @@
 		&:hover {
 			color: $color-red-light;
 		}
+	}
+	.rating {
+		list-style: none;
+		display: flex;
+    justify-content: center;
+
+		li {
+			img {
+				width: 30px;
+				height: auto;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.review-source {
+		width: 130px;
+		height: auto;
+		margin: 10px auto;
 	}
 }
