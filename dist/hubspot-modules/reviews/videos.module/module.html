@@ -2,7 +2,7 @@
   <div class="content-wrapper">
     <ul>
       {% for item in module.clients %}
-        <li class="card video-wrapper" id="{{ item.id }}">
+        <li class="card video-wrapper" id="{{ item.anchor }}">
           {# Client Photo #}
           <div class="client-img-wrapper" style="background-image: url({{ item.client_photo.src }});"></div>
 
