@@ -250,6 +250,27 @@ import LazyLoad from "vanilla-lazyload";
         rightToLeft: false,
         prevNextButtons: true,
       },
+      'image-gallery': {
+        freeScroll: false,
+        wrapAround: true,
+        groupCells: false,
+        autoPlay: true,
+        fade: false,
+        adaptiveHeight: false,
+        watchCSS: false,
+        selectedAttraction: 0.01,
+        friction: 0.2,
+        imagesLoaded: true,
+        cellSelector: undefined,
+        initialIndex: 0,
+        accessibility: true,
+        resize: true,
+        cellAlign: 0.2,
+        contain: false,
+        percentPosition: true,
+        rightToLeft: false,
+        prevNextButtons: true,
+      }
     };
 
     Q('.is-flickity').forEach((el) => {

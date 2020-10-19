@@ -1,13 +1,5 @@
-<marquee class="image-gallery">
-  <ul>
-    {% for item in module.collage_images %}
-      <li>
-        <img
-          class="gallery-photo"
-          src="{{ item.src }}"
-          alt="{{ item.alt }}"
-        />
-      </li>
-    {% endfor %}
-  </ul>
-</marquee>
+<div class="image-gallery is-flickity">
+  {% for item in module.collage_images %}
+    <img src="{{ item.src }}" alt="{{ item.alt }}" />
+  {% endfor %}
+</div>
