@@ -1,0 +1,54 @@
+[ {
+  "name" : "image",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/paul-hero-cropped.png",
+    "alt" : "Paul Hero Cropped",
+    "width" : 637,
+    "height" : 720
+  }
+}, {
+  "name" : "background_image",
+  "label" : "Background Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "src" : "https://cdn2.hubspot.net/hubfs/5191528/DAMore_December2018/Images/paul-hero-background.jpg",
+    "alt" : "Paul Hero",
+    "width" : 1440,
+    "height" : 720
+  }
+}, {
+  "name" : "form_title",
+  "label" : "Form Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Contact us for a \n<strong>FREE, NO RISK CONSULTATION.</strong>"
+}, {
+  "name" : "form",
+  "label" : "Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "1ca0066d-1f8e-49e9-b7e1-085a7c07cdda",
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+} ]

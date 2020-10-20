@@ -1,0 +1,217 @@
+.contact-wrap {
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+  width: 100%;
+
+  @include xl {
+    display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		position: relative;
+  }
+  .hs-button {
+    display: block;
+    margin: 20px 0;
+    width: initial;
+    padding: 0 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    background-color: $color-red-dark;
+    color: $color-white;
+    border: 0;
+    font-weight: $bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-red;
+    }
+  }
+  form.hs-form {
+    .hs-form-field {
+      >label {
+        display: none;
+      }
+      ul.inputs-list {
+        list-style: none;
+        padding: 0;
+      }
+    }
+    fieldset {
+      max-width: none;
+      .hs-form-field {
+        padding: 0 10px 0 0;
+      }
+    }
+    fieldset[class*=form-columns] {
+      .input {
+        margin-right: 0;
+      }
+      .hs-input {
+        width: 100%;
+      }
+      .hs-input[type=checkbox] {
+        width: auto;
+      }
+    }
+    fieldset.form-columns-3 {
+      .hs-form-field {
+        width: 33.33%;
+      }
+    }
+    .hs-error-msgs.inputs-list {
+      margin: 0;
+    }
+    ul.hs-error-msgs.inputs-list {
+      list-style: none;
+      padding: 0;
+      padding: 4px 0 !important;
+      list-style: none !important;
+
+      label {
+        padding: 5px;
+        color: #790000;
+        font-weight: 700;
+        letter-spacing: normal;
+        background-color: rgba(255,223,224,.25);
+        border-top: 1px solid #C89797;
+        border-bottom: 1px solid #C89797;
+        padding-bottom: 6px;
+        padding-top: 8px;
+        font-size: .813em;
+        line-height: inherit;
+        display: block;
+      }
+      li {
+        margin: 0;
+        list-style: none !important;
+      }
+    }
+    .hs-form-required {
+      color: #e85c41;
+      font-size: 150%;
+      font-weight: 400;
+      position: relative;
+      top: 5px;
+      margin-left: 0;
+    }
+    .hs-input.invalid.error {
+      border: 2px solid #e85c41;
+    }
+  }
+	textarea {
+		height: 120px;
+		line-height: 1.5;
+    margin-bottom: 18px;
+
+    @include sm {
+      line-height: 1.5;
+      height: 160px;
+    }
+  }
+  .contact-form-img {
+    @include xl {
+      flex: 1.5;
+      display: flex;
+
+      div {
+        flex: 1;
+      }
+    }
+    img {
+      display: block;
+      margin: auto;
+      display: none;
+
+      @include xl {
+        display: block;
+      }
+    }
+  }
+  .contact-form-pagewrap {
+    overflow: hidden;
+    padding: 25px;
+
+    @include xl {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
+  .contact-form-content {
+    @include sm {
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto;
+      float: none;
+    }
+    h5 {
+      text-align: center;
+      font-size: 24px;
+      color: $color-gray;
+      font-weight: 700;
+      padding: 0 10px;
+      margin-bottom: 12.5px;
+
+      @include lg {
+        padding: 0;
+        text-align: left;
+        font-size: 30px;
+      }
+      strong {
+        color: $color-red;
+        font-size: 30px;
+        text-transform: uppercase;
+      }
+    }
+    .gform_wrapper {
+      margin: 0;
+      width: 100%;
+      margin: 16px 0;
+      max-width: 100%;
+
+      form {
+        text-align: left;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      h3 {
+        display: none;
+      }
+    }
+    input[type=text],
+    input[type=password],
+    input[type=datetime],
+    input[type=datetime-local],
+    input[type=date],
+    input[type=month],
+    input[type=time],
+    input[type=week],
+    input[type=number],
+    input[type=email],
+    input[type=url],
+    input[type=search],
+    input[type=tel],
+    input[type=color],
+    input[type=file],
+    textarea,
+    select {
+      font: inherit;
+      margin: 0;
+      background-color: #fff;
+      border-radius: 0;
+      box-shadow: none;
+      color: #000;
+      font-weight: 400;
+      border: 1px silver solid;
+      padding: 10px 15px;
+      width: 100%;
+      display: block;
+      font-size: inherit;
+      font-family: inherit;
+      letter-spacing: normal;
+      outline: 0;
+      margin-top: 8px;
+    }
+  }
+}
