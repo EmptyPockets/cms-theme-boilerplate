@@ -401,6 +401,7 @@ import LazyLoad from "vanilla-lazyload";
    */
   (() => {
     const openModalClass = 'open-modal';
+    const isOpenClass = 'is-open';
 
     /** @type {HTMLScriptElement} */
     let ev1Script;
@@ -419,7 +420,7 @@ import LazyLoad from "vanilla-lazyload";
 
       const toggle = (isOn) => {
         document.body.classList.toggle(openModalClass, isOn);
-        modal.style.display = isOn ? 'block' : 'none';
+        modal.classList.toggle(isOpenClass, isOn);
       };
 
       if (modal && playButton && closeButton) {
